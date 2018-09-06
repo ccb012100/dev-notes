@@ -1,4 +1,5 @@
 # notes
+
 various notes/documentation
 
 ## Linux
@@ -20,10 +21,10 @@ various notes/documentation
 
 ### nanorc
 
-* run `nano -V` to check if --enable-nanorc option is present
+* run ``nano -V`` to check if ``--enable-nanorc option`` is present
 * apply settings to
   * all users:
-    * copy ``nanorc`` to the /etc/nanorc
+    * copy ``nanorc`` to ``/etc/nanorc``
   * a single user:
     * copy ``nanorc`` to ``$HOME/.nanorc``
 
