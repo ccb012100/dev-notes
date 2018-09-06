@@ -1,9 +1,6 @@
 # notes
 various notes/documentation
 
-# notes
-various notes/documentation
-
 ## Linux
 
 * Change colors in terminal: <https://askubuntu.com/a/466203>
