@@ -11,13 +11,13 @@ various notes/documentation
 
 ### switches
 
-- --\-B-- (backs up the file prior to editing it)
-- --\-E-- (converts tabs to spaces when editing)
-- --\-c-- (constantly show the cursor position stats)
-- --\-i-- (automatically indents new lines to the same position as the previous line)
-- --\-k-- (toggle cut so that it cuts from cursor position instead of the whole line)
-- --\-m-- (provides mouse support to the editor)
-- --\-v-- (opens file as readonly)
+- **-B** (backs up the file prior to editing it)
+- **-E** (converts tabs to spaces when editing)
+- **-c** (constantly show the cursor position stats)
+- **-i** (automatically indents new lines to the same position as the previous line)
+- **-k** (toggle cut so that it cuts from cursor position instead of the whole line)
+- **-m** (provides mouse support to the editor)
+- **-v** (opens file as readonly)
 
 ### nanorc
 
