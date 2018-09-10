@@ -67,7 +67,11 @@ trustExitCode = false
 - Set TortoiseGit as diff and merge tool: <https://stackoverflow.com/a/16494703>
 - Prompt customization file is located in `C:\Program Files\Git\etc\profile.d\git-prompt.sh`
 
-#### Set TortoiseGit diff and merge tools
+### Show current branch in CLI
+
+- <https://askubuntu.com/a/730758>
+
+### Set TortoiseGit diff and merge tools
 
 ```bash
 [diff]
