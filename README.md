@@ -4,11 +4,11 @@ various notes/documentation
 
 ## Linux
 
-- Change colors in terminal: <https://askubuntu.com/a/466203>
+- Change colors in terminal: `dircolors`
 - Reload .bashrc: `source .bashrc`
 - useful packages
   - `htop`
-  - `[diff-so-fancy](https://github.com/so-fancy/diff-so-fancy)`
+  - [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy)
   - [bat](https://github.com/sharkdp/bat)
   - `fzf`
   - `glances`
@@ -17,10 +17,28 @@ various notes/documentation
   - `. ~/.bashrc`
   - `exec bash`
   - <https://stackoverflow.com/a/35073891> for explanation of differences
+- display system info using `inxi`
+  - `inxi -Frmxx`
 
-## Nano
+### vi
 
-### switches
+- `:q` - exit
+- `:wq` - save file and exit
+- `o` - new line
+
+### Windows Subsystem for Linux (WSL)
+
+- [Windows Console Colortool](https://blogs.msdn.microsoft.com/commandline/2017/08/11/introducing-the-windows-console-colortool/)
+
+### tmux
+
+- toggle full-screen on current pane: `C-b z`
+- Resize pane in direction of `<arrow key>`: `C-b C-<arrow key>`
+- rename window: `C-b ,`
+
+### Nano
+
+#### switches
 
 - **-B** (backs up the file prior to editing it)
 - **-E** (converts tabs to spaces when editing)
@@ -39,7 +57,12 @@ various notes/documentation
   - a single user:
     - copy `nanorc` to `$HOME/.nanorc`
 
-## Resharper
+## Visual Studio
+
+- Location of `CurrentSettings.vssettings`
+  - `%UserProfile%\AppData\Local\Microsoft\VisualStudio\15.0_*\Settings`
+
+### Resharper
 
 - settings file is located at `%AppData%\JetBrains\Shared\vAny\GlobalSettingsStorage.DotSettings`
 
@@ -66,12 +89,15 @@ cmd = \"C:\\Program Files\\Microsoft VS Code\\Code.exe\" \"$LOCAL\" \"$REMOTE\" 
 trustExitCode = false
 ```
 
-## Git
+## Git Bash
+
+- `C:\Program Files\Git\etc\profile.d\aliases.sh`
+- `C:\Program Files\Git\etc\bash.bashrc
 
 ### Configuration
 
 - Config file location: %USERPROFILE%/.gitconfig
-- Atlassian page on git config: <https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-config>
+- [Atlassian page](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-config) on git config:
 - Change the directory new windows open in: <https://stackoverflow.com/a/32125911>
 - Set Notepad++ as the text editor:
   - `git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`
@@ -110,8 +136,7 @@ cmd = \""c:/Program Files/TortoiseGit/bin/TortoiseGitMerge.exe"\" -base "$BASE" 
 
 ### Templates
 
-- To be able to reference an enum in a template, you have to add a reference to the enum in the component.
-  - see <https://stackoverflow.com/questions/45361006/using-enums-in-angular2-view-templates/45361066#45361066>
+- To be able to reference an enum in a template, [you have to add a reference to the enum in the componen](https://stackoverflow.com/questions/45361006/using-enums-in-angular2-view-templates/45361066#45361066)
   - example:
 
 ```typescript
