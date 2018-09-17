@@ -35,6 +35,7 @@ various notes/documentation
 - toggle full-screen on current pane: `C-b z`
 - Resize pane in direction of `<arrow key>`: `C-b C-<arrow key>`
 - rename window: `C-b ,`
+- show options: `tmux show-options -g`
 
 ### Nano
 
