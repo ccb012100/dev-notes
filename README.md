@@ -6,6 +6,17 @@ various notes/documentation
 
 - Change colors in terminal: <https://askubuntu.com/a/466203>
 - Reload .bashrc: `source .bashrc`
+- useful packages
+  - `htop`
+  - `[diff-so-fancy](https://github.com/so-fancy/diff-so-fancy)`
+  - [bat](https://github.com/sharkdp/bat)
+  - `fzf`
+  - `glances`
+- reload `.bashrc`
+  - `source ~/.bashrc`
+  - `. ~/.bashrc`
+  - `exec bash`
+  - <https://stackoverflow.com/a/35073891> for explanation of differences
 
 ## Nano
 
