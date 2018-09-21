@@ -93,7 +93,8 @@ trustExitCode = false
 ## Git Bash
 
 - `C:\Program Files\Git\etc\profile.d\aliases.sh`
-- `C:\Program Files\Git\etc\bash.bashrc
+- `C:\Program Files\Git\etc\profile.d\`
+- `C:\Program Files\Git\etc\bash.bashrc`
 
 ### Configuration
 
