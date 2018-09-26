@@ -105,3 +105,5 @@
 [programming immutable objects - Google Search](https://www.google.com/search?q=programming+immutable+objects&rlz=1C1CAFC_enUS805US805&oq=programming+immutable+objects&aqs=chrome..69i57j0.9127j1j7&sourceid=chrome&ie=UTF-8)
 
 [Writing Extensible Functional Code](https://www.infoq.com/presentations/extensible-functional-code?utm_campaign=rightbar_v2&utm_source=infoq&utm_medium=presentations_link&utm_content=link_text)
+
+[Long Names Are Long](http://journal.stuffwithstuff.com/2016/06/16/long-names-are-long/)
