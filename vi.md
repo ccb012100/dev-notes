@@ -1,3 +1,0 @@
-- `:q` - exit
-- `:wq` - save file and exit
-- `o` - new line
