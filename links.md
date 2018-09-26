@@ -107,3 +107,5 @@
 [Writing Extensible Functional Code](https://www.infoq.com/presentations/extensible-functional-code?utm_campaign=rightbar_v2&utm_source=infoq&utm_medium=presentations_link&utm_content=link_text)
 
 [Long Names Are Long](http://journal.stuffwithstuff.com/2016/06/16/long-names-are-long/)
+
+[Increment: Documentation](https://increment.com/documentation/)
