@@ -67,3 +67,4 @@
 1. [Long Names Are Long](http://journal.stuffwithstuff.com/2016/06/16/long-names-are-long/)
 1. [Increment: Documentation](https://increment.com/documentation/)
 1. [Git in Bash](https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Bash)
+1. [weboas.is](https://weboas.is/)
