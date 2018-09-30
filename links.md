@@ -20,12 +20,10 @@
 1. [Advanced Architecture for ASP.NET Core Web API](https://www.infoq.com/articles/advanced-architecture-aspnet-core)
 1. [ASP.NET Core - The Power of Simplicity](https://www.infoq.com/articles/aspnetcore-power-of-simplicity)
 1. [Azure and .NET Core Are Beautiful Together](https://www.infoq.com/articles/azure-and-net-core?utm_campaign=rightbar_v2&utm_source=infoq&utm_medium=articles_link&utm_content=link_text)
-1. [bchavez/Bogus: A simple and sane fake data generator for C#, F#, and VB.NET. Based on and ported from the famed faker.js.](https://github.com/bchavez/Bogus)
+1. ~[bchavez/Bogus: A simple and sane fake data generator for C#, F#, and VB.NET. Based on and ported from the famed faker.js.](https://github.com/bchavez/Bogus)~
 1. [C# 8 Ranges and Recursive Patterns](https://www.infoq.com/articles/cs8-ranges-and-recursive-patterns)
 1. [dotnet core spa templates - Google Search](https://www.google.com/search?q=dotnet+core+spa+templates&oq=dotnet+core+spa)
-   [Feature Toggles (aka Feature Flags)](https://martinfowler.com/articles/feature-toggles.html)
-1. [Feature toggles in .NET: tips and tricks](https://surfingthecode.com/feature-toggles-in-.net-tips-and-tricks/)
-1. [jason-roberts/FeatureToggle: Simple, reliable feature toggles in .NET](https://github.com/jason-roberts/FeatureToggle)
+1. ~[jason-roberts/FeatureToggle: Simple, reliable feature toggles in .NET](https://github.com/jason-roberts/FeatureToggle)~
 1. [Performance is a Key .NET Core Feature](https://www.infoq.com/articles/performance-net-core?utm_campaign=rightbar_v2&utm_source=infoq&utm_medium=articles_link&utm_content=link_text)
 1. [The Argument for WCF Hosting in .NET Core](https://www.infoq.com/articles/WCF-Net-Core-Debate?utm_campaign=rightbar_v2&utm_source=infoq&utm_medium=articles_link&utm_content=link_text)
 
