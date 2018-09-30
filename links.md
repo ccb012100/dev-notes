@@ -49,9 +49,8 @@
 1. [A Tour of Go](https://tour.golang.org/welcome/1)
 1. [Angular Authentication: Using the Http Client and Http Interceptors](https://medium.com/@ryanchenkie_40935/angular-authentication-using-the-http-client-and-http-interceptors-2f9d1540eb8)
 1. [Documentation - The Go Programming Language](https://golang.org/doc/)
-1. [editorconfig cheatsheet](https://devhints.io/editorconfig)
-1. [EditorConfig](https://editorconfig.org/)
-1. [From Primitive Obsession to Domain Modelling](http://blog.ploeh.dk/2015/01/19/from-primitive-obsession-to-domain-modelling/)
+1. ~[editorconfig cheatsheet](https://devhints.io/editorconfig)~
+1. ~[EditorConfig](https://editorconfig.org/)~
 1. [Insider’s guide into interceptors and HttpClient mechanics in Angular](https://blog.angularindepth.com/insiders-guide-into-interceptors-and-httpclient-mechanics-in-angular-103fbdb397bf)
 1. [Racket](http://www.racket-lang.org/)
 1. [The Scheme Programming Language, 4th Edition](https://www.scheme.com/tspl4/)
