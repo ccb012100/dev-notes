@@ -31,7 +31,6 @@
 
 1. [Git - Basic Branching and Merging](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
 1. [Git Merge | Atlassian Git Tutorial](https://www.atlassian.com/git/tutorials/using-branches/git-merge)
-1. [GitHub does dotfiles - dotfiles.github.io](https://dotfiles.github.io/)
 1. [Three-Way Merging: A Look Under the Hood | Dr Dobb's](http://www.drdobbs.com/tools/three-way-merging-a-look-under-the-hood/240164902)
 1. [What is Git Bash for Windows anyway? - Super User](https://superuser.com/questions/1053633/what-is-git-bash-for-windows-anyway)
 
@@ -57,3 +56,4 @@
 1. [Increment: Documentation](https://increment.com/documentation/)
 1. [Git in Bash](https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Bash)
 1. [Build your own x](https://github.com/danistefanovic/build-your-own-x/blob/master/README.md)
+1. [GitHub does dotfiles - dotfiles.github.io](https://dotfiles.github.io/)
