@@ -1,18 +1,42 @@
-- Change colors in terminal: `dircolors`
-- Reload .bashrc: `source .bashrc`
-- useful packages
-  - `htop`
-  - [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy)
-  - [bat](https://github.com/sharkdp/bat)
-  - `fzf`
-  - `glances`
-- reload `.bashrc`
-  - `source ~/.bashrc`
-  - `. ~/.bashrc`
-  - `exec bash`
-  - <https://stackoverflow.com/a/35073891> for explanation of differences
-- display system info using `inxi`
-  - `inxi -Frmxx`
+# Linux
+
+Display PATH
+
+- **sed**
+
+  - `$ sed 's/:/\n/g' <<< "$PATH"`
+
+- **tr**
+
+  - `$ tr ':' '\n' <<< "$PATH"`
+
+- **python**
+
+  - `$ python2 -c "import os; print os.environ['PATH'].replace(':', '\n')"`
+
+Change colors in terminal: `dircolors`
+
+Reload .bashrc: `source .bashrc`
+
+useful packages
+
+- `htop`
+- [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy)
+- [bat](https://github.com/sharkdp/bat)
+- `fzf`
+- `glances`
+- `jq`
+
+reload `.bashrc`
+
+- `source ~/.bashrc`
+- `. ~/.bashrc`
+- `exec bash`
+- <https://stackoverflow.com/a/35073891> for explanation of differences
+
+display system info using `inxi`
+
+- `inxi -Frmxx`
 
 ### vi
 
@@ -22,14 +46,17 @@
 
 ### Windows Subsystem for Linux (WSL)
 
-- [Windows Console Colortool](https://blogs.msdn.microsoft.com/commandline/2017/08/11/introducing-the-windows-console-colortool/)
+[Windows Console Colortool](https://blogs.msdn.microsoft.com/commandline/2017/08/11/introducing-the-windows-console-colortool/)
 
 ### tmux
 
-- toggle full-screen on current pane: `C-b z`
-- Resize pane in direction of `<arrow key>`: `C-b C-<arrow key>`
-- rename window: `C-b ,`
-- show options: `tmux show-options -g`
+toggle full-screen on current pane: `C-b z`
+
+Resize pane in direction of `<arrow key>`: `C-b C-<arrow key>`
+
+rename window: `C-b ,`
+
+show options: `tmux show-options -g`
 
 ### Nano
 
@@ -45,8 +72,9 @@
 
 ### nanorc
 
-- run `nano -V` to check if `--enable-nanorc option` is present
-- apply settings to
+run `nano -V` to check if `--enable-nanorc option` is present
+
+apply settings to
   - all users:
     - copy `nanorc` to `/etc/nanorc`
   - a single user:
