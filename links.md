@@ -52,3 +52,4 @@
 1. [Racket](http://www.racket-lang.org/)
 1. [The Scheme Programming Language, 4th Edition](https://www.scheme.com/tspl4/)
 1. [Welcome to schemers.org!](https://schemers.org/)
+1. [Extending Visual Studio Code](https://code.visualstudio.com/docs/extensions/overview)
