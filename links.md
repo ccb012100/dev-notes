@@ -57,3 +57,4 @@
 1. [how i automated my job with node.js](https://medium.com/dailyjs/how-i-automated-my-job-with-node-js-94bf4e423017)
 1. [Sourcegraph](https://about.sourcegraph.com/)
 1. [Programming from the ground up](https://download-mirror.savannah.gnu.org/releases/pgubook/ProgrammingGroundUp-1-0-booksize.pdf)
+1. [C is not a low level language](https://queue.acm.org/detail.cfm?id=3212479)
