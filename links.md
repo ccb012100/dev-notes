@@ -58,3 +58,5 @@
 1. [Sourcegraph](https://about.sourcegraph.com/)
 1. [Programming from the ground up](https://download-mirror.savannah.gnu.org/releases/pgubook/ProgrammingGroundUp-1-0-booksize.pdf)
 1. [C is not a low level language](https://queue.acm.org/detail.cfm?id=3212479)
+1. [JavaScript closures](https://medium.com/dailyjs/i-never-understood-javascript-closures-9663703368e8)
+1. [Get your data back with Linux based recovery tools](https://www.linux.com/learn/get-your-data-back-linux-based-data-recovery-tools)
