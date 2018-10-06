@@ -54,3 +54,4 @@
 1. [Welcome to schemers.org!](https://schemers.org/)
 1. [Extending Visual Studio Code](https://code.visualstudio.com/docs/extensions/overview)
 1. [nand 2 Tetris](https://www.nand2tetris.org/)
+1. [how i automated my job with node.js](https://medium.com/dailyjs/how-i-automated-my-job-with-node-js-94bf4e423017)
