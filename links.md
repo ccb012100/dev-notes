@@ -56,3 +56,4 @@
 1. [nand 2 Tetris](https://www.nand2tetris.org/)
 1. [how i automated my job with node.js](https://medium.com/dailyjs/how-i-automated-my-job-with-node-js-94bf4e423017)
 1. [Sourcegraph](https://about.sourcegraph.com/)
+1. [Programming from the ground up](https://download-mirror.savannah.gnu.org/releases/pgubook/ProgrammingGroundUp-1-0-booksize.pdf)
