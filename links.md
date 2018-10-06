@@ -1,20 +1,5 @@
 # Weblinks
 
-## Docker
-
-1. [| Docker Documentation](https://docs.docker.com/engine/reference/builder/#understand-how-cmd-and-entrypoint-interact)
-1. [Advanced multi-stage build patterns – Tõnis Tiigi – Medium](https://medium.com/@tonistiigi/advanced-multi-stage-build-patterns-6f741b852fae)
-1. [boxboat/bootcamp](https://github.com/boxboat/bootcamp)
-1. [docker gui client - Google Search](https://www.google.com/search?q=docker+gui+client&rlz=1C1CAFC_enUS805US805&oq=docker+gui+client-8)
-1. [Dockerize a .NET Core application | Docker Documentation](https://docs.docker.com/engine/examples/dotnetcore/)
-1. [Get Started, Part 6: Deploy your app | Docker Documentation](https://docs.docker.com/v17.09/get-started/part6/)
-1. [goharbor/harbor: An open source trusted cloud native registry project that stores, signs, and scans content.](https://github.com/goharbor/harbor)
-1. [Harbor](https://goharbor.io/)
-1. [jonathandandries/docker-rabbitmq-example: Creates a custom RabbitMQ container with a preconfigured vhost (example-vhost), exchange (example-exchange), and queue (example-queue) with appropriate bindings therein.](https://github.com/jonathandandries/docker-rabbitmq-example)
-1. [kelseyhightower/standalone-kubelet-tutorial: Standalone Kubelet Tutorial](https://github.com/kelseyhightower/standalone-kubelet-tutorial)
-1. [microsoft/dotnet - Docker Hub](https://hub.docker.com/r/microsoft/dotnet/)
-1. [Setting Up Docker for Windows and WSL to Work Flawlessly — Nick Janetakis](https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly)
-
 ## dotnet core
 
 1. [Advanced Architecture for ASP.NET Core Web API](https://www.infoq.com/articles/advanced-architecture-aspnet-core)
