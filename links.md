@@ -48,3 +48,4 @@
 1. [Benchmark.NET](https://github.com/dotnet/BenchmarkDotNet)
 1. [What can you do with Gists on GitHub?](https://www.labnol.org/internet/github-gist-tutorial/28499/)
 1. [A gentle introduction to machine fundamentals](http://marijnhaverbeke.nl/turtle/)
+1. [http://book.realworldhaskell.org/read/](Real World Haskell)
