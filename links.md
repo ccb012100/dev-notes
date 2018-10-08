@@ -46,3 +46,4 @@
 1. [Avoiding a common mistake with JavaScript Closures](https://hub.appirio.com/tech-blog/avoiding-a-common-mistake-with-javascript-closures)
 1. [github pages](https://pages.github.com/)
 1. [Benchmark.NET](https://github.com/dotnet/BenchmarkDotNet)
+1. [What can you do with Gists on GitHub?](https://www.labnol.org/internet/github-gist-tutorial/28499/)
