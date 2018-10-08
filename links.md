@@ -50,3 +50,4 @@
 1. [A gentle introduction to machine fundamentals](http://marijnhaverbeke.nl/turtle/)
 1. [Real World Haskell](http://book.realworldhaskell.org/read)
 1. [Learn you a Haskell for Great Good!](http://learnyouahaskell.com/chapters)
+1. [Glitch](https://glitch.com/)
