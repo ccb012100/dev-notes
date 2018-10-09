@@ -9,10 +9,6 @@
 1. [Performance is a Key .NET Core Feature](https://www.infoq.com/articles/performance-net-core?utm_campaign=rightbar_v2&utm_source=infoq&utm_medium=articles_link&utm_content=link_text)
 1. [The Argument for WCF Hosting in .NET Core](https://www.infoq.com/articles/WCF-Net-Core-Debate?utm_campaign=rightbar_v2&utm_source=infoq&utm_medium=articles_link&utm_content=link_text)
 1. [Benchmark.NET](https://github.com/dotnet/BenchmarkDotNet)
-1. [Lazy Initialization](https://docs.microsoft.com/en-us/dotnet/framework/performance/lazy-initialization)
-1. [C# Concepts: Value vs Reference Types](http://www.albahari.com/valuevsreftypes.aspx)
-1. [Lazy](https://www.dotnetperls.com/lazy)
-1. [C# Struct examples](https://www.dotnetperls.com/struct)
 
 ## git
 
