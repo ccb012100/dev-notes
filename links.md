@@ -27,12 +27,16 @@
 1. [Linux Fu: System Administration Made Easier | Hackaday](https://hackaday.com/2017/11/09/linux-fu-system-administration-made-easier/)
 1. [Get your data back with Linux based recovery tools](https://www.linux.com/learn/get-your-data-back-linux-based-data-recovery-tools)
 
+## JavaScript
+
+1. [JavaScript functions: understanding the basics](https://codeburst.io/javascript-functions-understanding-the-basics-207dbf42ed99)
+1. [Function declarations vs functiom expressions](https://javascriptweblog.wordpress.com/2010/07/06/function-declarations-vs-function-expressions/)
+
 ## Functional Programming
 
 1. [Racket](http://www.racket-lang.org/)
 1. [The Scheme Programming Language, 4th Edition](https://www.scheme.com/tspl4/)
 1. [Welcome to schemers.org!](https://schemers.org/)
-1. [Avoiding a common mistake with JavaScript Closures](https://hub.appirio.com/tech-blog/avoiding-a-common-mistake-with-javascript-closures)
 1. [Real World Haskell](http://book.realworldhaskell.org/read)
 1. [Learn you a Haskell for Great Good!](http://learnyouahaskell.com/chapters)
 
@@ -56,4 +60,4 @@
 1. [What can you do with Gists on GitHub?](https://www.labnol.org/internet/github-gist-tutorial/28499/)
 1. [Glitch](https://glitch.com/)
 1. [10 Common Software Architectural Patterns in a nutshell](https://towardsdatascience.com/10-common-software-architectural-patterns-in-a-nutshell-a0b47a1e9013)
-1. [Funding FOSS](https://coderanger.net/funding-foss/)
+1. [Jenkins Wrangling for fun and profit](https://coderanger.net/jenkins/)
