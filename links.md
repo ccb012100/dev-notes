@@ -70,3 +70,5 @@
 1. [Jenkins Wrangling for fun and profit](https://coderanger.net/jenkins/)
 1. [GraphQL](https://graphql.org/)
 1. [Google JSON style guide](https://google.github.io/styleguide/jsoncstyleguide.xml?showone=Property_Ordering_Example#Property_Ordering_Example)
+1. [On Managers](https://www.codemag.com/Article/1803101/On-Managers)
+1. [On Transitioning](https://www.codemag.com/Article/1809101/On-Transitioning)
