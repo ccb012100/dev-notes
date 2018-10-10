@@ -62,3 +62,4 @@
 1. [10 Common Software Architectural Patterns in a nutshell](https://towardsdatascience.com/10-common-software-architectural-patterns-in-a-nutshell-a0b47a1e9013)
 1. [Jenkins Wrangling for fun and profit](https://coderanger.net/jenkins/)
 1. [VS Code extensions](https://reddit.com/r/programming/comments/9mg9xh/visual_studio_code_september_2018/e7f7fbt)
+1. [GraphQL](https://graphql.org/)
