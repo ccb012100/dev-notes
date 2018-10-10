@@ -9,6 +9,8 @@
 1. [Performance is a Key .NET Core Feature](https://www.infoq.com/articles/performance-net-core?utm_campaign=rightbar_v2&utm_source=infoq&utm_medium=articles_link&utm_content=link_text)
 1. [The Argument for WCF Hosting in .NET Core](https://www.infoq.com/articles/WCF-Net-Core-Debate?utm_campaign=rightbar_v2&utm_source=infoq&utm_medium=articles_link&utm_content=link_text)
 1. [Benchmark.NET](https://github.com/dotnet/BenchmarkDotNet)
+1. [Ready for Prime Time: .NET Core 2.0 and ASP.NET Core 2.0 Have Arrived](https://www.codemag.com/Article/1803061/Ready-for-Prime-Time-.NET-Core-2.0-and-ASP.NET-Core-2.0-Have-Arrived)
+1. [Re-Assembling the Web with Web Assembly and Blazor](https://www.codemag.com/Article/1809061/Re-Assembling-the-Web-with-Web-Assembly-and-Blazor)
 
 ## git
 
@@ -49,18 +51,22 @@
 1. [nand 2 Tetris](https://www.nand2tetris.org/)
 1. [Programming from the ground up](https://download-mirror.savannah.gnu.org/releases/pgubook/ProgrammingGroundUp-1-0-booksize.pdf)
 
+## VS Code
+
+1. [Extending Visual Studio Code](https://code.visualstudio.com/docs/extensions/overview)
+1. [VS Code extensions](https://reddit.com/r/programming/comments/9mg9xh/visual_studio_code_september_2018/e7f7fbt)
+1. [Writing Your Own Debugger and Language Extensions with Visual Studio Code](https://www.codemag.com/Article/1809051/Writing-Your-Own-Debugger-and-Language-Extensions-with-Visual-Studio-Code)
+1. [awesome-vscode](https://github.com/viatsko/awesome-vscode)
+
 ## Miscellaneous
 
 1. [GitHub does dotfiles - dotfiles.github.io](https://dotfiles.github.io/)
 1. [Increment: Documentation](https://increment.com/documentation/)
-1. [Extending Visual Studio Code](https://code.visualstudio.com/docs/extensions/overview)
-1. [Sourcegraph Quickstart](https://about.sourcegraph.com/docs/)
 1. [C is not a low level language](https://queue.acm.org/detail.cfm?id=3212479)
 1. [github pages](https://pages.github.com/)
 1. [What can you do with Gists on GitHub?](https://www.labnol.org/internet/github-gist-tutorial/28499/)
 1. [Glitch](https://glitch.com/)
 1. [10 Common Software Architectural Patterns in a nutshell](https://towardsdatascience.com/10-common-software-architectural-patterns-in-a-nutshell-a0b47a1e9013)
 1. [Jenkins Wrangling for fun and profit](https://coderanger.net/jenkins/)
-1. [VS Code extensions](https://reddit.com/r/programming/comments/9mg9xh/visual_studio_code_september_2018/e7f7fbt)
 1. [GraphQL](https://graphql.org/)
 1. [Google JSON style guide](https://google.github.io/styleguide/jsoncstyleguide.xml?showone=Property_Ordering_Example#Property_Ordering_Example)
