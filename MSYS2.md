@@ -7,10 +7,7 @@
 
 ### add MSYS2 to context menu
 
-- <https://gist.github.com/elieux/ef044468d067d68040c7>
 - <https://github.com/njzhangyifei/msys2-mingw-shortcut-menus>
-- create new `.reg` file:
-  - `[HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\MSYS here\command] @="C:\\msys64\\msys2.exe bash"`
 
 ### Configure SSH
 
