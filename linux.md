@@ -44,6 +44,12 @@ display system info using `inxi`
 - `:wq` - save file and exit
 - `o` - new line
 
+### curl
+
+`-k`, `--insecure`
+
+> (SSL) This option explicitly allows curl to perform "insecure" SSL connections and transfers. All SSL connections are attempted to be made secure by using the CA certificate bundle installed by default. This makes all connections considered "insecure" fail unless -k, --insecure is used.
+
 ### Windows Subsystem for Linux (WSL)
 
 [Windows Console Colortool](https://blogs.msdn.microsoft.com/commandline/2017/08/11/introducing-the-windows-console-colortool/)
@@ -75,7 +81,8 @@ show options: `tmux show-options -g`
 run `nano -V` to check if `--enable-nanorc option` is present
 
 apply settings to
-  - all users:
-    - copy `nanorc` to `/etc/nanorc`
-  - a single user:
-    - copy `nanorc` to `$HOME/.nanorc`
+
+- all users:
+  - copy `nanorc` to `/etc/nanorc`
+- a single user:
+  - copy `nanorc` to `$HOME/.nanorc`
