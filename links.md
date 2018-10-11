@@ -21,7 +21,6 @@
 1. [Rebase Considered Harmful](http://changelog.complete.org/archives/586-rebase-considered-harmful)
 1. [Git in Bash](https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Bash)
 1. [Stop cherry-picking, start merging: Index](https://blogs.msdn.microsoft.com/oldnewthing/20180323-01/?p=98325)
-1. [Getting Started with Python in VS Code](https://code.visualstudio.com/docs/python/python-tutorial)
 
 ## Linux
 
@@ -35,6 +34,7 @@
 
 1. [JavaScript functions: understanding the basics](https://codeburst.io/javascript-functions-understanding-the-basics-207dbf42ed99)
 1. [Function declarations vs functiom expressions](https://javascriptweblog.wordpress.com/2010/07/06/function-declarations-vs-function-expressions/)
+1. [Google JSON style guide](https://google.github.io/styleguide/jsoncstyleguide.xml?showone=Property_Ordering_Example#Property_Ordering_Example)
 
 ## Functional Programming
 
@@ -60,6 +60,10 @@
 1. [Writing Your Own Debugger and Language Extensions with Visual Studio Code](https://www.codemag.com/Article/1809051/Writing-Your-Own-Debugger-and-Language-Extensions-with-Visual-Studio-Code)
 1. [awesome-vscode](https://github.com/viatsko/awesome-vscode)
 
+## Python
+
+1. [Getting Started with Python in VS Code](https://code.visualstudio.com/docs/python/python-tutorial)
+
 ## Miscellaneous
 
 1. [GitHub does dotfiles - dotfiles.github.io](https://dotfiles.github.io/)
@@ -71,7 +75,6 @@
 1. [10 Common Software Architectural Patterns in a nutshell](https://towardsdatascience.com/10-common-software-architectural-patterns-in-a-nutshell-a0b47a1e9013)
 1. [Jenkins Wrangling for fun and profit](https://coderanger.net/jenkins/)
 1. [GraphQL](https://graphql.org/)
-1. [Google JSON style guide](https://google.github.io/styleguide/jsoncstyleguide.xml?showone=Property_Ordering_Example#Property_Ordering_Example)
 1. [On Managers](https://www.codemag.com/Article/1803101/On-Managers)
 1. [On Transitioning](https://www.codemag.com/Article/1809101/On-Transitioning)
 1. [ascii doc](https://asciidoctor.org/docs/what-is-asciidoc/)
