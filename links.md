@@ -21,6 +21,7 @@
 1. [Rebase Considered Harmful](http://changelog.complete.org/archives/586-rebase-considered-harmful)
 1. [Git in Bash](https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Bash)
 1. [Stop cherry-picking, start merging: Index](https://blogs.msdn.microsoft.com/oldnewthing/20180323-01/?p=98325)
+1. [Getting Started with Python in VS Code](https://code.visualstudio.com/docs/python/python-tutorial)
 
 ## Linux
 
