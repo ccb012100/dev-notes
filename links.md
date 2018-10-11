@@ -77,3 +77,4 @@
 1. [GraphQL](https://graphql.org/)
 1. [ascii doc](https://asciidoctor.org/docs/what-is-asciidoc/)
 1. [den4b](https://www.den4b.com/)
+1. [The System Design Primer](https://github.com/donnemartin/system-design-primer)
