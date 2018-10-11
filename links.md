@@ -73,3 +73,4 @@
 1. [On Managers](https://www.codemag.com/Article/1803101/On-Managers)
 1. [On Transitioning](https://www.codemag.com/Article/1809101/On-Transitioning)
 1. [ascii doc](https://asciidoctor.org/docs/what-is-asciidoc/)
+1. [den4b](https://www.den4b.com/)
