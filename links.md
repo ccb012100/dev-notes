@@ -20,6 +20,7 @@
 1. [What is Git Bash for Windows anyway? - Super User](https://superuser.com/questions/1053633/what-is-git-bash-for-windows-anyway)
 1. [Rebase Considered Harmful](http://changelog.complete.org/archives/586-rebase-considered-harmful)
 1. [Git in Bash](https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Bash)
+[Stop cherry-picking, start merging: Index](https://blogs.msdn.microsoft.com/oldnewthing/20180323-01/?p=98325)
 
 ## Linux
 
