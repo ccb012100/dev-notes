@@ -75,7 +75,5 @@
 1. [10 Common Software Architectural Patterns in a nutshell](https://towardsdatascience.com/10-common-software-architectural-patterns-in-a-nutshell-a0b47a1e9013)
 1. [Jenkins Wrangling for fun and profit](https://coderanger.net/jenkins/)
 1. [GraphQL](https://graphql.org/)
-1. [On Managers](https://www.codemag.com/Article/1803101/On-Managers)
-1. [On Transitioning](https://www.codemag.com/Article/1809101/On-Transitioning)
 1. [ascii doc](https://asciidoctor.org/docs/what-is-asciidoc/)
 1. [den4b](https://www.den4b.com/)
