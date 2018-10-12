@@ -11,6 +11,7 @@
 1. [Benchmark.NET](https://github.com/dotnet/BenchmarkDotNet)
 1. [Ready for Prime Time: .NET Core 2.0 and ASP.NET Core 2.0 Have Arrived](https://www.codemag.com/Article/1803061/Ready-for-Prime-Time-.NET-Core-2.0-and-ASP.NET-Core-2.0-Have-Arrived)
 1. [Re-Assembling the Web with Web Assembly and Blazor](https://www.codemag.com/Article/1809061/Re-Assembling-the-Web-with-Web-Assembly-and-Blazor)
+1. [Models and Their Interfaces in C# API Design](https://www.infoq.com/articles/CSharp-Models)
 
 ## git
 
