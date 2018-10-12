@@ -83,3 +83,4 @@
 1. [GraphQL](https://graphql.org/)
 1. [den4b](https://www.den4b.com/)
 1. [The System Design Primer](https://github.com/donnemartin/system-design-primer)
+1. [InfoQ](https://www.infoq.com/)
