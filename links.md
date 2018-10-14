@@ -65,7 +65,8 @@
 
 1. [Getting Started with Python in VS Code](https://code.visualstudio.com/docs/python/python-tutorial)
 1. [Real Python](https://realpython.com/)
-1. [Pyhtong module of the week](https://pymotw.com/3/)
+1. [Python module of the week](https://pymotw.com/3/)
+1. [Learn X in Y minutes](https://learnxinyminutes.com/docs/python3/)
 
 ## AsciiDoc
 
