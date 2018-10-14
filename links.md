@@ -44,6 +44,7 @@
 1. [Welcome to schemers.org!](https://schemers.org/)
 1. [Real World Haskell](http://book.realworldhaskell.org/read)
 1. [Learn you a Haskell for Great Good!](http://learnyouahaskell.com/chapters)
+1. [A Road to Common Lisp](http://stevelosh.com/blog/2018/08/a-road-to-common-lisp/)
 
 ## Tutorials
 
