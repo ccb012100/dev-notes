@@ -90,3 +90,4 @@
 1. [den4b](https://www.den4b.com/)
 1. [The System Design Primer](https://github.com/donnemartin/system-design-primer)
 1. [InfoQ](https://www.infoq.com/)
+1. [Advent of Code](https://adventofcode.com/2017)
