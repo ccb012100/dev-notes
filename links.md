@@ -91,3 +91,4 @@
 1. [The System Design Primer](https://github.com/donnemartin/system-design-primer)
 1. [InfoQ](https://www.infoq.com/)
 1. [Advent of Code](https://adventofcode.com/2017)
+1. [open CLI framework](https://medium.com/@jdxcode/12-factor-cli-apps-dd3c227a0e46)
