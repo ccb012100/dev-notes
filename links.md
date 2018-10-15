@@ -70,12 +70,13 @@
 1. [Learn X in Y minutes](https://learnxinyminutes.com/docs/python3/)
 1. [Full stack python](https://www.fullstackpython.com/best-python-resources.html)
 1. [The History of Python](http://python-history.blogspot.com/)
+1. [Python Central](https://www.pythoncentral.io/)
+
 ## AsciiDoc
 
 1. [ascii doc](https://asciidoctor.org/docs/what-is-asciidoc/)
 1. [AsciiDoc cheatsheet](https://powerman.name/doc/asciidoc)
 1. [AsciiDoc Writer's Guide](https://asciidoctor.org/docs/asciidoc-writers-guide/)
-1. [Python Central](https://www.pythoncentral.io/)
 
 ## Miscellaneous
 
