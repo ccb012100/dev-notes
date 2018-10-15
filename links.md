@@ -71,6 +71,7 @@
 1. [Full stack python](https://www.fullstackpython.com/best-python-resources.html)
 1. [The History of Python](http://python-history.blogspot.com/)
 1. [Python Central](https://www.pythoncentral.io/)
+1. [How to Embed an interactive Python interpreter console](https://www.pythoncentral.io/embed-interactive-python-interpreter-console/)
 
 ## AsciiDoc
 
