@@ -75,6 +75,7 @@
 1. [ascii doc](https://asciidoctor.org/docs/what-is-asciidoc/)
 1. [AsciiDoc cheatsheet](https://powerman.name/doc/asciidoc)
 1. [AsciiDoc Writer's Guide](https://asciidoctor.org/docs/asciidoc-writers-guide/)
+1. [Python Central](https://www.pythoncentral.io/)
 
 ## Miscellaneous
 
