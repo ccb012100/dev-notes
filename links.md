@@ -4,10 +4,9 @@
 
 1. [Advanced Architecture for ASP.NET Core Web API](https://www.infoq.com/articles/advanced-architecture-aspnet-core)
 1. [ASP.NET Core - The Power of Simplicity](https://www.infoq.com/articles/aspnetcore-power-of-simplicity)
-1. [Azure and .NET Core Are Beautiful Together](https://www.infoq.com/articles/azure-and-net-core?utm_campaign=rightbar_v2&utm_source=infoq&utm_medium=articles_link&utm_content=link_text)
+1. [Azure and .NET Core Are Beautiful Together](https://www.infoq.com/articles/azure-and-net-core)
 1. [C# 8 Ranges and Recursive Patterns](https://www.infoq.com/articles/cs8-ranges-and-recursive-patterns)
-1. [Performance is a Key .NET Core Feature](https://www.infoq.com/articles/performance-net-core?utm_campaign=rightbar_v2&utm_source=infoq&utm_medium=articles_link&utm_content=link_text)
-1. [The Argument for WCF Hosting in .NET Core](https://www.infoq.com/articles/WCF-Net-Core-Debate?utm_campaign=rightbar_v2&utm_source=infoq&utm_medium=articles_link&utm_content=link_text)
+1. [Performance is a Key .NET Core Feature](https://www.infoq.com/articles/performance-net-core)
 1. [Benchmark.NET](https://github.com/dotnet/BenchmarkDotNet)
 1. [Ready for Prime Time: .NET Core 2.0 and ASP.NET Core 2.0 Have Arrived](https://www.codemag.com/Article/1803061/Ready-for-Prime-Time-.NET-Core-2.0-and-ASP.NET-Core-2.0-Have-Arrived)
 1. [Re-Assembling the Web with Web Assembly and Blazor](https://www.codemag.com/Article/1809061/Re-Assembling-the-Web-with-Web-Assembly-and-Blazor)
@@ -44,7 +43,6 @@
 1. [Welcome to schemers.org!](https://schemers.org/)
 1. [Real World Haskell](http://book.realworldhaskell.org/read)
 1. [Learn you a Haskell for Great Good!](http://learnyouahaskell.com/chapters)
-1. [A Road to Common Lisp](http://stevelosh.com/blog/2018/08/a-road-to-common-lisp/)
 
 ## Tutorials
 
@@ -67,11 +65,11 @@
 1. [Getting Started with Python in VS Code](https://code.visualstudio.com/docs/python/python-tutorial)
 1. [Real Python](https://realpython.com/)
 1. [Python module of the week](https://pymotw.com/3/)
-1. [Learn X in Y minutes](https://learnxinyminutes.com/docs/python3/)
 1. [Full stack python](https://www.fullstackpython.com/best-python-resources.html)
 1. [The History of Python](http://python-history.blogspot.com/)
 1. [Python Central](https://www.pythoncentral.io/)
 1. [How to Embed an interactive Python interpreter console](https://www.pythoncentral.io/embed-interactive-python-interpreter-console/)
+1. [Primer on Python Decorators](https://realpython.com/primer-on-python-decorators/)
 
 ## AsciiDoc
 
