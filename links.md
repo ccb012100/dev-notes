@@ -76,6 +76,8 @@
 1. [ascii doc](https://asciidoctor.org/docs/what-is-asciidoc/)
 1. [AsciiDoc cheatsheet](https://powerman.name/doc/asciidoc)
 1. [AsciiDoc Writer's Guide](https://asciidoctor.org/docs/asciidoc-writers-guide/)
+1. [https://mrhaki.blogspot.com/search/label/Asciidoc](https://mrhaki.blogspot.com/search/label/Asciidoc)
+1. (https://mrhaki.blogspot.com/search/label/Asciidoctor)[https://mrhaki.blogspot.com/search/label/Asciidoctor]
 
 ## Miscellaneous
 
