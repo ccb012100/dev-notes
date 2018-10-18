@@ -29,6 +29,7 @@
 1. [Linux Fu: A Little Help for Bash | Hackaday](https://hackaday.com/2018/02/02/linux-fu-a-little-help-for-bash/)
 1. [Linux Fu: System Administration Made Easier | Hackaday](https://hackaday.com/2017/11/09/linux-fu-system-administration-made-easier/)
 1. [Get your data back with Linux based recovery tools](https://www.linux.com/learn/get-your-data-back-linux-based-data-recovery-tools)
+1. [Coding like a hacker in the terminal](https://medium.com/@caleb89taylor/coding-like-a-hacker-in-the-terminal-79e22954968e)
 
 ## JavaScript
 
