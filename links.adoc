@@ -1,6 +1,6 @@
 # Weblinks
 
-## dotnet core
+== dotnet core
 
 
 1. https://www.infoq.com/articles/advanced-architecture-aspnet-core[Advanced Architecture for ASP.NET Core Web API]
@@ -13,7 +13,7 @@
 1. https://www.codemag.com/Article/1809061/Re-Assembling-the-Web-with-Web-Assembly-and-Blazor[Re-Assembling the Web with Web Assembly and Blazor]
 1. https://www.infoq.com/articles/CSharp-Models[Models and Their Interfaces in C# API Design]
 
-## git
+== git
 
 1. https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging[Git - Basic Branching and Merging]
 1. https://www.atlassian.com/git/tutorials/using-branches/git-merge[Git Merge | Atlassian Git Tutorial]
@@ -23,7 +23,7 @@
 1. https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Bash[Git in Bash]
 1. https://blogs.msdn.microsoft.com/oldnewthing/20180323-01/?p=98325[Stop cherry-picking, start merging: Index]
 
-## Linux
+== Linux
 
 
 1. https://ss64.com/bash/syntax-keyboard.html[bash keyboard shortcuts - Bash - SS64.com]
@@ -31,15 +31,25 @@
 1. https://hackaday.com/2018/02/02/linux-fu-a-little-help-for-bash/[Linux Fu: A Little Help for Bash | Hackaday]
 1. https://hackaday.com/2017/11/09/linux-fu-system-administration-made-easier/[Linux Fu: System Administration Made Easier | Hackaday]
 1. https://www.linux.com/learn/get-your-data-back-linux-based-data-recovery-tools[Get your data back with Linux based recovery tools]
+1. https://dotfiles.github.io/[GitHub does dotfiles - dotfiles.github.io]
+1. https://medium.com/@jdxcode/12-factor-cli-apps-dd3c227a0e46[open CLI framework]
+1. https://github.com/tmux-plugins/tpm[Tmux Plugin Manager]
+1. https://github.com/jooize/tmux-powerline-theme[tmux Powerline theme]
+=== zsh
 
-## JavaScript
+1. https://ohmyz.sh/[Oh My Zsh]
+1. http://zsh.sourceforge.net/FAQ/zshfaq01.html[zsh FAQ]
+1. https://github.com/powerline/fonts[Powerline fonts]
+1. https://github.com/denysdovhan/spaceship-prompt[Spaceship ZSH]
+
+== JavaScript
 
 
 1. https://codeburst.io/javascript-functions-understanding-the-basics-207dbf42ed99[JavaScript functions: understanding the basics]
 1. https://javascriptweblog.wordpress.com/2010/07/06/function-declarations-vs-function-expressions/[Function declarations vs functiom expressions]
 1. https://google.github.io/styleguide/jsoncstyleguide.xml?showone=Property_Ordering_Example#Property_Ordering_Example[Google JSON style guide]
 
-## Functional Programming
+== Functional Programming
 
 1. http://www.racket-lang.org/[Racket]
 1. https://www.scheme.com/tspl4/[The Scheme Programming Language, 4th Edition]
@@ -47,7 +57,7 @@
 1. http://book.realworldhaskell.org/read[Real World Haskell]
 1. http://learnyouahaskell.com/chapters[Learn you a Haskell for Great Good!]
 
-## Tutorials
+== Tutorials
 
 
 1. http://marijnhaverbeke.nl/turtle/[A gentle introduction to machine fundamentals]
@@ -57,14 +67,14 @@
 1. https://www.nand2tetris.org/[nand 2 Tetris]
 1. https://download-mirror.savannah.gnu.org/releases/pgubook/ProgrammingGroundUp-1-0-booksize.pdf[Programming from the ground up]
 
-## VS Code
+== VS Code
 
 1. https://code.visualstudio.com/docs/extensions/overview[Extending Visual Studio Code]
 1. https://reddit.com/r/programming/comments/9mg9xh/visual_studio_code_september_2018/e7f7fbt[VS Code extensions]
 1. https://www.codemag.com/Article/1809051/Writing-Your-Own-Debugger-and-Language-Extensions-with-Visual-Studio-Code[Writing Your Own Debugger and Language Extensions with Visual Studio Code]
 1. https://github.com/viatsko/awesome-vscode[awesome-vscode]
 
-## Python
+== Python
 
 1. https://code.visualstudio.com/docs/python/python-tutorial[Getting Started with Python in VS Code]
 1. https://realpython.com/[Real Python]
@@ -75,17 +85,16 @@
 1. https://www.pythoncentral.io/embed-interactive-python-interpreter-console/[How to Embed an interactive Python interpreter console]
 1. https://realpython.com/primer-on-python-decorators/[Primer on Python Decorators]
 
-## AsciiDoc
+== AsciiDoc
 
 1. https://asciidoctor.org/docs/what-is-asciidoc/[ascii doc]
 1. https://powerman.name/doc/asciidoc[AsciiDoc cheatsheet]
 1. https://asciidoctor.org/docs/asciidoc-writers-guide/[AsciiDoc Writer's Guide]
-1. https://mrhaki.blogspot.com/search/label/Asciidoc[https://mrhaki.blogspot.com/search/label/Asciidoc]
-1. (https://mrhaki.blogspot.com/search/label/Asciidoctor)[https://mrhaki.blogspot.com/search/label/Asciidoctor]
+1. https://mrhaki.blogspot.com/search/label/Asciidoc
+1. https://mrhaki.blogspot.com/search/label/Asciidoctor
 
-## Miscellaneous
+== Miscellaneous
 
-1. https://dotfiles.github.io/[GitHub does dotfiles - dotfiles.github.io]
 1. https://increment.com/documentation/[Increment: Documentation]
 1. https://queue.acm.org/detail.cfm?id=3212479[C is not a low level language]
 1. https://pages.github.com/[github pages]
@@ -98,5 +107,4 @@
 1. https://github.com/donnemartin/system-design-primer[The System Design Primer]
 1. https://www.infoq.com/[InfoQ]
 1. https://adventofcode.com/2017[Advent of Code]
-1. https://medium.com/@jdxcode/12-factor-cli-apps-dd3c227a0e46[open CLI framework]
 1. https://learnxinyminutes.com/[Learn X in Y Minutes]
