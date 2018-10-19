@@ -2,7 +2,6 @@
 
 == dotnet core
 
-
 1. https://www.infoq.com/articles/advanced-architecture-aspnet-core[Advanced Architecture for ASP.NET Core Web API]
 1. https://www.infoq.com/articles/aspnetcore-power-of-simplicity[ASP.NET Core - The Power of Simplicity]
 1. https://www.infoq.com/articles/azure-and-net-core[Azure and .NET Core Are Beautiful Together]
@@ -25,7 +24,6 @@
 
 == Linux
 
-
 1. https://ss64.com/bash/syntax-keyboard.html[bash keyboard shortcuts - Bash - SS64.com]
 1. https://remysharp.com/2018/08/23/cli-improved[CLI: improved]
 1. https://hackaday.com/2018/02/02/linux-fu-a-little-help-for-bash/[Linux Fu: A Little Help for Bash | Hackaday]
@@ -35,6 +33,7 @@
 1. https://medium.com/@jdxcode/12-factor-cli-apps-dd3c227a0e46[open CLI framework]
 1. https://github.com/tmux-plugins/tpm[Tmux Plugin Manager]
 1. https://github.com/jooize/tmux-powerline-theme[tmux Powerline theme]
+
 === zsh
 
 1. https://ohmyz.sh/[Oh My Zsh]
@@ -43,7 +42,6 @@
 1. https://github.com/denysdovhan/spaceship-prompt[Spaceship ZSH]
 
 == JavaScript
-
 
 1. https://codeburst.io/javascript-functions-understanding-the-basics-207dbf42ed99[JavaScript functions: understanding the basics]
 1. https://javascriptweblog.wordpress.com/2010/07/06/function-declarations-vs-function-expressions/[Function declarations vs functiom expressions]
@@ -58,7 +56,6 @@
 1. http://learnyouahaskell.com/chapters[Learn you a Haskell for Great Good!]
 
 == Tutorials
-
 
 1. http://marijnhaverbeke.nl/turtle/[A gentle introduction to machine fundamentals]
 1. https://github.com/danistefanovic/build-your-own-x/blob/master/README.md[Build your own x]
