@@ -1,14 +1,27 @@
-## MSYS2
+= MSYS2
 
-### inherit the Windows $PATH
+=== inherit the Windows $PATH
 
-- [edit Windows Environment variables](https://sourceforge.net/p/msys2/discussion/general/thread/dbe17030/#3f85)
+- https://sourceforge.net/p/msys2/discussion/general/thread/dbe17030/#3f85[edit Windows Environment variables]
   - add `MSYS2_PATH_TYPE=inherit`
 
 ### add MSYS2 to context menu
 
-- <https://github.com/njzhangyifei/msys2-mingw-shortcut-menus>
+https://github.com/njzhangyifei/msys2-mingw-shortcut-menus
 
 ### Configure SSH
 
-- see this procedure: <https://github.com/OULibraries/msys2-setup/blob/master/02-ssh.md>
+see this procedure: https://github.com/OULibraries/msys2-setup/blob/master/02-ssh.md
+
+=== set `zxh` as default shell
+
+add in `\~/.bash_profile`/`~/.bashrc`:
+
+```bash
+# Launch Zsh
+if [ -t 1 ]; then
+    exec zsh
+fi
+```
+
+see https://gist.github.com/aviaryan/5a57aa25b140f6c48f0e

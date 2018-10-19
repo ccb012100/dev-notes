@@ -1,6 +1,19 @@
 # Linux
 
-Display PATH
+`CDABLE_VARS`
+
+- aliases for directories
+
+example:
+
+```bash
+# Convenient path navigation, e.g., `cd vp`
+setopt CDABLE_VARS
+vp="/c/Dev/VersionPress/versionpress"
+temp="/c/Dev/temp"
+```
+
+Display formatted `PATH`
 
 - **sed**
 
@@ -14,9 +27,14 @@ Display PATH
 
   - `$ python2 -c "import os; print os.environ['PATH'].replace(':', '\n')"`
 
-Change colors in terminal: `dircolors`
+`dircolors`
+- Change colors in terminal
 
-Reload .bashrc: `source .bashrc`
+Reload `.bashrc`
+- `source .bashrc`
+
+Set default shell to `zsh`
+- `chsh -s $(which zsh)`
 
 useful packages
 
@@ -38,23 +56,33 @@ display system info using `inxi`
 
 - `inxi -Frmxx`
 
-### vi
+---
+
+### `vi`
 
 - `:q` - exit
 - `:wq` - save file and exit
 - `o` - new line
 
-### curl
+---
+
+### `curl`
 
 `-k`, `--insecure`
 
 > (SSL) This option explicitly allows curl to perform "insecure" SSL connections and transfers. All SSL connections are attempted to be made secure by using the CA certificate bundle installed by default. This makes all connections considered "insecure" fail unless -k, --insecure is used.
 
+---
+
 ### Windows Subsystem for Linux (WSL)
 
 [Windows Console Colortool](https://blogs.msdn.microsoft.com/commandline/2017/08/11/introducing-the-windows-console-colortool/)
+---
+#### package management
 
-### tmux
+- `sudo apt-get install PACKAGE_NAME`
+---
+### `tmux`
 
 toggle full-screen on current pane: `C-b z`
 
@@ -64,21 +92,23 @@ rename window: `C-b ,`
 
 show options: `tmux show-options -g`
 
+---
+
 ### Nano
 
 #### switches
 
-- **-B** (backs up the file prior to editing it)
-- **-E** (converts tabs to spaces when editing)
-- **-c** (constantly show the cursor position stats)
-- **-i** (automatically indents new lines to the same position as the previous line)
-- **-k** (toggle cut so that it cuts from cursor position instead of the whole line)
-- **-m** (provides mouse support to the editor)
-- **-v** (opens file as readonly)
+- **`-B`** (backs up the file prior to editing it)
+- **`-E`** (converts tabs to spaces when editing)
+- **`-c`** (constantly show the cursor position stats)
+- **`-i`** (automatically indents new lines to the same position as the previous line)
+- **`-k`** (toggle cut so that it cuts from cursor position instead of the whole line)
+- **`-m`** (provides mouse support to the editor)
+- **`-v`** (opens file as readonly)
 
 ### nanorc
 
-run `nano -V` to check if `--enable-nanorc option` is present
+* run `nano -V` to check if `--enable-nanorc option` is present
 
 apply settings to
 
