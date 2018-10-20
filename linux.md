@@ -28,12 +28,15 @@ Display formatted `PATH`
   - `$ python2 -c "import os; print os.environ['PATH'].replace(':', '\n')"`
 
 `dircolors`
+
 - Change colors in terminal
 
 Reload `.bashrc`
+
 - `source .bashrc`
 
 Set default shell to `zsh`
+
 - `chsh -s $(which zsh)`
 
 useful packages
@@ -58,7 +61,7 @@ display system info using `inxi`
 
 ---
 
-### `vi`
+## `vi`
 
 - `:q` - exit
 - `:wq` - save file and exit
@@ -66,7 +69,7 @@ display system info using `inxi`
 
 ---
 
-### `curl`
+## `curl`
 
 `-k`, `--insecure`
 
@@ -74,15 +77,19 @@ display system info using `inxi`
 
 ---
 
-### Windows Subsystem for Linux (WSL)
+## Windows Subsystem for Linux (WSL)
 
 [Windows Console Colortool](https://blogs.msdn.microsoft.com/commandline/2017/08/11/introducing-the-windows-console-colortool/)
+
 ---
-#### package management
+
+### package management
 
 - `sudo apt-get install PACKAGE_NAME`
+
 ---
-### `tmux`
+
+## `tmux`
 
 toggle full-screen on current pane: `C-b z`
 
@@ -94,9 +101,9 @@ show options: `tmux show-options -g`
 
 ---
 
-### Nano
+## Nano
 
-#### switches
+### switches
 
 - **`-B`** (backs up the file prior to editing it)
 - **`-E`** (converts tabs to spaces when editing)
@@ -108,7 +115,7 @@ show options: `tmux show-options -g`
 
 ### nanorc
 
-* run `nano -V` to check if `--enable-nanorc option` is present
+- run `nano -V` to check if `--enable-nanorc option` is present
 
 apply settings to
 
