@@ -107,3 +107,4 @@
 1. https://www.infoq.com/[InfoQ]
 1. https://adventofcode.com/2017[Advent of Code]
 1. https://learnxinyminutes.com/[Learn X in Y Minutes]
+1. https://angularconsole.com/[Angular Console]
