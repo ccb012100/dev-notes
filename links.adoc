@@ -33,6 +33,7 @@
 1. https://medium.com/@jdxcode/12-factor-cli-apps-dd3c227a0e46[open CLI framework]
 1. https://github.com/tmux-plugins/tpm[Tmux Plugin Manager]
 1. https://github.com/jooize/tmux-powerline-theme[tmux Powerline theme]
+1. https://github.com/tmuxinator/tmuxinator[tmuxinator]
 
 === zsh
 
