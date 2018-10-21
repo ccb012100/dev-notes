@@ -38,6 +38,7 @@
 1. https://github.com/jooize/tmux-powerline-theme[tmux Powerline theme]
 1. https://github.com/tmuxinator/tmuxinator[tmuxinator]
 1. https://github.com/tmux-plugins/tmux-resurrect[tmux resurrect]
+1. https://github.com/tmux-plugins/tmux-continuum[tmux-continuum]
 
 === zsh
 
