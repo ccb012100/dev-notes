@@ -48,6 +48,7 @@
 1. https://github.com/denysdovhan/spaceship-prompt[Spaceship ZSH]
 1. https://github.com/sindresorhus/pure[pure zsh prompt]
 1. https://bennycwong.github.io/post/speeding-up-oh-my-zsh/[Speed Up Oh-My-Zsh]
+1. https://github.com/zsh-users/zsh-autosuggestions[zsh autosuggestions]
 
 == JavaScript
 
