@@ -13,9 +13,9 @@ https://github.com/njzhangyifei/msys2-mingw-shortcut-menus
 
 see this procedure: https://github.com/OULibraries/msys2-setup/blob/master/02-ssh.md
 
-=== set `zsh` as default shell
+=== set `zxh` as default shell
 
-add in `\~/.bash_profile` or `~/.bashrc`:
+add in `\~/.bash_profile`/`~/.bashrc`:
 
 ```bash
 # Launch Zsh
