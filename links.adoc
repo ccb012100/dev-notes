@@ -31,6 +31,8 @@
 1. https://www.linux.com/learn/get-your-data-back-linux-based-data-recovery-tools[Get your data back with Linux based recovery tools]
 1. https://dotfiles.github.io/[GitHub does dotfiles - dotfiles.github.io]
 1. https://medium.com/@jdxcode/12-factor-cli-apps-dd3c227a0e46[open CLI framework]
+1. https://github.com/sharkdp/bat[bat]
+1. https://github.com/nicolargo/glances[glances]
 
 === tmux
 
@@ -42,13 +44,8 @@
 
 === zsh
 
-1. https://ohmyz.sh/[Oh My Zsh]
-1. http://zsh.sourceforge.net/FAQ/zshfaq01.html[zsh FAQ]
-1. https://github.com/powerline/fonts[Powerline fonts]
-1. https://github.com/denysdovhan/spaceship-prompt[Spaceship ZSH]
 1. https://github.com/sindresorhus/pure[pure zsh prompt]
-1. https://bennycwong.github.io/post/speeding-up-oh-my-zsh/[Speed Up Oh-My-Zsh]
-1. https://github.com/zsh-users/zsh-autosuggestions[zsh autosuggestions]
+1. http://zsh.sourceforge.net/FAQ/zshfaq01.html[zsh FAQ]
 
 == JavaScript
 

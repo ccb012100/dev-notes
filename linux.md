@@ -41,13 +41,17 @@ Set default shell to `zsh`
 
 useful packages
 
-- `htop`
 - [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy)
-- [bat](https://github.com/sharkdp/bat)
-- `fzf`
-- `glances`
+- [fzf](https://github.com/junegunn/fzf)
+- `htop`
 - `jq`
+- [oh-my-zsh](https://ohmyz.sh)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
+- [Powerline fonts](https://github.com/powerline/fonts)
+- [Spaceship ZSH](https://github.com/denysdovhan/spaceship-prompt)
+- [z - jump around](https://github.com/rupa/z)
 - `zsh`
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 
 reload `.bashrc`
 
@@ -88,6 +92,10 @@ display system info using `inxi`
 1. copy `Dracula.itermcolors` to Colortool's `themes` folder
 1. open Windows Command Prompt
 1. run cmd `colortool -d Dracula`
+
+### z - jump around
+
+modify .zshrc [to fix error](https://github.com/rupa/z/issues/230#issuecomment-362297213): `_z_precmd:1: nice(5) failed: operation not permitted`
 
 ---
 
