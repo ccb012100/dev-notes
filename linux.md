@@ -1,18 +1,5 @@
 # Linux
 
-`CDABLE_VARS`
-
-- aliases for directories
-
-example:
-
-```bash
-# Convenient path navigation, e.g., `cd vp`
-setopt CDABLE_VARS
-vp="/c/Dev/VersionPress/versionpress"
-temp="/c/Dev/temp"
-```
-
 Display formatted `PATH`
 
 - **sed**
@@ -153,3 +140,16 @@ default aliases are in `~/.oh-my-zsh/plugins`
 - linux command aliases in `~/.oh-my-zsh/plugins/common-aliases/common-aliases.plugin.zsh`
 
 add custom alises in `$ZSH_CUSTOM/aliases.zsh`
+
+#### `cdablevars`
+
+- aliases for directories
+
+example:
+
+```bash
+# Convenient path navigation, e.g., `cd vp`
+setopt cdablevars
+vp="/c/Dev/VersionPress/versionpress"
+temp="/c/Dev/temp"
+```
