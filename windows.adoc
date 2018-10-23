@@ -1,0 +1,17 @@
+= Windows
+
+.Getting a window off screen back into view
+
+- Hold down the `Shift` key while right-clicking the program in the taskbar
+- Select `Move`
+- Use the arrow keys to move the window over to the visible desktop
+
+.Remap left `Caps Lock` to `Ctrl`
+
+*_keys.reg_*
+----
+; Map Caps Lock to Ctrl
+REGEDIT4
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
+"Scancode Map"=hex:00,00,00,00,00,00,00,00,02,00,00,00,1d,00,3a,00,00,00,00,00
+----
