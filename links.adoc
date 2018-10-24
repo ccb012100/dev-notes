@@ -33,6 +33,7 @@
 1. https://medium.com/@jdxcode/12-factor-cli-apps-dd3c227a0e46[open CLI framework]
 1. https://github.com/sharkdp/bat[bat]
 1. https://github.com/nicolargo/glances[glances]
+1. https://www.linuxlinks.com/bestconsolefilemanagers/[7 Excellent Console Linux File Managers]
 
 === tmux
 
