@@ -114,3 +114,4 @@
 1. https://learnxinyminutes.com/[Learn X in Y Minutes]
 1. https://angularconsole.com/[Angular Console]
 1. https://www.onlinedatagenerator.com/[online data generator]
+1. https://coderanger.net/jenkins/[Jenkins Wrangling for Fun and Profit]
