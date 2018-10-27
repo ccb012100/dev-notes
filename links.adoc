@@ -47,6 +47,7 @@
 
 1. https://github.com/sindresorhus/pure[pure zsh prompt]
 1. http://zsh.sourceforge.net/FAQ/zshfaq01.html[zsh FAQ]
+1. https://github.com/bhilburn/powerlevel9k[Powerlevel9k]
 
 == JavaScript
 
