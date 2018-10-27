@@ -5,17 +5,17 @@
 - https://sourceforge.net/p/msys2/discussion/general/thread/dbe17030/#3f85[edit Windows Environment variables]
   - add `MSYS2_PATH_TYPE=inherit`
 
-### add MSYS2 to context menu
+=== add MSYS2 to context menu
 
 https://github.com/njzhangyifei/msys2-mingw-shortcut-menus
 
-### Configure SSH
+=== Configure SSH
 
 see this procedure: https://github.com/OULibraries/msys2-setup/blob/master/02-ssh.md
 
-=== set `zxh` as default shell
+=== set `zsh` as default shell
 
-add in `\~/.bash_profile`/`~/.bashrc`:
+in `\~/.bash_profile`/`~/.bashrc`, add:
 
 ```bash
 # Launch Zsh
@@ -25,3 +25,9 @@ fi
 ```
 
 see https://gist.github.com/aviaryan/5a57aa25b140f6c48f0e
+
+=== zsh
+
+agkozak ZSH Prompt::
+only windows zsh theme that uses async git calls +
+https://github.com/agkozak/agkozak-zsh-prompt
