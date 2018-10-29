@@ -32,9 +32,10 @@ useful packages
 - [fzf](https://github.com/junegunn/fzf)
 - `htop`
 - `jq`
+- [nnn](https://github.com/jarun/nnn)
 - [oh-my-zsh](https://ohmyz.sh)
-- [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [Powerline fonts](https://github.com/powerline/fonts)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [Spaceship ZSH](https://github.com/denysdovhan/spaceship-prompt)
 - [z - jump around](https://github.com/rupa/z)
 - `zsh`
