@@ -34,6 +34,7 @@
 1. https://github.com/sharkdp/bat[bat]
 1. https://github.com/nicolargo/glances[glances]
 1. https://www.linuxlinks.com/bestconsolefilemanagers/[7 Excellent Console Linux File Managers]
+1. https://terminalsare.sexy/[Terminals Are Sexy]
 
 === tmux
 
