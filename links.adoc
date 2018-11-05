@@ -55,6 +55,8 @@
 1. https://codeburst.io/javascript-functions-understanding-the-basics-207dbf42ed99[JavaScript functions: understanding the basics]
 1. https://javascriptweblog.wordpress.com/2010/07/06/function-declarations-vs-function-expressions/[Function declarations vs functiom expressions]
 1. https://google.github.io/styleguide/jsoncstyleguide.xml?showone=Property_Ordering_Example#Property_Ordering_Example[Google JSON style guide]
+1. https://gist.github.com/staltz/868e7e9bc2a7b8c1f754[The introduction to Reactive Programming 
+you've been missing]
 
 == Functional Programming
 
