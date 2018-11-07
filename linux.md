@@ -28,8 +28,10 @@ Set default shell to `zsh`
 
 useful packages
 
+- [bat](https://github.com/sharkdp/bat)
 - [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy)
 - [fzf](https://github.com/junegunn/fzf)
+- [glances](https://github.com/nicolargo/glances)
 - `htop`
 - `jq`
 - [nnn](https://github.com/jarun/nnn)
