@@ -31,3 +31,10 @@ see https://gist.github.com/aviaryan/5a57aa25b140f6c48f0e
 agkozak ZSH Prompt::
 only windows zsh theme that uses async git calls +
 https://github.com/agkozak/agkozak-zsh-prompt
+
+== mintty
+
+=== themes
+
+https://gist.github.com/mohnish/fbdb87bd8f5c7ecc46de519fbdd4b68c
+https://gist.github.com/appikonda/34bf60df4253c430c4ee3254cfc0be83
