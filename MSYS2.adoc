@@ -38,3 +38,7 @@ https://github.com/agkozak/agkozak-zsh-prompt
 
 https://gist.github.com/mohnish/fbdb87bd8f5c7ecc46de519fbdd4b68c
 https://gist.github.com/appikonda/34bf60df4253c430c4ee3254cfc0be83
+
+=== convert CRLF to LF
+
+`$ tr -d '\r' < windows.csv > unix.csv`
