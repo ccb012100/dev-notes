@@ -1,0 +1,11 @@
+== Python
+
+=== Useful Resources
+
+- https://code.visualstudio.com/docs/python/python-tutorial[Getting Started with Python in VS Code]
+- https://realpython.com/[Real Python]
+- https://pymotw.com/3/[Python module of the week]
+- https://www.fullstackpython.com/best-python-resources.html[Full stack python]
+- http://python-history.blogspot.com/[The History of Python]
+- https://www.pythoncentral.io[Python Central]
+- https://www.pythoncentral.io/embed-interactive-python-interpreter-console[How to Embed an interactive Python interpreter console]
