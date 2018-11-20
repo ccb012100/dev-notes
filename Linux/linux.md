@@ -82,10 +82,6 @@ display system info using `inxi`
 
 ---
 
-## Windows Subsystem for Linux (WSL)
-
-[Windows Console Colortool](https://blogs.msdn.microsoft.com/commandline/2017/08/11/introducing-the-windows-console-colortool/)
-
 ### set Dracula as theme
 
 1. download dracula iTerm theme
