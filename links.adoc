@@ -60,6 +60,7 @@ you've been missing]
 1. https://schemers.org/[Welcome to schemers.org!]
 1. http://book.realworldhaskell.org/read[Real World Haskell]
 1. http://learnyouahaskell.com/chapters[Learn you a Haskell for Great Good!]
+1. https://medium.com/javascript-scene/composing-software-an-introduction-27b72500d6ea[Composing Software: an introduction]
 
 == Tutorials
 
