@@ -14,8 +14,6 @@
 
 == git
 
-1. https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging[Git - Basic Branching and Merging]
-1. https://www.atlassian.com/git/tutorials/using-branches/git-merge[Git Merge | Atlassian Git Tutorial]
 1. https://superuser.com/questions/1053633/what-is-git-bash-for-windows-anyway[What is Git Bash for Windows anyway? - Super User]
 1. http://changelog.complete.org/archives/586-rebase-considered-harmful[Rebase Considered Harmful]
 1. https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Bash[Git in Bash]
@@ -103,7 +101,6 @@ you've been missing]
 1. https://increment.com/documentation/[Increment: Documentation]
 1. https://queue.acm.org/detail.cfm?id=3212479[C is not a low level language]
 1. https://pages.github.com/[github pages]
-1. https://www.labnol.org/internet/github-gist-tutorial/28499/[What can you do with Gists on GitHub?]
 1. https://glitch.com/[Glitch]
 1. https://towardsdatascience.com/10-common-software-architectural-patterns-in-a-nutshell-a0b47a1e9013[10 Common Software Architectural Patterns in a nutshell]
 1. https://graphql.org/[GraphQL]
