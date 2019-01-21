@@ -19,3 +19,7 @@ REGEDIT4
 .Royal TS slow startup
 
 https://support.royalapplications.com/support/solutions/articles/17000027841-royal-ts-installation-taking-a-very-long-time-or-royal-ts-is-running-slow-in-general
+
+.Windows Startup folder
+
+`Win + R` -> enter `shell:startup` in Run window
