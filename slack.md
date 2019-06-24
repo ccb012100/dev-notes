@@ -23,6 +23,8 @@
     i.c-icon.c-icon--chevron-medium-left { color: #F1FA8C; } /* back arrow in pinned file details in sidebar */
     nav.p-channel_sidebar .p-channel_sidebar__channel--selected, .p-channel_sidebar__link--selected, .c-message_list__day_divider__label__pill, .p-message_pane .c-message_list.c-virtual_list--scrollbar > .c-scrollbar__hider:before { color: #F8F8F2!important;background: #FF79C6 !important; } /* day label for day separators in message pane */
     pre {} /* code blocks */
+    span.c-app_label { color: pink; } /* app label for app integration messages */
+    span.file_meta_expaned { color: #BD93F9; } /* unread message list - collapsed attachment in message - name of attachment sender */
     ts-mention.c-member_slug.c-member_slug--link.ts_tip_texty { color: black !important; } /* user/group tag in message input textbar */
     #msg_form #msg_input {border-color: transparent;} /* message input section */
     #msg_input, #primary_file_button { background: #121212 !important; } /* background of message textbar */
@@ -38,6 +40,7 @@
     .c-message_kit__background--labels { background: #424450 } /* background for shared message in thread */
     .c-message_list__day_divider__line { border-top-color: #FF79C6!important} /* horizontal line separating days in the message pane */
     .c-message--light .c-message__sender .c-message__sender_link { color: #BD93F9} /* username link above message */
+    .c-mrkdwn__user_group--link { background: #FF5555; color: black; } /* tagged usergroup */
     .c-pillow_file__content--collapsed:after { background: linear-gradient(0deg,black,hsla(0,0%,100%,0) 40px) } /* gradient at bottom of collapsed message/attachment */
     .c-pillow_file__post__content code, .c-pillow_file__post__content pre { background: #282A36; } /* code block in pinned post */
     .c-presence--active {color: #FF79C6 !important;} /* status indicator before active user */
@@ -56,7 +59,8 @@
     .rxn, .c-reaction, .c-reaction_add, .c-member_slug { border: 1px solid #F1FA8C; } /* color of icon on 'add reaction' icon under a message */
     .rxn, .c-reaction, .c-reaction, .c-member_slug { border: 1px solid #F1FA8C; } /* border around emoji reactions under a message */
     .thrills_purple { color: #BD93F9!important; } /* Apps icon in channel sidebar */
-    @keyframes highlight_page_load { from { background-color: #BD93F9; } to { background-color: transparent; }} /* new message fade-in */
+    .unread_empty_state_refresh { background: inherit !important; } /* unread messages tab - refresh button section */
+    .unread_group a.timestamp.ts_tip.ts_tip_top.ts_tip_float.ts_tip_hidden.ts_tip_multiline.ts_tip_delay_300 { color: #BD93F9; } /* unread messages - timestamp */
     `;
   $.ajax({
     url:
