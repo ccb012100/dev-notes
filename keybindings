@@ -1,0 +1,40 @@
+--------------------------------------------------------------------------------
+    Keybindings
+--------------------------------------------------------------------------------
+
+Midnight Commander
+
+-
+
+tab                 Move next item
+M-tab               Move previous item
+down                Move next item; scroll line down
+up                  Move previous item; scroll line up
+right, enter        Follow current link
+left, l             Back in history of visited nodes
+F1                  Show help viewer
+n                   Go to next node
+p                   Go to previous node
+c                   Go to contents node
+F10, esc            Exit help viewer
+
+--------------------------------------------------------------------------------
+
+tmux
+
+-
+
+--------------------------------------------------------------------------------
+
+iTerm2
+
+-
+
+
+--------------------------------------------------------------------------------
+
+zsh
+
+-
+
+C-[SPACE]       Use suggestion (zsh-autosuggestions)
