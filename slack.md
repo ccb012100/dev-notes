@@ -23,7 +23,7 @@
     i.c-icon.c-icon--chevron-medium-left { color: #F1FA8C; } /* back arrow in pinned file details in sidebar */
     nav.p-channel_sidebar .p-channel_sidebar__channel--selected, .p-channel_sidebar__link--selected, .c-message_list__day_divider__label__pill, .p-message_pane .c-message_list.c-virtual_list--scrollbar > .c-scrollbar__hider:before { color: #F8F8F2!important;background: #FF79C6 !important; } /* day label for day separators in message pane */
     pre {} /* code blocks */
-    span.c-app_label { color: pink; } /* app label for app integration messages */
+    span.c-app_label { color: #FF79C6; } /* app label for app integration messages */
     span.file_meta_expaned { color: #BD93F9; } /* unread message list - collapsed attachment in message - name of attachment sender */
     ts-mention.c-member_slug.c-member_slug--link.ts_tip_texty { color: black !important; } /* user/group tag in message input textbar */
     #msg_form #msg_input {border-color: transparent;} /* message input section */
