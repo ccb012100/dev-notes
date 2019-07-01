@@ -13,7 +13,7 @@
 - before closing bracket on last line, paste:
 
 ```javascript
-    let tt__customCss = `body, .channel_header, #footer, .channel_title_info, #channel_topic_text {background: #282A36; } /* main background color */
+  let tt__customCss = `body, .channel_header, #footer, .channel_title_info, #channel_topic_text {background: #282A36; } /* main background color */
     a.c-link.c-member_slug.c-member_slug--link.c-member_slug--mention { color: black } /* color of your username when tagged */
     a.c-member_slug--mention, a.c-member_slug--mention:hover { background: #FF79C6 } /* background behind your tagged username */
     a.c-member_slug, .c-member_slug--link, .c-mrkdwn__subteam--link { background: #F1FA8C !important; border: 1px solid #F1FA8C; color: red; } /* tagged username */
@@ -21,14 +21,16 @@
     a.internal_member_link.ts_tip.ts_tip_top.ts_tip_float.ts_tip_member.mention.ts_tip_hidden { color: #F1FA8C !important; } /* you own tagged username in unread messages */
     button.c-link--button.c-message_kit__labels__link { color: #FFB86C; } /* label text for shared message in thread */
     i.c-icon.c-icon--chevron-medium-left { color: #F1FA8C; } /* back arrow in pinned file details in sidebar */
+    i.c-icon.c-icon--times { color: #FFB86C } /* close button icon on threads in sidebar */
     nav.p-channel_sidebar .p-channel_sidebar__channel--selected, .p-channel_sidebar__link--selected, .c-message_list__day_divider__label__pill, .p-message_pane .c-message_list.c-virtual_list--scrollbar > .c-scrollbar__hider:before { color: #F8F8F2!important;background: #FF79C6 !important; } /* day label for day separators in message pane */
     pre {} /* code blocks */
     span.c-app_label { color: #FF79C6; } /* app label for app integration messages */
+    span.c-message_attachment__author_name { color: white; } /* author name on attached message */
     span.file_meta_expaned { color: #BD93F9; } /* unread message list - collapsed attachment in message - name of attachment sender */
     ts-mention.c-member_slug.c-member_slug--link.ts_tip_texty { color: black !important; } /* user/group tag in message input textbar */
     #msg_form #msg_input {border-color: transparent;} /* message input section */
     #msg_input, #primary_file_button { background: #121212 !important; } /* background of message textbar */
-    #team_menu, .p-channel_sidebar { background: #282A36 !important; } /* sidebar background color */
+    #team_menu, .p-channel_sidebar { background: black !important; } /* sidebar background color */
     .app_preview_link_slug.ts_tip, .internal_member_link.ts_tip, .internal_user_group_link.ts_tip { color: #BD93F9 !important; } /* tagged username in Unread messages */
     .c-icon--presence-offline:before { color:#F1FA8C } /* status indicator before offline user */
     .c-member_slug { color: #F8F8F2;background: #F1FA8C } /* tagged username in message */
