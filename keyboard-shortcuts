@@ -45,7 +45,19 @@ zsh
 
 -
 
-C-[SPACE]       Use suggestion (zsh-autosuggestions)
+C-[SPACE]       	Use suggestion (zsh-autosuggestions)
+
+--------------------------------------------------------------------------------
+
+Ranger
+
+-
+
+--------------------------------------------------------------------------------
+
+Vim
+
+-
 
 --------------------------------------------------------------------------------
 
@@ -53,32 +65,28 @@ Emacs
 
 -
 
-[f5]			reload init.el
-[f12]			open init.el
+[f5]				reload init.el
+[f12]				open init.el
 
-C-SPC			same as M-x
+C-SPC				same as M-x
+C-RET				new-line-below
+C-r					isearch-backward
+C-s					isearch-forward
+C-t					set-mark-command
 
-C-b				switch buffers
-C-f				occur (find all)
-C-m				new-line-below
-C-r				isearch-backward
-C-s				isearch-forward
-C-t				set-mark-command
+C-k b				eval-buffer
 
-C-k b			eval-buffer
+C-x 1				delete-other-windows
+C-x 4 0				delete-buffer-and-window
+C-x b				helm-buffers-list
+C-x b				kill-this-buffer
+C-x C-b				list-buffers
+C-x C-j				recentf-open-files
 
-C-x 1			delete-other-windows
-C-x 4 0			delete-buffer-and-window
-C-x b			helm-buffers-list
-C-x b			kill-this-buffer
-C-x C-b			list-buffers
-C-x C-j			recentf-open-files
+M-RET				new-line-below
 
-M-RET			new-line-below
-
-M-n				scroll-up-line
-M-p				scroll-down-line
-M-w				mode-line-other-buffer
+M-o					ace-window
+M-w					mode-line-other-buffer
 
 ---
 

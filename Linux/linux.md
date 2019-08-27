@@ -1,30 +1,22 @@
 # Linux
 
-Display formatted `PATH`
+## Display formatted `PATH`
 
-- **sed**
+### **sed**
 
-  - `$ sed 's/:/\n/g' <<< "$PATH"`
+`$ sed 's/:/\n/g' <<< "$PATH"`
 
-- **tr**
+### **tr**
 
-  - `$ tr ':' '\n' <<< "$PATH"`
+`$ tr ':' '\n' <<< "$PATH"`
 
-- **python**
+### **python**
 
-  - `$ python2 -c "import os; print os.environ['PATH'].replace(':', '\n')"`
+`$ python2 -c "import os; print os.environ['PATH'].replace(':', '\n')"`
 
-`dircolors`
+## Set default shell to `zsh`
 
-- Change colors in terminal
-
-Reload `.bashrc`
-
-- `source .bashrc`
-
-Set default shell to `zsh`
-
-- `chsh -s $(which zsh)`
+`$ chsh -s $(which zsh)`
 
 useful packages
 
@@ -34,35 +26,13 @@ useful packages
 - [glances](https://github.com/nicolargo/glances)
 - `htop`
 - `jq`
-- [nnn](https://github.com/jarun/nnn)
-- [oh-my-zsh](https://ohmyz.sh)
-- [Powerline fonts](https://github.com/powerline/fonts)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
-- [Spaceship ZSH](https://github.com/denysdovhan/spaceship-prompt)
 - [z - jump around](https://github.com/rupa/z)
-- `zsh`
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 
-reload `.bashrc`
+## display system info using `inxi`
 
-- `source ~/.bashrc`
-- `. ~/.bashrc`
-- `exec bash`
-- <https://stackoverflow.com/a/35073891> for explanation of differences
-
-display system info using `inxi`
-
-- `inxi -Frmxx`
-
----
-
-## `vi`
-
-- `:q` - exit
-- `:wq` - save file and exit
-- `o` - new line
-
----
+`$ inxi -Frmxx`
 
 ## `curl`
 
@@ -82,52 +52,32 @@ display system info using `inxi`
 
 ---
 
-### set Dracula as theme
-
-1. download dracula iTerm theme
-1. copy `Dracula.itermcolors` to Colortool's `themes` folder
-1. open Windows Command Prompt
-1. run cmd `colortool -d Dracula`
-
 ### z - jump around
 
 modify .zshrc [to fix error](https://github.com/rupa/z/issues/230#issuecomment-362297213): `_z_precmd:1: nice(5) failed: operation not permitted`
-
----
-
-### package management
-
-- `sudo apt-get install PACKAGE_NAME`
-
----
-
-## `tmux`
-
-toggle full-screen on current pane: `C-b z`
-
-Resize pane in direction of `<arrow key>`: `C-b C-<arrow key>`
-
-rename window: `C-b ,`
-
-show options: `tmux show-options -g`
-
----
 
 ## Nano
 
 ### switches
 
-- **`-B`** (backs up the file prior to editing it)
-- **`-E`** (converts tabs to spaces when editing)
-- **`-c`** (constantly show the cursor position stats)
-- **`-i`** (automatically indents new lines to the same position as the previous line)
-- **`-k`** (toggle cut so that it cuts from cursor position instead of the whole line)
-- **`-m`** (provides mouse support to the editor)
-- **`-v`** (opens file as readonly)
+- **`-B`**
+  - backs up the file prior to editing it
+- **`-E`**
+  - converts tabs to spaces when editing
+- **`-c`**
+  - constantly show the cursor position stats
+- **`-i`**
+  - automatically indents new lines to the same position as the previous line
+- **`-k`**
+  - toggle cut so that it cuts from cursor position instead of the whole line
+- **`-m`**
+  - provides mouse support to the editor
+- **`-v`**
+  - opens file as readonly
 
 ### nanorc
 
-- run `nano -V` to check if `--enable-nanorc option` is present
+run `nano -V` to check if `--enable-nanorc option` is present
 
 apply settings to
 
@@ -152,9 +102,9 @@ add custom alises in `$ZSH_CUSTOM/aliases.zsh`
 
 #### `cdablevars`
 
-- aliases for directories
+aliases for directories
 
-example:
+_example:_
 
 ```bash
 # Convenient path navigation, e.g., `cd vp`
@@ -162,3 +112,67 @@ setopt cdablevars
 vp="/c/Dev/VersionPress/versionpress"
 temp="/c/Dev/temp"
 ```
+
+## CentOS
+
+### services
+
+*systemctl*
+
+`$ sudo systemctl start application.service`
+
+`$ sudo systemctl start application`
+
+`$ sudo systemctl stop application.service`
+
+`$ sudo systemctl reload-or-restart application.service`
+
+`$ systemctl status application.service`
+
+`$ systemctl is-active application.service`
+
+`$ systemctl is-failed application.service`
+
+### package management
+
+*yum*
+
+`$ yum help`
+
+`$ yum list [available|installed|all|kernel]`
+
+`$ yum info package-name`
+
+`$ yum search package-name`
+
+`$ yum update`
+
+`$ yum yum update package-name`
+
+`$ yum reinstall package-name`
+
+`$ yum [remove|erase] package-name`
+
+`$ yum autoremove package-name`
+
+`$ yum show-installed`
+
+`$ yum history`
+
+`$ yum clean`
+
+## tar
+
+### create tar file
+
+`$ tar czvf file.tar.gz destination-folder`
+
+## view contents of tar file
+
+`$ tar -ztvf file.tar.gz`
+
+## extract tar file
+
+`$ tar -xzvf file.tar.gz`
+
+`$ tar -xzvf file.tar.gz -C /directory`
