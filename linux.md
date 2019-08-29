@@ -1,5 +1,22 @@
 # Linux
 
+## grep
+
+### search a directory recursively
+
+```bash
+$ grep -nr '{search-term}' directory-name
+```
+
+- `-n`
+  - Show relative line number in the file
+- `-r`
+  - Recursively search subdirectories listed
+- `search-term`
+  - String for search
+- `directory-name`
+  - Directory for search
+
 ## Display formatted `PATH`
 
 ### **sed**
@@ -24,8 +41,8 @@ useful packages
 - [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy)
 - [fzf](https://github.com/junegunn/fzf)
 - [glances](https://github.com/nicolargo/glances)
-- `htop`
-- `jq`
+- htop
+- jq
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [z - jump around](https://github.com/rupa/z)
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
