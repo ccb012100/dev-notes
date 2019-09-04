@@ -193,3 +193,11 @@ temp="/c/Dev/temp"
 `$ tar -xzvf file.tar.gz`
 
 `$ tar -xzvf file.tar.gz -C /directory`
+
+## tmux
+
+### List all key bindings
+
+from outside `tmux`: `$ tmux list-keys`
+
+from inside tmux: `<prefix>:list-keys` or `<prefix>?`
