@@ -1,5 +1,11 @@
 # Emacs
 
+# digit-argument
+
+`C-<number_key>` calls the command `digit-argument`, which can be used to give numeric arguments to a command.
+
+Ex. `C-5 C-n` will move down 5 lines (it becomes `C-u 5 C-n`, which is equivalent to calling `M-x eval-expression (next-line 5)`)
+
 # package-install
 
 `M-x package-refresh-contents`
