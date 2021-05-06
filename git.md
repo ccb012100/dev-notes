@@ -45,3 +45,9 @@ git filter-branch -f \
 git for-each-ref --format="%(refname)" refs/original/ | xargs -n 1 git update-ref -d
 git reflog expire --expire=now --all && git gc --prune=now --aggressive 
 ```
+
+## GPG
+
+### signing fails
+
+try this to fix $GPG_TTY: <https://stackoverflow.com/a/55993078>
