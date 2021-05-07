@@ -18,7 +18,7 @@
 
 ## Sync fork with original repository
 
-><https://gist.github.com/CristinaSolana/1885435>
+> <https://gist.github.com/CristinaSolana/1885435>
 
 ### 1. Clone your fork
 
@@ -43,7 +43,7 @@ git filter-branch -f \
     --tree-filter 'rm -f .gitconfig' \
     $(git log --follow --find-renames=40% --diff-filter=A --format=%H -- .gitconfig)~..HEAD
 git for-each-ref --format="%(refname)" refs/original/ | xargs -n 1 git update-ref -d
-git reflog expire --expire=now --all && git gc --prune=now --aggressive 
+git reflog expire --expire=now --all && git gc --prune=now --aggressive
 ```
 
 ## GPG
@@ -51,3 +51,7 @@ git reflog expire --expire=now --all && git gc --prune=now --aggressive
 ### signing fails
 
 try this to fix $GPG_TTY: <https://stackoverflow.com/a/55993078>
+
+### changing password timeout
+
+`~/.gnupg/gpg-agent.conf` contains values (in seconds) to set `cachettl`
