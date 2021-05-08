@@ -59,3 +59,9 @@ echo "test" | gpg --clearsign
 ### changing password timeout
 
 `~/.gnupg/gpg-agent.conf` contains values (in seconds) to set `cachettl`
+
+### MacOS
+
+1. Run `brew install gnupg pinentry-mac`
+2. Add `pinentry-program /usr/local/bin/pinentry-mac` to `~/.gnupg/gpg-agent.conf`
+
