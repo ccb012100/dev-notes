@@ -52,6 +52,10 @@ git reflog expire --expire=now --all && git gc --prune=now --aggressive
 
 try this to fix $GPG_TTY: <https://stackoverflow.com/a/55993078>
 
+#### debug
+
+echo "test" | gpg --clearsign
+
 ### changing password timeout
 
 `~/.gnupg/gpg-agent.conf` contains values (in seconds) to set `cachettl`
