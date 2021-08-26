@@ -71,4 +71,10 @@ Links:
 - <https://gist.github.com/lucko/bc2ba1f684bdce2b8cdcd8442e541e0e>
 - <https://gist.github.com/bmhatfield/cc21ec0a3a2df963bffa3c1f884b676b>
 
-- <
+## Status of all repositories
+
+Find all repositories in current directory and display their status
+
+```bash
+find . -mindepth 1 -maxdepth 1 -type d -print -exec git -C {} status \;
+```

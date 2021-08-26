@@ -1,11 +1,48 @@
 # Linux
 
+- [Linux](#linux)
+  - [Ubuntu](#ubuntu)
+    - [get version](#get-version)
+  - [grep](#grep)
+    - [search a directory recursively](#search-a-directory-recursively)
+  - [Display formatted `PATH`](#display-formatted-path)
+    - [**sed**](#sed)
+    - [**tr**](#tr)
+    - [**python**](#python)
+  - [Set default shell to `zsh`](#set-default-shell-to-zsh)
+  - [display system info using `inxi`](#display-system-info-using-inxi)
+  - [`curl`](#curl)
+    - [z - jump around](#z---jump-around)
+  - [Nano](#nano)
+    - [switches](#switches)
+    - [nanorc](#nanorc)
+  - [zsh](#zsh)
+    - [Oh My Zsh](#oh-my-zsh)
+      - [aliases](#aliases)
+      - [cdablevars](#cdablevars)
+  - [CentOS](#centos)
+    - [services](#services)
+    - [package management](#package-management)
+  - [tar](#tar)
+    - [create tar file](#create-tar-file)
+  - [view contents of tar file](#view-contents-of-tar-file)
+  - [extract tar file](#extract-tar-file)
+  - [tmux](#tmux)
+    - [List all key bindings](#list-all-key-bindings)
+  - [Advanced Package Tool (APT)](#advanced-package-tool-apt)
+
+## Ubuntu
+
+### get version
+
+`lsb_release -a`
+
 ## grep
 
 ### search a directory recursively
 
 ```bash
-$ grep -nr '{search-term}' directory-name
+grep -nr '{search-term}' directory-name
 ```
 
 - `-n`
@@ -117,7 +154,7 @@ default aliases are in `~/.oh-my-zsh/plugins`
 
 add custom alises in `$ZSH_CUSTOM/aliases.zsh`
 
-#### `cdablevars`
+#### cdablevars
 
 aliases for directories
 
@@ -134,7 +171,7 @@ temp="/c/Dev/temp"
 
 ### services
 
-*systemctl*
+`systemctl`
 
 `$ sudo systemctl start application.service`
 
@@ -152,7 +189,7 @@ temp="/c/Dev/temp"
 
 ### package management
 
-*yum*
+`yum`
 
 `$ yum help`
 
@@ -201,3 +238,15 @@ temp="/c/Dev/temp"
 from outside `tmux`: `$ tmux list-keys`
 
 from inside tmux: `<prefix>:list-keys` or `<prefix>?`
+
+## Advanced Package Tool (APT)
+
+`apt update`
+
+`apt install $PACKAGE_NAME`
+
+`apt search $PACKAGE_NAME`
+
+`apt update`
+
+`apt upgrade`
