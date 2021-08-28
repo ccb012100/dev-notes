@@ -37,3 +37,13 @@ cmd = \""c:/Program Files/TortoiseGit/bin/TortoiseGitMerge.exe"\" -mine "$REMOTE
 [mergetool "tortoisemerge"]
 cmd = \""c:/Program Files/TortoiseGit/bin/TortoiseGitMerge.exe"\" -base "$BASE" -theirs "$REMOTE" -mine "$LOCAL" -merged "$MERGED"
 ```
+
+## [[GPG]]
+
+If `GPG4Win` is installed, it will conflict with Git Bash's version of GPG. To fix, run the command:
+
+```bash
+git config --global gpg.program "/c/Program Files/Git/usr/bin/gpg.exe"
+```
+
+so that Git will use the Git Bash version.

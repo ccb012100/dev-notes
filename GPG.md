@@ -2,7 +2,7 @@
 
 ## debug
 
-echo "test" | gpg --clearsign
+`echo "test" | gpg --clearsign`
 
 ## changing password timeout
 
