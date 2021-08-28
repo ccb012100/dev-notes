@@ -1,6 +1,8 @@
 # WSL2
 
- [WSL2](#wsl2)
+[WSL2](#wsl2)
+
+- [WSL2](#wsl2)
   - [Fresh installation](#fresh-installation)
     - [Upgrade Ubuntu to 21.04 (Hirsute Hippo)](#upgrade-ubuntu-to-2104-hirsute-hippo)
     - [Set `zsh` as default shell](#set-zsh-as-default-shell)
@@ -16,6 +18,7 @@
   - [Signed Git commits with GPG](#signed-git-commits-with-gpg)
   - [Cargo](#cargo)
     - [permissions error](#permissions-error)
+  - [_source:_ <https://github.com/rust-lang/cargo/issues/6757#issuecomment-738494343>](#source-httpsgithubcomrust-langcargoissues6757issuecomment-738494343)
 
 ## Fresh installation
 
@@ -104,5 +107,4 @@ error: could not exec the linker `cc`
 
 It can be resolved by running the command `sudo apt install build-essential`
 
-_source:_ <https://github.com/rust-lang/cargo/issues/6757#issuecomment-738494343>
--
+## _source:_ <https://github.com/rust-lang/cargo/issues/6757#issuecomment-738494343>
