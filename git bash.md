@@ -2,9 +2,17 @@
 
 [[Git]] Bash shell for [[Windows]]
 
-- `C:\Program Files\Git\etc\profile.d\aliases.sh`
-- `C:\Program Files\Git\etc\profile.d\`
-- `C:\Program Files\Git\etc\bash.bashrc`
+- [git bash](#git-bash)
+
+  - [Customize prompt](#customize-prompt)
+    - [Liquidprompt](#liquidprompt)
+      - [Installation](#installation)
+      - [Add to ~/.bashrc](#add-to-bashrc)
+  - [Configuration](#configuration)
+  - [Show current branch in CLI](#show-current-branch-in-cli)
+  - [Set TortoiseGit diff and merge tools](#set-tortoisegit-diff-and-merge-tools)
+  - [Signing commits with [[GPG]]](#signing-commits-with-gpg)
+    - [Increase [[GPG]] passphrase ttl in GPG4Win](#increase-gpg-passphrase-ttl-in-gpg4win)
 
 ## Customize prompt
 
@@ -32,6 +40,10 @@ git clone https://github.com/nojhan/liquidprompt.git ~/liquidprompt
 ```
 
 ## Configuration
+
+- `C:\Program Files\Git\etc\profile.d\aliases.sh`
+- `C:\Program Files\Git\etc\profile.d\`
+- `C:\Program Files\Git\etc\bash.bashrc
 
 - `.gitconfig` location: `%USERPROFILE%/.gitconfig`
 - [Atlassian page](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-config) on git config:
