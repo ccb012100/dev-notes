@@ -1,4 +1,4 @@
-## [[Git Bash]]
+# git bash
 
 [[git]] shell for windows
 
@@ -6,7 +6,7 @@
 - `C:\Program Files\Git\etc\profile.d\`
 - `C:\Program Files\Git\etc\bash.bashrc`
 
-### Configuration
+## Configuration
 
 - .gitconfig location: %USERPROFILE%/.gitconfig
 - [Atlassian page](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-config) on git config:
@@ -16,11 +16,11 @@
 - Set TortoiseGit as diff and merge tool: <https://stackoverflow.com/a/16494703>
 - Prompt customization file is located in `C:\Program Files\Git\etc\profile.d\git-prompt.sh`
 
-### Show current branch in CLI
+## Show current branch in CLI
 
 - <https://askubuntu.com/a/730758>
 
-### Set TortoiseGit diff and merge tools
+## Set TortoiseGit diff and merge tools
 
 ```bash
 [diff]

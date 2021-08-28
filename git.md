@@ -52,25 +52,6 @@ git reflog expire --expire=now --all && git gc --prune=now --aggressive
 
 try this to fix $GPG_TTY: <https://stackoverflow.com/a/55993078>
 
-#### debug
-
-echo "test" | gpg --clearsign
-
-### changing password timeout
-
-`~/.gnupg/gpg-agent.conf` contains values (in seconds) to set `cachettl`
-
-### [[MacOS]]
-
-1. Run `brew install gnupg pinentry-mac`
-2. Add `pinentry-program /usr/local/bin/pinentry-mac` to `~/.gnupg/gpg-agent.conf`
-3. Restart gpg-agent by running `gpgconf --kill gpg-agent`
-
-Links:
-
-- <https://gist.github.com/lucko/bc2ba1f684bdce2b8cdcd8442e541e0e>
-- <https://gist.github.com/bmhatfield/cc21ec0a3a2df963bffa3c1f884b676b>
-
 ## Status of all repositories
 
 Find all repositories in current directory and display their status

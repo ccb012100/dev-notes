@@ -1,4 +1,4 @@
-# Regex
+# regex
 
 Remove duplicate lines from sorted list:
 
