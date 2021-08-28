@@ -41,12 +41,17 @@ Windows Subsystem for Linux 2
 
 ### Set [[zsh]] as default shell
 
-- `sudo apt-get install zsh`
-- `chsh -s $(which zsh)`
+```bash
+sudo apt-get install zsh
+
+chsh -s $(which zsh)`
+```
 
 ### Install packages with apt-get
 
-`sudo apt-get install fd-find bat emacs exa golang-go jq gnupg neofetch neovim mc python3-pip ranger postgresql ripgrep silversearcher-ag`
+```bash
+sudo apt-get install fd-find bat emacs exa golang-go jq gnupg neofetch neovim mc python3-pip ranger postgresql ripgrep silversearcher-ag
+```
 
 #### fzf
 
@@ -60,29 +65,43 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 #### powerlevel10K
 
-- `mkdir ~/tools && cd ~/tools`
-- `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k &&echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc`
-- `p10k configure`
+```bash
+mkdir ~/tools && cd ~/tools
+
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k &&echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+
+p10k configure
+```
 
 #### [[Rust]]
 
-`curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
 
 #### Delta
 
-`cargo install git-delta`
+```bash
+cargo install git-delta
+```
 
 #### lazygit
 
-`go get github.com/jesseduffield/lazygit`
+```bash
+go get github.com/jesseduffield/lazygit
+```
 
 #### zsh-syntax-highlighting
 
-`git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting`
+```bash
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
+```
 
 #### zsh-autosuggestions
 
-`git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions`
+```bash
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+```
 
 #### [[.NET]]
 
@@ -109,14 +128,16 @@ sudo apt-get update; \
 
 #### Glances
 
-`pip install --user glances`
+```bash
+pip install --user glances
+```
 
 ### Configure installed packages
 
 `fd-find`
 
-- `mkdir ~/.local/bin`
-- `ln -s $(which fdfind) ~/.local/bin/fd`
+- Run `mkdir ~/.local/bin`
+- Run `ln -s $(which fdfind) ~/.local/bin/fd`
 - Add `$HOME/.local/bin` to `$PATH`
 
 ## Signed Git commits with [[GPG]]
