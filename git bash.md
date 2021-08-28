@@ -1,10 +1,35 @@
 # git bash
 
-[[git]] shell for windows
+[[Git]] Bash shell for [[Windows]]
 
 - `C:\Program Files\Git\etc\profile.d\aliases.sh`
 - `C:\Program Files\Git\etc\profile.d\`
 - `C:\Program Files\Git\etc\bash.bashrc`
+
+## Customize prompt
+
+### Liquidprompt
+
+#### Installation
+
+Release branch
+
+```bash
+git clone --branch stable https://github.com/nojhan/liquidprompt.git ~/liquidprompt
+```
+
+Development (non-stable) branch
+
+```bash
+git clone https://github.com/nojhan/liquidprompt.git ~/liquidprompt
+```
+
+#### Add to ~/.bashrc
+
+```bash
+# Only load Liquidprompt in interactive shells, not from a script or from scp
+[[ $- = *i* ]] && source ~/liquidprompt/liquidprompt
+```
 
 ## Configuration
 
@@ -43,10 +68,8 @@ cmd = \""c:/Program Files/TortoiseGit/bin/TortoiseGitMerge.exe"\" -base "$BASE" 
 [[WINDOWS] How to enable auto-signing Git commits with GnuPG for programs that don't support it natively
 ](https://gist.github.com/BoGnY/f9b1be6393234537c3e247f33e74094a#windows-how-to-enable-auto-signing-git-commits-with-gnupg-for-programs-that-dont-support-it-natively)
 
-The most important thing to note: if `GPG4Win` is installed, it will conflict with Git Bash's version of GPG. To fix, run the command:
+The most important thing to note: if `GPG4Win` is installed, it will conflict with Git Bash's version of GPG. To fix, run the command `git config --global gpg.program "/c/Program Files/Git/usr/bin/gpg.exe"` to configure Git to use the Git Bash version.
 
-```bash
-git config --global gpg.program "/c/Program Files/Git/usr/bin/gpg.exe"
-```
+### Increase [[GPG]] passphrase ttl in GPG4Win
 
-so that Git will use the Git Bash version.
+To modify `default-cache-ttl` and `max-cache-ttl` in the **Kleopatra** GUI: <https://stackoverflow.com/a/66821816>
