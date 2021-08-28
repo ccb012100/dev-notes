@@ -31,29 +31,6 @@
     - [List all key bindings](#list-all-key-bindings)
   - [Advanced Package Tool (APT)](#advanced-package-tool-apt)
 
-## Ubuntu
-
-### get version
-
-`lsb_release -a`
-
-## grep
-
-### search a directory recursively
-
-```bash
-grep -nr '{search-term}' directory-name
-```
-
-- `-n`
-  - Show relative line number in the file
-- `-r`
-  - Recursively search subdirectories listed
-- `search-term`
-  - String for search
-- `directory-name`
-  - Directory for search
-
 ## Display formatted `PATH`
 
 ### **sed**
@@ -68,7 +45,7 @@ grep -nr '{search-term}' directory-name
 
 `$ python2 -c "import os; print os.environ['PATH'].replace(':', '\n')"`
 
-## Set default shell to `zsh`
+## Set default shell to [[zsh]]
 
 `$ chsh -s $(which zsh)`
 
@@ -139,81 +116,6 @@ apply settings to
   - copy `nanorc` to `/etc/nanorc`
 - a single user:
   - copy `nanorc` to `$HOME/.nanorc`
-
-## zsh
-
-### Oh My Zsh
-
-#### aliases
-
-`$ZSH_CUSTOM` --> `/home/_USER_/.oh-my-zsh/custom/`
-default aliases are in `~/.oh-my-zsh/plugins`
-
-- git aliases in `~/.oh-my-zsh/plugins/git/git.plugin.zsh`
-- linux command aliases in `~/.oh-my-zsh/plugins/common-aliases/common-aliases.plugin.zsh`
-
-add custom alises in `$ZSH_CUSTOM/aliases.zsh`
-
-#### cdablevars
-
-aliases for directories
-
-_example:_
-
-```bash
-# Convenient path navigation, e.g., `cd vp`
-setopt cdablevars
-vp="/c/Dev/VersionPress/versionpress"
-temp="/c/Dev/temp"
-```
-
-## CentOS
-
-### services
-
-`systemctl`
-
-`$ sudo systemctl start application.service`
-
-`$ sudo systemctl start application`
-
-`$ sudo systemctl stop application.service`
-
-`$ sudo systemctl reload-or-restart application.service`
-
-`$ systemctl status application.service`
-
-`$ systemctl is-active application.service`
-
-`$ systemctl is-failed application.service`
-
-### package management
-
-`yum`
-
-`$ yum help`
-
-`$ yum list [available|installed|all|kernel]`
-
-`$ yum info package-name`
-
-`$ yum search package-name`
-
-`$ yum update`
-
-`$ yum yum update package-name`
-
-`$ yum reinstall package-name`
-
-`$ yum [remove|erase] package-name`
-
-`$ yum autoremove package-name`
-
-`$ yum show-installed`
-
-`$ yum history`
-
-`$ yum clean`
 
 ## tar
 

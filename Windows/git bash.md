@@ -1,4 +1,6 @@
-## Git Bash
+## [[Git Bash]]
+
+[[git]] shell for windows
 
 - `C:\Program Files\Git\etc\profile.d\aliases.sh`
 - `C:\Program Files\Git\etc\profile.d\`
@@ -6,7 +8,7 @@
 
 ### Configuration
 
-- Config file location: %USERPROFILE%/.gitconfig
+- .gitconfig location: %USERPROFILE%/.gitconfig
 - [Atlassian page](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-config) on git config:
 - Change the directory new windows open in: <https://stackoverflow.com/a/32125911>
 - Set Notepad++ as the text editor:

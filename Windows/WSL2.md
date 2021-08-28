@@ -1,4 +1,4 @@
-# WSL2
+# [[WSL2]]
 
 [WSL2](#wsl2)
 
@@ -22,7 +22,7 @@
 
 ## Fresh installation
 
-### Upgrade Ubuntu to 21.04 (Hirsute Hippo)
+### Upgrade [[Ubuntu]] to 21.04 (Hirsute Hippo)
 
 - Run `sudo apt update && sudo apt dist-upgrade`
 
@@ -35,57 +35,66 @@
 
 - Run upgrade: `do-release-upgrade`
 
-### Set `zsh` as default shell
+### Set [[zsh]] as default shell
 
-- `sudo apt install zsh`
+- `sudo apt-get install zsh`
 - `chsh -s $(which zsh)`
 
-### Install packages
+### Install packages with [[apt-get]]
 
-`sudo apt install fd-find bat emacs exa golang-go jq gnupg neofetch neovim mc ranger postgresql ripgrep silversearcher-ag`
+`sudo apt-get install fd-find bat emacs exa golang-go jq gnupg neofetch neovim mc python3-pip ranger postgresql ripgrep silversearcher-ag`
 
-#### fzf
+#### [[fzf]]
 
 _Note:_ for some reason, `fzf` won't work with `zsh-syntax-highlighting` if installed through `apt-get`
 
 ```bash
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+
 ~/.fzf/install
 ```
 
-#### powerlevel10K
+#### [[powerlevel10K]]
 
 - `mkdir ~/tools && cd ~/tools`
-- git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k &&echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc`
+- `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k &&echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc`
 - `p10k configure`
 
-#### Rust
+#### [[Rust]]
 
 `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
 
-### Delta
+#### Delta
 
 `cargo install git-delta`
 
-#### lazygit
+#### [[lazygit]]
 
 `go get github.com/jesseduffield/lazygit`
 
-#### zsh-syntax-highlighting
+#### [[zsh-syntax-highlighting]]
 
 `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting`
 
-#### zsh-autosuggestions
+#### [[zsh-autosuggestions]]
 
 `git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions`
 
-#### .NET
+#### [[.NET]]
 
 ```bash
-$ wget https://packages.microsoft.com/config/ubuntu/21.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-$ sudo dpkg -i packages-microsoft-prod.deb
-$ rm packages-microsoft-prod.deb
+wget https://packages.microsoft.com/config/ubuntu/21.04/packages-microsoft-prod.deb -O
+
+packages-microsoft-prod.deb
+
+sudo dpkg -i packages-microsoft-prod.deb
+
+rm packages-microsoft-prod.deb
 ```
+
+#### Glances
+
+`pip install --user glances`
 
 ### Configure installed packages
 
@@ -95,13 +104,13 @@ $ rm packages-microsoft-prod.deb
 - `ln -s $(which fdfind) ~/.local/bin/fd`
 - Add `$HOME/.local/bin` to `$PATH`
 
-## Signed Git commits with GPG
+## Signed Git commits with [[GPG]]
 
 Install Gpg4win: <https://www.gpg4win.org/>
 
 <https://www.39digits.com/signed-git-commits-on-wsl2-using-visual-studio-code>
 
-## Cargo
+## [[Cargo]]
 
 ### permissions error
 
@@ -114,6 +123,6 @@ error: could not exec the linker `cc`
   = note: "cc" "-Wl,--as-needed" "-Wl,-z,noexecstack" "-m64" "-Wl,--eh-frame-hdr" "-L" "/home/bagel/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib"
 ```
 
-It can be resolved by running the command `sudo apt install build-essential`
+It can be resolved by running the command `sudo apt-get install build-essential`
 
 ## _source:_ <https://github.com/rust-lang/cargo/issues/6757#issuecomment-738494343>
