@@ -86,6 +86,8 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 #### [[.NET]]
 
+Get package
+
 ```bash
 wget https://packages.microsoft.com/config/ubuntu/21.04/packages-microsoft-prod.deb -O
 
@@ -94,6 +96,15 @@ packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 
 rm packages-microsoft-prod.deb
+```
+
+Install
+
+```bash
+sudo apt-get update; \
+  sudo apt-get install -y apt-transport-https && \
+  sudo apt-get update && \
+  sudo apt-get install -y dotnet-sdk-5.0
 ```
 
 #### Glances
