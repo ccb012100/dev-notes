@@ -42,7 +42,16 @@
 
 ### Install packages
 
-- `sudo apt install fd-find bat emacs exa golang-go jq neovim fzf gnupg neofetch mc ranger postgresql ripgrep silversearcher-ag`
+`sudo apt install fd-find bat emacs exa golang-go jq gnupg neofetch neovim mc ranger postgresql ripgrep silversearcher-ag`
+
+#### fzf
+
+_Note:_ for some reason, `fzf` won't work with `zsh-syntax-highlighting` if installed through `apt-get`
+
+```bash
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+```
 
 #### powerlevel10K
 
