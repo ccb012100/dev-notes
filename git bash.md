@@ -8,12 +8,12 @@
 
 ## Configuration
 
-- .gitconfig location: %USERPROFILE%/.gitconfig
+- `.gitconfig` location: `%USERPROFILE%/.gitconfig`
 - [Atlassian page](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-config) on git config:
 - Change the directory new windows open in: <https://stackoverflow.com/a/32125911>
-- Set Notepad++ as the text editor:
+- Set **Notepad++** as the text editor:
   - `git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`
-- Set TortoiseGit as diff and merge tool: <https://stackoverflow.com/a/16494703>
+- Set **TortoiseGit** as `diff` and `merge` tool: <https://stackoverflow.com/a/16494703>
 - Prompt customization file is located in `C:\Program Files\Git\etc\profile.d\git-prompt.sh`
 
 ## Show current branch in CLI
@@ -38,9 +38,12 @@ cmd = \""c:/Program Files/TortoiseGit/bin/TortoiseGitMerge.exe"\" -mine "$REMOTE
 cmd = \""c:/Program Files/TortoiseGit/bin/TortoiseGitMerge.exe"\" -base "$BASE" -theirs "$REMOTE" -mine "$LOCAL" -merged "$MERGED"
 ```
 
-## [[GPG]]
+## Signing commits with [[GPG]]
 
-If `GPG4Win` is installed, it will conflict with Git Bash's version of GPG. To fix, run the command:
+[[WINDOWS] How to enable auto-signing Git commits with GnuPG for programs that don't support it natively
+](https://gist.github.com/BoGnY/f9b1be6393234537c3e247f33e74094a#windows-how-to-enable-auto-signing-git-commits-with-gnupg-for-programs-that-dont-support-it-natively)
+
+The most important thing to note: if `GPG4Win` is installed, it will conflict with Git Bash's version of GPG. To fix, run the command:
 
 ```bash
 git config --global gpg.program "/c/Program Files/Git/usr/bin/gpg.exe"
