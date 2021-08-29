@@ -5,7 +5,7 @@
     - [**sed**](#sed)
     - [**tr**](#tr)
     - [**python**](#python)
-  - [Set default shell to [[zsh]]](#set-default-shell-to-zsh)
+  - [Set default shell to [[Zsh]]](#set-default-shell-to-zsh)
   - [display system info using `inxi`](#display-system-info-using-inxi)
   - [`curl`](#curl)
     - [z - jump around](#z---jump-around)
@@ -34,7 +34,7 @@
 
 `$ python2 -c "import os; print os.environ['PATH'].replace(':', '\n')"`
 
-## Set default shell to [[zsh]]
+## Set default shell to [[Zsh]]
 
 `$ chsh -s $(which zsh)`
 

@@ -8,6 +8,7 @@
 - [ ] sed
 - [ ] grep
 
-## sync dotfiles
+## Misc.
 
-<https://dotfiles.github.io/>
+- sync dotfiles: <https://dotfiles.github.io/>
+- Map `CapsLock` to `Ctrl` and `Escape` in [[Windows]]

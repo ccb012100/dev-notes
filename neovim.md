@@ -1,6 +1,6 @@
 # Neovim (nvim)
 
-[[vim]]-based editor
+[[Vim]]-based editor
 
 ## Configuration file
 

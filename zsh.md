@@ -1,4 +1,4 @@
-# [[zsh]]
+# [[Zsh]]
 
 ## Oh My Zsh
 

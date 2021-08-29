@@ -7,7 +7,7 @@ Windows Subsystem for Linux 2
 - [WSL2](#wsl2)
   - [Fresh installation](#fresh-installation)
     - [Upgrade [[Ubuntu]] to 21.04 (Hirsute Hippo)](#upgrade-ubuntu-to-2104-hirsute-hippo)
-    - [Set [[zsh]] as default shell](#set-zsh-as-default-shell)
+    - [Set [[Zsh]] as default shell](#set-zsh-as-default-shell)
     - [Install packages with apt-get](#install-packages-with-apt-get)
       - [fzf](#fzf)
       - [powerlevel10K](#powerlevel10k)
@@ -39,7 +39,7 @@ Windows Subsystem for Linux 2
 
 - Run upgrade: `do-release-upgrade`
 
-### Set [[zsh]] as default shell
+### Set [[Zsh]] as default shell
 
 ```bash
 sudo apt-get install zsh
