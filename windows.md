@@ -49,3 +49,12 @@ trustExitCode = false
 
 - `%AppData%\Roaming\azuredatastudio\User\keybindings.json`
 - `%AppData%\Roaming\azuredatastudio\User\settings.json`
+
+## Utilities
+
+- **Everything**
+  - <https://www.voidtools.com/>
+- **SumatraPDF**
+- **PowerToys**
+- **ShellMenuView**
+  - <http://www.nirsoft.net>
