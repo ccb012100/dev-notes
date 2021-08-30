@@ -58,3 +58,22 @@ trustExitCode = false
 - **PowerToys**
 - **ShellMenuView**
   - <http://www.nirsoft.net>
+
+## Command Prompt Aliases
+
+use `doskey.exe`
+
+```cmd
+@echo off
+
+doskey ls=dir
+
+doskey cb=cargo build
+doskey cc=cargo check
+doskey cr=cargo run
+
+doskey gb=go build .
+doskey gr=go run .
+```
+
+See <https://zwbetz.com/aliases-in-windows-command-prompt/> for more details.
