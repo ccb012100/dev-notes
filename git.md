@@ -36,14 +36,20 @@
 
 ## Remove file from entire branch history
 
+Use `git-filter-repo` (<https://github.com/newren/git-filter-repo>) - do _not_ use `git-filter-branch`
+
 ```bash
-git filter-branch -f \
-    --prune-empty \
-    --tag-name-filter cat \
-    --tree-filter 'rm -f .gitconfig' \
-    $(git log --follow --find-renames=40% --diff-filter=A --format=%H -- .gitconfig)~..HEAD
-git for-each-ref --format="%(refname)" refs/original/ | xargs -n 1 git update-ref -d
-git reflog expire --expire=now --all && git gc --prune=now --aggressive
+git filter-repo --invert-paths --path PATH-TO-YOUR-FILE-WITH-SENSITIVE-DATA
+```
+
+See GitHub page on [Removing sensitive data from a repository](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository).
+
+## Rebase previous commits
+
+ex. last 3 commits:
+
+```bash
+git rebase -i HEAD~3
 ```
 
 ## [[GPG]]
