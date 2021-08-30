@@ -24,4 +24,4 @@ note: please ensure that VS 2013, VS 2015, VS 2017 or VS 2019 was installed with
 error: aborting due to previous error
 ```
 
-Then you need to install the **C++ Build Tools** in [[Visual Studio]]
+Then you need to install the C++ Build Tools in [[Visual Studio]] (under the section called **Desktop Development with C++**)
