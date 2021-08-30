@@ -1,4 +1,4 @@
-# Visual Studio 2017
+# Visual Studio
 
 - Location of `CurrentSettings.vssettings`
   - `%UserProfile%\AppData\Local\Microsoft\VisualStudio\15.0_*\Settings`
