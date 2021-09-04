@@ -50,3 +50,33 @@ List current aliases
 ```cmd
 doskey /macros
 ```
+
+## Symbolic links (symlinks) in [[Windows]]
+
+### Soft link
+
+#### File
+
+```cmd
+mklink Link Target
+```
+
+#### Directory
+
+```cmd
+mklink /D Link Target
+```
+
+### Hard link
+
+#### File
+
+```cmd
+mklink /H Link Target
+```
+
+#### Directory (Junction)
+
+```cmd
+mklink /J Link Target
+```

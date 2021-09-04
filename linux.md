@@ -1,26 +1,25 @@
 # Linux
 
 - [Linux](#linux)
-  - [Display formatted `PATH`](#display-formatted-path)
+  - [Display formatted `$PATH`](#display-formatted-path)
     - [**sed**](#sed)
     - [**tr**](#tr)
     - [**python**](#python)
   - [Set default shell to [[Zsh]]](#set-default-shell-to-zsh)
   - [display system info using `inxi`](#display-system-info-using-inxi)
-  - [`curl`](#curl)
     - [z - jump around](#z---jump-around)
   - [Nano](#nano)
     - [switches](#switches)
     - [nanorc](#nanorc)
-  - [tar](#tar)
+  - [tar files](#tar-files)
     - [create tar file](#create-tar-file)
-  - [view contents of tar file](#view-contents-of-tar-file)
-  - [extract tar file](#extract-tar-file)
-  - [tmux](#tmux)
-    - [List all key bindings](#list-all-key-bindings)
-  - [Advanced Package Tool (APT)](#advanced-package-tool-apt)
+    - [view contents of tar file](#view-contents-of-tar-file)
+    - [extract tar file](#extract-tar-file)
+  - [Symbolic links (symlinks)](#symbolic-links-symlinks)
+    - [Create](#create)
+    - [Delete](#delete)
 
-## Display formatted `PATH`
+## Display formatted `$PATH`
 
 ### **sed**
 
@@ -38,39 +37,9 @@
 
 `$ chsh -s $(which zsh)`
 
-useful packages
-
-- [bat](https://github.com/sharkdp/bat)
-- [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy)
-- [fzf](https://github.com/junegunn/fzf)
-- [glances](https://github.com/nicolargo/glances)
-- htop
-- jq
-- [ripgrep](https://github.com/BurntSushi/ripgrep)
-- [z - jump around](https://github.com/rupa/z)
-- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
-
 ## display system info using `inxi`
 
 `$ inxi -Frmxx`
-
-## `curl`
-
-`-k`, `--insecure`
-
-> (SSL) This option explicitly allows curl to perform "insecure" SSL connections and transfers. All SSL connections are attempted to be made secure by using the CA certificate bundle installed by default. This makes all connections considered "insecure" fail unless -k, --insecure is used.
-
-`-i`, `--include`
-
-> Include the HTTP response headers in the output. The HTTP response headers can include things like server name, cookies, date of the document, HTTP version and more...
->
-> To view the request headers, consider the `-v`, `--verbose` option.
-
-`-L`, `--location`
-
-- follow redirects
-
----
 
 ### z - jump around
 
@@ -106,38 +75,38 @@ apply settings to
 - a single user:
   - copy `nanorc` to `$HOME/.nanorc`
 
-## tar
+## tar files
 
 ### create tar file
 
 `$ tar czvf file.tar.gz destination-folder`
 
-## view contents of tar file
+### view contents of tar file
 
 `$ tar -ztvf file.tar.gz`
 
-## extract tar file
+### extract tar file
 
 `$ tar -xzvf file.tar.gz`
 
 `$ tar -xzvf file.tar.gz -C /directory`
 
-## tmux
+## Symbolic links (symlinks)
 
-### List all key bindings
+### Create
 
-from outside `tmux`: `$ tmux list-keys`
+```bash
+ln -s my_file.txt my_link.txt
+```
 
-from inside tmux: `<prefix>:list-keys` or `<prefix>?`
+`-f` or `--force` to overwrite existing destination
 
-## Advanced Package Tool (APT)
+### Delete
 
-`apt update`
+```bash
+unlink symlink_to_remove
+```
 
-`apt install $PACKAGE_NAME`
-
-`apt search $PACKAGE_NAME`
-
-`apt update`
-
-`apt upgrade`
+```bash
+rm symlink_to_remove
+```

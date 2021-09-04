@@ -18,6 +18,8 @@ Windows Subsystem for Linux 2
       - [zsh-autosuggestions](#zsh-autosuggestions)
       - [[[.NET]]](#net)
       - [Glances](#glances)
+      - [[[chezmoi]]](#chezmoi)
+      - [GitHub CLI](#github-cli)
     - [Configure installed packages](#configure-installed-packages)
   - [Signed Git commits with [[GPG]]](#signed-git-commits-with-gpg)
   - [Cargo](#cargo)
@@ -108,9 +110,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosugges
 Get package
 
 ```bash
-wget https://packages.microsoft.com/config/ubuntu/21.04/packages-microsoft-prod.deb -O
-
-packages-microsoft-prod.deb
+wget https://packages.microsoft.com/config/ubuntu/21.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 
 sudo dpkg -i packages-microsoft-prod.deb
 
@@ -131,6 +131,24 @@ sudo apt-get update; \
 ```bash
 pip install --user glances
 ```
+
+#### [[chezmoi]]
+
+<https://www.chezmoi.io/docs/install/>
+
+#### GitHub CLI
+
+```bash
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg
+
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+
+sudo apt update
+
+sudo apt install gh
+```
+
+<https://github.com/cli/cli/blob/trunk/docs/install_linux.md>
 
 ### Configure installed packages
 

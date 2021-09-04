@@ -1,5 +1,18 @@
 # Windows
 
+- [Windows](#windows)
+  - [Getting a window off screen back into view](#getting-a-window-off-screen-back-into-view)
+  - [Remap left `Caps Lock` to `Ctrl`](#remap-left-caps-lock-to-ctrl)
+  - [Royal TS slow startup](#royal-ts-slow-startup)
+  - [Windows Startup folder](#windows-startup-folder)
+  - [[[VS Code]]](#vs-code)
+    - [Settings files](#settings-files)
+    - [Set VS Code as Git diff tool](#set-vs-code-as-git-diff-tool)
+  - [Azure Data Studio](#azure-data-studio)
+    - [Settings files](#settings-files-1)
+  - [Utilities](#utilities)
+  - [Command Prompt Aliases](#command-prompt-aliases)
+
 ## Getting a window off screen back into view
 
 - Hold down the `Shift` key while right-clicking the program in the taskbar
@@ -58,6 +71,12 @@ trustExitCode = false
 - **PowerToys**
 - **ShellMenuView**
   - <http://www.nirsoft.net>
+- **Link Shell Extension**
+  - <https://schinagl.priv.at/nt/hardlinkshellext/linkshellextension.html>
+    -- **Clink**
+  - <https://chrisant996.github.io/clink/>
+- **Polsedit**
+  - <https://www.southsoftware.com/polsedit.html>
 
 ## Command Prompt Aliases
 

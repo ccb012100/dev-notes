@@ -6,6 +6,18 @@
 
 **How to deal with large Cargo workspaces in Rust**: <https://kerkour.com/blog/rust-large-cargo-workspace/>
 
+## Commands
+
+`cargo new` create a skeleton project in a new directory.
+
+`cargo init` create a skeleton project in the current directory.
+
+`cargo build` downloads dependencies and compiles the code into an executable.
+
+`cargo run` executes `cargo build` and then runs the executable.
+
+`cargo doc` builds HTML documentation for every dependency in the project.
+
 ## Running in [[Windows]]
 
 ### link.exe error
