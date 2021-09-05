@@ -11,7 +11,7 @@
   - [Azure Data Studio](#azure-data-studio)
     - [Settings files](#settings-files-1)
   - [Utilities](#utilities)
-  - [Command Prompt Aliases](#command-prompt-aliases)
+  - [Environment variables](#environment-variables)
 
 ## Getting a window off screen back into view
 
@@ -78,21 +78,10 @@ trustExitCode = false
 - **Polsedit**
   - <https://www.southsoftware.com/polsedit.html>
 
-## Command Prompt Aliases
+## Environment variables
 
-use `doskey.exe`
+`%PATH%`
 
-```cmd
-@echo off
+`%TEMP%`/`%TMP%`
 
-doskey ls=dir
-
-doskey cb=cargo build
-doskey cc=cargo check
-doskey cr=cargo run
-
-doskey gb=go build .
-doskey gr=go run .
-```
-
-See <https://zwbetz.com/aliases-in-windows-command-prompt/> for more details.
+`%HOMEPATH%`

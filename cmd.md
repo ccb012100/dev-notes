@@ -1,5 +1,26 @@
 # Windows Command Prompt
 
+- [Windows Command Prompt](#windows-command-prompt)
+  - [Aliases](#aliases)
+    - [Auto-load aliases](#auto-load-aliases)
+      - [Windows Terminal](#windows-terminal)
+  - [`doskey`](#doskey)
+  - [Symbolic links (symlinks) in [[Windows]]](#symbolic-links-symlinks-in-windows)
+    - [Soft link](#soft-link)
+      - [File](#file)
+      - [Directory](#directory)
+    - [Hard link](#hard-link)
+      - [File](#file-1)
+      - [Directory (Junction)](#directory-junction)
+  - [%PATH%](#path)
+  - [Delete directories](#delete-directories)
+    - [Delete directory and contents recursively](#delete-directory-and-contents-recursively)
+  - [List files](#list-files)
+    - [Paged](#paged)
+    - [Wide list format](#wide-list-format)
+    - [Sort by newest](#sort-by-newest)
+    - [Sort by oldest](#sort-by-oldest)
+
 ## Aliases
 
 use `doskey.exe`
@@ -19,6 +40,8 @@ doskey cr=cargo run $*
 doskey gb=go build .
 doskey gr=go run .
 ```
+
+See <https://zwbetz.com/aliases-in-windows-command-prompt/> for more details.
 
 ### Auto-load aliases
 
@@ -84,3 +107,31 @@ mklink /J Link Target
 ## %PATH%
 
 pretty print: `$ echo %PATH:;=&echo.%`
+
+## Delete directories
+
+`rmdir`
+
+### Delete directory and contents recursively
+
+`$ rmdir /S dir_name`
+
+## List files
+
+`dir`
+
+### Paged
+
+`$ dir /P`
+
+### Wide list format
+
+`$ dir /W`
+
+### Sort by newest
+
+`$ dir /O-D`
+
+### Sort by oldest
+
+`$ dir /OD`
