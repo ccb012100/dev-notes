@@ -12,14 +12,16 @@
     - [Hard link](#hard-link)
       - [File](#file-1)
       - [Directory (Junction)](#directory-junction)
-  - [%PATH%](#path)
+  - [Pretty print %PATH% variable](#pretty-print-path-variable)
   - [Delete directories](#delete-directories)
     - [Delete directory and contents recursively](#delete-directory-and-contents-recursively)
   - [List files](#list-files)
+    - [List all files](#list-all-files)
     - [Paged](#paged)
     - [Wide list format](#wide-list-format)
     - [Sort by newest](#sort-by-newest)
     - [Sort by oldest](#sort-by-oldest)
+  - [Display the contents of a file](#display-the-contents-of-a-file)
 
 ## Aliases
 
@@ -104,9 +106,9 @@ mklink /H Link Target
 mklink /J Link Target
 ```
 
-## %PATH%
+## Pretty print %PATH% variable
 
-pretty print: `$ echo %PATH:;=&echo.%`
+`$ echo %PATH:;=&echo.%`
 
 ## Delete directories
 
@@ -119,6 +121,10 @@ pretty print: `$ echo %PATH:;=&echo.%`
 ## List files
 
 `dir`
+
+### List all files
+
+`$ dir /A`
 
 ### Paged
 
@@ -135,3 +141,9 @@ pretty print: `$ echo %PATH:;=&echo.%`
 ### Sort by oldest
 
 `$ dir /OD`
+
+## Display the contents of a file
+
+`type`
+
+`$ type file1 file2 file3`
