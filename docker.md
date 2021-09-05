@@ -1,5 +1,17 @@
 # Docker
 
+## add autocompletion in [[Zsh]]
+
+1. Download completion script and place in `zsh-completions` directory
+
+```zsh
+curl \
+  -L https://raw.githubusercontent.com/docker/compose/master/contrib/completion/zsh/_docker-compose
+  -o /usr/local/share/zsh/zsh-completions
+```
+
+<https://docs.docker.com/compose/completion/>
+
 ## dotnet core locally with https
 
 Useful GitHub issues thread: [How to setup the dev certificate when using Docker in development #6199](https://github.com/dotnet/AspNetCore.Docs/issues/6199)
@@ -95,7 +107,7 @@ System.NotSupportedException: The server mode SSL must use a certificate with th
 
 ###### Cause
 
-Certificate does not have a key (based on https://parsstudent.com/asp-net-core-2-1-application-in-docker-with-https-enabled/)
+Certificate does not have a key (based on <https://parsstudent.com/asp-net-core-2-1-application-in-docker-with-https-enabled/>)
 
 ###### Fix
 
@@ -115,22 +127,22 @@ sudo docker run -d -e ACCEPT_EULA=Y -e MSSQL_SA_PASSWORD=blahBlah1234 \
 ### create login
 
 ```sql
-CREATE LOGIN cbocardo
-    WITH PASSWORD = 'BlahBlah0987';
+CREATE LOGIN $user
+    WITH PASSWORD = '$password';
 ```
 
 ### create database user
 
 ```sql
-USE RestApi;
-CREATE USER cbocardo FOR LOGIN cbocardo
+USE $db_name;
+CREATE USER $user_name FOR LOGIN $user
 GO
 ```
 
-### grant CONTROL in RestApi to user
+### grant CONTROL in DB to user
 
 ```sql
-USE RestApi;
-GRANT CONTROL ON DATABASE::RestApi TO cbocardo;
+USE $db_name;
+GRANT CONTROL ON DATABASE:$db_name TO $user_name;
 GO
 ```

@@ -7,7 +7,10 @@ Windows Subsystem for Linux 2
 - [WSL2](#wsl2)
   - [Fresh installation](#fresh-installation)
     - [Upgrade [[Ubuntu]] to 21.04 (Hirsute Hippo)](#upgrade-ubuntu-to-2104-hirsute-hippo)
-    - [Set [[Zsh]] as default shell](#set-zsh-as-default-shell)
+    - [[[Zsh]]](#zsh)
+      - [Set [[Zsh]] as default shell](#set-zsh-as-default-shell)
+      - [Add completions directory](#add-completions-directory)
+        - [Add dir to `$FPATH`](#add-dir-to-fpath)
     - [Install packages with apt-get](#install-packages-with-apt-get)
       - [fzf](#fzf)
       - [powerlevel10K](#powerlevel10k)
@@ -22,9 +25,9 @@ Windows Subsystem for Linux 2
       - [GitHub CLI](#github-cli)
     - [Configure installed packages](#configure-installed-packages)
   - [Signed Git commits with [[GPG]]](#signed-git-commits-with-gpg)
-  - [Cargo](#cargo)
+  - [Configure [[Emacs]]](#configure-emacs)
+  - [[[Cargo]]](#cargo)
     - [permissions error](#permissions-error)
-  - [_source:_ <https://github.com/rust-lang/cargo/issues/6757#issuecomment-738494343>](#source-httpsgithubcomrust-langcargoissues6757issuecomment-738494343)
 
 ## Fresh installation
 
@@ -41,7 +44,9 @@ Windows Subsystem for Linux 2
 
 - Run upgrade: `do-release-upgrade`
 
-### Set [[Zsh]] as default shell
+### [[Zsh]]
+
+#### Set [[Zsh]] as default shell
 
 ```bash
 sudo apt-get install zsh
@@ -49,10 +54,35 @@ sudo apt-get install zsh
 chsh -s $(which zsh)`
 ```
 
+#### Add completions directory
+
+`mkdir -p ~/.zsh/zsh-completions
+
+##### Add dir to `$FPATH`
+
+In `~/.zshrc`, add the line
+
+`fpath=(~/.zsh/zsh-completions $fpath)`
+
 ### Install packages with apt-get
 
 ```bash
-sudo apt-get install fd-find bat emacs exa golang-go jq gnupg neofetch neovim mc python3-pip ranger postgresql ripgrep silversearcher-ag
+sudo apt-get install \
+  fd-find \
+  bat \
+  emacs \
+  exa \
+  golang-go \
+  jq \
+  gnupg \
+  neofetch \
+  neovim \
+  mc \
+  python3-pip \
+  ranger \
+  postgresql \
+  ripgrep \
+  silversearcher-ag
 ```
 
 #### fzf
@@ -182,6 +212,8 @@ error: could not exec the linker `cc`
   = note: "cc" "-Wl,--as-needed" "-Wl,-z,noexecstack" "-m64" "-Wl,--eh-frame-hdr" "-L" "/home/bagel/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib"
 ```
 
-It can be resolved by running the command `sudo apt-get install build-essential`
+It can be resolved by running the command
 
-## _source:_ <https://github.com/rust-lang/cargo/issues/6757#issuecomment-738494343>
+`$ sudo apt-get install build-essential`
+
+_source:_ <https://github.com/rust-lang/cargo/issues/6757#issuecomment-738494343>

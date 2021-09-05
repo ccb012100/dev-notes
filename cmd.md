@@ -80,3 +80,7 @@ mklink /H Link Target
 ```cmd
 mklink /J Link Target
 ```
+
+## %PATH%
+
+pretty print: `$ echo %PATH:;=&echo.%`
