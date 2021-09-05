@@ -164,7 +164,12 @@ Install Gpg4win: <https://www.gpg4win.org/>
 
 <https://www.39digits.com/signed-git-commits-on-wsl2-using-visual-studio-code>
 
-## Cargo
+## Configure [[Emacs]]
+
+1. Clone my Emacs dotfiles repo
+1. Run `cp -rl $DOTFILES_REPO/* ~/.emacs.d/` to symlink dotfiles to the emacs config directory
+
+## [[Cargo]]
 
 ### permissions error
 
