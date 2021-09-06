@@ -22,6 +22,9 @@
     - [Sort by newest](#sort-by-newest)
     - [Sort by oldest](#sort-by-oldest)
   - [Display the contents of a file](#display-the-contents-of-a-file)
+  - [Copy files](#copy-files)
+    - [Switches](#switches)
+  - [Batch files](#batch-files)
 
 ## Aliases
 
@@ -147,3 +150,27 @@ mklink /J Link Target
 `type`
 
 `$ type file1 file2 file3`
+
+## Copy files
+
+`xcopy`
+
+Similar to [[rsync]]
+
+### Switches
+
+- `/D` -> only copy if src is newer than dest
+- `/F` -> display full path and file name of src and dest
+- `/H` -> copy hidden/system files
+- `/I` -> assume dest is a directory
+- `/L` -> dry run
+
+## Batch files
+
+`.bat` extension
+
+`@ECHO OFF` - don't echo the commands in the batch file
+
+`@PAUSE` - keep the window open after the batch file finishes
+
+`REM` - start comment
