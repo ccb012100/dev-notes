@@ -77,6 +77,8 @@ trustExitCode = false
   - <https://chrisant996.github.io/clink/>
 - **Polsedit**
   - <https://www.southsoftware.com/polsedit.html>
+- **Meld**
+  - <https://meldmerge.org/>
 
 ## Environment variables
 
