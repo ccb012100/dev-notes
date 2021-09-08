@@ -51,7 +51,7 @@ Windows Subsystem for Linux 2
 ```bash
 sudo apt-get install zsh
 
-chsh -s $(which zsh)`
+chsh -s $(which zsh)
 ```
 
 #### Add completions directory
@@ -217,3 +217,21 @@ It can be resolved by running the command
 `$ sudo apt-get install build-essential`
 
 _source:_ <https://github.com/rust-lang/cargo/issues/6757#issuecomment-738494343>
+
+## `apt-get` hook error
+
+If, after uninstalling `snap`, you get this error:
+
+```bash
+E: Could not read response to hello message from hook [ ! -f /usr/bin/snap ] || /usr/bin/snap advise-snap --from-apt 2>/dev/null || true: Success
+```
+
+Follow the advice in <https://github.com/microsoft/WSL/issues/4640>.
+
+```bash
+cd /etc/apt/apt.conf.d/
+
+grep -r snap
+```
+
+Delete/rename the matching file.
