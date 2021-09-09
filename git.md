@@ -1,5 +1,27 @@
 # [[Git]]
 
+- [[[Git]]](#git)
+  - [Set git to rebase on pull:](#set-git-to-rebase-on-pull)
+  - [Set fast forward as default](#set-fast-forward-as-default)
+  - [Get email](#get-email)
+  - [Get username](#get-username)
+  - [Sync fork with original repository](#sync-fork-with-original-repository)
+    - [1. Clone your fork](#1-clone-your-fork)
+    - [2. Add remote from original repository in your forked repository](#2-add-remote-from-original-repository-in-your-forked-repository)
+    - [3. Updating your fork from original repo to keep up with their changes](#3-updating-your-fork-from-original-repo-to-keep-up-with-their-changes)
+  - [removes local feature branches that have already been merged](#removes-local-feature-branches-that-have-already-been-merged)
+  - [remove remote branches that have been merged](#remove-remote-branches-that-have-been-merged)
+  - [remove local branches that have no remote](#remove-local-branches-that-have-no-remote)
+  - [Changing history](#changing-history)
+  - [Fix author on all commits after SHA](#fix-author-on-all-commits-after-sha)
+    - [change author for all matching commits](#change-author-for-all-matching-commits)
+    - [amend commit to current time](#amend-commit-to-current-time)
+  - [Remove file from entire branch history](#remove-file-from-entire-branch-history)
+  - [Rebase previous commits](#rebase-previous-commits)
+  - [[[GPG]]](#gpg)
+    - [signing fails](#signing-fails)
+  - [Status of all repositories](#status-of-all-repositories)
+
 ## Set git to rebase on pull:
 
 ```bash
@@ -41,9 +63,9 @@ git clone git@github.com:YOUR-USERNAME/YOUR-FORKED-REPO.git
 ### 2. Add remote from original repository in your forked repository
 
 ```bash
-cd into/cloned/fork-repo`  
+cd into/cloned/fork-repo`
 
-git remote add upstream git://github.com/ORIGINAL-DEV-USERNAME/REPO-YOU-FORKED-FROM.git`  
+git remote add upstream git://github.com/ORIGINAL-DEV-USERNAME/REPO-YOU-FORKED-FROM.git`
 
 git fetch upstream
 ```
@@ -130,3 +152,29 @@ Find all repositories in current directory and display their status
 ```bash
 find . -mindepth 1 -maxdepth 1 -type d -print -exec git -C {} status \;
 ```
+
+## Interactive `add`
+
+`$ git add -i` or `$ git add --interactive`
+
+`status` status output, showing you how many added and removed lines there are in each file
+
+- split up between staged and unstaged changes
+
+`update` stage complete files into the index
+
+`revert` unstage changes from the index (operates on whole files)
+
+`add untracked` add untracked files
+
+`patch` does the same thing as `--patch`
+
+`diff` shows you a diff between the index and `HEAD`
+
+### Manually edit hunk
+
+Enter `e` on the prompt `Stage this hunk [y/n/a/d/K/j/J/e/?]`
+
+To drop `+` line: remove the line
+
+To drop `-` line: change `-` to a single `[space]`)
