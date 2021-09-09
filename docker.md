@@ -18,6 +18,26 @@ Useful GitHub issues thread: [How to setup the dev certificate when using Docker
 
 ### Errors
 
+#### Permissions error in Linux
+
+Error similar to
+
+```bash
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock:
+```
+
+##### Cause
+
+Running as a nonroot user who needs to be added to the `docker` group.
+
+##### Fix
+
+1. Create the docker group: `$ sudo groupadd docker`
+2. Add your user to the `docker` group: `$ sudo usermod -aG docker $USER`
+3. Log your user out then back in.
+
+_source_: <https://docs.docker.com/engine/install/linux-postinstall/>
+
 #### docker-compose build fails
 
 ```text

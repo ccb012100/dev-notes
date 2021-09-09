@@ -7,6 +7,7 @@ Windows Subsystem for Linux 2
 - [WSL2](#wsl2)
   - [Fresh installation](#fresh-installation)
     - [Upgrade [[Ubuntu]] to 21.04 (Hirsute Hippo)](#upgrade-ubuntu-to-2104-hirsute-hippo)
+  - [`apt-get` hook error](#apt-get-hook-error)
     - [[[Zsh]]](#zsh)
       - [Set [[Zsh]] as default shell](#set-zsh-as-default-shell)
       - [Add completions directory](#add-completions-directory)
@@ -27,7 +28,7 @@ Windows Subsystem for Linux 2
   - [Configure [[Emacs]]](#configure-emacs)
   - [[[Cargo]]](#cargo)
     - [permissions error](#permissions-error)
-  - [`apt-get` hook error](#apt-get-hook-error)
+  - [Configure [[Docker]]](#configure-docker)
 
 ## Fresh installation
 
@@ -38,11 +39,29 @@ Windows Subsystem for Linux 2
 - Open `relase-upgrades` file: `sudo vim /etc/update-manager/release-upgrades`
   - On the last line, change `Prompt=lts` to `Prompt=normal`
 - Uninstall `snapd`: `sudo apt remove snapd`
-
   - upgrade will fail if `snapd` is installed
     - <https://github.com/microsoft/WSL/issues/5126>
-
 - Run upgrade: `do-release-upgrade`
+
+## `apt-get` hook error
+
+If, after uninstalling `snap`, you get this error:
+
+```bash
+E: Could not read response to hello message from hook [ ! -f /usr/bin/snap ] || /usr/bin/snap advise-snap --from-apt 2>/dev/null || true: Success
+```
+
+Follow the advice in <https://github.com/microsoft/WSL/issues/4640>.
+
+To find the file with the issue:
+
+```bash
+cd /etc/apt/apt.conf.d/
+
+grep -r snap
+```
+
+Then delete/rename the matching file to stop the hook from running.
 
 ### [[Zsh]]
 
@@ -214,22 +233,10 @@ It can be resolved by running the command
 
 _source:_ <https://github.com/rust-lang/cargo/issues/6757#issuecomment-738494343>
 
-## `apt-get` hook error
+## Configure [[Docker]]
 
-If, after uninstalling `snap`, you get this error:
+1. Create the docker group: `$ sudo groupadd docker`
+2. Add your user to the `docker` group: `$ sudo usermod -aG docker $USER`
+3. Log your user out then back in.
 
-```bash
-E: Could not read response to hello message from hook [ ! -f /usr/bin/snap ] || /usr/bin/snap advise-snap --from-apt 2>/dev/null || true: Success
-```
-
-Follow the advice in <https://github.com/microsoft/WSL/issues/4640>.
-
-To find the file with the issue:
-
-```bash
-cd /etc/apt/apt.conf.d/
-
-grep -r snap
-```
-
-Then delete/rename the matching file to stop the hook from running.
+_source_: <https://docs.docker.com/engine/install/linux-postinstall/>
