@@ -21,13 +21,13 @@ Windows Subsystem for Linux 2
       - [zsh-autosuggestions](#zsh-autosuggestions)
       - [[[.NET]]](#net)
       - [Glances](#glances)
-      - [[[chezmoi]]](#chezmoi)
       - [GitHub CLI](#github-cli)
     - [Configure installed packages](#configure-installed-packages)
   - [Signed Git commits with [[GPG]]](#signed-git-commits-with-gpg)
   - [Configure [[Emacs]]](#configure-emacs)
   - [[[Cargo]]](#cargo)
     - [permissions error](#permissions-error)
+  - [`apt-get` hook error](#apt-get-hook-error)
 
 ## Fresh installation
 
@@ -56,7 +56,7 @@ chsh -s $(which zsh)
 
 #### Add completions directory
 
-`mkdir -p ~/.zsh/zsh-completions
+`mkdir -p ~/.zsh/zsh-completions`
 
 ##### Add dir to `$FPATH`
 
@@ -162,10 +162,6 @@ sudo apt-get update; \
 pip install --user glances
 ```
 
-#### [[chezmoi]]
-
-<https://www.chezmoi.io/docs/install/>
-
 #### GitHub CLI
 
 ```bash
@@ -228,10 +224,12 @@ E: Could not read response to hello message from hook [ ! -f /usr/bin/snap ] || 
 
 Follow the advice in <https://github.com/microsoft/WSL/issues/4640>.
 
+To find the file with the issue:
+
 ```bash
 cd /etc/apt/apt.conf.d/
 
 grep -r snap
 ```
 
-Delete/rename the matching file.
+Then delete/rename the matching file to stop the hook from running.
