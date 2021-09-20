@@ -33,3 +33,7 @@ q<register><commands>q
 ## Registers
 
 <https://www.brianstorti.com/vim-registers/>
+
+## `vimrc` file locations
+
+Enter `:version` to see list of paths that vim checks for `vimrc` files.
