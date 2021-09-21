@@ -21,6 +21,12 @@
   - [[[GPG]]](#gpg)
     - [signing fails](#signing-fails)
   - [Status of all repositories](#status-of-all-repositories)
+  - [Interactive `add`](#interactive-add)
+    - [Manually edit hunk](#manually-edit-hunk)
+  - [`amend`](#amend)
+    - [Add files to commit](#add-files-to-commit)
+    - [Change commit message](#change-commit-message)
+  - [undo last commit](#undo-last-commit)
 
 ## Set git to rebase on pull:
 
@@ -178,3 +184,27 @@ Enter `e` on the prompt `Stage this hunk [y/n/a/d/K/j/J/e/?]`
 To drop `+` line: remove the line
 
 To drop `-` line: change `-` to a single `[space]`)
+
+## `amend`
+
+### Add files to commit
+
+```bash
+# add files
+git add .
+
+# amend commit with --no-edit to keep the same commit message
+git commit --amend --no-edit
+```
+
+### Change commit message
+
+```bash
+git commit --amend -m "this is the new commit message"
+```
+
+## undo last commit
+
+```bash
+git reset --soft HEAD~1
+```
