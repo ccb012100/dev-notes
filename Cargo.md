@@ -37,3 +37,9 @@ error: aborting due to previous error
 ```
 
 Then you need to install the C++ Build Tools in [[Visual Studio]] (under the section called **Desktop Development with C++**)
+
+## `cargo-edit`
+
+Run `cargo install cargo-edit`
+
+Now packages can be added to a project with the command `cargo add $package_name`
