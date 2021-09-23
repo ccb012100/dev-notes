@@ -2,6 +2,8 @@
 
 ## CLI
 
+_reference_: <https://docs.microsoft.com/en-us/nuget/reference/cli-reference/cli-ref-list>
+
 ### List packages in the project
 
 In the project folder (where the `nuget.config` file is), run the command
