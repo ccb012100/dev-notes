@@ -1,4 +1,4 @@
-# [[Ubuntu]] [[linux]]
+# [[Ubuntu]] [[Linux]]
 
 ## get version
 

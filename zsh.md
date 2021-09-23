@@ -8,7 +8,7 @@
 default aliases are in `~/.oh-my-zsh/plugins`
 
 - git aliases in `~/.oh-my-zsh/plugins/git/git.plugin.zsh`
-- [[linux]] command aliases in `~/.oh-my-zsh/plugins/common-aliases/common-aliases.plugin.zsh`
+- [[Linux]] command aliases in `~/.oh-my-zsh/plugins/common-aliases/common-aliases.plugin.zsh`
 
 add custom alises in `$ZSH_CUSTOM/aliases.zsh`
 
