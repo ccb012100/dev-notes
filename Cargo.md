@@ -43,3 +43,17 @@ Then you need to install the C++ Build Tools in [[Visual Studio]] (under the sec
 Run `cargo install cargo-edit`
 
 Now packages can be added to a project with the command `cargo add $package_name`
+
+## Set `RUST_BACKTRACE`
+
+### [[Windows]]
+
+```cmd
+set RUST_BACKTRACE=1
+```
+
+### [[Linux]]
+
+```bash
+export RUST_BACKTRACE=1
+```
