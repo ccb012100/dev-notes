@@ -49,3 +49,14 @@ allowed values:
 - `n[ormal]`
 - `d[etailed]`
 - `diag[nostic]`
+
+## Make `Ctrl+s` act more like [[Emacs]]
+
+In [[Emacs]], the keybinding `C-s` will start a search, but entering `C-s` again will find the next match. This can be done in VS Code by setting the `When` clause carefully:
+
+1. Set the **Command** `Find` (`actions.find`)
+   - **Keybinding**: `Ctrl + S`
+   - **When clause**: `editorFocus || editorIsOpen`
+2. Set the **Command** `Find Next` (`editor.action.nextMatchFindAction`)
+   - **Keybinding**: `Ctrl + S`
+   - **When clause**: `editorFocus && editorHasSelection`
