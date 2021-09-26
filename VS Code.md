@@ -54,9 +54,13 @@ allowed values:
 
 In [[Emacs]], the keybinding `C-s` will start a search, but entering `C-s` again will find the next match. This can be done in VS Code by setting the `When` clause carefully:
 
-1. Set the **Command** `Find` (`actions.find`)
-   - **Keybinding**: `Ctrl + S`
-   - **When clause**: `editorFocus || editorIsOpen`
-2. Set the **Command** `Find Next` (`editor.action.nextMatchFindAction`)
-   - **Keybinding**: `Ctrl + S`
-   - **When clause**: `editorFocus && editorHasSelection`
+- Open **Keyboard Shortcuts**
+  - Set the **Command** `Find` (`actions.find`)
+    - **Keybinding**: `Ctrl + S`
+    - **When clause**: `editorFocus || editorIsOpen`
+  - Set the **Command** `Find Next` (`editor.action.nextMatchFindAction`)
+    - **Keybinding**: `Ctrl + S`
+    - **When clause**: `editorFocus && editorHasSelection`
+- Open **Settings**
+  - Go to the setting **Editor › Find: Seed Search String From Selection**
+    - Set the value to `selection`
