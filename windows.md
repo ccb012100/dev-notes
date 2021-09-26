@@ -87,3 +87,15 @@ trustExitCode = false
 `%TEMP%`/`%TMP%`
 
 `%HOMEPATH%`
+
+## Windows Defender
+
+### Fixing messages **Some settings are managed by your organization** or **This setting is managed by your administrator**
+
+1. Open **Registry Editor** (`regedit.exe`)
+2. Go to `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender`
+3. Export the `Windows Defender` branch.
+4. Delete the `Windows Defender` branch.
+5. Restart `explorer.exe`.
+
+_source_: <https://www.winhelponline.com/blog/windows-defender-disabled-real-time-protection-virus/>
