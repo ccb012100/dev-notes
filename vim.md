@@ -1,150 +1,289 @@
 # Vim
 
 - [Vim](#vim)
-  - [Format document](#format-document)
-  - [Macros](#macros)
-    - [Record macro](#record-macro)
-    - [Replay macro](#replay-macro)
-    - [Replay last excuted macro](#replay-last-excuted-macro)
-    - [View macros](#view-macros)
-  - [Registers](#registers)
-  - [`vimrc` file locations](#vimrc-file-locations)
-  - [Windows](#windows)
-    - [Switch between open windows](#switch-between-open-windows)
-      - [Cycle through windows](#cycle-through-windows)
-      - [Move to window in a specific direction](#move-to-window-in-a-specific-direction)
-  - [View keybindings](#view-keybindings)
-  - [Searching](#searching)
-    - [Next match](#next-match)
-    - [Previous match](#previous-match)
-    - [Ignore casing](#ignore-casing)
-      - [To turn off globally:](#to-turn-off-globally)
-      - [To turn on globally:](#to-turn-on-globally)
+  - [Normal mode](#normal-mode)
+    - [Scroll screen, centered on cursor](#scroll-screen-centered-on-cursor)
+    - [Format document](#format-document)
+    - [Macros](#macros)
+      - [Record macro](#record-macro)
+      - [Replay macro](#replay-macro)
+      - [Replay last excuted macro](#replay-last-excuted-macro)
+      - [View macros](#view-macros)
+    - [Registers](#registers)
+    - [`vimrc` file locations](#vimrc-file-locations)
+    - [View keybindings](#view-keybindings)
+    - [Searching](#searching)
+      - [Ignore casing](#ignore-casing)
+        - [To turn off globally:](#to-turn-off-globally)
+        - [To turn on globally:](#to-turn-on-globally)
+    - [Increment/decrement numbers](#incrementdecrement-numbers)
+    - [Navigation](#navigation)
+      - [Go to line](#go-to-line)
+      - [Go to column](#go-to-column)
+    - [Windows](#windows)
+      - [Split window](#split-window)
+    - [Marks](#marks)
+  - [Insert mode](#insert-mode)
+    - [Entering Insert mode](#entering-insert-mode)
   - [Visual mode](#visual-mode)
     - [Enter visual mode](#enter-visual-mode)
     - [Exit visual mode](#exit-visual-mode)
     - [Manipulate text](#manipulate-text)
-  - [Replace character](#replace-character)
-  - [Increment/decrement numbers](#incrementdecrement-numbers)
 
-## Format document
+## Normal mode
 
-`gg=G`
+```vim
+J             " join with next line
+gJ            " join lines without inserting a space
 
-## Macros
+gv            " reselect previous visual area
+
+~             " change casing
+gU{motion}    " convert text in direction moved to uppercase
+gu{motion}    " convert text in direction moved to lowercase
+
+y             " yank
+yy            " copy line
+Y             " copy line
+zy            " yank without trailing spaces
+
+p             " paste before
+P             " paste after
+
+dd            " delete line
+D             " delete to EOL
+
+u             " undo
+CTRL-R        " redo
+
+:g/regexp/d   " delete all lines that match regexp
+:v/regexp/d   " delete all lines that do NOT match regexp
+
+```
+
+### Scroll screen, centered on cursor
+
+```vim
+z<CR>  " focus cursor on top
+z-        " focus cursor on bottom
+z.        " focus cursor in center
+zz        " focus cursor in center
+
+12z+      " focus cursor on line 12
+```
+
+### Format document
+
+```vim
+gg=G
+```
+
+### Macros
 
 Allowable register names for macros are the letters a-z
 
-### Record macro
+#### Record macro
 
 ```vim
 q<register><commands>q
 ```
 
-### Replay macro
+#### Replay macro
 
 ```vim
 @<register>
 ```
 
-### Replay last excuted macro
+#### Replay last excuted macro
 
 ```vim
 @@
 ```
 
-### View macros
+#### View macros
 
-`:reg` or `:reg <register>`
+```vim
+:reg
 
-## Registers
+:reg <register>
+```
+
+### Registers
 
 <https://www.brianstorti.com/vim-registers/>
 
-## `vimrc` file locations
+### `vimrc` file locations
 
 Enter `:version` to see list of paths that vim checks for `vimrc` files.
 
-## Windows
-
-### Switch between open windows
-
-#### Cycle through windows
-
-```text
-C-w w
-```
-
-#### Move to window in a specific direction
-
-```text
-C-w [h|j|k|l]
-```
-
-## View keybindings
+### View keybindings
 
 ```vim
 :help index
 ```
 
-## Searching
+### Searching
 
 Type `/`, then the search term, then `[Enter]`
 
-### Next match
+```vim
+n   " next match
+N   " previous match
+```
 
-`n`
-
-### Previous match
-
-`N`
-
-### Ignore casing
+#### Ignore casing
 
 Append `\c` to the search term to ignore the casing, or `\C` to match case
 
 e.g. `/Linux\c` or `/Linux\C`
 
-#### To turn off globally:
+##### To turn off globally:
 
 `:set ignorecase` or `:set ic`
 
-#### To turn on globally:
+##### To turn on globally:
 
 `:set noignorecase` or `:set noic`
+
+### Increment/decrement numbers
+
+- `C-a` -> increment next number
+- `C-x` -> decrement next number
+
+### Navigation
+
+```vim
+H   " Top of screen ('Highest')
+M   " Middle of screen ('Middle')
+L   " Bottom of screen ('Lowest')
+
+(   " Beggining of sentence
+)   " End of sentence
+
+{   " Beginning of paragraph
+}   " End of paragraph
+
+gM  " go to character at middle of the text line
+gm  " go to character at middle of the screenline
+
+zj  " move to the start of the next fold
+zk  " move to the start of the previous fold
+```
+
+#### Go to line
+
+using line 32 as an example:
+
+```vim
+32G         " G defaults to last line of file
+
+32gg        " gg defaults to first line of file
+
+:32<ENTER>
+
+```
+
+#### Go to column
+
+Using line 32 as an example:
+
+```vim
+32|
+```
+
+### Windows
+
+#### Split window
+
+```vim
+:sp file          " open a file in a new split window
+:vs file          " open a file in a new vertical split window
+
+CTRL-W q         " quit window
+CTRL-W o         " quit all but current window
+
+CTRL-W {motion}  " move to window in direction of motion
+CTRL-W w         " go to next window
+CTRL-W p         " go to previous window
+
+CTRL-W +         " increase window height
+CTRL-W -         " decrease window height
+CTRL-W <         " decrease window width
+CTRL-W >         " increase window width
+
+CTRL-W H           move current window to the far left
+CTRL-W J           move current window to the very bottom
+CTRL-W K           move current window to the very top
+CTRL-W L           move current window to the far right
+```
+
+### Marks
+
+```vim
+ma      " mark spot and label it a
+mA      " mark spot and globally label it A
+
+'a      " jump to mark
+'A      " jump to mark (cross file)
+
+''      " jump to previous spot
+'.      " jump to last modification
+:marks  " show all marks
+```
+
+## Insert mode
+
+### Entering Insert mode
+
+```vim
+I   " insert at beginning of line
+i   " insert before cursor
+
+A   " append after end of line
+a   " append after cursor
+
+O   " open new line before cursor
+o   " open new life after cursor
+
+C   " synonym for c$ (change to end of line)
+cc  " change line
+
+r   " replace character
+R   " enter overtype ('Replace') mode
+
+gI  " insert at column 1
+```
 
 ## Visual mode
 
 ### Enter visual mode
 
-- `v` -> Character mode
-- `V` -> Line mode
-- `C-v` -> Block mode
-- `gv` -> start visual mode with last selection
+```vim
+v       " Character mode
+V       " Line mode
+CTRL-v  " Block mode
+gv      " Start visual mode with last selection
+```
 
 ### Exit visual mode
 
-`Esc`, `C-c`, or the same key you used to enter visual mode
+`<Esc>`, `CTRL-C`, or the same key you used to enter visual mode
 
 ### Manipulate text
 
 Comands act on the selection
 
-- `<` -> dedent
-- `>` -> indent
-- `c` -> change
-- `d` -> delete
-- `u` -> lowercase
-- `U` -> uppercase
-- `y` -> yank
+```vim
+<   " dedent
+>   " indent
+=   " auto-indent
 
-## Replace character
+c   " change
+d   " delete
 
-'r' -> replace single character
+~   " change case
+u   " lowercase
+U   " uppercase
 
-'R' -> enter overtype (replace) mode
-
-## Increment/decrement numbers
-
-- `C-a` -> increment next number
-- `C-x` -> decrement next number
+y   " yank
+```
