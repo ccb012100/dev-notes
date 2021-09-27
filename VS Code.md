@@ -64,3 +64,13 @@ In [[Emacs]], the keybinding `C-s` will start a search, but entering `C-s` again
 - Open **Settings**
   - Go to the setting **Editor › Find: Seed Search String From Selection**
     - Set the value to `selection`
+
+## Hide Extension Snippet from Intellisense
+
+I wanted to turn off the `markdownlint` extension's snippets, and this was the solution I found:
+
+- Open the Command Pallette
+- Chose **Insert Snippet**
+- Hover over the snippet and click the eye icon to hide/show the snippet in Intellisense
+
+_source_: <https://github.com/microsoft/vscode/issues/10565#issuecomment-721832613>
