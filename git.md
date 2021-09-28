@@ -69,9 +69,9 @@ git clone git@github.com:YOUR-USERNAME/YOUR-FORKED-REPO.git
 ### 2. Add remote from original repository in your forked repository
 
 ```bash
-cd into/cloned/fork-repo`
+cd $cloned_fork_repo`
 
-git remote add upstream git://github.com/ORIGINAL-DEV-USERNAME/REPO-YOU-FORKED-FROM.git`
+git remote add upstream git://github.com/ORIGINAL-DEV-USERNAME/REPO-YOU-FORKED-FROM.git
 
 git fetch upstream
 ```
@@ -84,15 +84,21 @@ git pull upstream master
 
 ## removes local feature branches that have already been merged
 
-- `$ git branch --merged | grep -v "\*" | grep "feature/*" | xargs -n 1 git branch -d`
+```bash
+git branch --merged | grep -v "\*" | grep "feature/*" | xargs -n 1 git branch -d
+```
 
 ## remove remote branches that have been merged
 
-- `$ git remote prune origin --dry-run`
+```bash
+git remote prune origin --dry-run
+```
 
 ## remove local branches that have no remote
 
-- `$ git branch --v | grep "\[gone\]" | awk '{print $1}' | xargs git branch -D`
+```bash
+git branch --v | grep "\[gone\]" | awk '{print $1}' | xargs git branch -D
+```
 
 ## Changing history
 
@@ -125,7 +131,9 @@ fi
 
 ### amend commit to current time
 
-- `$ GIT_COMMITTER_DATE="$(date)" git commit --amend --no-edit --date "$(date)"`
+```bash
+GIT_COMMITTER_DATE="$(date)" git commit --amend --no-edit --date "$(date)"
+```
 
 ## Remove file from entire branch history
 

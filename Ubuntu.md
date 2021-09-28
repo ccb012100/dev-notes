@@ -2,7 +2,9 @@
 
 ## get version
 
-`lsb_release -a`
+```bash
+lsb_release -a
+```
 
 ## Debian package (`.deb` file)
 
@@ -20,14 +22,16 @@ sudo dpkg -i package_file.deb
 
 ## Advanced Package Tool (APT)
 
-`apt` or `apt-get`
+```bash
+# "apt" or "apt-get"
 
-`apt update`
+apt update
 
-`apt install $PACKAGE_NAME`
+apt install $PACKAGE_NAME
 
-`apt search $PACKAGE_NAME`
+apt search $PACKAGE_NAME
 
-`apt update`
+apt update
 
-`apt upgrade`
+apt upgrade
+```

@@ -139,7 +139,13 @@ e.g. `/Linux\c` or `/Linux\C`
 
 ##### To turn off globally:
 
-`:set ignorecase` or `:set ic`
+```vim
+:set ignorecase
+
+" or
+
+:set ic
+```
 
 ##### To turn on globally:
 
@@ -180,7 +186,6 @@ using line 32 as an example:
 32gg        " gg defaults to first line of file
 
 :32<ENTER>
-
 ```
 
 #### Go to column

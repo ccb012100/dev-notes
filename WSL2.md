@@ -75,13 +75,17 @@ chsh -s $(which zsh)
 
 #### Add completions directory
 
-`mkdir -p ~/.zsh/zsh-completions`
+```bash
+mkdir -p ~/.zsh/zsh-completions
+```
 
 ##### Add dir to `$FPATH`
 
 In `~/.zshrc`, add the line
 
-`fpath=(~/.zsh/zsh-completions $fpath)`
+```bash
+fpath=(~/.zsh/zsh-completions $fpath)
+```
 
 ### Install packages with apt-get
 
@@ -199,8 +203,14 @@ sudo apt install gh
 
 `fd-find`
 
-- Run `mkdir ~/.local/bin`
-- Run `ln -s $(which fdfind) ~/.local/bin/fd`
+- Run:
+
+```bash
+mkdir ~/.local/bin
+
+ln -s $(which fdfind) ~/.local/bin/fd
+```
+
 - Add `$HOME/.local/bin` to `$PATH`
 
 ## Signed Git commits with [[GPG]]
@@ -229,7 +239,9 @@ error: could not exec the linker `cc`
 
 It can be resolved by running the command
 
-`$ sudo apt-get install build-essential`
+```bash
+sudo apt-get install build-essential
+```
 
 _source:_ <https://github.com/rust-lang/cargo/issues/6757#issuecomment-738494343>
 
