@@ -3,8 +3,6 @@
 - [Linux](#linux)
   - [Display formatted `$PATH`](#display-formatted-path)
     - [**sed**](#sed)
-    - [**tr**](#tr)
-    - [**python**](#python)
   - [Set default shell to [[Zsh]]](#set-default-shell-to-zsh)
   - [display system info using `inxi`](#display-system-info-using-inxi)
     - [z - jump around](#z---jump-around)
@@ -23,23 +21,31 @@
 
 ### **sed**
 
-`$ sed 's/:/\n/g' <<< "$PATH"`
+```bash
+# sed
+sed 's/:/\n/g' <<< "$PATH"
 
-### **tr**
+#tr
+tr ':' '\n' <<< "$PATH" # tr
 
-`$ tr ':' '\n' <<< "$PATH"`
+# python
+python2 -c "import os; print os.environ['PATH'].replace(':', '\n')"
 
-### **python**
-
-`$ python2 -c "import os; print os.environ['PATH'].replace(':', '\n')"`
+# bash parameter substition
+echo "${PATH//:/$'\n'}"
+```
 
 ## Set default shell to [[Zsh]]
 
-`$ chsh -s $(which zsh)`
+```bash
+chsh -s $(which zsh)
+```
 
 ## display system info using `inxi`
 
-`$ inxi -Frmxx`
+```bash
+inxi -Frmxx
+```
 
 ### z - jump around
 
@@ -49,20 +55,13 @@ modify .zshrc [to fix error](https://github.com/rupa/z/issues/230#issuecomment-3
 
 ### switches
 
-- **`-B`**
-  - backs up the file prior to editing it
-- **`-E`**
-  - converts tabs to spaces when editing
-- **`-c`**
-  - constantly show the cursor position stats
-- **`-i`**
-  - automatically indents new lines to the same position as the previous line
-- **`-k`**
-  - toggle cut so that it cuts from cursor position instead of the whole line
-- **`-m`**
-  - provides mouse support to the editor
-- **`-v`**
-  - opens file as readonly
+- **`-B`** backs up the file prior to editing it
+- **`-E`** converts tabs to spaces when editing
+- **`-c`** constantly show the cursor position stats
+- **`-i`** automatically indents new lines to the same position as the previous line
+- **`-k`** toggle cut so that it cuts from cursor position instead of the whole line
+- **`-m`** provides mouse support to the editor
+- **`-v`** opens file as readonly
 
 ### nanorc
 
@@ -79,17 +78,23 @@ apply settings to
 
 ### create tar file
 
-`$ tar czvf file.tar.gz destination-folder`
+```bash
+tar czvf file.tar.gz destination-folder
+```
 
 ### view contents of tar file
 
-`$ tar -ztvf file.tar.gz`
+```bash
+tar -ztvf file.tar.gz
+```
 
 ### extract tar file
 
-`$ tar -xzvf file.tar.gz`
+```bash
+tar -xzvf file.tar.gz
 
-`$ tar -xzvf file.tar.gz -C /directory`
+tar -xzvf file.tar.gz -C /directory
+```
 
 ## Symbolic links (symlinks)
 
@@ -105,8 +110,6 @@ ln -s my_file.txt my_link.txt
 
 ```bash
 unlink symlink_to_remove
-```
-
-```bash
+# or
 rm symlink_to_remove
 ```
