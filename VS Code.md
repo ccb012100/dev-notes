@@ -1,5 +1,17 @@
 # Visual Studio Code
 
+- [Visual Studio Code](#visual-studio-code)
+  - [Configure specific elements in theme](#configure-specific-elements-in-theme)
+  - [Export list of Extensions to text](#export-list-of-extensions-to-text)
+  - [Launch Tasks](#launch-tasks)
+    - [Persist output](#persist-output)
+    - [build logger](#build-logger)
+      - [`dotnet run`](#dotnet-run)
+  - [Keybindings](#keybindings)
+    - [Make `Ctrl+s` act more like [[Emacs]]](#make-ctrls-act-more-like-emacs)
+    - [Use same keybinding to toggle focus to Editor/Explorer](#use-same-keybinding-to-toggle-focus-to-editorexplorer)
+  - [Hide Extension Snippet from Intellisense](#hide-extension-snippet-from-intellisense)
+
 ## Configure specific elements in theme
 
 example: remove italics on comments in the HCQ (High Color Queries) theme
@@ -50,20 +62,41 @@ allowed values:
 - `d[etailed]`
 - `diag[nostic]`
 
-## Make `Ctrl+s` act more like [[Emacs]]
+## Keybindings
+
+### Make `Ctrl+s` act more like [[Emacs]]
 
 In [[Emacs]], the keybinding `C-s` will start a search, but entering `C-s` again will find the next match. This can be done in VS Code by setting the `When` clause carefully:
 
-- Open **Keyboard Shortcuts**
-  - Set the **Command** `Find` (`actions.find`)
-    - **Keybinding**: `Ctrl + S`
-    - **When clause**: `editorFocus || editorIsOpen`
-  - Set the **Command** `Find Next` (`editor.action.nextMatchFindAction`)
-    - **Keybinding**: `Ctrl + S`
-    - **When clause**: `editorFocus && editorHasSelection`
-- Open **Settings**
-  - Go to the setting **Editor › Find: Seed Search String From Selection**
-    - Set the value to `selection`
+```json
+{
+  "key": "ctrl+s",
+  "command": "actions.find",
+  "when": "editorFocus || editorIsOpen"
+},
+{
+  "key": "ctrl+s",
+  "command": "editor.action.nextMatchFindAction",
+  "when": "editorFocus && editorHasSelection"
+}
+```
+
+### Use same keybinding to toggle focus to Editor/Explorer
+
+Focus on Editor. If Editor is already in focus, focus on Explorer.
+
+```json
+{
+  "key": "ctrl+, e",
+  "command": "workbench.files.action.focusOpenEditorsView",
+  "when": "editorFocus"
+},
+{
+  "key": "ctrl+, e",
+  "command": "workbench.action.focusActiveEditorGroup",
+  "when": "editorFocus"
+}
+```
 
 ## Hide Extension Snippet from Intellisense
 
