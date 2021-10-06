@@ -2,21 +2,41 @@
 
 [[Rust]] package manager
 
+- [Cargo](#cargo)
+  - [Commands](#commands)
+  - [`cargo new`](#cargo-new)
+  - [Running in [[Windows]]](#running-in-windows)
+    - [link.exe error](#linkexe-error)
+  - [`cargo-edit`](#cargo-edit)
+  - [Set `RUST_BACKTRACE`](#set-rust_backtrace)
+    - [[[Windows]]](#windows)
+    - [[[Linux]]](#linux)
+
 **The Cargo Book**: <https://doc.rust-lang.org/cargo/>
 
 **How to deal with large Cargo workspaces in Rust**: <https://kerkour.com/blog/rust-large-cargo-workspace/>
 
 ## Commands
 
-`cargo new` create a skeleton project in a new directory.
+- `new` - create a skeleton project in a new directory.
+- `init` - create a skeleton project in the current directory.
+- `build` - downloads dependencies and compiles the code into an executable.
+- `run` - executes `cargo build` and then runs the executable.
+- `doc` - builds HTML documentation for every dependency in the project.
 
-`cargo init` create a skeleton project in the current directory.
+## `cargo new`
 
-`cargo build` downloads dependencies and compiles the code into an executable.
+```bash
+# new package
+cargo new hello_world
 
-`cargo run` executes `cargo build` and then runs the executable.
+# create without initializing a git repo
+cargo new hello_world --vcs none
 
-`cargo doc` builds HTML documentation for every dependency in the project.
+# new library
+cargo new hello_world --lib
+
+```
 
 ## Running in [[Windows]]
 

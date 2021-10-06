@@ -216,3 +216,11 @@ git commit --amend -m "this is the new commit message"
 ```bash
 git reset --soft HEAD~1
 ```
+
+## Ignore local changes to a tracked file
+
+```bash
+git update-index --assume-unchanged $filename
+```
+
+_source_: <https://practicalgit.com/blog/make-git-ignore-local-changes-to-tracked-files.html>
