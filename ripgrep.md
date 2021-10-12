@@ -2,10 +2,23 @@
 
 <https://github.com/BurntSushi/ripgrep>
 
-## List files with text 'foo'
+## Find files with text matching $PATTERN
 
 ```bash
-rg foo --files-with-matches
+rg $PATTERN
 
-rg -l 'foo'
+# list file names
+rg --files-with-matches $PATTERN
+
+rg -l $PATTERN
+
+# show $NUM surrounding lines on either side of match
+rg --context $NUM $PATTERN
+
+rg -C $NUM $PATTERN
+
+# ignore case
+rg -i $PATTERN
+
+rg --ignore-case $PATTERN
 ```
