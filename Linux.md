@@ -113,3 +113,21 @@ unlink symlink_to_remove
 # or
 rm symlink_to_remove
 ```
+
+## get line count of all code files in a repository
+
+```bash
+find */** -type f \( -iname \*.cs -o -iname \*.js -iname \*.ts -name \*.cshtml \) -print0 \
+| xargs -0 wc -l \
+| grep -v 'total$' \
+| sort -nr > ca_line_counts.txt
+```
+
+- `-type f` - files only (exlude directories and symbolic links)
+- `-iname \*.cs` - files with name matching the pattern `*.cs`
+- `-o` - OR
+- `print0` - from `find` man page: "print the full file name on the standard output, followed by a null character (instead of
+  the newline character that -print uses). This allows file names that contain newlines or other types of white space to be correctly interpreted by programs process the find output. This option corresponds to the -0 option of xargs."
+- `xargs -0` - From the `xargs` man page: "Change `xargs` to expect NUL (`\0`) characters as separators, instead of spaces and newlines. This is expected to be used in concert with the `-print0` function in `find(1)`."
+- `sort -n` - numeric sort
+- `sort -r` - reverse sort
