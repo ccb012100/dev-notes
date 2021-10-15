@@ -9,13 +9,16 @@
   - [Nano](#nano)
     - [switches](#switches)
     - [nanorc](#nanorc)
-  - [tar files](#tar-files)
-    - [create tar file](#create-tar-file)
-    - [view contents of tar file](#view-contents-of-tar-file)
-    - [extract tar file](#extract-tar-file)
-  - [Symbolic links (symlinks)](#symbolic-links-symlinks)
-    - [Create](#create)
-    - [Delete](#delete)
+  - [Utilities](#utilities)
+    - [tar files](#tar-files)
+      - [create tar file](#create-tar-file)
+      - [view contents of tar file](#view-contents-of-tar-file)
+      - [extract tar file](#extract-tar-file)
+    - [Symbolic links (symlinks)](#symbolic-links-symlinks)
+      - [Create](#create)
+      - [Delete](#delete)
+    - [get line count of all code files in a repository](#get-line-count-of-all-code-files-in-a-repository)
+    - [find a file and print the contents](#find-a-file-and-print-the-contents)
 
 ## Display formatted `$PATH`
 
@@ -74,21 +77,23 @@ apply settings to
 - a single user:
   - copy `nanorc` to `$HOME/.nanorc`
 
-## tar files
+## Utilities
 
-### create tar file
+### tar files
+
+#### create tar file
 
 ```bash
 tar czvf file.tar.gz destination-folder
 ```
 
-### view contents of tar file
+#### view contents of tar file
 
 ```bash
 tar -ztvf file.tar.gz
 ```
 
-### extract tar file
+#### extract tar file
 
 ```bash
 tar -xzvf file.tar.gz
@@ -96,9 +101,9 @@ tar -xzvf file.tar.gz
 tar -xzvf file.tar.gz -C /directory
 ```
 
-## Symbolic links (symlinks)
+### Symbolic links (symlinks)
 
-### Create
+#### Create
 
 ```bash
 ln -s my_file.txt my_link.txt
@@ -106,7 +111,7 @@ ln -s my_file.txt my_link.txt
 
 `-f` or `--force` to overwrite existing destination
 
-### Delete
+#### Delete
 
 ```bash
 unlink symlink_to_remove
@@ -114,7 +119,7 @@ unlink symlink_to_remove
 rm symlink_to_remove
 ```
 
-## get line count of all code files in a repository
+### get line count of all code files in a repository
 
 ```bash
 find */** -type f \( -iname \*.cs -o -iname \*.js -iname \*.ts -name \*.cshtml \) -print0 \
@@ -131,3 +136,9 @@ find */** -type f \( -iname \*.cs -o -iname \*.js -iname \*.ts -name \*.cshtml \
 - `xargs -0` - From the `xargs` man page: "Change `xargs` to expect NUL (`\0`) characters as separators, instead of spaces and newlines. This is expected to be used in concert with the `-print0` function in `find(1)`."
 - `sort -n` - numeric sort
 - `sort -r` - reverse sort
+
+### find a file and print the contents
+
+```bash
+find -name $FILE_NAME -exec cat {} \;
+```
