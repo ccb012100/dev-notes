@@ -8,6 +8,7 @@
   - [Running in [[Windows]]](#running-in-windows)
     - [link.exe error](#linkexe-error)
   - [`cargo-edit`](#cargo-edit)
+    - [build failure in [[WSL2]]](#build-failure-in-wsl2)
   - [Set `RUST_BACKTRACE`](#set-rust_backtrace)
     - [[[Windows]]](#windows)
     - [[[Linux]]](#linux)
@@ -63,6 +64,16 @@ Then you need to install the C++ Build Tools in [[Visual Studio]] (under the sec
 Run `cargo install cargo-edit`
 
 Now packages can be added to a project with the command `cargo add $package_name`
+
+### build failure in [[WSL2]]
+
+`openssl` and `libdevssl` need to be installed in Linux before you can install `cargo-edit`.
+
+WSL2 doesn't install `libssl-dev` by default, so you will get this error if you don't run `sudo apt install libssl-dev` before trying to install `cargo-edit`.
+
+```bash
+run pkg_config fail: "`\"pkg-config\" \"--libs\" \"--cflags\" \"openssl\"` did not exit successfully: exit status: 1\n--- stderr\nPackage openssl was not found in the pkg-config search path.\nPerhaps you should add the directory containing `openssl.pc'\nto the PKG_CONFIG_PATH environment variable\nNo package 'openssl' found\n"
+```
 
 ## Set `RUST_BACKTRACE`
 
