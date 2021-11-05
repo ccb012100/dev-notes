@@ -10,6 +10,8 @@ To set the username and email, you need to change the `./git/config` file in tha
 
 It's located at `~/AppData/Roaming/JetBrains/Rider2021.2/settingsRepository/repository/.git/config`.
 
+_Note_: when updating `recentSolutions.xml`, make sure that the IDE is closed and no processes are running
+
 ## Recent Items list
 
 For some reason, the Recent Items list can start showing the directory name instead of the project name.
