@@ -26,6 +26,10 @@
     - [Switches](#switches)
   - [Batch files](#batch-files)
 
+## Open as Administrator
+
+`Win+X`, `A`
+
 ## Aliases
 
 use `doskey.exe`
