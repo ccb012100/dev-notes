@@ -1,4 +1,4 @@
-# Golang
+# Go (Golang)
 
 ## [[Windows]]
 
