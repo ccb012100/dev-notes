@@ -36,7 +36,10 @@ REGEDIT4
 
 ## Windows Startup folder
 
-`Win + R` -> enter `shell:startup` in Run window
+Located at `C:\Users\<UserName>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`
+
+1. `Win + R`
+2. Enter `shell:startup` in Run window
 
 ## [[VS Code]]
 
