@@ -21,23 +21,23 @@ If not installed, you'll see the error:
 ```bash
 $ go version
 
-go version go1.8.1 linux/amd64
+go version go1.x linux/amd64
 
 $ cd /usr/local
 
 $ sudo rm -r /usr/local/go/
 
-$ sudo wget https://dl.google.com/go/go1.11.linux-amd64.tar.gz
+$ sudo wget https://dl.google.com/go/go1.y.linux-amd64.tar.gz
 
-... Saving to: ‘go1.11.linux-amd64.tar.gz’
+Saving to: ‘go1.y.linux-amd64.tar.gz’
 
-$ sudo tar -C /usr/local -xzf go1.11.linux-amd64.tar.gz
+$ sudo tar -C /usr/local -xzf go1.y.linux-amd64.tar.gz
 
 $ go version
 
-go version go1.11 linux/amd64
+go version go1.y linux/amd64
 
-$ rm go1.11.linux-amd64.tar.gz
+$ rm go1.y.linux-amd64.tar.gz
 ```
 
 _source_: <https://golangcode.com/updating-go-on-ubuntu/>
