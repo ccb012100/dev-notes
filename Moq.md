@@ -15,5 +15,5 @@ To do so, we explicitly specify the method parameters of the method on the `Retu
 ```csharp
 mockRepository
     .Setup(x => x.Create(newObject))
-    .ReturnsAsync((PocoObject inputObj, PocoObject outputObj) => inputObj);
+    .ReturnsAsync((PocoObject obj) => obj);
 ```
