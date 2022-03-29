@@ -224,3 +224,22 @@ git update-index --assume-unchanged $filename
 ```
 
 _source_: <https://practicalgit.com/blog/make-git-ignore-local-changes-to-tracked-files.html>
+
+## Delete remote branch
+
+```bash
+# -d can also be used
+git push <remote_name> --delete <branch_name>
+```
+
+### Example
+
+```bash
+git push origin --delete example-branch
+```
+
+## Fetch changes from all remotes and locally delete branches to match remote
+
+```bash
+git fetch --all --prune
+```
