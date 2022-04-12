@@ -102,3 +102,13 @@ trustExitCode = false
 5. Restart `explorer.exe`.
 
 _source_: <https://www.winhelponline.com/blog/windows-defender-disabled-real-time-protection-virus/>
+
+## Windows 11 Taskbar grouping
+
+Open `regedit.exe` and navigate to `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced`
+
+Edit `TaskbarGlomLevel`:
+
+- `0` Always combine, hide labels (default
+- `1` Combine when taskbar is full/Show labels
+- `2` Never combine/Show labels
