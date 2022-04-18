@@ -107,3 +107,7 @@ I wanted to turn off the `markdownlint` extension's snippets, and this was the s
 - Hover over the snippet and click the eye icon to hide/show the snippet in Intellisense
 
 _source_: <https://github.com/microsoft/vscode/issues/10565#issuecomment-721832613>
+
+## Disable `UpArrow`/`DownArrow` cycling through commit messages in the Source Control commit message textbox
+
+In the keybindings find and disable `UpArrow`/`DownArrow` bindings `scm.viewNextCommit` and `scm.viewPreviousCommit` (They are also bound to `Alt + UpArrow` and `Alt + DownArrow`).
