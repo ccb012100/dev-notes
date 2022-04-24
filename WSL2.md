@@ -108,6 +108,8 @@ sudo apt-get install \
   silversearcher-ag
 ```
 
+### Install from source
+
 #### fzf
 
 _Note:_ for some reason, `fzf` won't work with `zsh-syntax-highlighting` if installed through `apt-get`
@@ -156,6 +158,12 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-sy
 
 ```bash
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+```
+
+#### forgit
+
+```bash
+git clone git@github.com:wfxr/forgit.git ~/.forgit/
 ```
 
 #### [[.NET]]
