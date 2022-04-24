@@ -22,3 +22,20 @@ rg -i $PATTERN
 
 rg --ignore-case $PATTERN
 ```
+
+## Restrict search by file type
+
+```bash
+rg --type $FILE_TYPE $PATTERN
+
+rg -t $FILE_TYPE $PATTERN
+```
+
+### example
+
+```bash
+# find C# files containing "System"
+rg --type cs System
+
+rg -tcs System
+```
