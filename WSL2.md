@@ -13,6 +13,7 @@ Windows Subsystem for Linux 2
       - [Add completions directory](#add-completions-directory)
         - [Add dir to `$FPATH`](#add-dir-to-fpath)
     - [Install packages with apt-get](#install-packages-with-apt-get)
+    - [Install from source](#install-from-source)
       - [fzf](#fzf)
       - [powerlevel10K](#powerlevel10k)
       - [[[Rust]]](#rust)
@@ -20,9 +21,12 @@ Windows Subsystem for Linux 2
       - [lazygit](#lazygit)
       - [zsh-syntax-highlighting](#zsh-syntax-highlighting)
       - [zsh-autosuggestions](#zsh-autosuggestions)
+      - [forgit](#forgit)
       - [[[.NET]]](#net)
       - [Glances](#glances)
       - [GitHub CLI](#github-cli)
+    - [Install from Cargo](#install-from-cargo)
+      - [Update installed Cargo packages](#update-installed-cargo-packages)
     - [Configure installed packages](#configure-installed-packages)
   - [Signed Git commits with [[GPG]]](#signed-git-commits-with-gpg)
   - [Configure [[Emacs]]](#configure-emacs)
@@ -206,6 +210,27 @@ sudo apt install gh
 ```
 
 <https://github.com/cli/cli/blob/trunk/docs/install_linux.md>
+
+### Install from Cargo
+
+```bash
+cargo install broot cargo-add cargo-rm cargo-set-version cargo-upgrade cargo-install-update cargo-install-update-config delta jless xh
+```
+
+cargo install cargo-update
+
+#### Update installed Cargo packages
+
+```bash
+# method 1
+
+cargo install --list | awk -F ' ' '/^\s/ {print $1}' | xargs cargo install
+
+# method 2
+
+cargo install cargo-update
+cargo install-update -a
+```
 
 ### Configure installed packages
 
