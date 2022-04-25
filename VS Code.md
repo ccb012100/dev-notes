@@ -2,6 +2,7 @@
 
 - [Visual Studio Code](#visual-studio-code)
   - [Configure specific elements in theme](#configure-specific-elements-in-theme)
+  - [Configure language specific settings for multiple languages](#configure-language-specific-settings-for-multiple-languages)
   - [Export list of Extensions to text](#export-list-of-extensions-to-text)
   - [Launch Tasks](#launch-tasks)
     - [Persist output](#persist-output)
@@ -11,6 +12,7 @@
     - [Make `Ctrl+s` act more like [[Emacs]]](#make-ctrls-act-more-like-emacs)
     - [Use same keybinding to toggle focus to Editor/Explorer](#use-same-keybinding-to-toggle-focus-to-editorexplorer)
   - [Hide Extension Snippet from Intellisense](#hide-extension-snippet-from-intellisense)
+  - [Disable `UpArrow`/`DownArrow` cycling through commit messages in the Source Control commit message textbox](#disable-uparrowdownarrow-cycling-through-commit-messages-in-the-source-control-commit-message-textbox)
 
 ## Configure specific elements in theme
 
@@ -29,6 +31,15 @@ example: remove italics on comments in the HCQ (High Color Queries) theme
         ]
     },
 },
+```
+## Configure language specific settings for multiple languages
+
+List each language separated by brackets, i.e. `[lang_1][lang_2][...][lang_n]`
+
+```json
+"[csharp][markdown][javascript][typescript][json][html]": {
+    "editor.rulers": [120]
+}
 ```
 
 ## Export list of Extensions to text
