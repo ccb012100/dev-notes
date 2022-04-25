@@ -76,12 +76,14 @@ trustExitCode = false
   - <http://www.nirsoft.net>
 - **Link Shell Extension**
   - <https://schinagl.priv.at/nt/hardlinkshellext/linkshellextension.html>
-    -- **Clink**
+    - **Clink**
   - <https://chrisant996.github.io/clink/>
 - **Polsedit**
   - <https://www.southsoftware.com/polsedit.html>
 - **Meld**
   - <https://meldmerge.org/>
+- **KDiff3**
+  - <https://download.kde.org/stable/kdiff3/>
 
 ## Environment variables
 
