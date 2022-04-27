@@ -217,8 +217,6 @@ sudo apt install gh
 cargo install broot cargo-add cargo-rm cargo-set-version cargo-upgrade cargo-install-update cargo-install-update-config delta jless xh
 ```
 
-cargo install cargo-update
-
 #### Update installed Cargo packages
 
 ```bash

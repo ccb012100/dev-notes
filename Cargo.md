@@ -8,10 +8,12 @@
   - [Running in [[Windows]]](#running-in-windows)
     - [link.exe error](#linkexe-error)
   - [`cargo-edit`](#cargo-edit)
+    - [Build failure in Windows](#build-failure-in-windows)
     - [build failure in [[WSL2]]](#build-failure-in-wsl2)
   - [Set `RUST_BACKTRACE`](#set-rust_backtrace)
     - [[[Windows]]](#windows)
     - [[[Linux]]](#linux)
+  - [Update installed Cargo packages](#update-installed-cargo-packages)
 
 **The Cargo Book**: <https://doc.rust-lang.org/cargo/>
 
@@ -57,13 +59,27 @@ note: please ensure that VS 2013, VS 2015, VS 2017 or VS 2019 was installed with
 error: aborting due to previous error
 ```
 
-Then you need to install the C++ Build Tools in [[Visual Studio]] (under the section called **Desktop Development with C++**)
+Then you need to install the C++ Build Tools in [[Visual Studio]] (under the section called **Desktop Development with C++**).
+
+If errors continue, then try running `rustup default stable-x86_64-pc-windows-gnu`.
 
 ## `cargo-edit`
 
 Run `cargo install cargo-edit`
 
 Now packages can be added to a project with the command `cargo add $package_name`
+
+### Build failure in Windows
+
+```plaintext
+The pkg-config command could not be found.
+
+Most likely, you need to install a pkg-config package for your OS.
+
+If you've already installed it, ensure the pkg-config command is one of the directories in the PATH environment variable.
+```
+
+<https://download.gnome.org/binaries/win32/dependencies/pkg-config_0.26-1_win32.zip>
 
 ### build failure in [[WSL2]]
 
@@ -87,4 +103,17 @@ set RUST_BACKTRACE=1
 
 ```bash
 export RUST_BACKTRACE=1
+```
+
+## Update installed Cargo packages
+
+```bash
+# method 1
+
+cargo install --list | awk -F ' ' '/^\s/ {print $1}' | xargs cargo install
+
+# method 2
+
+cargo install cargo-update
+cargo install-update -a
 ```
