@@ -214,7 +214,7 @@ sudo apt install gh
 ### Install from Cargo
 
 ```bash
-cargo install broot cargo-add cargo-rm cargo-set-version cargo-upgrade cargo-install-update cargo-install-update-config delta jless xh
+cargo install broot cargo-add cargo-rm cargo-set-version cargo-upgrade cargo-install-update cargo-install-update-config delta difftastic jless xh
 ```
 
 #### Update installed Cargo packages
