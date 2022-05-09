@@ -24,7 +24,10 @@ awk '{ print NR,$0 }' $file
 awk '{ print $NF }' $file
 
 # specify colon as file separator (FS)
-awk -F ":" '{ print $NR }' $file
+awk -F ":" '{ print NR }' $file
 
 awk 'BEGIN { FS=":" } {print $NR}'
+
+# print number of lines
+awk '{ print } END{ print NR }
 ```
