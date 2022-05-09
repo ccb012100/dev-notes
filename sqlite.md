@@ -42,4 +42,13 @@ Run `sqlite3` to start the sqlite CLI
 
 # run SQL query
 .select * from tbl1 limit 100;
+
+# include column headers in results
+.headers on
+
+# output to file
+.output file.csv
+ 
+# dhame output back to console
+.output stdout
 ```
