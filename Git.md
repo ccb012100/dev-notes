@@ -251,4 +251,6 @@ git fetch --all --prune
 
 ## Change CRLF line endings to LF
 
-`tr -d '\r' input.txt > out.txt`
+```bash
+tr -d '\r' < input.txt > out.txt
+```
