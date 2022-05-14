@@ -27,6 +27,11 @@
     - [Add files to commit](#add-files-to-commit)
     - [Change commit message](#change-commit-message)
   - [undo last commit](#undo-last-commit)
+  - [Ignore local changes to a tracked file](#ignore-local-changes-to-a-tracked-file)
+  - [Delete remote branch](#delete-remote-branch)
+    - [Example](#example)
+  - [Fetch changes from all remotes and locally delete branches to match remote](#fetch-changes-from-all-remotes-and-locally-delete-branches-to-match-remote)
+  - [Change CRLF line endings to LF](#change-crlf-line-endings-to-lf)
 
 ## Set git to rebase on pull:
 
@@ -243,3 +248,7 @@ git push origin --delete example-branch
 ```bash
 git fetch --all --prune
 ```
+
+## Change CRLF line endings to LF
+
+`tr -d '\r' input.txt > out.txt`
