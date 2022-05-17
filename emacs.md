@@ -1,10 +1,22 @@
 # Emacs
 
+## load without user config
+
+```bash
+emacs -q
+emacs --no-init-file
+
+# equivalent to 'emacs -q --no-site-file --no-splash
+emacs --quick 
+emacs -Q
+```
+
 ## digit-argument
 
 `C-<number_key>` calls the command `digit-argument`, which can be used to give numeric arguments to a command.
 
-Ex. `C-5 C-n` will move down 5 lines (it becomes `C-u 5 C-n`, which is equivalent to calling `M-x eval-expression (next-line 5)`)
+Ex. `C-5 C-n` will move down 5 lines (it becomes `C-u 5 C-n`, which is equivalent to calling `M-x eval-expression
+(next-line 5)`)
 
 ## package-install
 
@@ -16,11 +28,14 @@ Ex. `C-5 C-n` will move down 5 lines (it becomes `C-u 5 C-n`, which is equivalen
 
 `i`
 
-- Mark the package on the current line for installation (package-menu-mark-install). If the package status is ‘available’, this adds an ‘I’ character to the start of the line; typing x (see below) will download and install the package.
+- Mark the package on the current line for installation (package-menu-mark-install). If the package status is
+‘available’, this adds an ‘I’ character to the start of the line; typing x (see below) will download and install the
+package.
 
 `d`
 
-- Mark the package on the current line for deletion (package-menu-mark-delete). If the package status is ‘installed’, this adds a ‘D’ character to the start of the line; typing x (see below) will delete the package.
+- Mark the package on the current line for deletion (package-menu-mark-delete). If the package status is ‘installed’,
+this adds a ‘D’ character to the start of the line; typing x (see below) will delete the package.
 
 `u` or `<DEL>`
 
@@ -28,19 +43,23 @@ Ex. `C-5 C-n` will move down 5 lines (it becomes `C-u 5 C-n`, which is equivalen
 
 `U`
 
-- Mark all package with a newer available version for upgrading (package-menu-mark-upgrades). This places an installation mark on the new available versions, and a deletion mark on the old installed versions.
+- Mark all package with a newer available version for upgrading (package-menu-mark-upgrades). This places an
+installation mark on the new available versions, and a deletion mark on the old installed versions.
 
 `x`
 
-- Download and install all packages marked with i, and their dependencies; also, delete all packages marked with d (package-menu-execute). This also removes the marks.
+- Download and install all packages marked with i, and their dependencies; also, delete all packages marked with d
+(package-menu-execute). This also removes the marks.
 
 `r`
 
-- Refresh the package list (package-menu-refresh). This fetches the list of available packages from the package archive again, and recomputes the package list.
+- Refresh the package list (package-menu-refresh). This fetches the list of available packages from the package archive
+again, and recomputes the package list.
 
 `f`
 
-- Filter the package list (package-menu-filter). This prompts for a keyword (e.g., ‘games’), then shows only the packages that relate to that keyword. To restore the full package list, type q.
+- Filter the package list (package-menu-filter). This prompts for a keyword (e.g., ‘games’), then shows only the
+packages that relate to that keyword. To restore the full package list, type q.
 
 ## Key bindings
 
