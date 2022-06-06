@@ -292,3 +292,13 @@ U   " uppercase
 
 y   " yank
 ```
+
+## runtimepath
+
+The `runtimepath` is the list of directories where vim searches for runtime files.
+
+### print runtimepath
+
+```vim
+:echo &rtp
+```
