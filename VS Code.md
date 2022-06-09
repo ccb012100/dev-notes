@@ -32,6 +32,7 @@ example: remove italics on comments in the HCQ (High Color Queries) theme
     },
 },
 ```
+
 ## Configure language specific settings for multiple languages
 
 List each language separated by brackets, i.e. `[lang_1][lang_2][...][lang_n]`
@@ -122,3 +123,23 @@ _source_: <https://github.com/microsoft/vscode/issues/10565#issuecomment-7218326
 ## Disable `UpArrow`/`DownArrow` cycling through commit messages in the Source Control commit message textbox
 
 In the keybindings find and disable `UpArrow`/`DownArrow` bindings `scm.viewNextCommit` and `scm.viewPreviousCommit` (They are also bound to `Alt + UpArrow` and `Alt + DownArrow`).
+
+## Settings file location
+
+### Windows
+
+`%APPDATA%\Code\User\settings.json`
+
+### macOS
+
+`$HOME/Library/Application\ Support/Code/User/settings.json`
+
+### Linux
+
+`$HOME/.config/Code/User/settings.json`
+
+## Installing on Mac with Homebrew
+
+```bash
+brew install visual-studio-code
+```
