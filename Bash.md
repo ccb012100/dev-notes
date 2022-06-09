@@ -17,3 +17,12 @@ Move file `./bar/foo.txt` to `./baz/`
 ```bash
 mv ./{bar,baz}/foo.txt
 ```
+
+## Overwrite (clobber) file with redirected output
+
+If noclobber is set (`set -o noclobber`), then the redirect operator (`>`) will not work, and you must use the clobber
+operator (`>|`).
+
+```bash
+$COMMAND_OUTPUT >| existing_file
+```
