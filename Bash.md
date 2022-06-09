@@ -26,3 +26,9 @@ operator (`>|`).
 ```bash
 $COMMAND_OUTPUT >| existing_file
 ```
+
+## shebang
+
+`#!/usr/bin/env bash`
+
+Uses the `env` utility to find the bash specified in `$PATH`
