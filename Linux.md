@@ -142,3 +142,21 @@ find */** -type f \( -iname \*.cs -o -iname \*.js -iname \*.ts -name \*.cshtml \
 ```bash
 find -name $FILE_NAME -exec cat {} \;
 ```
+
+### inspect system resources
+
+#### process info
+
+`top`, `htop`
+
+#### uname
+
+Print operating system info.
+
+`uname -a`
+
+#### /proc
+
+The `/proc` directory contains files with hardware info.
+
+ex. `cat /proc/cpuinfo`
