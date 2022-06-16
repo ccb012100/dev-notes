@@ -13,6 +13,11 @@
     - [Use same keybinding to toggle focus to Editor/Explorer](#use-same-keybinding-to-toggle-focus-to-editorexplorer)
   - [Hide Extension Snippet from Intellisense](#hide-extension-snippet-from-intellisense)
   - [Disable `UpArrow`/`DownArrow` cycling through commit messages in the Source Control commit message textbox](#disable-uparrowdownarrow-cycling-through-commit-messages-in-the-source-control-commit-message-textbox)
+  - [Settings file location](#settings-file-location)
+    - [Windows](#windows)
+    - [macOS](#macos)
+    - [Linux](#linux)
+  - [Installing on Mac with Homebrew](#installing-on-mac-with-homebrew)
 
 ## Configure specific elements in theme
 

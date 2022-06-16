@@ -19,6 +19,10 @@
       - [Delete](#delete)
     - [get line count of all code files in a repository](#get-line-count-of-all-code-files-in-a-repository)
     - [find a file and print the contents](#find-a-file-and-print-the-contents)
+    - [inspect system resources](#inspect-system-resources)
+      - [process info](#process-info)
+      - [uname](#uname)
+      - [/proc](#proc)
 
 ## Display formatted `$PATH`
 

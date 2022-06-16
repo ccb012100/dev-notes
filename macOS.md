@@ -1,5 +1,16 @@
 # macOS
 
+- [macOS](#macos)
+  - [Outlook](#outlook)
+    - [group messages by conversation](#group-messages-by-conversation)
+  - [rsync](#rsync)
+  - [[[Emacs]]](#emacs)
+    - [enable C-M-d](#enable-c-m-d)
+  - [modifying config through Terminal](#modifying-config-through-terminal)
+  - [[[VS Code]]](#vs-code)
+    - [Bell sound on Ctrl+/ keybinding](#bell-sound-on-ctrl-keybinding)
+  - [[[GPG]]](#gpg)
+
 ## Outlook
 
 ### group messages by conversation
