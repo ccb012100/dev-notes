@@ -81,49 +81,7 @@ apply settings to
 - a single user:
   - copy `nanorc` to `$HOME/.nanorc`
 
-## Utilities
-
-### tar files
-
-#### create tar file
-
-```bash
-tar czvf file.tar.gz destination-folder
-```
-
-#### view contents of tar file
-
-```bash
-tar -ztvf file.tar.gz
-```
-
-#### extract tar file
-
-```bash
-tar -xzvf file.tar.gz
-
-tar -xzvf file.tar.gz -C /directory
-```
-
-### Symbolic links (symlinks)
-
-#### Create
-
-```bash
-ln -s my_file.txt my_link.txt
-```
-
-`-f` or `--force` to overwrite existing destination
-
-#### Delete
-
-```bash
-unlink symlink_to_remove
-# or
-rm symlink_to_remove
-```
-
-### get line count of all code files in a repository
+## get line count of all code files in a repository
 
 ```bash
 find */** -type f \( -iname \*.cs -o -iname \*.js -iname \*.ts -name \*.cshtml \) -print0 \
@@ -141,11 +99,13 @@ find */** -type f \( -iname \*.cs -o -iname \*.js -iname \*.ts -name \*.cshtml \
 - `sort -n` - numeric sort
 - `sort -r` - reverse sort
 
-### find a file and print the contents
+## find a file and print the contents
 
 ```bash
 find -name $FILE_NAME -exec cat {} \;
 ```
+
+## Utilities
 
 ### inspect system resources
 

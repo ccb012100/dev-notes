@@ -1,4 +1,4 @@
-# [[Ubuntu]] [[Linux]]
+# Ubuntu [[Linux]]
 
 ## get version
 
@@ -6,32 +6,26 @@
 lsb_release -a
 ```
 
-## Debian package (`.deb` file)
+## Enable [[Wayland]]
 
-### Install
+_Note: Wayland was made the default in Ubuntu 22.04, so this should only be necessary for earlier versions._
 
-```cmd
-sudo dpkg -i package_file.deb
-```
+- Run the command `sudo /etc/gdm3/custom.conf` and uncomment the line `#WaylandEnable=true`
+- Change it to `WaylandEnable=false` to disable [[Wayland]].
+- Run the command `sudo systemctl restart gdm3`
 
-### Uninstall
-
-```cmd
-sudo dpkg -i package_file.deb
-```
-
-## Advanced Package Tool (APT)
+## Get latest stable upstream [[Git]] version
 
 ```bash
-# "apt" or "apt-get"
-
-apt update
-
-apt install $PACKAGE_NAME
-
-apt search $PACKAGE_NAME
-
-apt update
-
-apt upgrade
+sudo add-apt-repository ppa:git-core/ppa && sudo apt update && sudo apt install git
 ```
+
+## Change default terminal
+
+_source: <https://itsfoss.com/change-default-terminal-ubuntu/>_
+
+Run the command `sudo update-alternatives --config x-terminal-emulator`.
+
+## Show number overlays on GNOME dock
+
+`Super+q`

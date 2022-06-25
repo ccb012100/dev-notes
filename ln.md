@@ -20,4 +20,7 @@ ln -f file /target/dir/new_file
 
 # link multiple file
 ln /dir/{file1,file2,foo,bar} /target/dir
+
+# unlink (not an ln command)
+unlink symlink_to_remove
 ```
