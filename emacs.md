@@ -189,3 +189,29 @@ Let Emacs know `macro-name` is a macro
 ```emacs
 M-x xterm-mouse-mode
 ```
+
+## Start server daemon at [[Ubuntu]] startup
+
+- Add the following to `~/.config/systemd/user/emacsd.service`:
+
+```ini
+[Unit]
+Description=Emacs: the extensible, self-documenting text editor
+Documentation=man:emacs(1) info:Emacs
+
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/emacs --daemon
+ExecStop=/usr/bin/emacsclient --eval "(progn (setq kill-emacs-hook nil) (kill-emacs))"
+Restart=on-failure
+Environment=DISPLAY=:%i
+TimeoutStartSec=0
+
+[Install]
+WantedBy=default.target
+```
+
+- Run `systemctl --user enable emacsd`
+
+_source: <https://wikemacs.org/wiki/Emacs_server>_
