@@ -1,5 +1,13 @@
 # Ubuntu [[Linux]]
 
+- [Ubuntu [[Linux]]](#ubuntu-linux)
+  - [get version](#get-version)
+  - [Enable [[Wayland]]](#enable-wayland)
+  - [Get latest stable upstream [[Git]] version](#get-latest-stable-upstream-git-version)
+  - [Change default terminal](#change-default-terminal)
+  - [Show number overlays on GNOME dock](#show-number-overlays-on-gnome-dock)
+  - [free up Control+Shift+E shortcut](#free-up-controlshifte-shortcut)
+
 ## get version
 
 ```bash
@@ -29,3 +37,14 @@ Run the command `sudo update-alternatives --config x-terminal-emulator`.
 ## Show number overlays on GNOME dock
 
 `Super+q`
+
+## free up Control+Shift+E shortcut
+
+Trying to map `Ctrl+Shift+E` to a command in [[VS Code]], it will show up as `Unknown`. This is because Linux has the
+shortcut bound globally to Emoji input.
+
+To fix it, run the command `ibus-setup`, go to the _Emoji Input_ tab, and delete the `Control+Shift+E` shortcut.
+
+_source: <https://github.com/microsoft/vscode/issues/72947#issuecomment-491228367>_
+
+According to <https://stackoverflow.com/a/52295258>, this is only an issue in `GTK3` versions before `3.24`.
