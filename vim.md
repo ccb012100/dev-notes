@@ -1,4 +1,4 @@
-# Vim
+ # Vim
 
 - [Vim](#vim)
   - [Normal mode](#normal-mode)
@@ -67,12 +67,12 @@ CTRL-R        " redo
 ### Scroll screen, centered on cursor
 
 ```vim
-z<CR>  " focus cursor on top
-z-        " focus cursor on bottom
-z.        " focus cursor in center
-zz        " focus cursor in center
+z<CR>   " focus cursor on top
+z-      " focus cursor on bottom
+z.      " focus cursor in center
+zz      " focus cursor in center
 
-12z+      " focus cursor on line 12
+12z+    " focus cursor on line 12
 ```
 
 ### Format document
@@ -204,8 +204,8 @@ Using line 32 as an example:
 #### Split window
 
 ```vim
-:sp file          " open a file in a new split window
-:vs file          " open a file in a new vertical split window
+:sp file         " open a file in a new split window
+:vs file         " open a file in a new vertical split window
 
 CTRL-W q         " quit window
 CTRL-W o         " quit all but current window
@@ -219,12 +219,12 @@ CTRL-W -         " decrease window height
 CTRL-W <         " decrease window width
 CTRL-W >         " increase window width
 
-CTRL-W H           move current window to the far left
-CTRL-W J           move current window to the very bottom
-CTRL-W K           move current window to the very top
-CTRL-W L           move current window to the far right
+CTRL-W H         " move current window to the far left
+CTRL-W J         " move current window to the very bottom
+CTRL-W K         " move current window to the very top
+CTRL-W L         " move current window to the far right
 ```
-
+ 
 ### Marks
 
 ```vim
