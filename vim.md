@@ -29,6 +29,9 @@
     - [Enter visual mode](#enter-visual-mode)
     - [Exit visual mode](#exit-visual-mode)
     - [Manipulate text](#manipulate-text)
+  - [runtimepath](#runtimepath)
+    - [print runtimepath](#print-runtimepath)
+  - [Reload `.vimrc`](#reload-vimrc)
 
 ## Normal mode
 
@@ -301,4 +304,16 @@ The `runtimepath` is the list of directories where vim searches for runtime file
 
 ```vim
 :echo &rtp
+```
+
+## Reload `.vimrc`
+
+```vim
+" :so is short for :source
+:so $MYVIMRC
+:so ~/.vimrc
+
+" % is the current file name, so you can also source current file
+" if .vimrc is the file you're currently editing
+:so %
 ```
