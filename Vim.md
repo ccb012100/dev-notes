@@ -1,4 +1,4 @@
- # Vim
+# Vim
 
 - [Vim](#vim)
   - [Normal mode](#normal-mode)
