@@ -24,3 +24,12 @@ Useful extensions:
 - [Uluancher windows switcher](https://github.com/merrickluo/ulauncher-windows-switcher)
 - [ulauncher-vscode-recent](https://github.com/plibither8/ulauncher-vscode-recent)
 - [ulauncher-terminal-runner-extension](https://github.com/lighttigerXIV/ulauncher-terminal-runner-extension/)
+- [Ulauncher Github](https://github.com/brpaz/ulauncher-github)
+
+### Installation error with Ulauncher Github
+
+The Extension will fail because the `github` is not installed.
+
+Run `pip install pygithub` (_not_ `pip install github`)
+
+_source: <https://github.com/brpaz/ulauncher-github/issues/12>_
