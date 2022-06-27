@@ -317,3 +317,9 @@ The `runtimepath` is the list of directories where vim searches for runtime file
 " if .vimrc is the file you're currently editing
 :so %
 ```
+
+## Comment/uncomment code
+
+Use the plugin [tcomment](https://github.com/tomtom/tcomment_vim).
+
+There's also [vim-commentary](https://github.com/tomtom/tcomment_vim)
