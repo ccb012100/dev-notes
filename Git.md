@@ -254,3 +254,11 @@ git fetch --all --prune
 ```bash
 tr -d '\r' < input.txt > out.txt
 ```
+
+## Stage file as executable
+
+`git add --chmod=+x path/to/file`
+
+## Set existing file to executable
+
+`git update-index --chmod=+x path/to/file`
