@@ -117,3 +117,33 @@ Print operating system info.
 The `/proc` directory contains files with hardware info.
 
 ex. `cat /proc/cpuinfo`
+
+### Get all environment variables
+
+Use the `set` command.
+
+### Get process ID
+
+#### `pidof`
+
+e.g.
+
+```bash
+pidof slack
+```
+
+#### `ps`
+
+`ps aux | grep -i "PROGRAM_NAME"`
+
+Type `pidof<TAB>` to get autocompletion of application names.
+
+### Kill process
+
+```bash
+sudo kill -9 PROCESS_ID
+
+sudo kill -9 `pidof PROGRAM_NAME`
+
+killall PROGRAM_NAME
+```
