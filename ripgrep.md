@@ -16,7 +16,7 @@ rg -C $NUM $PATTERN # --context
 # ignore case
 rg -i $PATTERN # --ignore-case
 
-# literal search (disable regex)
+# literal (verbatim) search (disables regex)
 rg -F '$PATTERN' # --fixed-strings
 
 # find C# files containing "System"
