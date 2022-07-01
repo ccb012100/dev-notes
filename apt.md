@@ -2,6 +2,8 @@
 
 Advanced Package Tool (APT)
 
+Repository list is located in `/etc/apt/sources.list`
+
 ## commands
 
 ```bash
