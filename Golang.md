@@ -18,6 +18,8 @@ If not installed, you'll see the error:
 
 ### Update Go version
 
+(It's better to use [[homebrew]])
+
 ```bash
 $ go version
 
@@ -41,3 +43,19 @@ $ rm go1.y.linux-amd64.tar.gz
 ```
 
 _source_: <https://golangcode.com/updating-go-on-ubuntu/>
+
+### Install `gcc`
+
+This applies when [[Golang]] has been installed via [[[homebrew]]]
+
+### Error
+
+```bash
+exec: "gcc-5": executable file not found in $PATH
+```
+
+### Fix
+
+```bash
+brew install gcc@5
+```
