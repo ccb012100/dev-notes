@@ -42,3 +42,17 @@ Extension “ubuntu-appindicators@ubuntu.com” doesn't exist
 
 org.gnome.shell enabled-extensions ['tiling-assistant@leleat-on-github', 'desktop-icons@csoriano', 'panelScroll@sun.wxg@gmail.com', 'touchpad-indicator@orangeshirt', 'gestureImprovements@gestures', 'workspace-switch-wraparound@theychx.org', 'multi-monitors-add-on@spin83', 'impatience@gfxmonk.net', 'trayIconsReloaded@selfmade.pl', 'babar@fthx', 'ubuntu-dock@ubuntu.com', 'walkpaper@walkpaper.blinkbp.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'sound-output-device-chooser@kgshank.net', 'caffeine@patapon.info', 'cpupower@mko-sl.de', 'horizontal-workspace-indicator@tty2.io']
 ```
+
+## Gnome Extensions
+
+<https://extensions.gnome.org/>
+
+### Integration with Chrome
+
+Error on site:
+
+> Although GNOME Shell integration extension is running, native host connector is not detected. Refer documentation for instructions about installing connector.
+
+Fix:
+
+Run `sudo apt chrome-gnome-shell`
