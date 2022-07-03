@@ -32,6 +32,8 @@
   - [runtimepath](#runtimepath)
     - [print runtimepath](#print-runtimepath)
   - [Reload `.vimrc`](#reload-vimrc)
+  - [Comment/uncomment code](#commentuncomment-code)
+  - [Get current filename](#get-current-filename)
 
 ## Normal mode
 
@@ -323,3 +325,14 @@ The `runtimepath` is the list of directories where vim searches for runtime file
 Use the plugin [tcomment](https://github.com/tomtom/tcomment_vim).
 
 There's also [vim-commentary](https://github.com/tomtom/tcomment_vim)
+
+## Get current filename
+
+```vim
+C-G   " print file name
+1 C-G " print full path
+
+" % register holds the current filename,
+" relative to the current working directory 
+:echo @%
+```
