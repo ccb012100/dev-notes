@@ -147,3 +147,8 @@ sudo kill -9 `pidof PROGRAM_NAME`
 
 killall PROGRAM_NAME
 ```
+
+## enable/disable [[Bluetooth]] on boot
+
+- Run command `sudo vim /etc/bluetotth/main.conf`
+- Change the line `AutoEnable=false` to `AutoEnable=true`
