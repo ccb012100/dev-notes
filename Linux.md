@@ -16,6 +16,13 @@
       - [process info](#process-info)
       - [uname](#uname)
       - [/proc](#proc)
+    - [Get all environment variables](#get-all-environment-variables)
+    - [Get process ID](#get-process-id)
+      - [`pidof`](#pidof)
+      - [`ps`](#ps)
+    - [Kill process](#kill-process)
+  - [enable/disable [[Bluetooth]] on boot](#enabledisable-bluetooth-on-boot)
+  - [Add/remove fonts](#addremove-fonts)
 
 ## Display formatted `$PATH`
 
@@ -152,3 +159,9 @@ killall PROGRAM_NAME
 
 - Run command `sudo vim /etc/bluetotth/main.conf`
 - Change the line `AutoEnable=false` to `AutoEnable=true`
+
+## Add/remove fonts
+
+Fonts are located in `/usr/share/fonts` and `~/.local/share/fonts`.
+
+After adding or removing fonts, run command `fc-cache -f` to update your font cache.
