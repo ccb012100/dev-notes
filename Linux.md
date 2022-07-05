@@ -155,6 +155,10 @@ sudo kill -9 `pidof PROGRAM_NAME`
 killall PROGRAM_NAME
 ```
 
+### Get USB device info
+
+`lsusb`
+
 ## enable/disable [[Bluetooth]] on boot
 
 - Run command `sudo vim /etc/bluetotth/main.conf`
@@ -165,3 +169,46 @@ killall PROGRAM_NAME
 Fonts are located in `/usr/share/fonts` and `~/.local/share/fonts`.
 
 After adding or removing fonts, run command `fc-cache -f` to update your font cache.
+
+## Enable waking laptop with USB devices
+
+- Run the command `rg . /sys/bus/usb/devices/*/product` to list names of all the USB devices
+
+e.g. in this example my keyboard is device `3-1.1.4.1`:
+
+```bash
+❯ rg . /sys/bus/usb/devices/*/product
+/sys/bus/usb/devices/usb3/product
+1:xHCI Host Controller
+
+/sys/bus/usb/devices/3-1.1/product
+1:USB2.0 Hub
+
+/sys/bus/usb/devices/3-1.1.4/product
+1:4-Port USB 2.0 Hub
+
+/sys/bus/usb/devices/3-1/product
+1:USB2.0 Hub             
+
+/sys/bus/usb/devices/3-1.1.4.3/product
+1:YubiKey OTP+FIDO+CCID
+
+/sys/bus/usb/devices/3-1.1.2/product
+1:AX88772A
+
+/sys/bus/usb/devices/3-1.1.3/product
+1:Jabra SPEAK 410 USB
+
+/sys/bus/usb/devices/3-1.1.4.1/product
+1:ErgoDox EZ Glow
+```
+
+- Using the name of that device, edit `/etc/rc.local` and add the line:
+
+ `echo enabled > /sys/bus/usb/devices/$DEVICE_NAME/power/wakeup`
+
+e.g. `echo enabled > /sys/bus/usb/devices/3-1.1.4.1/power/wakeup`
+
+It should now enable the device on boot.
+
+_source: <https://askubuntu.com/questions/848698/wake-up-from-suspend-using-wireless-usb-keyboard-or-mouse-for-any-linux-distro/874701#874701>_
