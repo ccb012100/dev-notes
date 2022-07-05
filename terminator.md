@@ -76,3 +76,16 @@ P - Previous Tab
 
 [1-0] - Switch to tab #1-10
 ```
+
+## Unable to set keybindings
+
+If you suddenly can't set any keybindings through the Preferences GUI, run the command
+
+`rg None ~/.config/terminator/config`
+
+If any keybindings are disabled with the setting `None`, they will break the keybinding tool. They should be changed to
+`""`.
+
+Run the command `sed -i "s/None/""/g" ~/.config/terminator/config` to fix the invalid values.
+
+_source: <https://github.com/gnome-terminator/terminator/issues/548>_
