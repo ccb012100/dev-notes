@@ -24,3 +24,8 @@ setopt cdablevars
 vp="/c/Dev/VersionPress/versionpress"
 temp="/c/Dev/temp"
 ```
+
+## Zsh history not being saved to HISTFILE
+
+Check and make sure that both `HISTSIZE` and `SAVEHIST` are set. For some reason, I keep losing `SAVEHIST` from my
+`.zshrc`.
