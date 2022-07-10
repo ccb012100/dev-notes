@@ -10,7 +10,9 @@ rg $PATTERN
 # list file names
 rg -l $PATTERN # --files-with-matches
 
-# show $NUM surrounding lines on either side of match
+# show $NUM lines of context
+rg -C $NUM $PATTERN # --after-context
+rg -B $NUM $PATTERN # --before-context
 rg -C $NUM $PATTERN # --context
 
 # ignore case
