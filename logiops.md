@@ -22,3 +22,22 @@ _source: <https://github.com/PixlOne/logiops/issues/142>_
 ## Get device name
 
 Run the command `sudo logiops` with the device connected and the device name will be listed at startup.
+
+## Exclude devices
+
+Run `sudo keyd -m` to get the list of devices detected by `keyd`.
+
+In the config, change
+
+```conf
+[ids]
+*
+```
+
+to
+
+```conf
+[ids]
+*
+-$KEYBOARD_ID
+```
