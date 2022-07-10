@@ -55,3 +55,7 @@ There's some issue that prevents setting some keybindings through the Settings a
 recognize `Super+Shift+,`, I couldn't get it to actually _set_ a shortcut to that binding.
 
 To set these, use [[gsettings]] in the command line.
+
+## Disable/modify settings for Automatic Updates
+
+<https://linuxnightly.com/how-to-disable-automatic-updates-in-ubuntu/>
