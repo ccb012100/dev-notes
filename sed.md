@@ -20,3 +20,19 @@ rg --path-separator // foo --files-with-matches | xargs sed -i 's/foo/bar/g'
 ```
 
 _source_: <https://github.com/BurntSushi/ripgrep/blob/master/FAQ.md#search-and-replace>
+
+## Print by line number from file
+
+```bash
+# print line 512 from file
+sed -n '512p' $FILE_NAME
+
+# print lines 512-550
+sed -n '512-550p' $FILE_NAME
+
+# print line 512 plus 10 lines after X
+sed -n '512,+10p' $FILE_NAME
+
+# print lines 1, 5, and 7
+sed -n '1p; 5p; 7p' $FILE_NAME
+```
