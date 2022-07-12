@@ -2,6 +2,23 @@
 
 Desktop Environment (DE) for [[Linux]]. Used by [[Ubuntu]]
 
+- [GNOME](#gnome)
+  - [GSettings](#gsettings)
+  - [Add top bar to all monitors](#add-top-bar-to-all-monitors)
+  - [Restart GNOME Shell](#restart-gnome-shell)
+  - ["Phantom" extensions](#phantom-extensions)
+  - [Gnome Extensions](#gnome-extensions)
+    - [Integration with Chrome](#integration-with-chrome)
+  - [Rebind keybindings](#rebind-keybindings)
+    - [`<Super>+P` toggles display](#superp-toggles-display)
+  - [Move Open/Save/Cancel modal buttons to bottom of dialogue](#move-opensavecancel-modal-buttons-to-bottom-of-dialogue)
+
+## GSettings
+
+Many GNOME and GNOME apps/extensions use GSettings to store settings in a key-based configuration system called `dconf`.
+
+They can be viewed/edited through the `gsettings` command or the `dconf-editor` package.
+
 ## Add top bar to all monitors
 
 Use [Multi Monitors Add-On](https://github.com/realh/multi-monitors-add-on)
@@ -56,3 +73,32 @@ Error on site:
 Fix:
 
 Run `sudo apt chrome-gnome-shell`
+
+## Rebind keybindings
+
+### `<Super>+P` toggles display
+
+If you use the keyboard shortcut `<Super>+p`, the GNOME keybindings UI won't tell you it's already bound to
+`switch-monitor`, and using that binding will cause your external displays to freak out.
+
+Use the `gsettings` command to unbind it:
+
+```bash
+# view keybinding
+$ gsettings get org.gnome.mutter.keybindings switch-monitor
+['<Super>p', 'XF86Display']
+
+# unset keybinding
+$ gsettings set org.gnome.mutter.keybindings switch-monitor "[]"
+
+# view new binding
+$ gsettings get org.gnome.mutter.keybindings switch-monitor     
+@as []
+
+```
+
+## Move Open/Save/Cancel modal buttons to bottom of dialogue
+
+```bash
+gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/DialogsUseHeader':<0>}"
+```
