@@ -6,9 +6,10 @@ Desktop Environment (DE) for [[Linux]]. Used by [[Ubuntu]]
   - [GSettings](#gsettings)
   - [Add top bar to all monitors](#add-top-bar-to-all-monitors)
   - [Restart GNOME Shell](#restart-gnome-shell)
-  - ["Phantom" extensions](#phantom-extensions)
   - [Gnome Extensions](#gnome-extensions)
+  - ["Phantom" extensions](#phantom-extensions)
     - [Integration with Chrome](#integration-with-chrome)
+    - [Extension fails to load after restart](#extension-fails-to-load-after-restart)
   - [Rebind keybindings](#rebind-keybindings)
     - [`<Super>+P` toggles display](#superp-toggles-display)
   - [Move Open/Save/Cancel modal buttons to bottom of dialogue](#move-opensavecancel-modal-buttons-to-bottom-of-dialogue)
@@ -28,6 +29,10 @@ Use [Multi Monitors Add-On](https://github.com/realh/multi-monitors-add-on)
 Open Task Runner and run command `r`
 
 On [[Wayland]], you have to run terminal command `killall -3 gnome-shell`
+
+## Gnome Extensions
+
+<https://extensions.gnome.org/>
 
 ## "Phantom" extensions
 
@@ -60,10 +65,6 @@ Extension “ubuntu-appindicators@ubuntu.com” doesn't exist
 org.gnome.shell enabled-extensions ['tiling-assistant@leleat-on-github', 'desktop-icons@csoriano', 'panelScroll@sun.wxg@gmail.com', 'touchpad-indicator@orangeshirt', 'gestureImprovements@gestures', 'workspace-switch-wraparound@theychx.org', 'multi-monitors-add-on@spin83', 'impatience@gfxmonk.net', 'trayIconsReloaded@selfmade.pl', 'babar@fthx', 'ubuntu-dock@ubuntu.com', 'walkpaper@walkpaper.blinkbp.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'sound-output-device-chooser@kgshank.net', 'caffeine@patapon.info', 'cpupower@mko-sl.de', 'horizontal-workspace-indicator@tty2.io']
 ```
 
-## Gnome Extensions
-
-<https://extensions.gnome.org/>
-
 ### Integration with Chrome
 
 Error on site:
@@ -73,6 +74,16 @@ Error on site:
 Fix:
 
 Run `sudo apt chrome-gnome-shell`
+
+### Extension fails to load after update
+
+Look for errors in the syslog (`rg $EXTENSION_NAME /var/log/syslog`).
+
+If the error reads
+
+> Error: A different version was loaded previously
+
+then you need to [restart the GNOME shell](#restart-gnome-shell) and then restart **Extension Manager**.
 
 ## Rebind keybindings
 
