@@ -7,7 +7,7 @@
   - [[[Emacs]]](#emacs)
     - [enable C-M-d](#enable-c-m-d)
   - [modifying config through Terminal](#modifying-config-through-terminal)
-  - [[[VS Code]]](#vs-code)
+  - [[[vscode]]](#vs-code)
     - [Bell sound on Ctrl+/ keybinding](#bell-sound-on-ctrl-keybinding)
   - [[[GPG]]](#gpg)
 
@@ -40,7 +40,7 @@ defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 70 '<dic
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
 ```
 
-## [[VS Code]]
+## [[vscode]]
 
 ### Bell sound on Ctrl+/ keybinding
 

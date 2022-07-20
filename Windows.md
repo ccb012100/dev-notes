@@ -5,7 +5,7 @@
   - [Remap left `Caps Lock` to `Ctrl`](#remap-left-caps-lock-to-ctrl)
   - [Royal TS slow startup](#royal-ts-slow-startup)
   - [Windows Startup folder](#windows-startup-folder)
-  - [[[VS Code]]](#vs-code)
+  - [[[vscode]]](#vs-code)
     - [Settings files](#settings-files)
     - [Set VS Code as Git diff tool](#set-vs-code-as-git-diff-tool)
   - [Azure Data Studio](#azure-data-studio)
@@ -41,7 +41,7 @@ Located at `C:\Users\<UserName>\AppData\Roaming\Microsoft\Windows\Start Menu\Pro
 1. `Win + R`
 2. Enter `shell:startup` in Run window
 
-## [[VS Code]]
+## [[vscode]]
 
 ### Settings files
 

@@ -40,7 +40,7 @@ Run the command `sudo update-alternatives --config x-terminal-emulator`.
 
 ## free up Control+Shift+E shortcut
 
-Trying to map `Ctrl+Shift+E` to a command in [[VS Code]], it will show up as `Unknown`. This is because Linux has the
+Trying to map `Ctrl+Shift+E` to a command in [[vscode]], it will show up as `Unknown`. This is because Linux has the
 shortcut bound globally to Emoji input.
 
 To fix it, run the command `ibus-setup`, go to the _Emoji Input_ tab, and delete the `Control+Shift+E` shortcut.
