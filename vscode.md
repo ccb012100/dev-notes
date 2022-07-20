@@ -148,3 +148,13 @@ In the keybindings find and disable `UpArrow`/`DownArrow` bindings `scm.viewNext
 ```bash
 brew install visual-studio-code
 ```
+
+## Inspect vscode context
+
+To inspect the context of the current vs code instance:
+
+1. Run the command `Developer: Toggle Developer Tools`
+2. Run the command `Developer: Inspect Context Keys`
+3. Click on the element you want to inspect the context for
+
+This will print the current context will be logged to the Developer Tools javascript console
