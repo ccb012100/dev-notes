@@ -49,13 +49,6 @@ _source: <https://github.com/microsoft/vscode/issues/72947#issuecomment-49122836
 
 According to <https://stackoverflow.com/a/52295258>, this is only an issue in `GTK3` versions before `3.24`.
 
-## [[GNOME]] keybindings
-
-There's some issue that prevents setting some keybindings through the Settings app (for example, though it would
-recognize `Super+Shift+,`, I couldn't get it to actually _set_ a shortcut to that binding.
-
-To set these, use [[gsettings]] in the command line.
-
 ## Disable/modify settings for Automatic Updates
 
 <https://linuxnightly.com/how-to-disable-automatic-updates-in-ubuntu/>

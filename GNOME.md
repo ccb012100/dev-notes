@@ -9,10 +9,11 @@ Desktop Environment (DE) for [[Linux]]. Used by [[Ubuntu]]
   - [Gnome Extensions](#gnome-extensions)
   - ["Phantom" extensions](#phantom-extensions)
     - [Integration with Chrome](#integration-with-chrome)
-    - [Extension fails to load after restart](#extension-fails-to-load-after-restart)
+    - [Extension fails to load after update](#extension-fails-to-load-after-update)
   - [Rebind keybindings](#rebind-keybindings)
     - [`<Super>+P` toggles display](#superp-toggles-display)
   - [Move Open/Save/Cancel modal buttons to bottom of dialogue](#move-opensavecancel-modal-buttons-to-bottom-of-dialogue)
+  - [Can't set keybindings in GUI](#cant-set-keybindings-in-gui)
 
 ## GSettings
 
@@ -113,3 +114,10 @@ $ gsettings get org.gnome.mutter.keybindings switch-monitor
 ```bash
 gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/DialogsUseHeader':<0>}"
 ```
+
+## Can't set keybindings in GUI
+
+There's some issue that prevents setting some keybindings through the Settings app (for example, though it would
+recognize `Super+Shift+,`, I couldn't get it to actually _set_ a shortcut to that binding.
+
+To set these, use [[gsettings]] in the command line.
