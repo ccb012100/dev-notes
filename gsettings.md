@@ -4,7 +4,7 @@
 
 ## Finding keybindings
 
-`gsettings list-recursively rg keybinding`
+`gsettings list-recursively | rg keybinding`
 
 or
 
