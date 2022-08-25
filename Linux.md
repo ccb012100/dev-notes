@@ -212,3 +212,22 @@ e.g. `echo enabled > /sys/bus/usb/devices/3-1.1.4.1/power/wakeup`
 It should now enable the device on boot.
 
 _source: <https://askubuntu.com/questions/848698/wake-up-from-suspend-using-wireless-usb-keyboard-or-mouse-for-any-linux-distro/874701#874701>_
+
+## Set default Editor
+
+Use the `update-alternatives` command.
+
+### Install editor as alternative
+
+`update-alternatives --install /usr/bin/editor editor <editor_to_install> <priority>`
+
+e.g.
+
+`update-alternatives --install /usr/bin/editor editor /usr/bin/vim 100`
+
+### Configure alternative
+
+`update-alternatives --configure editor`
+
+_NOTE_: If `update-alternatives` is using 'auto mode', then it will choose the highest priority as the default editor, so
+setting  high priority will make the newly installed editor
