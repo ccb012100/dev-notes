@@ -336,3 +336,10 @@ C-G   " print file name
 " relative to the current working directory 
 :echo @%
 ```
+
+## system clipboard
+
+There are 2 clipboard registers:
+
+- `*` -> PRIMARY (copy-on-select)
+- `+` -> CLIPBOARD (ctrl+C/V)
