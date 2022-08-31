@@ -1,5 +1,13 @@
 # Bash shell
 
+## Fail and exit script on error
+
+Add the line
+
+```bash
+set -euxo pipefail
+```
+
 ## Brace expansion
 
 _see_: <https://www.howtogeek.com/725657/how-to-use-brace-expansion-in-linuxs-bash-shell/>
