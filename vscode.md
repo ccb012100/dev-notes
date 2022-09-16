@@ -115,6 +115,10 @@ Focus on Editor. If Editor is already in focus, focus on Explorer.
 }
 ```
 
+### Cycle though Quick Fix popup menu
+
+To cycle through the list of actions in the Quick Fix popup, use the keybindings `selectNextCodeAction` and `selectPrevCodeAction`
+
 ## Hide Extension Snippet from Intellisense
 
 I wanted to turn off the `markdownlint` extension's snippets, and this was the solution I found:
