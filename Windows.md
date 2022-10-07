@@ -5,7 +5,7 @@
   - [Remap left `Caps Lock` to `Ctrl`](#remap-left-caps-lock-to-ctrl)
   - [Royal TS slow startup](#royal-ts-slow-startup)
   - [Windows Startup folder](#windows-startup-folder)
-  - [[[vscode]]](#vs-code)
+  - [[[vscode]]](#vscode)
     - [Settings files](#settings-files)
     - [Set VS Code as Git diff tool](#set-vs-code-as-git-diff-tool)
   - [Azure Data Studio](#azure-data-studio)

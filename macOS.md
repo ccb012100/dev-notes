@@ -7,7 +7,7 @@
   - [[[Emacs]]](#emacs)
     - [enable C-M-d](#enable-c-m-d)
   - [modifying config through Terminal](#modifying-config-through-terminal)
-  - [[[vscode]]](#vs-code)
+  - [[[vscode]]](#vscode)
     - [Bell sound on Ctrl+/ keybinding](#bell-sound-on-ctrl-keybinding)
   - [[[GPG]]](#gpg)
 

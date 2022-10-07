@@ -226,7 +226,7 @@ CTRL-W J         " move current window to the very bottom
 CTRL-W K         " move current window to the very top
 CTRL-W L         " move current window to the far right
 ```
- 
+
 ### Marks
 
 ```vim
