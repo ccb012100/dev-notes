@@ -132,6 +132,9 @@ Enter `:version` to see list of paths that vim checks for `vimrc` files.
 Type `/`, then the search term, then `[Enter]`
 
 ```vim
+/{search term}<ENTER> " search forwards
+?{search term}<ENTER> " search backwards
+
 n   " next match
 N   " previous match
 ```
@@ -161,24 +164,44 @@ e.g. `/Linux\c` or `/Linux\C`
 - `C-a` -> increment next number
 - `C-x` -> decrement next number
 
-### Navigation
+### Motion/Navigation
 
 ```vim
-H   " Top of screen ('Highest')
-M   " Middle of screen ('Middle')
-L   " Bottom of screen ('Lowest')
+H     " Top of screen ('Highest')
+M     " Middle of screen ('Middle')
+L     " Bottom of screen ('Lowest')
 
-(   " Beggining of sentence
-)   " End of sentence
+(     " Beginning of sentence
+)     " End of sentence
 
-{   " Beginning of paragraph
-}   " End of paragraph
+{     " Beginning of paragraph
+}     " End of paragraph
 
-gM  " go to character at middle of the text line
-gm  " go to character at middle of the screenline
+gM    " go to character at middle of the text line
+gm    " go to character at middle of the screenline
 
-zj  " move to the start of the next fold
-zk  " move to the start of the previous fold
+zj    " move to the start of the next fold
+zk    " move to the start of the previous fold
+
+0     " move to first character of the line
+^     " move to first non-blank character of the line
+
+$     " move to the end of the line
+
+f{char} " move cursor on next {char}
+F{char} " move cursor on next {char} backwards
+
+t{char} " move cursor before next {char}
+T{char} " move cursor after next {char} backwards
+
+;       " repeat last [f|t|F|T] command
+,       " repeat last [f|t|F|T] command in opposite direction
+
+n       " next match
+N       " previous match
+
+*       " move to next occurrence of word under cursor
+#       " move to previous occurrence of word under cursor
 ```
 
 #### Go to line
