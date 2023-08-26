@@ -12,10 +12,10 @@
     - [Taskbar grouping](#taskbar-grouping)
     - [show all icons in Taskbar](#show-all-icons-in-taskbar)
   - [Updating `PATH` in Windows Terminal](#updating-path-in-windows-terminal)
-  - [New machine setup](#new-machine-setup)
   - [Choppy/lagging Bluetooth mouse](#choppylagging-bluetooth-mouse)
     - [Symptom](#symptom)
     - [Solution](#solution)
+  - [Windows icon file locations](#windows-icon-file-locations)
 
 ## Getting a window off screen back into view
 
@@ -107,3 +107,7 @@ After leaving the mouse idle for a few seconds, it will take a second or two for
 - Unheck the box labeled _Allow the computer to turn off this device to save power_
 
 _Source_: <https://www.reddit.com/r/Windows11/comments/tafgx3/if_youre_having_issues_with_a_laggystuttering/>
+
+## Windows icon file locations
+
+<https://www.digitalcitizen.life/where-find-most-windows-10s-native-icons/>
