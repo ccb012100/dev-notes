@@ -16,7 +16,7 @@
       - [process info](#process-info)
       - [uname](#uname)
       - [/proc](#proc)
-    - [Get all environment variables](#get-all-environment-variables)
+    - [List all environment variables](#list-all-environment-variables)
     - [Get process ID](#get-process-id)
       - [`pidof`](#pidof)
       - [`ps`](#ps)
@@ -26,6 +26,7 @@
   - [Add/remove fonts](#addremove-fonts)
   - [Enable waking laptop with USB devices](#enable-waking-laptop-with-usb-devices)
   - [set display brightness](#set-display-brightness)
+  - [rename files](#rename-files)
 
 ## Display formatted `$PATH`
 
@@ -128,9 +129,9 @@ The `/proc` directory contains files with hardware info.
 
 ex. `cat /proc/cpuinfo`
 
-### Get all environment variables
+### List all environment variables
 
-Use the `set` command.
+`printenv` or `set`
 
 ### Get process ID
 
@@ -214,7 +215,7 @@ e.g. `echo enabled > /sys/bus/usb/devices/3-1.1.4.1/power/wakeup`
 
 It should now enable the device on boot.
 
-_source: <https://askubuntu.com/questions/848698/wake-up-from-suspend-using-wireless-usb-keyboard-or-mouse-for-any-linux-distro/874701#874701>_
+_source: <https://askubuntu.com/questions/848698/wake-up-from-suspend-using-wireless-usb-keyboard-or-mouse-for-any-linux-distro/874701#874701>
 
 ## set display brightness
 
