@@ -104,8 +104,7 @@
 
 `Win + Home` - Minimize all except active window
 
-`Win + Shift + [<LeftArrow>|<RightArrow>]` - Move window to left/right desktop
-  - [Enable Hibernate](#enable-hibernate)
+`Win + Shift + [<LeftArrow>|<RightArrow>]` - Move window to left/right monitor (wraps around)
 
 ## Getting a window off screen back into view
 
