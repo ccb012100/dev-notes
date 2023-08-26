@@ -27,6 +27,7 @@
   - [Enable waking laptop with USB devices](#enable-waking-laptop-with-usb-devices)
   - [set display brightness](#set-display-brightness)
   - [rename files](#rename-files)
+  - [Get Linux kernel version](#get-linux-kernel-version)
 
 ## Display formatted `$PATH`
 
@@ -239,3 +240,9 @@ rename EXPRESSION REPLACEMENT FILE
 # change extension of files from .txt to .md
 rename .txt .md *.md
 ```
+
+## Get Linux kernel version
+
+- `uname -r`
+- `cat /proc/version`
+- `hostnamectl`
