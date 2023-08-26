@@ -11,6 +11,7 @@ Desktop Environment (DE) for [[Linux]]. Used by [[Ubuntu]]
     - [Integration with Chrome](#integration-with-chrome)
     - [Extension fails to load after update](#extension-fails-to-load-after-update)
   - [Keybindings](#keybindings)
+    - ["Select All" shortcut](#select-all-shortcut)
     - [List keybindings](#list-keybindings)
     - [Rebind keybindings](#rebind-keybindings)
       - [Multiple keybindings for an action](#multiple-keybindings-for-an-action)
@@ -93,6 +94,10 @@ If the error reads
 then you need to [restart the GNOME shell](#restart-gnome-shell) and then restart **Extension Manager**.
 
 ## Keybindings
+
+### "Select All" shortcut
+
+`Ctrl-/` is a secondary shortcut for "Select All", and works even when using [[emacs]] keybindings.
 
 ### List keybindings
 
