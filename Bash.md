@@ -71,3 +71,29 @@ _source:_ <https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#ANSI
 ```bash
 declare -p
 ```
+
+## Globbing
+
+- `*` - match all
+- `?` - match a single character
+- `'<TEXT>'` - prevents globbing
+
+```bash
+# match all
+*
+
+# ends with 'xy'
+xy*
+
+# starts with 'xy'
+*xy
+
+# contains 'xy'
+*xy*
+
+# would match 'xyz', but not 'wxyz'
+?yz
+
+# prints '*'
+echo '*'
+```
