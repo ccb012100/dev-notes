@@ -105,12 +105,23 @@ trustExitCode = false
 
 _source_: <https://www.winhelponline.com/blog/windows-defender-disabled-real-time-protection-virus/>
 
-## Windows 11 Taskbar grouping
+## Windows 11
+
+### Taskbar grouping
 
 Open `regedit.exe` and navigate to `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced`
 
 Edit `TaskbarGlomLevel`:
 
-- `0` Always combine, hide labels (default
+- `0` Always combine, hide labels (default)
 - `1` Combine when taskbar is full/Show labels
 - `2` Never combine/Show labels
+
+### show all icons in Taskbar
+
+1. Press `Win+R` to open the _Run_ prompt.
+2. Enter `explorer shell:::{05d7b0f4-2121-4eff-bf6b-ed3f69b894d9}`
+3. Tick the _Always show all icons and notifications on the taskbar_ checkbox.
+4. Click _OK_
+
+[source](https://techcommunity.microsoft.com/t5/windows-11/quot-show-all-icons-in-system-tray-quot-option-in-windows11/m-p/3359877)
