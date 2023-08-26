@@ -3,7 +3,7 @@
 - [Linux](#linux)
   - [Display formatted `$PATH`](#display-formatted-path)
     - [**sed**](#sed)
-  - [Set default shell to [[Zsh]]](#set-default-shell-to-zsh)
+  - [Set default shell to \[\[Zsh\]\]](#set-default-shell-to-zsh)
   - [display system info using `inxi`](#display-system-info-using-inxi)
     - [z - jump around](#z---jump-around)
   - [Nano](#nano)
@@ -21,8 +21,11 @@
       - [`pidof`](#pidof)
       - [`ps`](#ps)
     - [Kill process](#kill-process)
-  - [enable/disable [[Bluetooth]] on boot](#enabledisable-bluetooth-on-boot)
+    - [Get USB device info](#get-usb-device-info)
+  - [enable/disable \[\[Bluetooth\]\] on boot](#enabledisable-bluetooth-on-boot)
   - [Add/remove fonts](#addremove-fonts)
+  - [Enable waking laptop with USB devices](#enable-waking-laptop-with-usb-devices)
+  - [set display brightness](#set-display-brightness)
 
 ## Display formatted `$PATH`
 
@@ -213,21 +216,14 @@ It should now enable the device on boot.
 
 _source: <https://askubuntu.com/questions/848698/wake-up-from-suspend-using-wireless-usb-keyboard-or-mouse-for-any-linux-distro/874701#874701>_
 
-## Set default Editor
+## set display brightness
 
-Use the `update-alternatives` command.
+```bash
+xrandr --output <DISPLAY_NAME> --brightness <PERCENTAGE>
+```
 
-### Install editor as alternative
+ex.
 
-`update-alternatives --install /usr/bin/editor editor <editor_to_install> <priority>`
-
-e.g.
-
-`update-alternatives --install /usr/bin/editor editor /usr/bin/vim 100`
-
-### Configure alternative
-
-`update-alternatives --configure editor`
-
-_NOTE_: If `update-alternatives` is using 'auto mode', then it will choose the highest priority as the default editor, so
-setting  high priority will make the newly installed editor
+```bash
+xrandr --output DP-1 --brightness 0.75
+```
