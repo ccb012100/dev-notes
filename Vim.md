@@ -36,6 +36,20 @@
   - [Get current filename](#get-current-filename)
   - [system clipboard](#system-clipboard)
 
+## Save and exit
+
+```vim
+:update " write file if buffer has been modified
+:w      " write file
+:wall   " write all changed buffers
+:wall!  " write all buffers
+:x      " same as `ZZ`
+```
+
+### `ZZ` vs `:wq`
+
+`:wq` will always write to the file and update the last modified time. `ZZ` will only write to the file if changes have been made.
+
 ## Normal mode
 
 ```vim
