@@ -13,6 +13,9 @@
     - [show all icons in Taskbar](#show-all-icons-in-taskbar)
   - [Updating `PATH` in Windows Terminal](#updating-path-in-windows-terminal)
   - [New machine setup](#new-machine-setup)
+  - [Choppy/lagging Bluetooth mouse](#choppylagging-bluetooth-mouse)
+    - [Symptom](#symptom)
+    - [Solution](#solution)
 
 ## Getting a window off screen back into view
 
@@ -97,3 +100,19 @@ You must start a new instance to get the `$PATH`/`%PATH%` to update. Starting a 
 - Meld
 - VS Code
 - WSL/Ubuntu
+
+## Choppy/lagging Bluetooth mouse
+
+### Symptom
+
+After leaving the mouse idle for a few seconds, it will take a second or two for it to start responding to movement when it's next used
+
+### Solution
+
+- Open **Device Manager**
+- Expand **Bluetooth**
+- Double-click on **Intel(R) Wireless Bluetooth(R)**
+- Click on the tab **Power Management**
+- Unheck the box labeled _Allow the computer to turn off this device to save power_
+
+_Source_: <https://www.reddit.com/r/Windows11/comments/tafgx3/if_youre_having_issues_with_a_laggystuttering/>
