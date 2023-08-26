@@ -246,3 +246,15 @@ tr -d '\r' < input.txt > out.txt
 ## Sign commits with SSH
 
 <https://calebhearth.com/sign-git-with-ssh>
+
+## Get branch name
+
+`git branch --show-current`
+
+## Get repository name
+
+```bash
+basename -s .git `git config --get remote.origin.url`
+```
+
+_source:_ <https://stackoverflow.com/a/42543006>
