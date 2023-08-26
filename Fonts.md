@@ -8,6 +8,11 @@
 - Dina Remastered II
 - Fira Code
 - Hack
-  - Hack Nerd Font
-- IBM Plex Mono
+- IBM Plex
+- Input
 - JetBrains Mono
+- Liberation
+- Linux Libertine
+- Lo-Res
+- Meslo LG
+- Source Sans Pro
