@@ -1,6 +1,8 @@
 # Vim
 
 - [Vim](#vim)
+  - [Save and exit](#save-and-exit)
+    - [`ZZ` vs `:wq`](#zz-vs-wq)
   - [Normal mode](#normal-mode)
     - [Scroll screen, centered on cursor](#scroll-screen-centered-on-cursor)
     - [Format document](#format-document)
@@ -35,6 +37,7 @@
   - [Comment/uncomment code](#commentuncomment-code)
   - [Get current filename](#get-current-filename)
   - [system clipboard](#system-clipboard)
+  - [troubleshoot startup](#troubleshoot-startup)
 
 ## Save and exit
 
@@ -384,3 +387,7 @@ There are 2 clipboard registers:
 
 - `*` -> PRIMARY (copy-on-select)
 - `+` -> CLIPBOARD (ctrl+C/V)
+
+## troubleshoot startup
+
+`vim -V`
