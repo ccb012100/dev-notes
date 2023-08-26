@@ -15,6 +15,7 @@
     - [Get email](#get-email)
     - [Get username](#get-username)
   - [Get repository name](#get-repository-name)
+  - [`$GIT_DIR`](#git_dir)
   - [Sync fork with original repository](#sync-fork-with-original-repository)
     - [1. Clone your fork](#1-clone-your-fork)
     - [2. Add remote from original repository in your forked repository](#2-add-remote-from-original-repository-in-your-forked-repository)
@@ -48,6 +49,7 @@
   - [Check if $PWD is a Git repository](#check-if-pwd-is-a-git-repository)
   - [stash](#stash)
     - [stash specific file(s)](#stash-specific-files)
+  - [Hooks](#hooks)
 
 ## Commits
 
@@ -134,6 +136,10 @@ basename -s .git `git config --get remote.origin.url`
 ```
 
 _source:_ <https://stackoverflow.com/a/42543006>
+
+## `$GIT_DIR`
+
+Instead of accessing `$GIT_DIR` directly, use the command `git rev-parse --git-common-directory`; this uses the logic `return $GIT_COMMON_DIR ?? $GIT_DIR ?? .git/`
 
 ## Sync fork with original repository
 
@@ -350,3 +356,7 @@ git stash push -- FILE_NAME_1 FILE_NAME_2
 # stash an untracked file
 git stash push -u -- FILE_NAME
 ```
+
+## Hooks
+
+<!-- TODO: notes on hooks, and using local repo hook along with hooksPath hooks -->
