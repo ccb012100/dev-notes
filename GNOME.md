@@ -86,9 +86,20 @@ If the error reads
 
 then you need to [restart the GNOME shell](#restart-gnome-shell) and then restart **Extension Manager**.
 
-## Rebind keybindings
+## Keybindings
 
-### `<Super>+P` toggles display
+### List keybindings
+
+```bash
+(for schema in $(gsettings list-schemas); do gsettings list-recursively $schema; done) | rg 'keybindings'
+```
+
+Useful if you're trying to figure out what is stopping you from settings a binding (`<Super>+o` being a notable
+offender)
+
+### Rebind keybindings
+
+#### `<Super>+P` toggles display
 
 If you use the keyboard shortcut `<Super>+p`, the GNOME keybindings UI won't tell you it's already bound to
 `switch-monitor`, and using that binding will cause your external displays to freak out.
@@ -108,6 +119,22 @@ $ gsettings get org.gnome.mutter.keybindings switch-monitor
 @as []
 
 ```
+
+#### unset SUPER+o
+
+Unset the binding:
+
+```bash
+gsettings set org.gnome.settings-daemon.plugins.media-keys rotate-video-lock-static []
+```
+
+Then restart GNOME (`Super+F2`, then enter `r<Enter>`)
+
+#### rebind SUPER+SHIFT+,
+
+For some reason, the GNOME keybindings UI won't allow you t set athe shortcut `SUPER+SHIFT+,`
+
+`gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-left "['<Super><Shift>comma']"`
 
 ## Move Open/Save/Cancel modal buttons to bottom of dialogue
 
