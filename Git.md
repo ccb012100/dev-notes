@@ -93,12 +93,6 @@ git pull upstream master
 git branch --merged | grep -v "\*" | grep "feature/*" | xargs -n 1 git branch -d
 ```
 
-## remove remote branches that have been merged
-
-```bash
-git remote prune origin --dry-run
-```
-
 ## remove local branches that have no remote
 
 ```bash
@@ -106,12 +100,6 @@ git branch --v | grep "\[gone\]" | awk '{print $1}' | xargs git branch -D
 ```
 
 ## Changing history
-
-## Fix author on all commits after SHA
-
-```bash
-git rebase -i ####### -x "git commit --amend --author '[USER NAME] \<USER_EMAIL]\>' -CHEAD"
-```
 
 ### change author for all matching commits
 
