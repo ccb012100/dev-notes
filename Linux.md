@@ -247,6 +247,33 @@ rename .txt .md *.md
 - `cat /proc/version`
 - `hostnamectl`
 
-## Sound only coming from a single side
+## Audio issues
+
+### Sound only coming from a single channel
 
 Install [[Pulse Audio Volume Control]] (`pavucontrol`) and in the **Output devices** section, click the lock icon next to a device to see the individual levels for the 2 channels
+
+### Use LDAC
+
+Install [[PipeWire]] and the LDAC codec ([instructions](https://gist.github.com/the-spyke/2de98b22ff4f978ebf0650c90e82027e))
+
+### Can't adjust system volume
+
+Problem where adjusting the sytem volume has no effect (other than just having 2 levels: off (when the volume is set to 0) or 100% (when the volume is set to anything > 0))
+
+- `sudoedit /usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common`
+- Before the line `[Element PCM]`, add the text:
+
+```conf
+[Element Master]
+switch = mute
+volume = ignore
+```
+
+- restart audio service
+  - [[Pulse Audio]]
+    - `pulseaudio -k`
+  - [[PipeWire]]
+    - `systemctl --user restart pipewire pipewire-pulse`
+
+[source](https://askubuntu.com/a/1022363)
