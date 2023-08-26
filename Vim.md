@@ -398,3 +398,38 @@ There are 2 clipboard registers:
 :n  " next file
 :N  " previous file
 ```
+
+## Plugin keybindings
+
+### [EasyMotion](https://github.com/easymotion/vim-easymotion)
+
+```vim
+<leader> = <Space> or <Backspace>
+
+<leader>; <Plug>(easymotion-s2)     " 2-char search
+<leader>F <Plug>(easymotion-bd-F)   " move to char
+<leader>f <Plug>(easymotion-bd-f)   " move to char
+<leader>h <Plug>(easymotion-linebackward)
+<leader>j <Plug>(easymotion-j)
+<leader>k <Plug>(easymotion-k)
+<leader>L <Plug>(easymotion-bd-jk)  " move to line
+<leader>l <Plug>(easymotion-lineforward)
+<leader>s <Plug>(easymotion-s2)     " 2-char search
+<leader>W <Plug>(easymotion-w)      " word motion
+<leader>w <Plug>(easymotion-bd-w)   " word motion
+```
+
+### [commentary.vim](https://github.com/tpope/vim-commentary)
+
+`gcc`: (un)comment out a line (takes a count)
+
+`gc`: (un)comment out the target of a motion
+
+- (for example, `gcap` to comment out a paragraph)
+- in `Visual` mode to (un)comment out the selection
+- in `Operator pending` mode to target a comment.
+- You can also use it as a command
+  - with a range like `:7,17Commentary`
+  - as part of a `:global` invocation like with `:g/TODO/Commentary`
+
+`gcgc` uncomments a set of adjacent commented lines.
