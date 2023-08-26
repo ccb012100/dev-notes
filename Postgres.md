@@ -1,5 +1,20 @@
 # PostgreSQL
 
+- [PostgreSQL](#postgresql)
+  - [psql](#psql)
+    - [open `psql` with connect to database](#open-psql-with-connect-to-database)
+    - [`psql` commands](#psql-commands)
+      - [connect to database](#connect-to-database)
+      - [list databases](#list-databases)
+      - [list tables](#list-tables)
+      - [view table schema](#view-table-schema)
+      - [output to file](#output-to-file)
+      - [change table format](#change-table-format)
+      - [edit query in editor](#edit-query-in-editor)
+      - [execute query in expanded mode](#execute-query-in-expanded-mode)
+      - [watch query](#watch-query)
+        - [example](#example)
+
 ## psql
 
 PostgreSQL CLI tool
