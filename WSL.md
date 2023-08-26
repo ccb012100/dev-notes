@@ -315,3 +315,13 @@ To configure `xdg-open`:
 
 - create a link to the browser: `ln -s /mnt/c/Program\ Files\ \(x86\)/Microsoft/Edge/Application/msedge.exe ~/bin/msedge.exe`
 - add `export BROWSER=msedge.exe` to the shell profile
+
+## `xdg-open`
+
+- Install `xdg-utils`
+  - `sudo apt install xdg-utils`
+- Install [wslu](https://wslutiliti.es/wslu/)
+  - _Note_: _don't use the Ubuntu repo version_; it is no longer updated
+  -     sudo add-apt-repository ppa:wslutilities/wslu
+        sudo apt update
+        sudo apt install wslu
