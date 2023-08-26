@@ -126,7 +126,7 @@ To cycle through the list of actions in the Quick Fix popup, use the keybindings
 
 I wanted to turn off the `markdownlint` extension's snippets, and this was the solution I found:
 
-- Open the Command Pallette
+- Open the Command Palette
 - Chose **Insert Snippet**
 - Hover over the snippet and click the eye icon to hide/show the snippet in Intellisense
 
