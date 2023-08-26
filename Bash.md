@@ -9,6 +9,7 @@
   - [dot command](#dot-command)
   - [backslash escaped characters in single-character strings](#backslash-escaped-characters-in-single-character-strings)
   - [list shell variables](#list-shell-variables)
+  - [Globbing](#globbing)
 
 ## Fail and exit script on error
 
@@ -74,7 +75,9 @@ declare -p
 
 ## Globbing
 
-- `*` - match all
+- `*` - match all (excluding dot files)
+- `.*` - match against dot files
+  - `.[^.]*` or `.??*` to exclude `.` and `..` directories
 - `?` - match a single character
 - `'<TEXT>'` - prevents globbing
 
