@@ -44,21 +44,21 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/nul
 
 ### Bell sound on Ctrl+/ keybinding
 
+```bash
+$ mkdir -p ~/Library/KeyBindings
+
+$ cat > ~/Library/KeyBindings/DefaultKeyBinding.dict <<EOF
+{
+  "^/" = "noop";
+}
+EOF
+```
+
 <https://stackoverflow.com/questions/45904944/how-to-turn-off-bell-sound-in-visual-studio-code>
 
 <https://github.com/atom/atom/issues/1669#issuecomment-135503562>
 
 <https://github.com/microsoft/vscode/issues/44070#issuecomment-799716362>
-
-Add
-
-```text
-{
-    "^/": "noop:";
-}
-```
-
-to `~/Library/KeyBindings/DefaultKeyBinding.dict`
 
 ## [[GPG]]
 
