@@ -8,6 +8,7 @@ Desktop Environment (DE) for [[Linux]]. Used by [[Ubuntu]]
   - [Restart GNOME Shell](#restart-gnome-shell)
   - [Gnome Extensions](#gnome-extensions)
   - ["Phantom" extensions](#phantom-extensions)
+    - [Symptom](#symptom)
     - [Integration with Chrome](#integration-with-chrome)
     - [Extension fails to load after update](#extension-fails-to-load-after-update)
   - [Keybindings](#keybindings)
@@ -20,7 +21,10 @@ Desktop Environment (DE) for [[Linux]]. Used by [[Ubuntu]]
       - [rebind SUPER+SHIFT+,](#rebind-supershift)
   - [Move Open/Save/Cancel modal buttons to bottom of dialogue](#move-opensavecancel-modal-buttons-to-bottom-of-dialogue)
   - [Can't set keybindings in GUI](#cant-set-keybindings-in-gui)
+    - [Symptom](#symptom-1)
+    - [Solution](#solution)
   - [Set text scaling factor](#set-text-scaling-factor)
+  - [Set step size for volume increment/decrement](#set-step-size-for-volume-incrementdecrement)
 
 ## GSettings
 
@@ -44,10 +48,12 @@ On [[Wayland]], you have to run terminal command `killall -3 gnome-shell`
 
 ## "Phantom" extensions
 
-This is for an issue where GNOME keeps trying to install an extension every time the screen locks. In my case, it was
-`ubuntu-app-indicator`, so I'll use that as the example.
+### Symptom
 
-First, run `gsettings list-recursively | rg APP_NAME
+GNOME keeps trying to install an extension every time the screen locks. In my case, it was `ubuntu-app-indicator`, so
+I'll use that as the example.
+
+First, run `gsettings list-recursively | rg APP_NAME`
 
 ```bash
 ❯ gsettings list-recursively | rg -F 'app-indicator'
@@ -147,7 +153,7 @@ Then restart GNOME (`Super+F2`, then enter `r<Enter>`)
 
 #### rebind SUPER+SHIFT+,
 
-For some reason, the GNOME keybindings UI won't allow you t set athe shortcut `SUPER+SHIFT+,`
+For some reason, the GNOME keybindings UI won't allow you to set a shortcut to the keybinding `SUPER+SHIFT+,`
 
 `gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-left "['<Super><Shift>comma']"`
 
@@ -159,8 +165,12 @@ gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/Dialo
 
 ## Can't set keybindings in GUI
 
-There's some issue that prevents setting some keybindings through the Settings app (for example, though it would
-recognize `Super+Shift+,`, I couldn't get it to actually _set_ a shortcut to that binding.
+### Symptom
+
+Some keybindings can't be set through the Settings app (for example, though it would recognize `Super+Shift+,`, I
+couldn't get it to actually _set_ a shortcut to that binding.
+
+### Solution
 
 To set these, use [[gsettings]] in the command line.
 

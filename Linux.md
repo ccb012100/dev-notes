@@ -32,8 +32,10 @@
     - [Sound only coming from a single channel](#sound-only-coming-from-a-single-channel)
     - [Use LDAC](#use-ldac)
     - [Can't adjust system volume](#cant-adjust-system-volume)
-    - [Mic keeps auto-muting after unmuting](#mic-keeps-auto-muting-after-unmuting)
+      - [Syptom](#syptom)
       - [Solution](#solution)
+    - [Mic keeps auto-muting after unmuting](#mic-keeps-auto-muting-after-unmuting)
+      - [Solution](#solution-1)
   - [man page sections](#man-page-sections)
 
 ## Display formatted `$PATH`
@@ -266,7 +268,11 @@ Install [[PipeWire]] and the LDAC codec ([instructions](https://gist.github.com/
 
 ### Can't adjust system volume
 
-Problem where adjusting the sytem volume has no effect (other than just having 2 levels: off (when the volume is set to 0) or 100% (when the volume is set to anything > 0))
+#### Syptom
+
+Adjusting the system volume has no effect (other than just having 2 levels: off (when the volume is set to 0) or 100% (when the volume is set to anything > 0))
+
+#### Solution
 
 - `sudoedit /usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common`
 - Before the line `[Element PCM]`, add the text:
