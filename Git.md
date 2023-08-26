@@ -36,11 +36,17 @@
     - [removes local feature branches that have already been merged](#removes-local-feature-branches-that-have-already-been-merged)
     - [remove local branches that have no remote](#remove-local-branches-that-have-no-remote)
     - [Fetch changes from all remotes and locally delete branches to match remote](#fetch-changes-from-all-remotes-and-locally-delete-branches-to-match-remote)
+    - [Merge/Rebase terminology](#mergerebase-terminology)
+      - [Rebasing](#rebasing-1)
+        - [example](#example-1)
+      - [Merging](#merging)
+        - [example](#example-2)
   - [Change CRLF line endings to LF](#change-crlf-line-endings-to-lf)
   - [Executable (`+x`) file](#executable-x-file)
     - [Stage file as executable](#stage-file-as-executable)
     - [Set existing file to executable](#set-existing-file-to-executable)
   - [Check if $PWD is a Git repository](#check-if-pwd-is-a-git-repository)
+  - [stash](#stash)
 
 ## Commits
 
@@ -265,6 +271,28 @@ git branch --v | grep "\[gone\]" | awk '{print $1}' | xargs git branch -D
 git fetch --all --prune
 ```
 
+### Merge/Rebase terminology
+
+#### Rebasing
+
+_**Incoming**_ is the branch you're working on (the branch you're merging)
+
+_**Current**_ is the branch you're merging into (the target branch)
+
+##### example
+
+If you're rebasing `feat` onto `main`, `feat` is the _incoming_ branch, and `main` is the _current_ branch.
+
+#### Merging
+
+_**Current**_ is the branch you're working on (the branch you're merging)
+
+_**Incoming**_ is the branch you're merging into (the target branch)
+
+##### example
+
+If you're merging `feat` into `master`, `feat` is the _incoming_ branch, and _main_ is the _current_ branch.
+
 ## Change CRLF line endings to LF
 
 ```bash
@@ -293,3 +321,22 @@ fi
 ```
 
 _source_: <https://stackoverflow.com/a/2180367>
+
+## stash
+
+```bash
+# stash tracked files
+git stash # equivalent to `git stash push`
+
+# include ignored and untracked
+git stash push -a # --all
+
+# include untracked files
+git stash push -u # --include-untracked
+
+# stash only staged files
+git stash push -S # --staged
+
+# only stash untracked files
+git stash push --only-untracked
+```
