@@ -404,3 +404,103 @@ git log -S --all <string>
 # search for branches matching shell glob `<pattern>`
 git log -S <string> --branches[=<pattern>]
 ```
+
+## Using Multiple git profiles with different ssh keys
+
+### Example Users:
+
+#### work
+
+user: `john_doe-company`
+
+organization: `github.com/Company/`
+
+#### personal
+
+email: `jdoe@github.com`
+
+code: `github.com/jdoe/`
+
+1. Edit `~/.ssh/config`
+
+  ```conf
+  # personal github account
+  Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/jdoe_private_key
+    IdentitiesOnly yes
+    AddKeysToAgent yes
+    
+  # work github account
+  Host github-company
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/company_private_key
+    IdentitiesOnly yes
+    AddKeysToAgent yes
+  ```
+
+2. Edit `~/.gitconfig`
+
+  ```gitconfig
+  [includeIf "gitdir:~/.dotfiles/"]
+      path = .config/git/personal.gitconfig
+  [includeIf "gitdir:~/work/"]
+      path = .config/git/work.gitconfig
+  ```
+
+3. Edit `.config/git/personal.gitconfig`
+
+  ```gitconfig
+  [user]
+      name = John Doe
+      email = 123456+jdoe@users.noreply.github.com
+      signingkey = ~/.ssh/jdoe_private_key
+  [url "git@github.com:"]
+      insteadof = https://github.com/
+  ```
+
+4. Edit `.config/git/work.gitconfig`
+
+  ```gitconfig
+  [user]
+    name = John Doe
+    email = john_doe@company.com
+    signingkey = ~/.ssh/company_private_key
+  [url "git@github-work:Company/"]
+    insteadof = https://github.com/Company/
+  ```
+
+5. Add private keys to ssh agent
+
+  ```shell
+  ssh-add `~/.ssh/jdoe_private_key`
+  ssh-add `~/.ssh/company_private_key`
+  ```
+
+6. Verify configuration
+
+  ```bash
+  $ ssh -T git@github.com
+  Hi jdoe! You've successfully authenticated, but GitHub does not provide shell access.
+  $ ssh -T git@github-work
+  Hi john_doe-company! You've successfully authenticated, but GitHub does not provide shell access.
+  ```
+
+_source_: <https://gist.github.com/oanhnn/80a89405ab9023894df7>
+
+## List all committers to a repository
+
+```bash
+git shortlog -s
+
+# all branches
+git shortlog -s --all
+
+# sort by number of commits
+git shortlog -sn
+
+# show committer email address
+git shortlog -se # or git shortlog -s --email
+```
