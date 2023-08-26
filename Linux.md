@@ -246,3 +246,7 @@ rename .txt .md *.md
 - `uname -r`
 - `cat /proc/version`
 - `hostnamectl`
+
+## Sound only coming from a single side
+
+Install [[Pulse Audio Volume Control]] (`pavucontrol`) and in the **Output devices** section, click the lock icon next to a device to see the individual levels for the 2 channels
