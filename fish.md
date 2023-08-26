@@ -42,6 +42,25 @@ bar bat baz
 
 ## functions
 
+### loading
+
 Functions are auto-loaded from the `$HOME/.config/fish/functions/` directory. Fish loads them when they are first used;
 it does this by looking for a file with the same name as the function (i.e. function `foobar` must be contained in
 `foobar.fish`), so functions _must be contained in files of the same name_ if you want to make use of this functionality.
+
+### viewing
+
+The command `functions` will list all functions. `functions <FUNC_NAME>` will show the details for a function.
+
+## aliases
+
+Aliases are just functions. `alias --save` will save the alias as a function in the autoloaded functions directory.
+
+## abbreviations
+
+Abbreviations are similar to aliases, but are expanded after pressing `Space` or `Enter`. Using `Control+Space` to avoid
+expanding.
+
+```sh
+abbr --add <NAME> <EXPANSION>
+```
