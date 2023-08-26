@@ -15,6 +15,8 @@
     - [here string `<<<`](#here-string-)
     - [here document `<<`](#here-document-)
     - [redirect to stdin `<`](#redirect-to-stdin-)
+  - [Argument parsing](#argument-parsing)
+  - [input/output redirection](#inputoutput-redirection)
 
 ## Fail and exit script on error
 
@@ -151,3 +153,29 @@ $ cat < /etc/fstab
 ```
 
 _source_: <https://unix.stackexchange.com/a/80368>
+
+## Argument parsing
+
+Use the built-in bash `getopts` or the GNU `getopt` utility to parse command-line options
+
+## input/output redirection
+
+```bash
+# redirect stdout to FILE
+> FILE # or `1> FILE`
+
+# append stdout to FILE
+>> FILE
+
+# pull FILE into stdin
+< FILE
+
+# redirect stderror
+2> FILE
+
+# redirect stdout and stderror
+&> FILE
+
+# append stdout and stderror
+&>> FILE
+```
