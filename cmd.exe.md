@@ -59,9 +59,11 @@ See <https://zwbetz.com/aliases-in-windows-command-prompt/> for more details.
 - Open the `Command Prompt` shortcut in `%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\System Tools`
 - Change **Target** value to `%windir%\system32\cmd.exe /k aliases.cmd` (just add `/k aliases.cmd`)
 
-#### Windows Terminal
+#### [[Windows Terminal]]
 
-In **Settings**, open the `cmd` profile, and under the **General** section, change the value of _Command Line_ to `cmd.exe /k aliases.cmd`.
+- Open **Settings**
+- open the `cmd.exe` profile
+- append `/k aliases.cmd` to the _Command Line_ text input.
 
 ---
 
