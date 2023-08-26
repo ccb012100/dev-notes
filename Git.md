@@ -33,6 +33,9 @@
   - [Stage file as executable](#stage-file-as-executable)
   - [Set existing file to executable](#set-existing-file-to-executable)
   - [Sign commits with SSH](#sign-commits-with-ssh)
+  - [Get branch name](#get-branch-name)
+  - [Get repository name](#get-repository-name)
+  - [Check if $PWD is a Git repository](#check-if-pwd-is-a-git-repository)
 
 ## Set git to rebase on pull:
 
@@ -258,3 +261,16 @@ basename -s .git `git config --get remote.origin.url`
 ```
 
 _source:_ <https://stackoverflow.com/a/42543006>
+
+## Check if $PWD is a Git repository
+
+```bash
+if [ -d .git ] || git rev-parse --git-dir > /dev/null 2>&1; then
+  echo "yes"
+else
+  echo "no"
+  return -1
+fi
+```
+
+_source_: <https://stackoverflow.com/a/2180367>
