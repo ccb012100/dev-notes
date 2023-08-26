@@ -33,7 +33,7 @@ Not supported by fish: <https://fishshell.com/docs/current/fish_for_bash_users.h
 
 #### example
 
-```bash
+```fish
 $ echo '#!/usr/bin/env fish
 echo "$argv[2..-1]"' >> script.fish
 $ ./script foo bar bat baz
@@ -42,7 +42,7 @@ bar bat baz
 
 ### test argv count
 
-```sh
+```fish
 if test (count $argv) -gt 0
     ---snip---
 end
@@ -69,6 +69,6 @@ Aliases are just functions. `alias --save` will save the alias as a function in 
 Abbreviations are similar to aliases, but are expanded after pressing `Space` or `Enter`. Using `Control+Space` to avoid
 expanding.
 
-```sh
+```fish
 abbr --add <NAME> <EXPANSION>
 ```
