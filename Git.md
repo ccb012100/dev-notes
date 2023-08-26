@@ -1,49 +1,104 @@
 # [[Git]]
 
 - [\[\[Git\]\]](#git)
-  - [Set git to rebase on pull:](#set-git-to-rebase-on-pull)
-  - [Set fast forward as default](#set-fast-forward-as-default)
-  - [Get email](#get-email)
-  - [Get username](#get-username)
+  - [Commits](#commits)
+    - [`amend`](#amend)
+      - [Add files to commit](#add-files-to-commit)
+      - [Change commit message](#change-commit-message)
+    - [undo last commit](#undo-last-commit)
+    - [change author for all matching commits](#change-author-for-all-matching-commits)
+    - [amend commit to current time](#amend-commit-to-current-time)
+    - [Sign commits with SSH](#sign-commits-with-ssh)
+  - [Config](#config)
+    - [Set git to rebase on pull:](#set-git-to-rebase-on-pull)
+    - [Set fast forward as default](#set-fast-forward-as-default)
+    - [Get email](#get-email)
+    - [Get username](#get-username)
+  - [Get repository name](#get-repository-name)
   - [Sync fork with original repository](#sync-fork-with-original-repository)
     - [1. Clone your fork](#1-clone-your-fork)
     - [2. Add remote from original repository in your forked repository](#2-add-remote-from-original-repository-in-your-forked-repository)
     - [3. Updating your fork from original repo to keep up with their changes](#3-updating-your-fork-from-original-repo-to-keep-up-with-their-changes)
-  - [removes local feature branches that have already been merged](#removes-local-feature-branches-that-have-already-been-merged)
-  - [remove local branches that have no remote](#remove-local-branches-that-have-no-remote)
-  - [Changing history](#changing-history)
-    - [change author for all matching commits](#change-author-for-all-matching-commits)
-    - [amend commit to current time](#amend-commit-to-current-time)
-  - [Remove file from entire branch history](#remove-file-from-entire-branch-history)
-  - [Rebase previous commits](#rebase-previous-commits)
+    - [Remove file from entire branch history](#remove-file-from-entire-branch-history)
+  - [Rebasing](#rebasing)
+    - [Rebase initial commit](#rebase-initial-commit)
+    - [Rebase previous commits](#rebase-previous-commits)
   - [\[\[GPG\]\]](#gpg)
     - [signing fails](#signing-fails)
   - [Status of all repositories](#status-of-all-repositories)
   - [Interactive `add`](#interactive-add)
     - [Manually edit hunk](#manually-edit-hunk)
-  - [`amend`](#amend)
-    - [Add files to commit](#add-files-to-commit)
-    - [Change commit message](#change-commit-message)
-  - [undo last commit](#undo-last-commit)
   - [Ignore local changes to a tracked file](#ignore-local-changes-to-a-tracked-file)
-  - [Delete remote branch](#delete-remote-branch)
+  - [Branches](#branches)
+    - [Delete remote branch](#delete-remote-branch)
     - [Example](#example)
-  - [Fetch changes from all remotes and locally delete branches to match remote](#fetch-changes-from-all-remotes-and-locally-delete-branches-to-match-remote)
+    - [Get branch name](#get-branch-name)
+    - [removes local feature branches that have already been merged](#removes-local-feature-branches-that-have-already-been-merged)
+    - [remove local branches that have no remote](#remove-local-branches-that-have-no-remote)
+    - [Fetch changes from all remotes and locally delete branches to match remote](#fetch-changes-from-all-remotes-and-locally-delete-branches-to-match-remote)
   - [Change CRLF line endings to LF](#change-crlf-line-endings-to-lf)
-  - [Stage file as executable](#stage-file-as-executable)
-  - [Set existing file to executable](#set-existing-file-to-executable)
-  - [Sign commits with SSH](#sign-commits-with-ssh)
-  - [Get branch name](#get-branch-name)
-  - [Get repository name](#get-repository-name)
+  - [Executable (`+x`) file](#executable-x-file)
+    - [Stage file as executable](#stage-file-as-executable)
+    - [Set existing file to executable](#set-existing-file-to-executable)
   - [Check if $PWD is a Git repository](#check-if-pwd-is-a-git-repository)
 
-## Set git to rebase on pull:
+## Commits
+
+### `amend`
+
+#### Add files to commit
+
+```bash
+# add files
+git add .
+
+# amend commit with --no-edit to keep the same commit message
+git commit --amend --no-edit
+```
+
+#### Change commit message
+
+```bash
+git commit --amend -m "this is the new commit message"
+```
+
+### undo last commit
+
+```bash
+git reset --soft HEAD~1
+```
+
+### change author for all matching commits
+
+To change the author for all commits after commit with hash `HASH`:
+
+```bash
+# use currently configured author
+git rebase HASH -x "git commit --amend --no-edit --reset-author"
+
+# specify author
+git rebase HASH -x "git commit --amend --no-edit --author="Author Name <email@example.com>"
+```
+
+### amend commit to current time
+
+```bash
+GIT_COMMITTER_DATE="$(date)" git commit --amend --no-edit --date "$(date)"
+```
+
+### Sign commits with SSH
+
+<https://calebhearth.com/sign-git-with-ssh>
+
+## Config
+
+### Set git to rebase on pull:
 
 ```bash
 git config --global pull.rebase true
 ```
 
-## Set fast forward as default
+### Set fast forward as default
 
 ```bash
 # merge
@@ -53,17 +108,25 @@ git config --global merge.ff only
 git config --global pull.ff only
 ```
 
-## Get email
+### Get email
 
 ```bash
 git config --global user.email
 ```
 
-## Get username
+### Get username
 
 ```bash
 git config --global user.name
 ```
+
+## Get repository name
+
+```bash
+basename -s .git `git config --get remote.origin.url`
+```
+
+_source:_ <https://stackoverflow.com/a/42543006>
 
 ## Sync fork with original repository
 
@@ -91,39 +154,7 @@ git fetch upstream
 git pull upstream master
 ```
 
-## removes local feature branches that have already been merged
-
-```bash
-git branch --merged | grep -v "\*" | grep "feature/*" | xargs -n 1 git branch -d
-```
-
-## remove local branches that have no remote
-
-```bash
-git branch --v | grep "\[gone\]" | awk '{print $1}' | xargs git branch -D
-```
-
-## Changing history
-
-### change author for all matching commits
-
-To change the author for all commits after commit with hash `HASH`:
-
-```bash
-# use currently configured author
-git rebase HASH -x "git commit --amend --no-edit --reset-author"
-
-# specify author
-git rebase HASH -x "git commit --amend --no-edit --author="Author Name <email@example.com>"
-```
-
-### amend commit to current time
-
-```bash
-GIT_COMMITTER_DATE="$(date)" git commit --amend --no-edit --date "$(date)"
-```
-
-## Remove file from entire branch history
+### Remove file from entire branch history
 
 Use `git-filter-repo` (<https://github.com/newren/git-filter-repo>) - do _not_ use `git-filter-branch`
 
@@ -133,7 +164,15 @@ git filter-repo --invert-paths --path PATH-TO-YOUR-FILE-WITH-SENSITIVE-DATA
 
 See GitHub page on [Removing sensitive data from a repository](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository).
 
-## Rebase previous commits
+## Rebasing
+
+### Rebase initial commit
+
+```bash
+git rebase -i --root
+```
+
+### Rebase previous commits
 
 ex. last 3 commits:
 
@@ -181,30 +220,6 @@ To drop `+` line: remove the line
 
 To drop `-` line: change `-` to a single `[space]`)
 
-## `amend`
-
-### Add files to commit
-
-```bash
-# add files
-git add .
-
-# amend commit with --no-edit to keep the same commit message
-git commit --amend --no-edit
-```
-
-### Change commit message
-
-```bash
-git commit --amend -m "this is the new commit message"
-```
-
-## undo last commit
-
-```bash
-git reset --soft HEAD~1
-```
-
 ## Ignore local changes to a tracked file
 
 ```bash
@@ -213,7 +228,9 @@ git update-index --assume-unchanged $filename
 
 _source_: <https://practicalgit.com/blog/make-git-ignore-local-changes-to-tracked-files.html>
 
-## Delete remote branch
+## Branches
+
+### Delete remote branch
 
 ```bash
 # -d can also be used
@@ -226,7 +243,23 @@ git push <remote_name> --delete <branch_name>
 git push origin --delete example-branch
 ```
 
-## Fetch changes from all remotes and locally delete branches to match remote
+### Get branch name
+
+`git branch --show-current`
+
+### removes local feature branches that have already been merged
+
+```bash
+git branch --merged | grep -v "\*" | grep "feature/*" | xargs -n 1 git branch -d
+```
+
+### remove local branches that have no remote
+
+```bash
+git branch --v | grep "\[gone\]" | awk '{print $1}' | xargs git branch -D
+```
+
+### Fetch changes from all remotes and locally delete branches to match remote
 
 ```bash
 git fetch --all --prune
@@ -238,29 +271,15 @@ git fetch --all --prune
 tr -d '\r' < input.txt > out.txt
 ```
 
-## Stage file as executable
+## Executable (`+x`) file
+
+### Stage file as executable
 
 `git add --chmod=+x path/to/file`
 
-## Set existing file to executable
+### Set existing file to executable
 
 `git update-index --chmod=+x path/to/file`
-
-## Sign commits with SSH
-
-<https://calebhearth.com/sign-git-with-ssh>
-
-## Get branch name
-
-`git branch --show-current`
-
-## Get repository name
-
-```bash
-basename -s .git `git config --get remote.origin.url`
-```
-
-_source:_ <https://stackoverflow.com/a/42543006>
 
 ## Check if $PWD is a Git repository
 
