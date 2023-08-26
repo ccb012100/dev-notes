@@ -1,5 +1,15 @@
 # Bash shell
 
+- [Bash shell](#bash-shell)
+  - [Fail and exit script on error](#fail-and-exit-script-on-error)
+  - [Brace expansion](#brace-expansion)
+    - [Moving/renaming a file](#movingrenaming-a-file)
+  - [Overwrite (clobber) file with redirected output](#overwrite-clobber-file-with-redirected-output)
+  - [shebang](#shebang)
+  - [dot command](#dot-command)
+  - [backslash escaped characters in single-character strings](#backslash-escaped-characters-in-single-character-strings)
+  - [list shell variables](#list-shell-variables)
+
 ## Fail and exit script on error
 
 Add the line
@@ -55,3 +65,9 @@ calls to `sort` and `column`, for example
 e.g. `\t` for tab
 
 _source:_ <https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#ANSI_002dC-Quoting>
+
+## list shell variables
+
+```bash
+declare -p
+```
