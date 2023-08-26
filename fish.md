@@ -1,5 +1,22 @@
 # fish shell
 
+- [fish shell](#fish-shell)
+  - [`bind`](#bind)
+  - [shortcuts](#shortcuts)
+  - [here docs/here strings](#here-docshere-strings)
+  - [script arguments](#script-arguments)
+    - [list of arguments](#list-of-arguments)
+    - [access single argument](#access-single-argument)
+    - [access range of args](#access-range-of-args)
+      - [example](#example)
+    - [test argv count](#test-argv-count)
+  - [functions](#functions)
+    - [loading](#loading)
+    - [viewing](#viewing)
+  - [aliases](#aliases)
+  - [abbreviations](#abbreviations)
+  - [Switch case](#switch-case)
+
 <https://fishshell.com/docs/current/>
 
 ## `bind`
@@ -71,4 +88,22 @@ expanding.
 
 ```fish
 abbr --add <NAME> <EXPANSION>
+```
+
+## Switch case
+
+```fish
+switch $argv[1]
+    case cat
+        echo evil
+    case wolf dog human moose dolphin whale
+        echo mammal
+    case duck goose albatross
+        echo bird
+    case shark trout stingray
+        echo fish
+    # NOTE: default case must be surrounded in single-quotes
+    case '*'
+        echo I have no idea what a $animal is
+end
 ```
