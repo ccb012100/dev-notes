@@ -100,3 +100,11 @@ xy*
 # prints '*'
 echo '*'
 ```
+
+## Sourcing multiple files
+
+```bash
+ for f in <DIRECTORY>; do source $f; done
+```
+
+_source:_ <https://stackoverflow.com/a/1423444>
