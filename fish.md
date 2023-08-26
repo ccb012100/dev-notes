@@ -81,6 +81,10 @@ The command `functions` will list all functions. `functions <FUNC_NAME>` will sh
 
 Aliases are just functions. `alias --save` will save the alias as a function in the autoloaded functions directory.
 
+### see alias definition
+
+To do the equivalent of `alias FOO` in [[Bash]], use `function FOO` (works with functions as well, obviously).
+
 ## abbreviations
 
 Abbreviations are similar to aliases, but are expanded after pressing `Space` or `Enter`. Using `Control+Space` to avoid
