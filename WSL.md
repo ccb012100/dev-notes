@@ -325,7 +325,7 @@ To configure `xdg-open`:
   - `sudo apt install xdg-utils`
 - Install [wslu](https://wslutiliti.es/wslu/)
   - _Note_: _don't use the Ubuntu repo version_; it is no longer updated
-  -     sudo add-apt-repository ppa:wslutilities/wslu
+  - sudo add-apt-repository ppa:wslutilities/wslu
         sudo apt update
         sudo apt install wslu
 
