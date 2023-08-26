@@ -137,7 +137,11 @@ _Note: Knuth himself referred to it as **Hoare's Dictum**_
 ## Useful concepts
 
 - Chesterton's Fence
-- the Curse of Knowledge
-- SOLID
-- DRY/WET
 - Composition over Inheritence
+- DRY/WET
+- Dynamic Programming
+- False Dilemma/False Dichotomy
+- Property-based testing
+- SOLID
+- Testing at the system boundaries
+- The Curse of Knowledge
