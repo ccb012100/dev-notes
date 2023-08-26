@@ -35,6 +35,9 @@ Windows Subsystem for Linux 2
   - [clock skew](#clock-skew)
     - [Syptom](#syptom)
     - [Solution](#solution)
+  - [open web browser](#open-web-browser)
+  - [`xdg-open`](#xdg-open)
+  - [disable appening \[\[Windows\]\] `%PATH%` from `$PATH`](#disable-appening-windows-path-from-path)
 
 ## Commands
 
@@ -325,3 +328,7 @@ To configure `xdg-open`:
   -     sudo add-apt-repository ppa:wslutilities/wslu
         sudo apt update
         sudo apt install wslu
+
+## disable appening [[Windows]] `%PATH%` from `$PATH`
+
+In `/etc/wsl.conf`, set `interop::appendWindowsPath` to `false`
