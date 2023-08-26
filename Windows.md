@@ -92,15 +92,6 @@ Edit `TaskbarGlomLevel`:
 
 You must start a new instance to get the `$PATH`/`%PATH%` to update. Starting a new [[Bash]]/[[cmd.exe]] instance is not enough.
 
-## New machine setup
-
-- Chocolatey
-- Clink
-- Git
-- Meld
-- VS Code
-- WSL/Ubuntu
-
 ## Choppy/lagging Bluetooth mouse
 
 ### Symptom
