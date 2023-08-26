@@ -28,6 +28,12 @@
   - [set display brightness](#set-display-brightness)
   - [rename files](#rename-files)
   - [Get Linux kernel version](#get-linux-kernel-version)
+  - [Audio issues](#audio-issues)
+    - [Sound only coming from a single channel](#sound-only-coming-from-a-single-channel)
+    - [Use LDAC](#use-ldac)
+    - [Can't adjust system volume](#cant-adjust-system-volume)
+    - [Mic keeps auto-muting after unmuting](#mic-keeps-auto-muting-after-unmuting)
+      - [Solution](#solution)
 
 ## Display formatted `$PATH`
 
@@ -277,3 +283,14 @@ volume = ignore
     - `systemctl --user restart pipewire pipewire-pulse`
 
 [source](https://askubuntu.com/a/1022363)
+
+### Mic keeps auto-muting after unmuting
+
+This is due to a problem with the jack-sensing feature
+
+#### Solution
+
+- Run `sudoedit /etc/pulse/default.pa`
+- Comment out the line `load-module module-switch-on-port-available`
+
+_source:_ <https://bbs.archlinux.org/viewtopic.php?id=247538>
