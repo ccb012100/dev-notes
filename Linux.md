@@ -227,3 +227,14 @@ ex.
 ```bash
 xrandr --output DP-1 --brightness 0.75
 ```
+
+## rename files
+
+Use the `rename` utility
+
+```bash
+rename EXPRESSION REPLACEMENT FILE
+
+# change extension of files from .txt to .md
+rename .txt .md *.md
+```
