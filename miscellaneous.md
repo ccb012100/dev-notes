@@ -145,3 +145,4 @@ _Note: Knuth himself referred to it as **Hoare's Dictum**_
 - SOLID
 - Testing at the system boundaries
 - The Curse of Knowledge
+- API design: feature-oriented vs. task-oriented
