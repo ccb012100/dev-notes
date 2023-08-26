@@ -1,6 +1,8 @@
 # Windows
 
 - [Windows](#windows)
+  - [Shortcuts](#shortcuts)
+    - [`Win` key shortcuts](#win-key-shortcuts)
   - [Getting a window off screen back into view](#getting-a-window-off-screen-back-into-view)
   - [Remap left `Caps Lock` to `Ctrl`](#remap-left-caps-lock-to-ctrl)
   - [Windows Startup folder](#windows-startup-folder)
@@ -16,12 +18,35 @@
     - [Symptom](#symptom)
     - [Solution](#solution)
   - [Windows icon file locations](#windows-icon-file-locations)
+  - [Unable to unpin from Quick access in File Explorer](#unable-to-unpin-from-quick-access-in-file-explorer)
+    - [Symptom](#symptom-1)
+    - [Solution](#solution-1)
 
 ## Shortcuts
+
+`Alt + Esc` - Cycle through items in the order in which they were opened
+
+`Alt + Enter` - Display properties for the selected item
+
+`Alt + Spacebar` - Open the shortcut menu for the active window
+
+`Alt + Left arrow` - Go back
+
+`Alt + Right arrow` - Go forward
+
+`Alt + Page Up` - Move up one screen
+
+`Alt + Page Down` - Move down one screen
+
+`Ctrl + Alt + Tab` - Use the arrow keys to switch between all open apps
+
+`Ctrl + F4` - Close the active document (in apps that are full-screen and let you have multiple documents open at the same time)
 
 `Ctrl + Esc` - **Start** menu
 
 `Ctrl + Shift + Esc` - Open **Task manager**
+
+`Ctrl + E` - Open Search (in most apps)
 
 `Shift + F10` - context menu (right-click menu)
 
@@ -79,7 +104,7 @@
 
 `Win + Home` - Minimize all except active window
 
-`Win + Shift + <LeftArrow|RightArrow>` - Move window to left/right desktop
+`Win + Shift + [<LeftArrow>|<RightArrow>]` - Move window to left/right desktop
 
 ## Getting a window off screen back into view
 
