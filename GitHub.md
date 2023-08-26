@@ -23,3 +23,9 @@ javascript:document.getElementsByName("viewed").forEach(ch => {
 ```
 
 *source:* [stackoverflow.com](https://stackoverflow.com/questions/69945775/how-to-unview-toggle-all-the-viewed-files-on-github-pull-request#comment126429925_69945864)
+
+### add GitHub to `known_hosts`
+
+```bash
+ssh-keyscan github.com >> ~/.ssh/known_hosts
+```
