@@ -13,7 +13,6 @@
   - [customizating Windows 11](#customizating-windows-11)
     - [Taskbar grouping](#taskbar-grouping)
     - [show all icons in Taskbar](#show-all-icons-in-taskbar)
-  - [Updating `PATH` in Windows Terminal](#updating-path-in-windows-terminal)
   - [Choppy/lagging Bluetooth mouse](#choppylagging-bluetooth-mouse)
     - [Symptom](#symptom)
     - [Solution](#solution)
@@ -176,10 +175,6 @@ Edit `TaskbarGlomLevel`:
 4. Click _OK_
 
 [source](https://techcommunity.microsoft.com/t5/windows-11/quot-show-all-icons-in-system-tray-quot-option-in-windows11/m-p/3359877)
-
-## Updating `PATH` in Windows Terminal
-
-You must start a new instance to get the `$PATH`/`%PATH%` to update. Starting a new [[Bash]]/[[cmd.exe]] instance is not enough.
 
 ## Choppy/lagging Bluetooth mouse
 
