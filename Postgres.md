@@ -92,3 +92,15 @@ WHERE schemaname != 'pg_catalog' AND schemaname != 'information_schema';
 ```bash
 \gx
 ```
+
+#### watch query
+
+```bash
+COMMAND; \watch <SECONDS>
+```
+
+##### example
+
+```bash
+SELECT 1; \watch 5
+```
