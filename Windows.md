@@ -20,6 +20,7 @@
   - [Unable to unpin from Quick access in File Explorer](#unable-to-unpin-from-quick-access-in-file-explorer)
     - [Symptom](#symptom-1)
     - [Solution](#solution-1)
+  - [Enable Hibernate](#enable-hibernate)
 
 ## Shortcuts
 
@@ -104,6 +105,7 @@
 `Win + Home` - Minimize all except active window
 
 `Win + Shift + [<LeftArrow>|<RightArrow>]` - Move window to left/right desktop
+  - [Enable Hibernate](#enable-hibernate)
 
 ## Getting a window off screen back into view
 
@@ -206,3 +208,9 @@ After choosing _unpin from Quick access_ in File Explorer, entries stay pinned.
 
 - Press `WIN + R` and enter `%APPDATA%\Microsoft\Windows\Recent\AutomaticDestinations`
 - Delete all entries in the list (this will reset the Quick access section)
+
+## Enable Hibernate
+
+- open [[cmd.exe]] as Administrator and run `powercfg.exe \hibernate on`
+- open **Control Panel** and go to `Control Panel\Hardware and Sound\Power Options\System Settings`
+  - To be able to add Hibernate to the _Shutdown settings_, click the link _Change settings that are currently unavailable_
