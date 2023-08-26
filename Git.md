@@ -52,6 +52,8 @@
     - [stash specific file(s)](#stash-specific-files)
   - [Hooks](#hooks)
   - [\[\[Windows\]\] installation](#windows-installation)
+  - [Logs](#logs)
+    - [search logs for commits that added/removed specific text](#search-logs-for-commits-that-addedremoved-specific-text)
 
 ## Commits
 
@@ -382,3 +384,23 @@ To use Windows Credentials Manager, which will remember the ssh passphrase, when
 
 - Use Windows' built-in OpenSSH
 - Install **Git Credential Manager**
+
+## Logs
+
+### search logs for commits that added/removed specific text
+
+a.k.a **the pickaxe**
+
+```bash
+# search for string
+git log -S <string>
+
+# search by regex
+git log -G <pattern>
+
+# search all branches/tags
+git log -S --all <string>
+
+# search for branches matching shell glob `<pattern>`
+git log -S <string> --branches[=<pattern>]
+```
