@@ -171,3 +171,12 @@ gsettings get org.gnome.desktop.interface text-scaling-factor
 
 gsettings set org.gnome.desktop.interface text-scaling-factor <SCALING_FACTOR>
 ```
+
+## Set step size for volume increment/decrement
+
+```bash
+$ gsettings get org.gnome.settings-daemon.plugins.media-keys volume-step
+6
+
+$ gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 2
+```
