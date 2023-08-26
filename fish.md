@@ -16,3 +16,11 @@ fish equivalent to `bindkey`
 ## here docs/here strings
 
 Not supported by fish: <https://fishshell.com/docs/current/fish_for_bash_users.html#heredocs>
+
+## script arguments
+
+```fish
+$argv # list of arguments
+
+$argv[1] # access first arg
+```
