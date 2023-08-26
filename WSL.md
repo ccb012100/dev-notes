@@ -1,38 +1,53 @@
-# WSL2
+# WSL
 
 Windows Subsystem for Linux 2
 
-[WSL2](#wsl2)
-
-- [WSL2](#wsl2)
+- [WSL](#wsl)
+  - [Commands](#commands)
   - [Fresh installation](#fresh-installation)
-    - [Upgrade [[Ubuntu]] to 21.04 (Hirsute Hippo)](#upgrade-ubuntu-to-2104-hirsute-hippo)
+    - [Upgrade \[\[Ubuntu\]\] to 21.04 (Hirsute Hippo)](#upgrade-ubuntu-to-2104-hirsute-hippo)
   - [`apt-get` hook error](#apt-get-hook-error)
-    - [[[Zsh]]](#zsh)
-      - [Set [[Zsh]] as default shell](#set-zsh-as-default-shell)
+    - [\[\[Zsh\]\]](#zsh)
+      - [Set \[\[Zsh\]\] as default shell](#set-zsh-as-default-shell)
       - [Add completions directory](#add-completions-directory)
         - [Add dir to `$FPATH`](#add-dir-to-fpath)
     - [Install packages with apt-get](#install-packages-with-apt-get)
     - [Install from source](#install-from-source)
       - [fzf](#fzf)
       - [powerlevel10K](#powerlevel10k)
-      - [[[Rust]]](#rust)
+      - [\[\[Rust\]\]](#rust)
       - [Delta](#delta)
       - [lazygit](#lazygit)
       - [zsh-syntax-highlighting](#zsh-syntax-highlighting)
       - [zsh-autosuggestions](#zsh-autosuggestions)
       - [forgit](#forgit)
-      - [[[.NET]]](#net)
+      - [\[\[.NET\]\]](#net)
       - [Glances](#glances)
       - [GitHub CLI](#github-cli)
     - [Install from Cargo](#install-from-cargo)
       - [Update installed Cargo packages](#update-installed-cargo-packages)
     - [Configure installed packages](#configure-installed-packages)
-  - [Signed Git commits with [[GPG]]](#signed-git-commits-with-gpg)
-  - [Configure [[Emacs]]](#configure-emacs)
-  - [[[Cargo]]](#cargo)
+  - [Signed Git commits with \[\[GPG\]\]](#signed-git-commits-with-gpg)
+  - [Configure \[\[Emacs\]\]](#configure-emacs)
+  - [\[\[Cargo\]\]](#cargo)
     - [permissions error](#permissions-error)
-  - [Configure [[Docker]]](#configure-docker)
+  - [Configure \[\[Docker\]\]](#configure-docker)
+  - [clock skew](#clock-skew)
+    - [Syptom](#syptom)
+    - [Solution](#solution)
+
+## Commands
+
+```cmd
+REM list all instances
+wsl --list --verbose
+
+REM list only running instances
+wsl --list --verbose --running
+
+REM stop instance
+wsl --terminate <DISTRO_NAME>
+```
 
 ## Fresh installation
 
@@ -283,3 +298,13 @@ _source:_ <https://github.com/rust-lang/cargo/issues/6757#issuecomment-738494343
 3. Log your user out then back in.
 
 _source_: <https://docs.docker.com/engine/install/linux-postinstall/>
+
+## clock skew
+
+### Syptom
+
+WSL clock gets out of sync, usually after hibernating/sleeping
+
+### Solution
+
+Use the `systemd-timesyncd` fix detailed in [this GitHub issue](https://github.com/microsoft/WSL/issues/8204#issuecomment-1338334154)
