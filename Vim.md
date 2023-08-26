@@ -17,7 +17,7 @@
         - [To turn off globally:](#to-turn-off-globally)
         - [To turn on globally:](#to-turn-on-globally)
     - [Increment/decrement numbers](#incrementdecrement-numbers)
-    - [Navigation](#navigation)
+    - [Motion/Navigation](#motionnavigation)
       - [Go to line](#go-to-line)
       - [Go to column](#go-to-column)
     - [Windows](#windows)
@@ -34,6 +34,7 @@
   - [Reload `.vimrc`](#reload-vimrc)
   - [Comment/uncomment code](#commentuncomment-code)
   - [Get current filename](#get-current-filename)
+  - [system clipboard](#system-clipboard)
 
 ## Normal mode
 
@@ -167,26 +168,33 @@ e.g. `/Linux\c` or `/Linux\C`
 ### Motion/Navigation
 
 ```vim
-H     " Top of screen ('Highest')
-M     " Middle of screen ('Middle')
-L     " Bottom of screen ('Lowest')
+w   " move to beginning of next word
+e   " move last letter of word
 
-(     " Beginning of sentence
-)     " End of sentence
+H   " Top of screen ('Highest')
+M   " Middle of screen ('Middle')
+L   " Bottom of screen ('Lowest')
 
-{     " Beginning of paragraph
-}     " End of paragraph
+(   " Beginning of sentence
+)   " End of sentence
+{   " Beginning of paragraph
+}   " End of paragraph
 
-gM    " go to character at middle of the text line
-gm    " go to character at middle of the screenline
+gM  " go to character at middle of the text line
+gm  " go to character at middle of the screenline
 
-zj    " move to the start of the next fold
-zk    " move to the start of the previous fold
+zj  " move to the start of the next fold
+zk  " move to the start of the previous fold
 
-0     " move to first character of the line
-^     " move to first non-blank character of the line
+0   " move to first character of the line
+^   " move to first non-blank character of the line
+$   " move to the end of the line
 
-$     " move to the end of the line
+n   " next match
+N   " previous match
+
+*   " move to next occurrence of word under cursor
+#   " move to previous occurrence of word under cursor
 
 f{char} " move cursor on next {char}
 F{char} " move cursor on next {char} backwards
@@ -196,12 +204,6 @@ T{char} " move cursor after next {char} backwards
 
 ;       " repeat last [f|t|F|T] command
 ,       " repeat last [f|t|F|T] command in opposite direction
-
-n       " next match
-N       " previous match
-
-*       " move to next occurrence of word under cursor
-#       " move to previous occurrence of word under cursor
 ```
 
 #### Go to line
