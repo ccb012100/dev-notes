@@ -26,20 +26,26 @@ _source_: <https://github.com/BurntSushi/ripgrep/blob/master/FAQ.md#search-and-r
 
 ```bash
 # print line 512 from file
-sed -n '512p' FILE_NAME
+sed -n '512p' FILE
 
 # print lines 512-550
-sed -n '512-550p' FILE_NAME
+sed -n '512-550p' FILE
 
 # print line 512 plus 10 lines after X
-sed -n '512,+10p' FILE_NAME
+sed -n '512,+10p' FILE
 
 # print lines 1, 5, and 7
-sed -n '1p; 5p; 7p' FILE_NAME
+sed -n '1p; 5p; 7p' FILE
 ```
 
 ## Delete lines in a file that match a pattern
 
 ```bash
-sed -i '/PATTERN/d' FILE_NAME
+# --in-place/-i edits the file in place
+# d command = "delete pattern space"
+sed --in-place '/<pattern>/d' FILE
+
+# case-insensitive matching
+## note: the I must be before the d
+sed --in-place '/<pattern>/Id' FILE_NAME
 ```
