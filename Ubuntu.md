@@ -11,6 +11,7 @@
   - [Set default Editor](#set-default-editor)
     - [Install editor as alternative](#install-editor-as-alternative)
     - [Configure alternative](#configure-alternative)
+  - [Set \[\[homebrew\]\] \[\[Zsh\]\] as default shell](#set-homebrew-zsh-as-default-shell)
 
 ## get version
 
@@ -75,3 +76,18 @@ e.g.
 
 _NOTE_: If `update-alternatives` is using 'auto mode', then it will choose the highest priority as the default editor, so
 setting  high priority will make the newly installed editor
+
+## Set [[homebrew]] [[Zsh]] as default shell
+
+```bash
+# install zsh
+brew install zsh
+# add homebrew zsh to /etc/shells
+sudoedit /etc/shells # add /home/linuxbrew/.linuxbrew/bin/zsh to the file
+# set default shell
+chsh /home/linuxbrew/.linuxbrew/bin/zsh
+# remove apt version
+sudo apt remove zsh
+# create link for /usr/bin/zsh b/c a lot of things will break if there's no zsh there
+sudo ln -s /home/linuxbrew/.linuxbrew/bin/zsh /usr/bin/zsh
+```
