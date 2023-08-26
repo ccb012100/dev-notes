@@ -17,6 +17,12 @@
     - [redirect to stdin `<`](#redirect-to-stdin-)
   - [Argument parsing](#argument-parsing)
   - [input/output redirection](#inputoutput-redirection)
+  - [Get the path of the currently executing function or script](#get-the-path-of-the-currently-executing-function-or-script)
+  - [arrays](#arrays)
+    - [print all array items](#print-all-array-items)
+    - [array length](#array-length)
+    - [input parameters](#input-parameters)
+      - [array length](#array-length-1)
 
 ## Fail and exit script on error
 
@@ -72,7 +78,7 @@ calls to `sort` and `column`, for example
 
 e.g. `\t` for tab
 
-_source:_ <https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#ANSI_002dC-Quoting>
+_source:_ <https://www.gnu.org/savannah-checkoutes/gnu/bash/manual/bash.html#ANSI_002dC-Quoting>
 
 ## list shell variables
 
@@ -179,3 +185,31 @@ Use the built-in bash `getopts` or the GNU `getopt` utility to parse command-lin
 # append stdout and stderror
 &>> FILE
 ```
+
+## Get the path of the currently executing function or script
+
+`${BASH_SOURCE[0]}`
+
+_source_: [BashFAQ](http://mywiki.wooledge.org/BashFAQ/028)
+
+## arrays
+
+### print all array items
+
+`"${arr[@]}"` - expands each element as a separate argument
+
+`"${arr[*]}` - merges args into a single argument
+
+### array length
+
+`"${#arr[@]}"`
+
+### input parameters
+
+`$@` for all parameters
+
+`$1` for first parameter, `$2` for second paramter, etc.
+
+#### array length
+
+`"$#"`
