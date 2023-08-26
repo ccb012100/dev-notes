@@ -3,13 +3,16 @@
 - [macOS](#macos)
   - [Outlook](#outlook)
     - [group messages by conversation](#group-messages-by-conversation)
-  - [rsync](#rsync)
-  - [[[Emacs]]](#emacs)
+  - [\[\[rsync\]\]](#rsync)
+  - [\[\[Emacs\ ]\]](#emacs)
     - [enable C-M-d](#enable-c-m-d)
   - [modifying config through Terminal](#modifying-config-through-terminal)
-  - [[[vscode]]](#vscode)
+  - [\[\[vscode\]\]](#vscode)
     - [Bell sound on Ctrl+/ keybinding](#bell-sound-on-ctrl-keybinding)
-  - [[[GPG]]](#gpg)
+  - [\[\[GPG\]\]](#gpg)
+  - [Finder](#finder)
+    - [Set current folder settings as default view options](#set-current-folder-settings-as-default-view-options)
+    - [Keyboard Shortcuts](#keyboard-shortcuts)
 
 ## Outlook
 
