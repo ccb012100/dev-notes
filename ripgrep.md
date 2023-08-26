@@ -67,4 +67,8 @@ rg [-M|--max-colums] NUM PATTERN
 
 # no max line length
 rg -M0 PATTERN
+
+# Don't respect ignore files
+# Equivalent to `grep -r`
+rg -uuu # same as --no-ignore --hidden --binary
 ```
