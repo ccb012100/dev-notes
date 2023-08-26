@@ -148,3 +148,11 @@ There's some issue that prevents setting some keybindings through the Settings a
 recognize `Super+Shift+,`, I couldn't get it to actually _set_ a shortcut to that binding.
 
 To set these, use [[gsettings]] in the command line.
+
+## Set text scaling factor
+
+```bash
+gsettings get org.gnome.desktop.interface text-scaling-factor
+
+gsettings set org.gnome.desktop.interface text-scaling-factor <SCALING_FACTOR>
+```
