@@ -115,23 +115,14 @@ git rebase -i ####### -x "git commit --amend --author '[USER NAME] \<USER_EMAIL]
 
 ### change author for all matching commits
 
-```bash
-git filter-branch --env-filter '
-WRONG_EMAIL="john_doe@github.com"
-NEW_NAME="Christopher Bocardo"
-NEW_EMAIL="ccb012100@users.noreply.github.com"
+To change the author for all commits after commit with hash `HASH`:
 
-if [ "$GIT_COMMITTER_EMAIL" = "$WRONG_EMAIL" ]
-then
-    export GIT_COMMITTER_NAME="$NEW_NAME"
-    export GIT_COMMITTER_EMAIL="$NEW_EMAIL"
-fi
-if [ "$GIT_AUTHOR_EMAIL" = "$WRONG_EMAIL" ]
-then
-    export GIT_AUTHOR_NAME="$NEW_NAME"
-    export GIT_AUTHOR_EMAIL="$NEW_EMAIL"
-fi
-' --tag-name-filter cat -- --branches --tags
+```bash
+# use currently configured author
+git rebase HASH -x "git commit --amend --no-edit --reset-author"
+
+# specify author
+git rebase HASH -x "git commit --amend --no-edit --author="Author Name <email@example.com>"
 ```
 
 ### amend commit to current time
