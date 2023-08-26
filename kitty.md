@@ -19,3 +19,12 @@
 >   - Copy `icons/hicolor/256x256/apps/kitty.png` under `kitty.app/share/` to `~/.local/share/<keep_the_same_path>`.
 >
 > - The kitty icon will appear in the launcher and can be run by clicking on it.
+
+## Set as default terminal
+
+```bash
+# add to list of alternatives
+sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator `which kitty` 50
+
+sudo update-alternatives --config x-terminal-emulator
+```
