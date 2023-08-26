@@ -15,6 +15,7 @@
     - [Keyboard Shortcuts](#keyboard-shortcuts)
     - [Add ssh keyphrase to keychain](#add-ssh-keyphrase-to-keychain)
       - [Solution](#solution)
+    - [Use better versions of UNIX tools](#use-better-versions-of-unix-tools)
 
 ## Outlook
 
@@ -102,3 +103,53 @@ This applies to:
 #### Solution
 
 Run the command `ssh-add --apple-use-keychain ~/.ssh/id_ed25519`
+
+### Use better versions of UNIX tools
+
+```bash
+# NOTE: don't install openssh; macOS version has Keychain support
+brew install coreutils \
+  binutils \
+  diffutils \
+  ed  \
+  findutils  \
+  gawk \
+  gnu-indent  \
+  gnu-sed  \
+  gnu-tar  \
+  gnu-which  \
+  gnutls \
+  grep  \
+  gzip \
+  screen \
+  watch \
+  wdiff \
+  wget \
+  bash \
+  emacs \
+  gdb \
+  gpatch \
+  less \
+  m4 \
+  make \
+  nano \
+  file-formula  \
+  git \
+  perl \
+  python \
+  rsync \
+  svn \
+  unzip \
+  vim \
+  macvim \
+  zsh
+```
+
+- add to `.zshrc`:
+
+```sh
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
+export MANPATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnuman:$MANPATH"
+```
+
+*source*: <https://www.topbug.net/blog/2013/04/14/install-and-use-gnu-command-line-tools-in-mac-os-x/>
