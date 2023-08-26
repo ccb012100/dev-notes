@@ -40,3 +40,9 @@ $COMMAND_OUTPUT >| existing_file
 `#!/usr/bin/env bash`
 
 Uses the `env` utility to find the bash specified in `$PATH`
+
+## dot command
+
+The dot command `.` is used to evaluate commands in the current execution context.
+
+The `source` command is an alias for `dot`.
