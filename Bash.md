@@ -46,3 +46,12 @@ Uses the `env` utility to find the bash specified in `$PATH`
 The dot command `.` is used to evaluate commands in the current execution context.
 
 The `source` command is an alias for `dot`.
+
+## backslash escaped characters in single-character strings
+
+Use the dollar sign and single quotes to specify a backslash escaped character - useful in specifying the separator in
+calls to `sort` and `column`, for example
+
+e.g. `\t` for tab
+
+_source:_ <https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#ANSI_002dC-Quoting>
