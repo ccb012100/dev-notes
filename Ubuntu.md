@@ -1,12 +1,16 @@
 # Ubuntu [[Linux]]
 
-- [Ubuntu [[Linux]]](#ubuntu-linux)
+- [Ubuntu \[\[Linux\]\]](#ubuntu-linux)
   - [get version](#get-version)
-  - [Enable [[Wayland]]](#enable-wayland)
-  - [Get latest stable upstream [[Git]] version](#get-latest-stable-upstream-git-version)
+  - [Enable \[\[Wayland\]\]](#enable-wayland)
+  - [Get latest stable upstream \[\[Git\]\] version](#get-latest-stable-upstream-git-version)
   - [Change default terminal](#change-default-terminal)
   - [Show number overlays on GNOME dock](#show-number-overlays-on-gnome-dock)
   - [free up Control+Shift+E shortcut](#free-up-controlshifte-shortcut)
+  - [Disable/modify settings for Automatic Updates](#disablemodify-settings-for-automatic-updates)
+  - [Set default Editor](#set-default-editor)
+    - [Install editor as alternative](#install-editor-as-alternative)
+    - [Configure alternative](#configure-alternative)
 
 ## get version
 
@@ -52,3 +56,22 @@ According to <https://stackoverflow.com/a/52295258>, this is only an issue in `G
 ## Disable/modify settings for Automatic Updates
 
 <https://linuxnightly.com/how-to-disable-automatic-updates-in-ubuntu/>
+
+## Set default Editor
+
+Use the `update-alternatives` command.
+
+### Install editor as alternative
+
+`update-alternatives --install /usr/bin/editor editor <editor_to_install> <priority>`
+
+e.g.
+
+`update-alternatives --install /usr/bin/editor editor /usr/bin/vim 100`
+
+### Configure alternative
+
+`update-alternatives --configure editor`
+
+_NOTE_: If `update-alternatives` is using 'auto mode', then it will choose the highest priority as the default editor, so
+setting  high priority will make the newly installed editor
