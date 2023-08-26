@@ -85,6 +85,8 @@ CTRL-R        " redo
 
 ```vim
 z<CR>   " focus cursor on top
+zt      " focus cursor on top
+zb      " focus cursor on bottom
 z-      " focus cursor on bottom
 z.      " focus cursor in center
 zz      " focus cursor in center
