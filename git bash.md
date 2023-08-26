@@ -77,7 +77,7 @@ cmd = \""c:/Program Files/TortoiseGit/bin/TortoiseGitMerge.exe"\" -base "$BASE" 
 
 ## Signing commits with [[GPG]]
 
-[[WINDOWS] How to enable auto-signing Git commits with GnuPG for programs that don't support it natively
+[WINDOWS How to enable auto-signing Git commits with GnuPG for programs that don't support it natively
 ](https://gist.github.com/BoGnY/f9b1be6393234537c3e247f33e74094a#windows-how-to-enable-auto-signing-git-commits-with-gnupg-for-programs-that-dont-support-it-natively)
 
 The most important thing to note: if `GPG4Win` is installed, it will conflict with Git Bash's version of GPG. To fix, run the command `git config --global gpg.program "/c/Program Files/Git/usr/bin/gpg.exe"` to configure Git to use the Git Bash version.
@@ -85,3 +85,21 @@ The most important thing to note: if `GPG4Win` is installed, it will conflict wi
 ### Increase [[GPG]] passphrase ttl in GPG4Win
 
 To modify `default-cache-ttl` and `max-cache-ttl` in the **Kleopatra** GUI: <https://stackoverflow.com/a/66821816>
+
+### Save SSH signing key to keychain
+
+**NOTE** (2023-05-2023): haven't been able to find a way to use a keychain the way Linux/macOS do
+
+## Add to Windows Terminal
+
+Open `settings.json` and add the following to the profiles section:
+
+```json
+{
+    "commandline": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "guid": "{abc00000-0000-0000-0000-000000000000}",
+    "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
+    "name": "Git Bash",
+    "startingDirectory": "%USERPROFILE%"
+}
+```

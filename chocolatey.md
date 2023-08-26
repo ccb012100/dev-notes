@@ -4,7 +4,7 @@
 
 List installed packages
 
-`choco list --local-only`
+`choco list`
 
 Upgrade chocolatey
 
