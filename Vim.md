@@ -391,3 +391,10 @@ There are 2 clipboard registers:
 ## troubleshoot startup
 
 `vim -V`
+
+## switch between files
+
+```vim
+:n  " next file
+:N  " previous file
+```
