@@ -40,6 +40,14 @@ $ ./script foo bar bat baz
 bar bat baz
 ```
 
+### test argv count
+
+```sh
+if test (count $argv) -gt 0
+    ---snip---
+end
+```
+
 ## functions
 
 ### loading
