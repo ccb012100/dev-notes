@@ -47,6 +47,7 @@
     - [Set existing file to executable](#set-existing-file-to-executable)
   - [Check if $PWD is a Git repository](#check-if-pwd-is-a-git-repository)
   - [stash](#stash)
+    - [stash specific file(s)](#stash-specific-files)
 
 ## Commits
 
@@ -339,4 +340,13 @@ git stash push -S # --staged
 
 # only stash untracked files
 git stash push --only-untracked
+```
+
+### stash specific file(s)
+
+```bash
+git stash push -- FILE_NAME_1 FILE_NAME_2
+
+# stash an untracked file
+git stash push -u -- FILE_NAME
 ```
