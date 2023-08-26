@@ -308,3 +308,10 @@ WSL clock gets out of sync, usually after hibernating/sleeping
 ### Solution
 
 Use the `systemd-timesyncd` fix detailed in [this GitHub issue](https://github.com/microsoft/WSL/issues/8204#issuecomment-1338334154)
+
+## open web browser
+
+To configure `xdg-open`:
+
+- create a link to the browser: `ln -s /mnt/c/Program\ Files\ \(x86\)/Microsoft/Edge/Application/msedge.exe ~/bin/msedge.exe`
+- add `export BROWSER=msedge.exe` to the shell profile
