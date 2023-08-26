@@ -17,11 +17,12 @@
 
 > `View` -> `Show as Conversations`
 
-## rsync
+## [[rsync]]
 
-> `-t` preserve timestamps
->
-> `-r` recursive sync directories
+The version of [[rsync]] that comes with macOS is old, so it's best to download a newer version through [[homebrew]].
+
+- `-t` preserve timestamps
+- `-r` recursive sync directories
 
 ## [[Emacs]]
 
@@ -70,3 +71,18 @@ Links:
 
 - <https://gist.github.com/lucko/bc2ba1f684bdce2b8cdcd8442e541e0e>
 - <https://gist.github.com/bmhatfield/cc21ec0a3a2df963bffa3c1f884b676b>
+
+## Finder
+
+### Set current folder settings as default view options
+
+`⌘+J` to open the settings, then click the button at the bottom labeled *Use as defaults*
+
+### Keyboard Shortcuts
+
+- `⌘+⌥+H`: Go to Home folder
+- `⌘+<UpArrow>`: Go up one directory
+- `⌘+Shift+N`: Create new folder
+- `⌘+⌥+T`: Toggle toolbar
+- `⌘+,`: Preferences
+- `Space`: Preview selected file
