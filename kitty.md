@@ -20,6 +20,15 @@
 >
 > - The kitty icon will appear in the launcher and can be run by clicking on it.
 
+To use a single instance, create a script `~/kitty.sh`:
+
+```sh
+#!/usr/bin/env sh
+/absolute/path/to/kitty.app/bin/kitty --single-instance
+```
+
+and in `kitty.desktop`, point `Exec`/`TryExec` to the script instead.
+
 ## Set as default terminal
 
 ```bash
