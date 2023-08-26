@@ -1,6 +1,6 @@
 # [[Git]]
 
-- [[[Git]]](#git)
+- [\[\[Git\]\]](#git)
   - [Set git to rebase on pull:](#set-git-to-rebase-on-pull)
   - [Set fast forward as default](#set-fast-forward-as-default)
   - [Get email](#get-email)
@@ -10,15 +10,13 @@
     - [2. Add remote from original repository in your forked repository](#2-add-remote-from-original-repository-in-your-forked-repository)
     - [3. Updating your fork from original repo to keep up with their changes](#3-updating-your-fork-from-original-repo-to-keep-up-with-their-changes)
   - [removes local feature branches that have already been merged](#removes-local-feature-branches-that-have-already-been-merged)
-  - [remove remote branches that have been merged](#remove-remote-branches-that-have-been-merged)
   - [remove local branches that have no remote](#remove-local-branches-that-have-no-remote)
   - [Changing history](#changing-history)
-  - [Fix author on all commits after SHA](#fix-author-on-all-commits-after-sha)
     - [change author for all matching commits](#change-author-for-all-matching-commits)
     - [amend commit to current time](#amend-commit-to-current-time)
   - [Remove file from entire branch history](#remove-file-from-entire-branch-history)
   - [Rebase previous commits](#rebase-previous-commits)
-  - [[[GPG]]](#gpg)
+  - [\[\[GPG\]\]](#gpg)
     - [signing fails](#signing-fails)
   - [Status of all repositories](#status-of-all-repositories)
   - [Interactive `add`](#interactive-add)
@@ -32,6 +30,9 @@
     - [Example](#example)
   - [Fetch changes from all remotes and locally delete branches to match remote](#fetch-changes-from-all-remotes-and-locally-delete-branches-to-match-remote)
   - [Change CRLF line endings to LF](#change-crlf-line-endings-to-lf)
+  - [Stage file as executable](#stage-file-as-executable)
+  - [Set existing file to executable](#set-existing-file-to-executable)
+  - [Sign commits with SSH](#sign-commits-with-ssh)
 
 ## Set git to rebase on pull:
 
@@ -241,3 +242,7 @@ tr -d '\r' < input.txt > out.txt
 ## Set existing file to executable
 
 `git update-index --chmod=+x path/to/file`
+
+## Sign commits with SSH
+
+<https://calebhearth.com/sign-git-with-ssh>
