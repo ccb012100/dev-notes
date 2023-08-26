@@ -9,7 +9,7 @@ PostgreSQL CLI tool
 ### open `psql` with connect to database
 
 ```bash
-psql -d DATABASE_NAME
+psql -d <DATABASE NAME>
 ```
 
 ### `psql` commands
@@ -17,7 +17,7 @@ psql -d DATABASE_NAME
 #### connect to database
 
 ```bash
-\c DATABASE_NAME
+\c <DATABASE NAME>
 ```
 
 #### list databases
@@ -33,7 +33,7 @@ psql -d DATABASE_NAME
 \dt
 
 # list tables in specific schema
-\dt SCHEMA_NAME.*
+\dt <SCHEMA NAME>.*
 
 # list tables in all schemas
 \dt *.*
@@ -46,24 +46,23 @@ WHERE schemaname != 'pg_catalog' AND schemaname != 'information_schema';
 #### view table schema
 
 ```bash
-\d TABLE_NAME
+\d <TABLE NAME>
 
 # view additional info
-\d+ TABLE_NAME
+\d+ <TABLE NAME>
 ```
 
 #### output to file
 
 ```bash
 # start writing to FILE_NAME
-\o FILE_NAME
+\o <FILE NAME>
 
 # run SQL commands
-...
+<...>
 
 # stop writing to file
 \o
-
 ```
 
 #### change table format
@@ -75,5 +74,21 @@ WHERE schemaname != 'pg_catalog' AND schemaname != 'information_schema';
 #
 # Recommended: psql, fancy_grid and grid.
 
-\T TABLE_FORMAT
+\T <TABLE FORMAT>
+```
+
+#### edit query in editor
+
+```bash
+# edit query in query buffer
+\e
+
+# edit file
+\e <FILENAME>
+```
+
+#### execute query in expanded mode
+
+```bash
+\gx
 ```
