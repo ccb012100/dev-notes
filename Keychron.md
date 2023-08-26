@@ -10,9 +10,15 @@ Switch to the `bluetooth_playground` branch
 
 - `$ git checkout bluetooth_playground`
 
+Install [[QMK]]
+
+`python3.11 -m pip install --upgrade pip`
+
 Set up QMK
 
-- `$ qmk setup`
+`$ qmk setup`
+
+If on [[WSL]], also install [QMK Toolbox](https://github.com/qmk/qmk_toolbox)
 
 Set the repo to the default QMK project
 
@@ -20,8 +26,10 @@ Set the repo to the default QMK project
 
 Set the default keyboard and keymap
 
-- `$ qmk config user.keyboard=keychron/k4_pro/ansi/rgb`
-- `$ qmk config user.keyboard=default`
+```bash
+qmk config user.keyboard=keychron/k4_pro/ansi/rgb
+qmk config user.keyboard=default
+```
 
 Modify keymaps/config/rules
 
@@ -39,3 +47,5 @@ Flash the firmware to keyboard
 - Remove the spacebar keycap from the keyboard to reveal the `RESET` button.
 - Connect the keyboard to the computer while holding down the `RESET` button; don't release the button until the CLI output indicates that it has discovered the keyboard.
 - Wait for flashing to complete
+
+_Note:_ After flashing, it may be necessary to remove the keyboard from the Bluetooth devices and repair it (at least on [[Windows]])
