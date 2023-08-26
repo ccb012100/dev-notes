@@ -4,7 +4,7 @@
   - [Outlook](#outlook)
     - [group messages by conversation](#group-messages-by-conversation)
   - [\[\[rsync\]\]](#rsync)
-  - [\[\[Emacs\ ]\]](#emacs)
+  - [\[\[Emacs\]\]](#emacs)
     - [enable C-M-d](#enable-c-m-d)
   - [modifying config through Terminal](#modifying-config-through-terminal)
   - [\[\[vscode\]\]](#vscode)
@@ -13,6 +13,8 @@
   - [Finder](#finder)
     - [Set current folder settings as default view options](#set-current-folder-settings-as-default-view-options)
     - [Keyboard Shortcuts](#keyboard-shortcuts)
+    - [Add ssh keyphrase to keychain](#add-ssh-keyphrase-to-keychain)
+      - [Solution](#solution)
 
 ## Outlook
 
@@ -89,3 +91,14 @@ Links:
 - `⌘+⌥+T`: Toggle toolbar
 - `⌘+,`: Preferences
 - `Space`: Preview selected file
+
+### Add ssh keyphrase to keychain
+
+This applies to:
+
+- An issue where git commands in [[vscode]] fail because it won't recognize the [[ssh]] keyphrase
+- Git on the terminal keeps asking for the ssh keyphrase
+
+#### Solution
+
+Run the command `ssh-add --apple-use-keychain ~/.ssh/id_ed25519`
