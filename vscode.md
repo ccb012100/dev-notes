@@ -169,3 +169,16 @@ This will print the current context will be logged to the Developer Tools javasc
 ## Change font size for tab titles, sidebar, etc.
 
 In settings, change `window.zoomLevel`, then change `editor.fontSize` to adjust the editor font to the new zoom level.
+
+## Git error: `TypeError: Cannot read properties of undefined (reading 'replace')?`
+
+Solution when [[Git]] operations in [[Windows]] result in a failure originating in `%HOME%\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\askpass-main.js`:
+
+Add to `%HOME%\.gitconfig`:
+
+```ini
+[core]
+  sshCommand = SSH_ASKPASS=\"C:\\Program Files\\Git\\mingw64\\libexec\\git-core\\git-gui--askpass\" ssh
+```
+
+_Source_: <https://github.com/microsoft/vscode/issues/166832#issuecomment-1488827368>
