@@ -9,8 +9,9 @@
     - [build logger](#build-logger)
       - [`dotnet run`](#dotnet-run)
   - [Keybindings](#keybindings)
-    - [Make `Ctrl+s` act more like [[Emacs]]](#make-ctrls-act-more-like-emacs)
+    - [Make `Ctrl+s` act more like \[\[Emacs\]\]](#make-ctrls-act-more-like-emacs)
     - [Use same keybinding to toggle focus to Editor/Explorer](#use-same-keybinding-to-toggle-focus-to-editorexplorer)
+    - [Cycle though Quick Fix popup menu](#cycle-though-quick-fix-popup-menu)
   - [Hide Extension Snippet from Intellisense](#hide-extension-snippet-from-intellisense)
   - [Disable `UpArrow`/`DownArrow` cycling through commit messages in the Source Control commit message textbox](#disable-uparrowdownarrow-cycling-through-commit-messages-in-the-source-control-commit-message-textbox)
   - [Settings file location](#settings-file-location)
@@ -18,6 +19,8 @@
     - [macOS](#macos)
     - [Linux](#linux)
   - [Installing on Mac with Homebrew](#installing-on-mac-with-homebrew)
+  - [Inspect vscode context](#inspect-vscode-context)
+  - [Change font size for tab titles, sidebar, etc.](#change-font-size-for-tab-titles-sidebar-etc)
 
 ## Configure specific elements in theme
 
@@ -162,3 +165,7 @@ To inspect the context of the current vs code instance:
 3. Click on the element you want to inspect the context for
 
 This will print the current context will be logged to the Developer Tools javascript console
+
+## Change font size for tab titles, sidebar, etc.
+
+In settings, change `window.zoomLevel`, then change `editor.fontSize` to adjust the editor font to the new zoom level.
