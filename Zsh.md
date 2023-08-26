@@ -20,3 +20,9 @@ conf="~/.config"
 
 Check and make sure that both `HISTSIZE` and `SAVEHIST` are set. For some reason, I keep losing `SAVEHIST` from my
 `.zshrc`.
+
+## list shell variables
+
+```zsh
+typeset
+```
