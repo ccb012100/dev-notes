@@ -72,7 +72,7 @@ e.g.
 
 ### Configure alternative
 
-`update-alternatives --configure editor`
+`update-alternatives --config editor`
 
 _NOTE_: If `update-alternatives` is using 'auto mode', then it will choose the highest priority as the default editor, so
 setting  high priority will make the newly installed editor
