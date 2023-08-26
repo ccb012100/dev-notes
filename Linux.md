@@ -314,3 +314,12 @@ _source:_ <https://bbs.archlinux.org/viewtopic.php?id=247538>
 | 6       | Games                                                                 |
 | 7       | File formats, conventions, and encodings (ASCII, suffixes, and so on) |
 | 8       | System commands and servers                                           |
+
+## Symbolic links
+
+### Get the target of a symbolic link
+
+- `readlink SYMLINK`
+- `realpath SYMLINK`
+- `file SYMLINK`
+- `stat -c%N SYMLINK`
