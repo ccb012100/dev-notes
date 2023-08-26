@@ -38,6 +38,8 @@ or `py`.
 
 ## Fuzzy completion
 
+_Note:_ _Not_ supported in [[fish]] shell.<>
+
 _Note:_ I've changed the trigger sequence to `;;` (the default is `**`).
 
 ```bash
