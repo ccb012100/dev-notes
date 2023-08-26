@@ -10,6 +10,11 @@
   - [backslash escaped characters in single-character strings](#backslash-escaped-characters-in-single-character-strings)
   - [list shell variables](#list-shell-variables)
   - [Globbing](#globbing)
+  - [Sourcing multiple files](#sourcing-multiple-files)
+  - [Angle brackets (`<`)](#angle-brackets-)
+    - [here string `<<<`](#here-string-)
+    - [here document `<<`](#here-document-)
+    - [redirect to stdin `<`](#redirect-to-stdin-)
 
 ## Fail and exit script on error
 
@@ -108,3 +113,41 @@ echo '*'
 ```
 
 _source:_ <https://stackoverflow.com/a/1423444>
+
+## Angle brackets (`<`)
+
+### here string `<<<`
+
+Passes single line into command
+
+```bash
+$ cat <<< 'hi there'
+hi there
+```
+
+### here document `<<`
+
+Passes document/multiple lines into command
+
+```bash
+$ cat <<EOF
+> hi
+> there
+> EOF
+hi
+there
+```
+
+### redirect to stdin `<`
+
+Passes file to commands standard input
+
+```bash
+$ cat < /etc/fstab
+/dev/sda2               /boot   ext4            nosuid,noexec,nodev,rw,noatime,nodiratime       0 2
+/dev/sda4               /       ext4            rw,noatime,nodiratime,  0 1
+/dev/sdb5               /var    ext4            nosuid,noexec,nodev,rw,relatime 0 2
+--snip--
+```
+
+_source_: <https://unix.stackexchange.com/a/80368>
