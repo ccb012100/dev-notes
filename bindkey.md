@@ -55,7 +55,7 @@ The output of running the `bindkey` command on my `zsh` (with some formatting ad
 "^Xh"       _complete_help
 "^Xm"       _most_recent_file
 "^Xn"       _next_tags
-"^Xr"       history-incremental-search-backward   
+"^Xr"       history-incremental-search-backward
 "^Xs"       history-incremental-search-forward
 "^Xt"       _complete_tag
 "^Xu"       undo
@@ -105,8 +105,6 @@ The output of running the `bindkey` command on my `zsh` (with some formatting ad
 "^[OB"      down-line-or-history
 "^[OC"      forward-char
 "^[OD"      backward-char
-"^[OF"      end-of-line
-"^[OH"      beginning-of-line
 "^[P"       history-search-backward
 "^[Q"       push-line
 "^[S"       spell-word
@@ -114,8 +112,6 @@ The output of running the `bindkey` command on my `zsh` (with some formatting ad
 "^[U"       up-case-word
 "^[W"       copy-region-as-kill
 "^[[200~"   bracketed-paste
-"^[[2~"     overwrite-mode
-"^[[3~"     delete-char
 "^[[A"      up-line-or-history
 "^[[B"      down-line-or-history
 "^[[C"      forward-char
