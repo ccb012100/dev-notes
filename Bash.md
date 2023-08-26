@@ -186,6 +186,14 @@ Use the built-in bash `getopts` or the GNU `getopt` utility to parse command-lin
 &>> FILE
 ```
 
+### Process lines in a file
+
+```bash
+while read -r line; do
+    cat $line
+done <FILENAME
+```
+
 ## Get the path of the currently executing function or script
 
 `${BASH_SOURCE[0]}`
