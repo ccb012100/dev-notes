@@ -4,7 +4,9 @@ Stream editor
 
 ## Find and replace text in files
 
-using [[ripgrep]]
+Use `-i` or `--in-place` to edit a file in place 
+
+### using [[ripgrep]]
 
 ```bash
 # find files containing 'foo' and replace 'foo' with 'bar'
@@ -17,7 +19,7 @@ Add the `ripgrep` flag `--path-separator //` to feed the filenames to `sed` in t
 
 ```bash
 rg --path-separator // foo --files-with-matches |
-    xargs sed -i 's/foo/bar/g'
+    xargs sed --in-place 's/foo/bar/g'
 ```
 
 _source_: <https://github.com/BurntSushi/ripgrep/blob/master/FAQ.md#search-and-replace>
@@ -48,4 +50,10 @@ sed --in-place '/<pattern>/d' FILE
 # case-insensitive matching
 ## note: the I must be before the d
 sed --in-place '/<pattern>/Id' FILE_NAME
+```
+
+## Trim whitespace from a file
+
+```bash
+sed -Ee 's/^[[:space:]]+([0-9]+)[[:space:]]+/\1,/' --in-place FILE
 ```
