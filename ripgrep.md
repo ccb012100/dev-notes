@@ -61,4 +61,10 @@ rg [--count|--count-matches] --include-zero PATTERN
 
 # search for pattern that starts with a dash
 rg -e PATTERN # e.g. `man rg | rg -e -F` to search for entry on -F flag
+
+# don't print lines over length NUM
+rg [-M|--max-colums] NUM PATTERN
+
+# no max line length
+rg -M0 PATTERN
 ```
