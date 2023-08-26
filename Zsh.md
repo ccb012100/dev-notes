@@ -1,28 +1,19 @@
 # [[Zsh]]
 
-## Oh My Zsh
+## expand alias
 
-### aliases
+Pressing `C-x a` with your cursor on an alias will trigger `_expand_alias`.
 
-`$ZSH_CUSTOM` --> `/home/_USER_/.oh-my-zsh/custom/`
-default aliases are in `~/.oh-my-zsh/plugins`
-
-- git aliases in `~/.oh-my-zsh/plugins/git/git.plugin.zsh`
-- [[Linux]] command aliases in `~/.oh-my-zsh/plugins/common-aliases/common-aliases.plugin.zsh`
-
-add custom alises in `$ZSH_CUSTOM/aliases.zsh`
-
-### cdablevars
+## cdablevars
 
 aliases for directories
 
 _example:_
 
 ```bash
-# Convenient path navigation, e.g., `cd vp`
 setopt cdablevars
-vp="/c/Dev/VersionPress/versionpress"
-temp="/c/Dev/temp"
+conf="~/.config"
+# typing `cd conf` will cd to ~/.config
 ```
 
 ## Zsh history not being saved to HISTFILE
