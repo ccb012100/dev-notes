@@ -17,6 +17,70 @@
     - [Solution](#solution)
   - [Windows icon file locations](#windows-icon-file-locations)
 
+## Shortcuts
+
+`Ctrl + Esc` - **Start** menu
+
+`Ctrl + Shift + Esc` - Open **Task manager**
+
+`Shift + F10` - context menu (right-click menu)
+
+### `Win` key shortcuts
+
+`Win + A` - **Quick Settings**
+
+`Win + B` - Focus on first item in **Taskbar**
+
+`Win + C` - **Teams** Chat
+
+`Win + D` - Toggle display/hide **Desktop**
+
+`Win + E` - **File Explorer**
+
+`Win + I` - **Settings**
+
+`Win + Alt + K` - Toggle microphone mute
+
+`Win + L` - Lock computer
+
+`Win + M` - Minimize all windows
+
+`Win + N` - **Notification center**
+
+`Win + P` - Set presentatino display mode (duplicate, extend, etc.)
+
+`Win + R` - **Run** dialog
+
+`Win + S` - **Search**
+
+`Win + Shift + S` - Screen snip
+
+`Win + U` - **Accessibility** settings
+
+`Win + V` - **Clipboard** history
+
+`Win + X` - **Quick Link** menu
+
+`Win + Z` - Snap layouts
+
+`Win + .` - Emoji panel
+
+`Win + ;` - Emoji panel
+
+`Win + ,` - Peek at **Desktop**
+
+`Win + [0-9]` - Open app in nth position on **taskbar**
+
+`Win + Alt + [0-9]` - Open the **Jump List** for the app in nth position on **taskbar**
+
+`Win + TAB` - **Task** view
+
+`Win + <UpArrow>` - Maximize window
+
+`Win + Home` - Minimize all except active window
+
+`Win + Shift + <LeftArrow|RightArrow>` - Move window to left/right desktop
+
 ## Getting a window off screen back into view
 
 - Hold down the `Shift` key while right-clicking the program in the taskbar
