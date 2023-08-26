@@ -1,11 +1,12 @@
 # Windows Command Prompt
 
 - [Windows Command Prompt](#windows-command-prompt)
+  - [Open as Administrator](#open-as-administrator)
   - [Aliases](#aliases)
     - [Auto-load aliases](#auto-load-aliases)
       - [Windows Terminal](#windows-terminal)
   - [`doskey`](#doskey)
-  - [Symbolic links (symlinks) in [[Windows]]](#symbolic-links-symlinks-in-windows)
+  - [Symbolic links (symlinks) in \[\[Windows\]\]](#symbolic-links-symlinks-in-windows)
     - [Soft link](#soft-link)
       - [File](#file)
       - [Directory](#directory)
