@@ -10,10 +10,16 @@ Desktop Environment (DE) for [[Linux]]. Used by [[Ubuntu]]
   - ["Phantom" extensions](#phantom-extensions)
     - [Integration with Chrome](#integration-with-chrome)
     - [Extension fails to load after update](#extension-fails-to-load-after-update)
-  - [Rebind keybindings](#rebind-keybindings)
-    - [`<Super>+P` toggles display](#superp-toggles-display)
+  - [Keybindings](#keybindings)
+    - [List keybindings](#list-keybindings)
+    - [Rebind keybindings](#rebind-keybindings)
+      - [Multiple keybindings for an action](#multiple-keybindings-for-an-action)
+      - [`<Super>+P` toggles display](#superp-toggles-display)
+      - [unset SUPER+o](#unset-supero)
+      - [rebind SUPER+SHIFT+,](#rebind-supershift)
   - [Move Open/Save/Cancel modal buttons to bottom of dialogue](#move-opensavecancel-modal-buttons-to-bottom-of-dialogue)
   - [Can't set keybindings in GUI](#cant-set-keybindings-in-gui)
+  - [Set text scaling factor](#set-text-scaling-factor)
 
 ## GSettings
 
@@ -99,12 +105,16 @@ offender)
 
 ### Rebind keybindings
 
+#### Multiple keybindings for an action
+
+See [[gsettings]] notes
+
 #### `<Super>+P` toggles display
 
 If you use the keyboard shortcut `<Super>+p`, the GNOME keybindings UI won't tell you it's already bound to
 `switch-monitor`, and using that binding will cause your external displays to freak out.
 
-Use the `gsettings` command to unbind it:
+Use the [[gsettings]] command to unbind it:
 
 ```bash
 # view keybinding

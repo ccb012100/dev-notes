@@ -16,12 +16,24 @@ gsettings list-recursively | rg "wm\.keybindings|shell\.keybindings" | sort
 
 Unbound settings will show up with the keybinding `@as []`
 
-## Settings keybindings
+## Setting keybindings
 
-`gsettings set SETTING_NAME KEYBINDING`
+`gsettings set SETTING_NAME "['KEYBINDING']"`
 
-e.g.
+Make sure to wrap the array in quotes (`"`)
+
+_example:_
 
 ```bash
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-left "['<Super><Shift>comma']"
+```
+
+### Setting multiple keybindings for an action
+
+Notice above that the `set` command takes an _array_ of keybindings.
+
+_example:_
+
+```bash
+gsettings set org.gnome.desktop.wm.keybindings minimize "['<Super>h', '<Ctrl><Shift><Alt>h']"
 ```
