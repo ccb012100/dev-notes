@@ -360,3 +360,10 @@ git stash push -u -- FILE_NAME
 ## Hooks
 
 <!-- TODO: notes on hooks, and using local repo hook along with hooksPath hooks -->
+
+## [[Windows]] installation
+
+To use Windows Credentials Manager, which will remember the ssh passphrase, when installing **Git for Windows**, choose to:
+
+- Use Windows' built-in OpenSSH
+- Install **Git Credential Manager**
