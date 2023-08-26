@@ -14,6 +14,7 @@
     - [Set fast forward as default](#set-fast-forward-as-default)
     - [Get email](#get-email)
     - [Get username](#get-username)
+    - [`Include` directive](#include-directive)
   - [Get repository name](#get-repository-name)
   - [`$GIT_DIR`](#git_dir)
   - [Sync fork with original repository](#sync-fork-with-original-repository)
@@ -50,6 +51,7 @@
   - [stash](#stash)
     - [stash specific file(s)](#stash-specific-files)
   - [Hooks](#hooks)
+  - [\[\[Windows\]\] installation](#windows-installation)
 
 ## Commits
 
@@ -128,6 +130,10 @@ git config --global user.email
 ```bash
 git config --global user.name
 ```
+
+### `Include` directive
+
+`Include.path` is relative to the configuration file _in which the include directive is located_.
 
 ## Get repository name
 
