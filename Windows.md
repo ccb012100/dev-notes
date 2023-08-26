@@ -111,3 +111,14 @@ _Source_: <https://www.reddit.com/r/Windows11/comments/tafgx3/if_youre_having_is
 ## Windows icon file locations
 
 <https://www.digitalcitizen.life/where-find-most-windows-10s-native-icons/>
+
+## Unable to unpin from Quick access in File Explorer
+
+### Symptom
+
+After choosing _unpin from Quick access_ in File Explorer, entries stay pinned.
+
+### Solution
+
+- Press `WIN + R` and enter `%APPDATA%\Microsoft\Windows\Recent\AutomaticDestinations`
+- Delete all entries in the list (this will reset the Quick access section)
