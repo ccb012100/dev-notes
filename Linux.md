@@ -34,6 +34,7 @@
     - [Can't adjust system volume](#cant-adjust-system-volume)
     - [Mic keeps auto-muting after unmuting](#mic-keeps-auto-muting-after-unmuting)
       - [Solution](#solution)
+  - [man page sections](#man-page-sections)
 
 ## Display formatted `$PATH`
 
@@ -294,3 +295,16 @@ This is due to a problem with the jack-sensing feature
 - Comment out the line `load-module module-switch-on-port-available`
 
 _source:_ <https://bbs.archlinux.org/viewtopic.php?id=247538>
+
+## man page sections
+
+| Section | Description                                                           |
+|---------|-----------------------------------------------------------------------|
+| 1       | User commands                                                         |
+| 2       | Kernel system calls                                                   |
+| 3       | Higher-level Unix programming library documentation                   |
+| 4       | Device interface and driver information                               |
+| 5       | File descriptions (system configuration files)                        |
+| 6       | Games                                                                 |
+| 7       | File formats, conventions, and encodings (ASCII, suffixes, and so on) |
+| 8       | System commands and servers                                           |
