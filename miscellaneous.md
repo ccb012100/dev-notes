@@ -141,6 +141,7 @@ _Note: Knuth himself referred to it as **Hoare's Dictum**_
 - Composition over Inheritence
 - CQRS
 - Design by contract (also known as DbC, contract programming)
+  - Preconditions, Invariants, Postconditions
 - Dynamic Programming
 - False Dilemma/False Dichotomy
 - False economy
