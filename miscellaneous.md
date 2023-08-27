@@ -1,5 +1,24 @@
 # miscellaneous dev notes
 
+## Useful concepts
+
+- API design: feature-oriented vs. task-oriented
+- Chesterton's Fence
+- Composition over Inheritence
+- CQRS
+- Design by contract (also known as DbC, contract programming)
+  - Preconditions, Invariants, Postconditions
+- Dynamic Programming
+- False Dilemma/False Dichotomy
+- False economy
+- Memoization
+- Property-based testing
+- Replaceability over reusability
+- Testing at the system boundaries
+- The Curse of Knowledge
+- The Einstellung effect
+- Vertical slice
+
 ## "Laws"
 
 <https://www.laws-of-software.com/>
@@ -133,22 +152,3 @@ _Note: Knuth himself referred to it as **Hoare's Dictum**_
 > Example: "It's easy to change a FORTRAN compiler to compile COBOL as well; it's just a small matter of programming."
 
 -- Jargon File, 1983
-
-## Useful concepts
-
-- API design: feature-oriented vs. task-oriented
-- Chesterton's Fence
-- Composition over Inheritence
-- CQRS
-- Design by contract (also known as DbC, contract programming)
-  - Preconditions, Invariants, Postconditions
-- Dynamic Programming
-- False Dilemma/False Dichotomy
-- False economy
-- Memoization
-- Property-based testing
-- Replaceability over reusability
-- Testing at the system boundaries
-- The Curse of Knowledge
-- The Einstellung effect
-- Vertical slice
