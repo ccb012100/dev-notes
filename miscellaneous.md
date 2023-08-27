@@ -136,6 +136,7 @@ _Note: Knuth himself referred to it as **Hoare's Dictum**_
 
 ## Useful concepts
 
+- API design: feature-oriented vs. task-oriented
 - Chesterton's Fence
 - Composition over Inheritence
 - DRY/WET
@@ -146,5 +147,5 @@ _Note: Knuth himself referred to it as **Hoare's Dictum**_
 - Replaceability over reusability
 - SOLID
 - Testing at the system boundaries
+- The Einstellung effect
 - The Curse of Knowledge
-- API design: feature-oriented vs. task-oriented
