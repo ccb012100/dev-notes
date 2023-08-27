@@ -144,6 +144,7 @@ _Note: Knuth himself referred to it as **Hoare's Dictum**_
 - Dynamic Programming
 - False Dilemma/False Dichotomy
 - False economy
+- Memoization
 - Property-based testing
 - Replaceability over reusability
 - Testing at the system boundaries
