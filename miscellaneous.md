@@ -142,6 +142,7 @@ _Note: Knuth himself referred to it as **Hoare's Dictum**_
 - Dynamic Programming
 - False Dilemma/False Dichotomy
 - Property-based testing
+- Replaceability over reusability
 - SOLID
 - Testing at the system boundaries
 - The Curse of Knowledge
