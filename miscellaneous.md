@@ -139,13 +139,13 @@ _Note: Knuth himself referred to it as **Hoare's Dictum**_
 - API design: feature-oriented vs. task-oriented
 - Chesterton's Fence
 - Composition over Inheritence
-- DRY/WET
+- CQRS
 - Dynamic Programming
 - False Dilemma/False Dichotomy
 - False economy
 - Property-based testing
 - Replaceability over reusability
-- SOLID
 - Testing at the system boundaries
-- The Einstellung effect
 - The Curse of Knowledge
+- The Einstellung effect
+- Vertical slice
