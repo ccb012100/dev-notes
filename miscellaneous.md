@@ -12,6 +12,7 @@
 - False Dilemma/False Dichotomy
 - False economy
 - Memoization
+- Model-based testing (also called stateful testing)
 - Property-based testing
 - Replaceability over reusability
 - Testing at the system boundaries
