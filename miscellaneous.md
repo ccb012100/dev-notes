@@ -15,6 +15,8 @@
 - Model-based testing
 - Property-based testing
 - Replaceability over reusability
+- Row polymorphism
+- Structural subtyping
 - Testing at the system boundaries
 - The Curse of Knowledge
 - The Einstellung effect
