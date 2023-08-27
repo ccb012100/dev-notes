@@ -141,6 +141,7 @@ _Note: Knuth himself referred to it as **Hoare's Dictum**_
 - DRY/WET
 - Dynamic Programming
 - False Dilemma/False Dichotomy
+- False economy
 - Property-based testing
 - Replaceability over reusability
 - SOLID
