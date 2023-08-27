@@ -140,6 +140,7 @@ _Note: Knuth himself referred to it as **Hoare's Dictum**_
 - Chesterton's Fence
 - Composition over Inheritence
 - CQRS
+- Design by contract (also known as DbC, contract programming)
 - Dynamic Programming
 - False Dilemma/False Dichotomy
 - False economy
