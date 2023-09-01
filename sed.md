@@ -31,7 +31,7 @@ _source_: <https://github.com/BurntSushi/ripgrep/blob/master/FAQ.md#search-and-r
 sed -n '512p' FILE
 
 # print lines 512-550
-sed -n '512-550p' FILE
+sed -n '512,550p' FILE
 
 # print line 512 plus 10 lines after X
 sed -n '512,+10p' FILE
