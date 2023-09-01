@@ -5,21 +5,22 @@
     - [`Win` key shortcuts](#win-key-shortcuts)
   - [Getting a window off screen back into view](#getting-a-window-off-screen-back-into-view)
   - [Remap left `Caps Lock` to `Ctrl`](#remap-left-caps-lock-to-ctrl)
-  - [Windows Startup folder](#windows-startup-folder)
-    - [Quick open folder](#quick-open-folder)
+  - [Windows `Startup` folder](#windows-startup-folder)
+    - [Quick open `Startup` folder](#quick-open-startup-folder)
   - [Environment variables](#environment-variables)
   - [Windows Defender](#windows-defender)
-    - [Fixing messages **Some settings are managed by your organization** or **This setting is managed by your administrator**](#fixing-messages-some-settings-are-managed-by-your-organization-or-this-setting-is-managed-by-your-administrator)
+    - [Symptom](#symptom)
+    - [Solution](#solution)
   - [customizating Windows 11](#customizating-windows-11)
     - [Taskbar grouping](#taskbar-grouping)
     - [show all icons in Taskbar](#show-all-icons-in-taskbar)
   - [Choppy/lagging Bluetooth mouse](#choppylagging-bluetooth-mouse)
-    - [Symptom](#symptom)
-    - [Solution](#solution)
-  - [Windows icon file locations](#windows-icon-file-locations)
-  - [Unable to unpin from Quick access in File Explorer](#unable-to-unpin-from-quick-access-in-file-explorer)
     - [Symptom](#symptom-1)
     - [Solution](#solution-1)
+  - [Windows icon file locations](#windows-icon-file-locations)
+  - [Unable to unpin from Quick access in File Explorer](#unable-to-unpin-from-quick-access-in-file-explorer)
+    - [Symptom](#symptom-2)
+    - [Solution](#solution-2)
   - [Enable Hibernate](#enable-hibernate)
 
 ## Shortcuts
@@ -123,11 +124,11 @@ REGEDIT4
 "Scancode Map"=hex:00,00,00,00,00,00,00,00,02,00,00,00,1d,00,3a,00,00,00,00,00
 ```
 
-## Windows Startup folder
+## Windows `Startup` folder
 
 Located at `C:\Users\<UserName>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`
 
-### Quick open folder
+### Quick open `Startup` folder
 
 1. `Win + R`
 2. Enter `shell:startup` in Run window
@@ -142,7 +143,12 @@ Located at `C:\Users\<UserName>\AppData\Roaming\Microsoft\Windows\Start Menu\Pro
 
 ## Windows Defender
 
-### Fixing messages **Some settings are managed by your organization** or **This setting is managed by your administrator**
+### Symptom
+
+When trying to change settings, get the messages **Some settings are managed by your organization** or **This setting is
+managed by your administrator**
+
+### Solution
 
 1. Open **Registry Editor** (`regedit.exe`)
 2. Go to `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender`
