@@ -1,7 +1,7 @@
 # fish shell
 
 - [fish shell](#fish-shell)
-  - [`bind`](#bind)
+  - [`set`](#set)
   - [shortcuts](#shortcuts)
   - [here docs/here strings](#here-docshere-strings)
   - [script arguments](#script-arguments)
@@ -14,14 +14,26 @@
     - [loading](#loading)
     - [viewing](#viewing)
   - [aliases](#aliases)
+    - [see alias definition](#see-alias-definition)
   - [abbreviations](#abbreviations)
   - [Switch case](#switch-case)
 
 <https://fishshell.com/docs/current/>
 
-## `bind`
+## `set`
 
-fish equivalent to `bindkey`
+display and change shell variables
+
+```fish
+# print all global, exported variabls
+set -gx
+
+# set $FOO to bar
+set FOO bar
+
+# append baz to $FOO variable
+set -a FOO baz
+```
 
 ## shortcuts
 
