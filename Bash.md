@@ -1,6 +1,8 @@
 # Bash shell
 
 - [Bash shell](#bash-shell)
+  - [Shell options](#shell-options)
+    - [Alias expansion](#alias-expansion)
   - [Fail and exit script on error](#fail-and-exit-script-on-error)
   - [Brace expansion](#brace-expansion)
     - [Moving/renaming a file](#movingrenaming-a-file)
@@ -17,12 +19,47 @@
     - [redirect to stdin `<`](#redirect-to-stdin-)
   - [Argument parsing](#argument-parsing)
   - [input/output redirection](#inputoutput-redirection)
+    - [Process lines in a file](#process-lines-in-a-file)
   - [Get the path of the currently executing function or script](#get-the-path-of-the-currently-executing-function-or-script)
   - [arrays](#arrays)
     - [print all array items](#print-all-array-items)
     - [array length](#array-length)
     - [input parameters](#input-parameters)
       - [array length](#array-length-1)
+  - [`bind`](#bind)
+    - [quoted insert](#quoted-insert)
+
+## Shell options
+
+`set`
+
+- part of the [[POSIX]] standard
+- modifies `$SHELLOPTS` env var
+
+`shopt`
+
+- Bash-specific
+- modifies the `$BASHOPTS` env var
+
+```bash
+# list options and their status
+set -o
+shopt
+
+# enable option
+set -o OPTION
+shopt -s OPTION
+
+# disable option
+set +o OPTION
+shopt -u OPTION
+```
+
+### Alias expansion
+
+```bash
+shopt -s expand_aliases
+```
 
 ## Fail and exit script on error
 
@@ -221,3 +258,43 @@ _source_: [BashFAQ](http://mywiki.wooledge.org/BashFAQ/028)
 #### array length
 
 `"$#"`
+
+## `bind`
+
+Default keybindings configuration is located at `/etc/inputrc`
+
+`Ctrl` can be represented as `\C-` or `^`
+
+`Esc` can be `\e` or `^[`
+
+```bash
+# list default bindings
+bind -P
+
+# list bindable functions
+bind -l
+bind -P # also list their current bindings
+
+# list variables and their values
+bind -V
+bind -v # list as commands to bind
+
+# bind keys to FUNCTION
+bind "KEY_SEQUENCE":FUNCTION
+
+# unbind all keys bound to FUNCTION
+bind -u FUNCTION
+
+# set key bindings from FILE
+bind -f FILE
+
+# bind COMMAND to KEY_SEQUENCE
+bind -x '"KEY_SEQUENCE"':COMMAND
+bind -X # list sequences bound by `bind -x`
+```
+
+### quoted insert
+
+To get the keycode representation for a key combination, enter `C-v` ("quoted insert") followed by the key combo to see it.
+
+For example, typing `Ctrl+v Alt+l` will output `^[l`
