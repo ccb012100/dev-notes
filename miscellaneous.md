@@ -8,6 +8,7 @@
 - CQRS
 - Design by contract (also known as DbC, contract programming)
   - Preconditions, Invariants, Postconditions
+- Disagree and commit
 - Dynamic Programming
 - False Dilemma/False Dichotomy
 - False economy
