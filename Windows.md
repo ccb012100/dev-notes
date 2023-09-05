@@ -219,3 +219,18 @@ After choosing _unpin from Quick access_ in File Explorer, entries stay pinned.
 - open [[cmd.exe]] as Administrator and run `powercfg.exe \hibernate on`
 - open **Control Panel** and go to `Control Panel\Hardware and Sound\Power Options\System Settings`
   - To be able to add Hibernate to the _Shutdown settings_, click the link _Change settings that are currently unavailable_
+
+## Identify which process is locking a file
+
+## **Resource Monitor**
+
+- Open **Resource Monitor** using `Win+R`, `resmon`
+- Go to the **CPU** tab
+  - In the **Processes** section, check the box next to _Image_ to select all Processes
+  - In the **Associated Handlers** section titlebar, enter the file name in the search box on the right 
+
+## **Process Explorer**
+
+- Download from <https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer>
+- Go to **Find** > **Find Handle or DLL**
+  - Type the file name in the _Handle or DLL substring:_ textbox
