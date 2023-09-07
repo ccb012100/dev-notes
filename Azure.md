@@ -20,4 +20,16 @@
 
 [KQL Quick Reference](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/kql-quick-reference?source=recommendations)
 
-[Syntax Convections](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/syntax-conventions?source=recommendations)
+[Syntax Conventions](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/syntax-conventions?source=recommendations)
+
+## **Azure SQL**
+
+[documentation](https://learn.microsoft.com/en-us/azure/azure-sql/?view=azuresql)
+
+### Add SQL user to DB
+
+```sql
+-- example of creating a readonly user named 'ReadOnlyUser'
+CREATE USER [ReadOnlyUser] WITH PASSWORD = 'PASSWORD';
+ALTER ROLE [db_datareader] ADD MEMBER [ReadOnlyUser];
+```
