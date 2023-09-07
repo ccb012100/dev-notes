@@ -4,7 +4,7 @@ Stream editor
 
 ## Find and replace text in files
 
-Use `-i` or `--in-place` to edit a file in place 
+Use `-i` or `--in-place` to edit a file in place
 
 ### using [[ripgrep]]
 
