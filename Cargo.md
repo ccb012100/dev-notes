@@ -5,14 +5,14 @@
 - [Cargo](#cargo)
   - [Commands](#commands)
   - [`cargo new`](#cargo-new)
-  - [Running in [[Windows]]](#running-in-windows)
+  - [Running in \[\[Windows\]\]](#running-in-windows)
     - [link.exe error](#linkexe-error)
   - [`cargo-edit`](#cargo-edit)
     - [Build failure in Windows](#build-failure-in-windows)
-    - [build failure in [[WSL]]](#build-failure-in-wsl2)
+    - [build failure in \[\[WSL\]\]](#build-failure-in-wsl)
   - [Set `RUST_BACKTRACE`](#set-rust_backtrace)
-    - [[[Windows]]](#windows)
-    - [[[Linux]]](#linux)
+    - [\[\[Windows\]\]](#windows)
+    - [\[\[Linux\]\]](#linux)
   - [Update installed Cargo packages](#update-installed-cargo-packages)
 
 **The Cargo Book**: <https://doc.rust-lang.org/cargo/>
