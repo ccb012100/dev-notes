@@ -181,3 +181,17 @@ Similar to [[rsync]]
 `@PAUSE` - keep the window open after the batch file finishes
 
 `REM` - start comment
+
+## Check if a port is in use
+
+```cmd
+# run as Administrator
+netstat -aon | findstr PORT_NUMBER
+```
+
+## Check reserved ports
+
+```cmd
+# run as Administrator
+netsh interface ipv4 show excludedportrange protocol=tcp
+```
