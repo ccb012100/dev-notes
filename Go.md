@@ -1,5 +1,42 @@
 # Go (Golang)
 
+- [Go (Golang)](#go-golang)
+  - [Modules](#modules)
+    - [Create module](#create-module)
+    - [Add module as dependency](#add-module-as-dependency)
+    - [Add missing and remove unused modules](#add-missing-and-remove-unused-modules)
+  - [\[\[Windows\]\]](#windows)
+    - [Install `tdm-gcc`](#install-tdm-gcc)
+  - [\[\[Linux\]\]](#linux)
+    - [Update Go version](#update-go-version)
+    - [Install `gcc`](#install-gcc)
+    - [Error](#error)
+    - [Fix](#fix)
+
+## Modules
+
+### Create module
+
+`go mod init`
+
+```go
+// example
+go mod init github.com/ccb012100/hello-world
+```
+
+### Add module as dependency
+
+`go get`
+
+```go
+// example
+go get github.com/spf13/cobra
+```
+
+### Add missing and remove unused modules
+
+`go mod tidy`
+
 ## [[Windows]]
 
 ### Install `tdm-gcc`
@@ -46,7 +83,7 @@ _source_: <https://golangcode.com/updating-go-on-ubuntu/>
 
 ### Install `gcc`
 
-This applies when [[Golang]] has been installed via [[[homebrew]]]
+This applies when Go has been installed via [[[homebrew]]]
 
 ### Error
 
