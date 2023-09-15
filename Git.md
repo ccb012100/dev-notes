@@ -359,10 +359,10 @@ git stash push --only-untracked
 ### stash specific file(s)
 
 ```bash
-git stash push -- FILE_NAME_1 FILE_NAME_2
+git stash push -- FILE1 FILE2 # can also do `git stash -- FILE` without `push`
 
 # stash an untracked file
-git stash push -u -- FILE_NAME
+git stash push -u -- FILE
 ```
 
 ## Hooks
@@ -428,7 +428,7 @@ code: `github.com/jdoe/`
   Host github.com
     HostName github.com
     User git
-    IdentityFile ~/.ssh/jdoe_private_key
+    IdentityFile ~/.ssh/personal_private_key
     IdentitiesOnly yes
     AddKeysToAgent yes
     
@@ -456,7 +456,7 @@ code: `github.com/jdoe/`
   [user]
       name = John Doe
       email = 123456+jdoe@users.noreply.github.com
-      signingkey = ~/.ssh/jdoe_private_key
+      signingkey = ~/.ssh/personal_private_key
   [url "git@github.com:"]
       insteadof = https://github.com/
   ```
@@ -475,7 +475,7 @@ code: `github.com/jdoe/`
 5. Add private keys to ssh agent
 
   ```shell
-  ssh-add `~/.ssh/jdoe_private_key`
+  ssh-add `~/.ssh/personal_private_key`
   ssh-add `~/.ssh/company_private_key`
   ```
 
