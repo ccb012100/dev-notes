@@ -1,5 +1,6 @@
 {
     "cSpell.words": [
+        "curlrc",
         "datareader",
         "doskey",
         "dotfiles",
@@ -16,6 +17,7 @@
         "shortlog",
         "signingkey",
         "sysusers",
+        "urlencode",
         "USERPROFILE",
         "usersecrets",
         "windir",
