@@ -2,30 +2,34 @@
 
 ## Useful concepts
 
+- Active listening
 - API design: feature-oriented vs. task-oriented
 - Chesterton's Fence
-- Composition over Inheritence
+- Composition over Inheritance
 - CQRS
+- Curse of Knowledge, The
 - Design by contract (also known as DbC, contract programming)
-  - Preconditions, Invariants, Postconditions
 - Disagree and commit
 - Dynamic Programming
+- Einstellung effect, The
 - False Dilemma/False Dichotomy
 - False economy
 - Memoization
 - Model-based testing
+- Preconditions, Invariants, Postconditions
 - Property-based testing
+- Relentless forward progress
 - Replaceability over reusability
 - Row polymorphism
+- Servant leadership
+- Strong opinions, loosely held
 - Structural subtyping
 - Testing at the system boundaries
-- The Curse of Knowledge
-- The Einstellung effect
 - Vertical slice
 
 ## "Laws"
 
-<https://www.laws-of-software.com/>
+Many taken from [Laws of Software](https://www.laws-of-software.com/)
 
 ### Hyrum's Law
 
