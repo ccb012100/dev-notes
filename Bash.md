@@ -1,5 +1,7 @@
 # Bash shell
 
+<!-- cspell:ignore shellopts shopt bashopts euxo pipefail noclobber wxyz stderror inputrc realpath readlink -->
+
 - [Bash shell](#bash-shell)
   - [Shell options](#shell-options)
     - [Alias expansion](#alias-expansion)
@@ -28,6 +30,7 @@
       - [array length](#array-length-1)
   - [`bind`](#bind)
     - [quoted insert](#quoted-insert)
+  - [Check for existence of files/directories](#check-for-existence-of-filesdirectories)
 
 ## Shell options
 
@@ -66,7 +69,7 @@ shopt -s expand_aliases
 Add the line
 
 ```bash
-set -euxo pipefail
+set -euo pipefail
 ```
 
 ## Brace expansion
@@ -187,6 +190,8 @@ there
 
 Passes file to commands standard input
 
+<!-- cspell:disable -->
+
 ```bash
 $ cat < /etc/fstab
 /dev/sda2               /boot   ext4            nosuid,noexec,nodev,rw,noatime,nodiratime       0 2
@@ -194,6 +199,8 @@ $ cat < /etc/fstab
 /dev/sdb5               /var    ext4            nosuid,noexec,nodev,rw,relatime 0 2
 --snip--
 ```
+
+<!-- cspell:enable -->
 
 _source_: <https://unix.stackexchange.com/a/80368>
 
@@ -233,9 +240,14 @@ done <FILENAME
 
 ## Get the path of the currently executing function or script
 
-`${BASH_SOURCE[0]}`
+```bash
+# source: https://stackoverflow.com/a/1482133
+dir_path=$(dirname -- "$(readlink -f -- "$0")")
 
-_source_: [BashFAQ](http://mywiki.wooledge.org/BashFAQ/028)
+# alternate method
+# http://mywiki.wooledge.org/BashFAQ/028
+dir_path=$(dirname "$(realpath "${BASH_SOURCE[0]}")")
+```
 
 ## arrays
 
@@ -253,7 +265,7 @@ _source_: [BashFAQ](http://mywiki.wooledge.org/BashFAQ/028)
 
 `$@` for all parameters
 
-`$1` for first parameter, `$2` for second paramter, etc.
+`$1` for first parameter, `$2` for second parameter, etc.
 
 #### array length
 
@@ -298,3 +310,13 @@ bind -X # list sequences bound by `bind -x`
 To get the keycode representation for a key combination, enter `C-v` ("quoted insert") followed by the key combo to see it.
 
 For example, typing `Ctrl+v Alt+l` will output `^[l`
+
+## Check for existence of files/directories
+
+```bash
+test -f "$FILE" && echo "File exists"
+test ! -f "$FILE" && echo "File does not exist"
+
+test -d "$DIR" && echo "Directory exists"
+test ! -d "$DIR" && echo "Directory does not exist"
+```
