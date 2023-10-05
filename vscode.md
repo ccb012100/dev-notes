@@ -1,5 +1,7 @@
 # Visual Studio Code
 
+<!-- cspell:ignore msbuild appdata askpass libexec -->
+
 - [Visual Studio Code](#visual-studio-code)
   - [Configure specific elements in theme](#configure-specific-elements-in-theme)
   - [Configure language specific settings for multiple languages](#configure-language-specific-settings-for-multiple-languages)
@@ -21,6 +23,9 @@
   - [Installing on Mac with Homebrew](#installing-on-mac-with-homebrew)
   - [Inspect vscode context](#inspect-vscode-context)
   - [Change font size for tab titles, sidebar, etc.](#change-font-size-for-tab-titles-sidebar-etc)
+  - [Git error: `TypeError: Cannot read properties of undefined (reading 'replace')?`](#git-error-typeerror-cannot-read-properties-of-undefined-reading-replace)
+  - [Code Snippets](#code-snippets)
+    - [Escaping `$0` in a snippet](#escaping-0-in-a-snippet)
 
 ## Configure specific elements in theme
 
@@ -75,12 +80,13 @@ will output to a file named `msbuild.log` in the project directory
 add `/property:verbosity=detailed`
 
 allowed values:
-
+<!-- cspell:disable -->
 - `q[uiet]`
 - `m[inimal]` (default setting)
 - `n[ormal]`
 - `d[etailed]`
 - `diag[nostic]`
+<!-- cspell:enable -->
 
 ## Keybindings
 
@@ -182,3 +188,9 @@ Add to `%HOME%\.gitconfig`:
 ```
 
 _Source_: <https://github.com/microsoft/vscode/issues/166832#issuecomment-1488827368>
+
+## Code Snippets
+
+### Escaping `$0` in a snippet
+
+`$0`, `$1`, etc. are special variables in snippets. If a snippet needs the literal text `$0`, `$1`, etc. (for example, shell args), escape it with `\\$0`.
