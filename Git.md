@@ -1,5 +1,7 @@
 # [[Git]]
 
+ <!-- cspell:ignore mindepth maxdepth jdoe gitdir insteadof shortlog -->
+
 - [\[\[Git\]\]](#git)
   - [Commits](#commits)
     - [`amend`](#amend)
@@ -43,6 +45,9 @@
         - [example](#example-1)
       - [Merging](#merging)
         - [example](#example-2)
+    - [Checkout specific files from a branch](#checkout-specific-files-from-a-branch)
+      - [Checkout to staging area](#checkout-to-staging-area)
+      - [Checkout to working area](#checkout-to-working-area)
   - [Change CRLF line endings to LF](#change-crlf-line-endings-to-lf)
   - [Executable (`+x`) file](#executable-x-file)
     - [Stage file as executable](#stage-file-as-executable)
@@ -54,6 +59,11 @@
   - [\[\[Windows\]\] installation](#windows-installation)
   - [Logs](#logs)
     - [search logs for commits that added/removed specific text](#search-logs-for-commits-that-addedremoved-specific-text)
+  - [Using Multiple git profiles with different ssh keys](#using-multiple-git-profiles-with-different-ssh-keys)
+    - [Example Users:](#example-users)
+      - [work](#work)
+      - [personal](#personal)
+  - [List all committers to a repository](#list-all-committers-to-a-repository)
 
 ## Commits
 
@@ -307,6 +317,20 @@ _**Incoming**_ is the branch you're merging into (the target branch)
 ##### example
 
 If you're merging `feat` into `master`, `feat` is the _incoming_ branch, and _main_ is the _current_ branch.
+
+### Checkout specific files from a branch
+
+#### Checkout to staging area
+
+```bash
+git checkout BRANCH -- FILE
+```
+
+#### Checkout to working area
+
+```bash
+git restore -s BRANCH -- FILE
+```
 
 ## Change CRLF line endings to LF
 
