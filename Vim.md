@@ -6,10 +6,11 @@
   - [Normal mode](#normal-mode)
     - [Scroll screen, centered on cursor](#scroll-screen-centered-on-cursor)
     - [Format document](#format-document)
+    - [Rewrap text](#rewrap-text)
     - [Macros](#macros)
       - [Record macro](#record-macro)
       - [Replay macro](#replay-macro)
-      - [Replay last excuted macro](#replay-last-excuted-macro)
+      - [Replay last executed macro](#replay-last-executed-macro)
       - [View macros](#view-macros)
     - [Registers](#registers)
     - [`vimrc` file locations](#vimrc-file-locations)
@@ -38,6 +39,10 @@
   - [Get current filename](#get-current-filename)
   - [system clipboard](#system-clipboard)
   - [troubleshoot startup](#troubleshoot-startup)
+  - [switch between files](#switch-between-files)
+  - [Plugin keybindings](#plugin-keybindings)
+    - [EasyMotion](#easymotion)
+    - [commentary.vim](#commentaryvim)
 
 ## Save and exit
 
@@ -103,6 +108,17 @@ zz      " focus cursor in center
 gg=G
 ```
 
+### Rewrap text
+
+`gq` followed by the range
+
+Examples:
+
+```vim
+gqq  " wrap in current line
+gqip " wrap in current paragraph
+```
+
 ### Macros
 
 Allowable register names for macros are the letters a-z
@@ -119,7 +135,7 @@ q<register><commands>q
 @<register>
 ```
 
-#### Replay last excuted macro
+#### Replay last executed macro
 
 ```vim
 @@
@@ -325,7 +341,7 @@ gv      " Start visual mode with last selection
 
 ### Manipulate text
 
-Comands act on the selection
+Commands act on the selection
 
 ```vim
 <   " dedent
