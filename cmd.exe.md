@@ -4,7 +4,7 @@
   - [Open as Administrator](#open-as-administrator)
   - [Aliases](#aliases)
     - [Auto-load aliases](#auto-load-aliases)
-      - [Windows Terminal](#windows-terminal)
+      - [\[\[Windows Terminal\]\]](#windows-terminal)
   - [`doskey`](#doskey)
   - [Symbolic links (symlinks) in \[\[Windows\]\]](#symbolic-links-symlinks-in-windows)
     - [Soft link](#soft-link)
@@ -26,6 +26,9 @@
   - [Copy files](#copy-files)
     - [Switches](#switches)
   - [Batch files](#batch-files)
+  - [Check if a port is in use](#check-if-a-port-is-in-use)
+  - [Check reserved ports](#check-reserved-ports)
+  - [`powercfg`](#powercfg)
 
 ## Open as Administrator
 
@@ -195,3 +198,7 @@ netstat -aon | findstr PORT_NUMBER
 # run as Administrator
 netsh interface ipv4 show excludedportrange protocol=tcp
 ```
+
+## `powercfg`
+
+For controlling _power schemes* (also called *power schemes_)
