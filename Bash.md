@@ -320,3 +320,13 @@ test ! -f "$FILE" && echo "File does not exist"
 test -d "$DIR" && echo "Directory exists"
 test ! -d "$DIR" && echo "Directory does not exist"
 ```
+
+## Check if variable is set
+
+To test in scripts containing `set -o` (which will exit if referencing an unset variable):
+
+```bash
+if [[ "${FOO:-}" ]]; then
+  echo "FOO is set"
+fi
+```
