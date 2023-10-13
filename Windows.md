@@ -25,7 +25,7 @@
 
 ## Shortcuts
 
-`Alt + Esc` - Cycle through items in the order in which they were opened
+`Alt + Esc` - Cycle through items in the order in which they were opened, moving current window to back
 
 `Alt + Enter` - Display properties for the selected item
 
@@ -73,7 +73,7 @@
 
 `Win + N` - **Notification center**
 
-`Win + P` - Set presentatino display mode (duplicate, extend, etc.)
+`Win + P` - Set presentation display mode (duplicate, extend, etc.)
 
 `Win + R` - **Run** dialog
 
