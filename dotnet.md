@@ -24,6 +24,7 @@
   - [Testing](#testing)
     - [`HttpContext` in a `Controller`](#httpcontext-in-a-controller)
   - [Log HTTP requests and responses](#log-http-requests-and-responses)
+  - [Trust dev HTTPS Certificates in \[\[Docker\]\] containers running in \[\[WSL\]\] with Docker Compose](#trust-dev-https-certificates-in-docker-containers-running-in-wsl-with-docker-compose)
 
 ## App secrets
 
@@ -199,3 +200,45 @@ _sut.ControllerContext.HttpContext.Items.Add("Foo", "bar");
 [Microsoft.AspNetCore.Builder.UseHttpLogging](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.builder.httploggingbuilderextensions.usehttplogging)
 
 [HTTP Logging in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/http-logging)
+
+## Trust dev HTTPS Certificates in [[Docker]] containers running in [[WSL]] with Docker Compose
+
+In [[Windows]], run:
+
+  ```bash
+  dotnet dev-certs https -ep ~/aspnetapp.pfx -p pass123 --trust
+  ```
+
+This will create the file `~/aspnetapp.pfx` with password = `pass123`
+
+In [[WSL]], run:
+
+  ```bash
+  sudo cp /mnt/c/Users/<USER>/https.pfx --password pass123 ~/.aspnet/https/aspnetapp.pfx
+  ```
+
+Create a `docker-compose.yml` file:
+
+```yaml
+services:
+  api:
+    build: .
+    ports:
+      - 80
+      - 443
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=password
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+    volumes:
+      - ~/.aspnet/https:/https:ro
+```
+
+---
+
+_sources_:
+
+[Starting a container with https support using docker compose](https://learn.microsoft.com/en-us/aspnet/core/security/docker-compose-https?view=aspnetcore-6.0#starting-a-container-with-https-support-using-docker-compose)
+
+[Trust HTTPS certificate from Windows Subsystem for Linux]( https://learn.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?view=aspnetcore-7.0&tabs=visual-studio%2Clinux-ubuntu#trust-https-certificate-from-windows-subsystem-for-linux)
