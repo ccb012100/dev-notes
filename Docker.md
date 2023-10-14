@@ -63,7 +63,8 @@ Running as a nonroot user who needs to be added to the `docker` group.
 
 1. Create the docker group: `$ sudo groupadd docker`
 2. Add your user to the `docker` group: `$ sudo usermod -aG docker $USER`
-3. Log your user out then back in.
+3. Log your user out then back in or run `newgrp docker`
+4. Verify by running `docker run hello-world`
 
 _source_: <https://docs.docker.com/engine/install/linux-postinstall/>
 
