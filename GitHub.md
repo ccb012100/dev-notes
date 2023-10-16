@@ -1,5 +1,7 @@
 # GitHub
 
+<!-- cspell:ignore stackoverflow keyscan wezterm -->
+
 ## see a user's public keys
 
 `https://github.com/<username>.keys`
@@ -29,3 +31,21 @@ javascript:document.getElementsByName("viewed").forEach(ch => {
 ```bash
 ssh-keyscan github.com >> ~/.ssh/known_hosts
 ```
+
+## Search
+
+[Syntax documentation](https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax)
+
+### search for file by filename
+
+to find a file named `wezterm.lua`:
+
+`path:wezterm.lua`
+
+to find a file named `wezterm.lua` located in a repository at `/config/wezterm`:
+
+`path:config/wezterm/wezterm.lua`
+
+to find files of type `.lua`:
+
+`path:*.lua`
