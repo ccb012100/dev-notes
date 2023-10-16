@@ -1,5 +1,23 @@
 # cURL
 
+- [cURL](#curl)
+  - [Configuration file](#configuration-file)
+  - [Allow insecure connections](#allow-insecure-connections)
+  - [Show HTTP response headers](#show-http-response-headers)
+  - [Show HTTP request headers](#show-http-request-headers)
+  - [Show specific response data](#show-specific-response-data)
+  - [Follow redirects](#follow-redirects)
+  - [Only output errors](#only-output-errors)
+  - [URL globbing](#url-globbing)
+    - [Disable globbing](#disable-globbing)
+  - [Save to file](#save-to-file)
+  - [Retries](#retries)
+  - [POST](#post)
+    - [JSON](#json)
+  - [URL-encode data](#url-encode-data)
+  - [download a file](#download-a-file)
+    - [flags](#flags)
+
 ["Client for URL"](https://curl.se/)
 
 [Everything curl](https://everything.curl.dev/) book
@@ -98,3 +116,16 @@ curl --json '{"name": "alice"}' http://www.example.com
 ## URL-encode data
 
 `--data-urlencode`
+
+## download a file
+
+Basic syntax
+
+```bash
+curl URL --output FILE # or -o
+```
+
+### flags
+
+- `--output-dir DIR` - directory to create the file specified by `-o`/`--output`
+- `--create-dirs` - create directories specified by `--output`/`--output-dir` if they don't exist
