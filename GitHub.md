@@ -1,7 +1,5 @@
 # GitHub
 
-<!-- cspell:ignore stackoverflow keyscan wezterm -->
-
 ## see a user's public keys
 
 `https://github.com/<username>.keys`

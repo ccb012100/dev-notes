@@ -1,7 +1,5 @@
 # Bash shell
 
-<!-- cspell:ignore shellopts shopt bashopts euxo pipefail noclobber wxyz stderror inputrc realpath readlink -->
-
 - [Bash shell](#bash-shell)
   - [Shell options](#shell-options)
     - [Alias expansion](#alias-expansion)
@@ -190,8 +188,6 @@ there
 
 Passes file to commands standard input
 
-<!-- cspell:disable -->
-
 ```bash
 $ cat < /etc/fstab
 /dev/sda2               /boot   ext4            nosuid,noexec,nodev,rw,noatime,nodiratime       0 2
@@ -199,8 +195,6 @@ $ cat < /etc/fstab
 /dev/sdb5               /var    ext4            nosuid,noexec,nodev,rw,relatime 0 2
 --snip--
 ```
-
-<!-- cspell:enable -->
 
 _source_: <https://unix.stackexchange.com/a/80368>
 

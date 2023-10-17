@@ -1,7 +1,5 @@
 # [[Git]]
 
- <!-- cspell:ignore mindepth maxdepth jdoe gitdir insteadof shortlog -->
-
 - [\[\[Git\]\]](#git)
   - [Commits](#commits)
     - [`amend`](#amend)

@@ -1,7 +1,5 @@
 # Visual Studio Code
 
-<!-- cspell:ignore msbuild appdata askpass libexec -->
-
 - [Visual Studio Code](#visual-studio-code)
   - [Configure specific elements in theme](#configure-specific-elements-in-theme)
   - [Configure language specific settings for multiple languages](#configure-language-specific-settings-for-multiple-languages)
@@ -80,13 +78,12 @@ will output to a file named `msbuild.log` in the project directory
 add `/property:verbosity=detailed`
 
 allowed values:
-<!-- cspell:disable -->
+
 - `q[uiet]`
 - `m[inimal]` (default setting)
 - `n[ormal]`
 - `d[etailed]`
 - `diag[nostic]`
-<!-- cspell:enable -->
 
 ## Keybindings
 
