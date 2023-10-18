@@ -22,6 +22,9 @@
     - [Symptom](#symptom-2)
     - [Solution](#solution-2)
   - [Enable Hibernate](#enable-hibernate)
+  - [Identify which process is locking a file](#identify-which-process-is-locking-a-file)
+    - [**Resource Monitor**](#resource-monitor)
+    - [**Process Explorer**](#process-explorer)
 
 ## Shortcuts
 
@@ -222,14 +225,14 @@ After choosing _unpin from Quick access_ in File Explorer, entries stay pinned.
 
 ## Identify which process is locking a file
 
-## **Resource Monitor**
+### **Resource Monitor**
 
 - Open **Resource Monitor** using `Win+R`, `resmon`
 - Go to the **CPU** tab
   - In the **Processes** section, check the box next to _Image_ to select all Processes
   - In the **Associated Handlers** section titlebar, enter the file name in the search box on the right 
 
-## **Process Explorer**
+### **Process Explorer**
 
 - Download from <https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer>
 - Go to **Find** > **Find Handle or DLL**
