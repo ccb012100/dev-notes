@@ -1,7 +1,8 @@
 # Vim
 
 - [Vim](#vim)
-  - [Save and exit](#save-and-exit)
+  - [Exit](#exit)
+  - [Save](#save)
     - [`ZZ` vs `:wq`](#zz-vs-wq)
   - [Normal mode](#normal-mode)
     - [Scroll screen, centered on cursor](#scroll-screen-centered-on-cursor)
@@ -38,20 +39,35 @@
   - [Comment/uncomment code](#commentuncomment-code)
   - [Get current filename](#get-current-filename)
   - [system clipboard](#system-clipboard)
+    - [Copy all](#copy-all)
+    - [Paste from clipboard](#paste-from-clipboard)
   - [troubleshoot startup](#troubleshoot-startup)
   - [switch between files](#switch-between-files)
   - [Plugin keybindings](#plugin-keybindings)
     - [EasyMotion](#easymotion)
     - [commentary.vim](#commentaryvim)
 
-## Save and exit
+## Exit
+
+```vim
+:q    " exit if there are no unsaved changes (short for :quit)
+:q!   " discard unsaved changes and exit
+:qa   " exit all (short for :quitall)
+:cq   " quit without saving and use nonzero exit code (short for :cquit)
+
+ZQ    " same as :q!
+```
+
+## Save
 
 ```vim
 :update " write file if buffer has been modified
 :w      " write file
 :wall   " write all changed buffers
 :wall!  " write all buffers
-:x      " same as `ZZ`
+:x      " write file if changes have been made, and then exit (short for :exit)
+   
+ZZ      " same as :x/:exit
 ```
 
 ### `ZZ` vs `:wq`
@@ -150,6 +166,8 @@ q<register><commands>q
 ```
 
 ### Registers
+
+`"{register}` will use `{register}` for the next delete, yank, or put.
 
 <https://www.brianstorti.com/vim-registers/>
 
@@ -403,6 +421,19 @@ There are 2 clipboard registers:
 
 - `*` -> PRIMARY (copy-on-select)
 - `+` -> CLIPBOARD (ctrl+C/V)
+
+### Copy all
+
+```vim
+" % register is the current file
+
+" copy all to clipboard
+:%y*    " or :%y+
+```
+
+### Paste from clipboard
+
+`"*p` or `ctrl+shift+v`
 
 ## troubleshoot startup
 
