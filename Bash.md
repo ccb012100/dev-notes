@@ -24,11 +24,14 @@
   - [arrays](#arrays)
     - [print all array items](#print-all-array-items)
     - [array length](#array-length)
-    - [input parameters](#input-parameters)
-      - [array length](#array-length-1)
+    - [array slice](#array-slice)
+    - [input parameters (args)](#input-parameters-args)
+      - [args array length](#args-array-length)
+      - [args slice](#args-slice)
   - [`bind`](#bind)
     - [quoted insert](#quoted-insert)
   - [Check for existence of files/directories](#check-for-existence-of-filesdirectories)
+  - [Check if variable is set](#check-if-variable-is-set)
 
 ## Shell options
 
@@ -247,23 +250,38 @@ dir_path=$(dirname "$(realpath "${BASH_SOURCE[0]}")")
 
 ### print all array items
 
-`"${arr[@]}"` - expands each element as a separate argument
+`${arr[@]}` - expands each element as a separate argument
 
-`"${arr[*]}` - merges args into a single argument
+`${arr[*]}` - merges args into a single argument
 
 ### array length
 
-`"${#arr[@]}"`
+`${#arr[@]}`
 
-### input parameters
+### array slice
 
-`$@` for all parameters
+`${arr[@]:2} # all but first element`
+
+### input parameters (args)
+
+`"$@"` for all parameters
 
 `$1` for first parameter, `$2` for second parameter, etc.
 
-#### array length
+#### args array length
 
 `"$#"`
+
+#### args slice
+
+```bash
+${@:2}      # all but first arg
+
+${@: -1}    # last arg (space between : and - is required)
+${@:$#}     # last arg
+
+${@: -2:1}  # next to last
+```
 
 ## `bind`
 
