@@ -1,6 +1,19 @@
 # Bash shell
 
 - [Bash shell](#bash-shell)
+  - [Conditional expressions](#conditional-expressions)
+    - [booleans](#booleans)
+    - [strings](#strings)
+    - [arithmetic binary operators](#arithmetic-binary-operators)
+    - [Check existence of files/directories](#check-existence-of-filesdirectories)
+    - [Check if variable is set](#check-if-variable-is-set)
+  - [arrays](#arrays)
+    - [print all array items](#print-all-array-items)
+    - [array length](#array-length)
+    - [array slice](#array-slice)
+    - [input parameters (args)](#input-parameters-args)
+      - [args array length](#args-array-length)
+      - [args slice](#args-slice)
   - [Shell options](#shell-options)
     - [Alias expansion](#alias-expansion)
   - [Fail and exit script on error](#fail-and-exit-script-on-error)
@@ -21,17 +34,112 @@
   - [input/output redirection](#inputoutput-redirection)
     - [Process lines in a file](#process-lines-in-a-file)
   - [Get the path of the currently executing function or script](#get-the-path-of-the-currently-executing-function-or-script)
-  - [arrays](#arrays)
-    - [print all array items](#print-all-array-items)
-    - [array length](#array-length)
-    - [array slice](#array-slice)
-    - [input parameters (args)](#input-parameters-args)
-      - [args array length](#args-array-length)
-      - [args slice](#args-slice)
   - [`bind`](#bind)
     - [quoted insert](#quoted-insert)
-  - [Check for existence of files/directories](#check-for-existence-of-filesdirectories)
-  - [Check if variable is set](#check-if-variable-is-set)
+  - [`echo` without newline at the end](#echo-without-newline-at-the-end)
+
+## Conditional expressions
+
+[GNU Bash manual](https://www.gnu.org/software/bash/manual/bash.html#Bash-Conditional-Expressions)
+
+### booleans
+
+True booleans don't exist in `bash`
+
+`true` runs a command that is just `return 0`; Similarly, `false` is `return 1`
+
+```bash
+foo=true  
+
+if [[ "$foo" == "true" ]]; then echo "this will run"; fi
+if [[ "$foo" == true ]]; then echo "this will run"; fi
+if [[ "$foo" -eq 1 ]]; then echo "this will run"; fi
+if [[ "$foo" -ne 0 ]]; then echo "this will run"; fi
+```
+
+### strings
+
+```bash
+-z $foo  # true if length of $foo is 0
+
+-n $foo  # true if length of $foo is non-zero
+
+# true if strings are equal; performs pattern matching when used within [[ command
+$foo == $bar
+$foo = $bar
+
+$foo != $bar  # true if strings are not equal
+
+$foo < $bar # true if $foo lexographically sorts before $bar
+$foo > $bar # true if $foo lexographically sorts after $bar
+```
+
+### arithmetic binary operators
+
+- `eq`
+- `ne`
+- `lt`
+- `gt`
+- `ge`
+
+Evaluated as arithemetic expressions when used with `[[` command.
+
+### Check existence of files/directories
+
+```bash
+test -f "$FILE" && echo "File exists"
+test ! -f "$FILE" && echo "File does not exist"
+
+test -d "$DIR" && echo "Directory exists"
+test ! -d "$DIR" && echo "Directory does not exist"
+```
+
+### Check if variable is set
+
+To test in scripts containing `set -o` (which will exit if referencing an unset variable):
+
+```bash
+if [[ "${FOO:-}" ]]; then
+  echo "FOO is set"
+fi
+```
+
+## arrays
+
+### print all array items
+
+`${arr[@]}` - expands each element as a separate argument
+
+`${arr[*]}` - merges args into a single argument
+
+### array length
+
+`${#arr[@]}`
+
+### array slice
+
+`${arr[@]:2} # all but first element`
+
+### input parameters (args)
+
+`"$@"` for all parameters
+
+`$1` for first parameter, `$2` for second parameter, etc.
+
+#### args array length
+
+`"$#"`
+
+#### args slice
+
+```bash
+${@:2}      # all but first arg
+
+${@: -1}    # last arg (space between : and - is required)
+${@:$#}     # last arg
+
+${@: -2:1}  # next to last
+```
 
 ## Shell options
 
@@ -246,43 +354,6 @@ dir_path=$(dirname -- "$(readlink -f -- "$0")")
 dir_path=$(dirname "$(realpath "${BASH_SOURCE[0]}")")
 ```
 
-## arrays
-
-### print all array items
-
-`${arr[@]}` - expands each element as a separate argument
-
-`${arr[*]}` - merges args into a single argument
-
-### array length
-
-`${#arr[@]}`
-
-### array slice
-
-`${arr[@]:2} # all but first element`
-
-### input parameters (args)
-
-`"$@"` for all parameters
-
-`$1` for first parameter, `$2` for second parameter, etc.
-
-#### args array length
-
-`"$#"`
-
-#### args slice
-
-```bash
-${@:2}      # all but first arg
-
-${@: -1}    # last arg (space between : and - is required)
-${@:$#}     # last arg
-
-${@: -2:1}  # next to last
-```
-
 ## `bind`
 
 Default keybindings configuration is located at `/etc/inputrc`
@@ -323,22 +394,6 @@ To get the keycode representation for a key combination, enter `C-v` ("quoted in
 
 For example, typing `Ctrl+v Alt+l` will output `^[l`
 
-## Check for existence of files/directories
+## `echo` without newline at the end
 
-```bash
-test -f "$FILE" && echo "File exists"
-test ! -f "$FILE" && echo "File does not exist"
-
-test -d "$DIR" && echo "Directory exists"
-test ! -d "$DIR" && echo "Directory does not exist"
-```
-
-## Check if variable is set
-
-To test in scripts containing `set -o` (which will exit if referencing an unset variable):
-
-```bash
-if [[ "${FOO:-}" ]]; then
-  echo "FOO is set"
-fi
-```
+`echo -n FOO`
