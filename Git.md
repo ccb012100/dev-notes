@@ -62,6 +62,7 @@
       - [work](#work)
       - [personal](#personal)
   - [List all committers to a repository](#list-all-committers-to-a-repository)
+  - [See specific version of a file](#see-specific-version-of-a-file)
 
 ## Commits
 
@@ -525,4 +526,10 @@ git shortlog -sn
 
 # show committer email address
 git shortlog -se # or git shortlog -s --email
+```
+
+## See specific version of a file
+
+```bash
+git show COMMIT_SHA:path/to/file
 ```
