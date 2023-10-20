@@ -10,6 +10,8 @@
 
 ## Pipelines
 
+see [[Azure Pipelines]]
+
 ## Logs
 
 ### Kusto Query Language (KQL)
