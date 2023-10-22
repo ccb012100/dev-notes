@@ -331,6 +331,14 @@ git checkout BRANCH -- FILE
 git restore -s BRANCH -- FILE
 ```
 
+### Checkout changes from one branch to another branch
+
+```bash
+git checkout branch1    # on branch1
+git checkout branch2    # now on branch2
+git checkout branch2 .  # staging area of branch2 now contains the changes from branch1
+```
+
 ## Change CRLF line endings to LF
 
 ```bash
