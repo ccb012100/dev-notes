@@ -37,6 +37,8 @@
   - [`bind`](#bind)
     - [quoted insert](#quoted-insert)
   - [`echo` without newline at the end](#echo-without-newline-at-the-end)
+  - [test output destination](#test-output-destination)
+    - [terminal](#terminal)
 
 ## Conditional expressions
 
@@ -397,3 +399,13 @@ For example, typing `Ctrl+v Alt+l` will output `^[l`
 ## `echo` without newline at the end
 
 `echo -n FOO`
+
+## test output destination
+
+### terminal
+
+`-t fd` is true if file descriptor (`fd`) is open and refers to a terminal
+
+- `-t 0` stdin
+- `-t 1` stdout
+- `-t 2` stderr
