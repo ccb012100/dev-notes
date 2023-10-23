@@ -146,6 +146,10 @@ git config --global user.name
 
 `Include.path` is relative to the configuration file _in which the include directive is located_.
 
+### Relative path to diff/merge tool
+
+Git doesn't support environment variables in the paths to `difftool`/`mergetool`, so you can't use `~` or `!HOME`.
+
 ## Get repository name
 
 ```bash
