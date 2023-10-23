@@ -2,8 +2,7 @@
 
 - [Azure Pipelines](#azure-pipelines)
   - [Azure DevOps documentation](#azure-devops-documentation)
-  - [==\> 2023-10-04](#-2023-10-04)
-  - [==\> 2023-10-16](#-2023-10-16)
+  - [Pipeline features](#pipeline-features)
   - [Key Concepts](#key-concepts)
     - [Releases](#releases)
     - [Runs](#runs)
@@ -30,9 +29,14 @@
   - [Jobs](#jobs)
     - [Job Variables](#job-variables)
     - [Job types](#job-types)
-      - [Deployment jobs](#deployment-jobs)
       - [Agent pool jobs](#agent-pool-jobs)
       - [Server jobs](#server-jobs)
+      - [Deployment jobs](#deployment-jobs)
+        - [deployment lifecycle hooks](#deployment-lifecycle-hooks)
+        - [deployment strategies:](#deployment-strategies)
+          - [`runOnce`](#runonce)
+          - [`rolling`](#rolling)
+          - [`canary`](#canary)
       - [Agentless jobs](#agentless-jobs)
       - [Container jobs](#container-jobs)
     - [Dependencies](#dependencies)
@@ -43,28 +47,16 @@
       - [Subdirectories](#subdirectories)
   - [Timeouts](#timeouts)
   - [Stages](#stages)
+    - [Run order](#run-order)
+    - [Conditions](#conditions-1)
+  - [Deployment Slots](#deployment-slots)
+  - [Queuing policies](#queuing-policies)
 
 ## Azure DevOps documentation
 
 <https://learn.microsoft.com/en-us/azure/devops/pipelines>
 
-## ==> 2023-10-04
-
-- `deployment slots`
-
-  > In the Cloud Shell, swap the verified/warmed-up staging slot into production.
-  >
-  > ```bash
-  > az webapp deployment slot swap --name $webappname --resource-group AzureTutorial --slot staging
-  > ```
-
-- Disconnect local Git deployment
-
-- **Triggers** tab
-  - checkbox labeled _Batch changes while a build is in progress_
-    - directly under checkbox labeled _Enable continuous integration_
-
-## ==> 2023-10-16
+## Pipeline features
 
 [Azure Pipeline Features](https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/pipelines-get-started?view=azure-devops&preserve-view=true#feature-availability)
 
@@ -268,10 +260,6 @@ Variables can be specified on the job.
 
 ### Job types
 
-#### Deployment jobs
-
-Allows deploying to an environment.
-
 #### Agent pool jobs
 
 Run on an agent in an agent pool.
@@ -287,6 +275,64 @@ Tasks in a server job are orchestrated by and executed on the server (Azure Pipe
 Doesn't require any agent or target computers.
 
 Maximum time for a server job is 30 days.
+
+#### Deployment jobs
+
+Collection of steps that are run sequentially against the environment.
+
+Deployment jobs provide deployment history
+
+- history across piplelines, down to a specific resource and status of the deployments for auditing
+
+Any steps defined in a deployment job with a VM resource will run against that VM and not against the agent in the pool.
+
+##### deployment lifecycle hooks
+
+By default, hooks inherit the `pool` specified by the `deployment` job.
+
+1. `preDeploy`
+
+   - Run steps that initialize resources before application deployment starts.
+
+2. `deploy`
+
+   - Run steps that deploy your application.
+   - Download artifact task will be auto injected only in the `deploy` hook for deployment jobs.
+   - To stop downloading artifacts, use `- download: none` or choose specific artifacts to download by specifying
+    **Download Pipeline Artifact** task.
+
+3. `routeTraffic`
+   - Run steps that serve the traffic to the updated version.
+
+4. `postRouteTraffic`
+   - Run the steps after the traffic is routed.
+   - Typically, these tasks monitor the health of the updated version for defined interval.
+
+5. `on: failure` or `on: success`
+   - Run steps for rollback actions or clean-up.
+
+##### deployment strategies:
+
+###### `runOnce`
+
+Simplest strategy
+
+All lifecycle hooks are executed once
+
+###### `rolling`
+
+Replaces instances of the previous version of an application with instances of the new version of the application on a
+fixed set of virtual machines (rolling set) in each iteration.
+
+Typically waits for deployments on each set of virtual machines to complete before proceeding to the next set of
+deployments. You can do a health check after each iteration and if a significant issue occurs, the rolling deployment
+can be stopped
+
+Limitation: retrying a stage re-runs the deployments on all VMs, not just the failed targets.
+
+###### `canary`
+
+Roll out changes to a small subset of servers first.
 
 #### Agentless jobs
 
@@ -367,11 +413,42 @@ Logical boundary in the pipeline where you can pause the pipeline and perform va
 
 Can be used to mark separation of concerns (for example, build app, run tests, deploy to QA).
 
-By default, if you define multiple stages in a pipeline, they run sequentially.
-
 Every pipeline implicitly has at least 1 job.
 
 If `pool` is specified on a stage, then all jobs defined in that stage will use that pool (unless the job specifies a
 pool).
 
+### Run order
+
+By default, if you define multiple stages in a pipeline, they run sequentially, in the order they are defined.
+
 To run stages in parallel, use `dependsOn: []` to remove the implicit dependency on a previous stage.
+
+### Conditions
+
+Specifying a `condition` on a stage removes the implicit conditions for previous stages to complete and succeed.
+
+- Use `and(succeeded(), custom_condition)` or the stage even if the previous stage fails.
+
+## Deployment Slots
+
+  > In the Cloud Shell, swap the verified/warmed-up staging slot into production.
+  >
+  > ```bash
+  > az webapp deployment slot swap --name $webappname --resource-group AzureTutorial --slot staging
+  > ```
+
+- Disconnect local Git deployment
+
+- **Triggers** tab
+  - checkbox labeled _Batch changes while a build is in progress_
+    - directly under checkbox labeled _Enable continuous integration_
+
+## Queuing policies
+
+> YAML pipelines don't support queuing policies. Each run of a pipeline is independent from and unaware of other runs.
+> In other words, your two successive commits may trigger two pipelines, and both of them will execute the same sequence
+> of stages without waiting for each other. While we work to bring queuing policies to YAML pipelines, we recommend that
+> you use manual approvals in order to manually sequence and control the order the execution if this is of importance.
+
+_source_: <https://learn.microsoft.com/en-us/azure/devops/pipelines/process/stages?view=azure-devops&tabs=yaml#specify-queuing-policies>
