@@ -41,6 +41,10 @@
       - [Container jobs](#container-jobs)
     - [Dependencies](#dependencies)
     - [Conditions](#conditions)
+      - [Using template parameters in conditions](#using-template-parameters-in-conditions)
+      - [Use the output variable from a job in a condition in a subsequent job](#use-the-output-variable-from-a-job-in-a-condition-in-a-subsequent-job)
+      - [Use the pipeline variable created from a step in a condition in a subsequent step](#use-the-pipeline-variable-created-from-a-step-in-a-condition-in-a-subsequent-step)
+        - [Scoping](#scoping)
     - [Multi-job configuration](#multi-job-configuration)
     - [Slicing](#slicing)
     - [Workspaces](#workspaces)
@@ -51,6 +55,7 @@
     - [Conditions](#conditions-1)
   - [Deployment Slots](#deployment-slots)
   - [Queuing policies](#queuing-policies)
+  - [Libraries](#libraries)
 
 ## Azure DevOps documentation
 
@@ -364,6 +369,24 @@ Default: a job runs if it doesn't depend on any other job, or if all the jobs th
 
 Conditions can access variables from previous jobs (but only in directly dependent jobs).
 
+#### Using template parameters in conditions
+
+When you declare a parameter in the same pipeline that you have a condition, parameter expansion happens before conditions are considered.
+
+#### Use the output variable from a job in a condition in a subsequent job
+
+You can make a variable available to future jobs and specify it in a condition. Variables available to future jobs must be marked as multi-job output variables using `isOutput=true`.
+
+#### Use the pipeline variable created from a step in a condition in a subsequent step
+
+By default, variables created from a step are available to future steps.
+
+##### Scoping
+
+- Variables created in a step in a job will be scoped to the steps in the same job.
+- Variables created in a step will only be available in subsequent steps as environment variables.
+- Variables created in a step can't be used in the step that defines them.
+
 ### Multi-job configuration
 
 A job using the `matrix` strategy can run multiple jobs on multiple agents in parallel.
@@ -452,3 +475,209 @@ Specifying a `condition` on a stage removes the implicit conditions for previous
 > you use manual approvals in order to manually sequence and control the order the execution if this is of importance.
 
 _source_: <https://learn.microsoft.com/en-us/azure/devops/pipelines/process/stages?view=azure-devops&tabs=yaml#specify-queuing-policies>
+
+## Libraries
+
+A library is a collection of build and release assets for an Azure DevOps project.
+
+Assets defined in a library can be used in multiple build and release pipelines of the project.
+
+The **Library** tab can be accessed from the **Azure Pipelines** section in Azure DevOps.
+
+The library contains two types of assets: variable groups and secure files.
+
+### Variable groups
+
+Variables can be used with expressions to conditionally assign values
+
+Different from runtime parameters, which are typed and available during template parsing.
+
+#### Variable scope
+
+- **root**
+  - available to all jobs in the pipeline
+- **stage**
+  - available only to a specific stage
+- **job**
+  - available only to a specific job
+
+Variable names can be shadowed.
+
+- The narrowest scope wins
+
+Global variables defined in a YAML aren't visible in the pipeline settings UI.
+
+#### User-defined variables
+
+Can be defined at the root, stage, and job level.
+
+If done through the UI, they can be encrypted and set as secret.
+
+**Variable groups** can be used to make variables
+
+#### User-defined multi-line variables
+
+Tricky, limited. See: [User-defined multi-line variables](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch#user-defined-multi-line-variables)
+
+Can be set as read-only.
+
+#### System variables
+
+See: [List of pre-defined system values](https://learn.microsoft.com/en-us/azure/devops/pipelines/build/variables?view=azure-devops&tabs=yaml)
+
+#### Environment variables
+
+Specific to the pipeline's OS.
+
+System and user-defined variables are also injected into the pipeline as environment variables.
+
+- Names are converted to uppercase, and periods (`.`) turn into underscores (`_`)
+
+#### Runtime parameters
+
+##### Formatting
+
+- UNIX ([[macOS]] and [[Linux]]), format `$NAME`
+- On [[Windows]], the format is:
+  - `$NAME` in [[Bash]] scripts
+  - `%NAME%` in `.bat` scripts
+  - `$env:NAME` in [[PowerShell]] scripts
+
+#### Naming restrictions
+
+Names must consist of letter, numbers, `.`, and `_`.
+
+Disallowed prefixes:
+
+- `endpoint`
+- `input`
+- `path`
+- `secret`
+- `securefile`
+
+#### Syntax
+
+3 types: `macro`, `template expressione`, `runtime expression`
+
+| Syntax | Example | When is it processed? | Where does it expand in a pipeline definition? | How does it render when not found? |
+|---|---|---|---|---|
+| macro | `$(var)` | runtime before a task executes | value (right side) | prints `$(var)` |
+| template expression | `${{ variables.var }}` | compile time | key or value (left or right side) | empty string |
+| runtime expression | `$[variables.var]` | runtime | value (right side) | empty string |
+
+##### Macro syntax variables
+
+`$(var)`
+
+Processed during runtime
+
+- after template expansion
+- before a task runs
+
+Replaced by the system with the contents of the variable.
+
+- If there's no variable by that name, then the macro expression does not change and it left as-is.
+
+Can only be used in **stages**, **jobs**, and **steps**.
+
+Can only be used as a value, not a keyword.
+
+##### Template expression syntax
+
+`${{ variables.var }}`
+
+Processed at compile time, before runtime starts.
+
+##### Runtime expression syntax
+
+`$[variables.var]`
+
+Processed during runtime.
+
+Intended to be used with conditions and expressions.
+
+Must take up the entire right side of a definition.
+
+#### Secrets
+
+Set in **Variables** pipeline settings UI.
+
+Scoped to the pipeline
+
+- available on the agent for tasks and scripts to use.
+
+Secrets are not mapped automatically to env variables and have to be done explicitly
+
+#### Referencing output variables
+
+To reference a variable from a:
+
+- different task within the same job: use `TASK.VARIABLE`.
+- task from a different job: use `dependencies.JOB.outputs['TASK.VARIABLE']`.
+
+#### List variables
+
+```bash
+# by id
+az pipelines variables list --pipeline-id ID
+
+# by name
+az pipelines variables list --pipeline-name NAME
+
+# by project name or id
+az pipelines variables list --project NAME_OR_ID
+```
+
+Add `--output-table` to list the variables in table format
+
+#### Set variables in scripts
+
+##### job-scoped
+
+Use the `task.setvariable` logging command.
+
+Available as environment variables in to subsequent jobs and steps (but not the step in which the variable is defined) .
+
+Available with macro syntax in subsequent jobs.
+
+Use `issecret` to set the variable as a secret.
+
+##### Configure settable variables for setps
+
+Use `settableVariables` to `none` to disable setting variables, or specify specific variables that are allowed to be set.
+
+#### Queue-time variables
+
+Can be set in 1 of 2 ways. The variable must not be set in the YAML, or the YAML value will take precedence.
+
+##### Option 1:
+
+define a variable in the UI and check the option _Let users override this value when running this pipeline_
+
+- should only be used for secrets
+
+##### Option 2:
+
+Use **runtime parameters**
+
+- preferred way if variable is not secret
+
+#### Variable expansion
+
+When you set a variable with the same name in multiple scopes, the following precedence applies (highest precedence first).
+
+1. Job level variable set in the YAML file
+2. Stage level variable set in the YAML file
+3. Pipeline level variable set in the YAML file
+4. Variable set at queue time
+5. Pipeline variable set in Pipeline settings UI
+
+Variables are expanded when the run is started, and again at the beginning of each step.
+
+Variables referenced using macro syntax (`$( )`) are expanded recursively.
+
+### Secure files
+
+### Logging commands
+
+see: [Loggin commands](https://learn.microsoft.com/en-us/azure/devops/pipelines/scripts/logging-commands?view=azure-devops&tabs=bash)
