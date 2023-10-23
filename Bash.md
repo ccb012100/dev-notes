@@ -400,7 +400,7 @@ For example, typing `Ctrl+v Alt+l` will output `^[l`
 
 `echo -n FOO`
 
-## test output destination
+## testing/determing the destination of outputs
 
 ### terminal
 
