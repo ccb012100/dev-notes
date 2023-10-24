@@ -545,3 +545,39 @@ git shortlog -se # or git shortlog -s --email
 ```bash
 git show COMMIT_SHA:path/to/file
 ```
+
+## Worktrees
+
+Worktrees are tracking in a project's `.git/worktrees` directory
+
+### Create a worktree
+
+```bash
+# Create a new branch BRANCH and check it out
+# into a worktree named NAME in the dir PATH
+git worktree add -b NAME PATH BRANCH
+
+
+# Create a worktree from an existing branch BRANCH
+# and place it in the dir PATH
+git worktree add PATH BRANCH
+```
+
+### Move a worktree
+
+```bash
+# move a worktree named NAME to PATH
+git worktree move NAME PATH
+```
+
+### List worktrees
+
+```bash
+git worktree list
+```
+
+### Delete a worktree
+
+```bash
+git worktree remove NAME
+```
