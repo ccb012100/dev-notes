@@ -4,16 +4,16 @@
   - [Azure DevOps documentation](#azure-devops-documentation)
   - [Pipeline features](#pipeline-features)
   - [Key Concepts](#key-concepts)
-    - [Releases](#releases)
-    - [Runs](#runs)
-    - [Steps](#steps)
-    - [Triggers](#triggers)
-    - [Library](#library)
+    - [**Azure Resource Manager** aka `ARM`](#azure-resource-manager-aka-arm)
+    - [`Bicep`](#bicep)
   - [GitHub integration](#github-integration)
     - [Checkout path](#checkout-path)
     - [Sync tags](#sync-tags)
     - [Shallow fetch](#shallow-fetch)
     - [Predefined variables](#predefined-variables)
+  - [Runs](#runs)
+  - [Steps](#steps)
+  - [Triggers](#triggers)
   - [Label sources](#label-sources)
   - [Templates](#templates)
     - [Includes templates](#includes-templates)
@@ -56,6 +56,31 @@
   - [Deployment Slots](#deployment-slots)
   - [Queuing policies](#queuing-policies)
   - [Libraries](#libraries)
+    - [Variable groups](#variable-groups)
+      - [Variable scope](#variable-scope)
+      - [User-defined variables](#user-defined-variables)
+      - [User-defined multi-line variables](#user-defined-multi-line-variables)
+      - [System variables](#system-variables)
+      - [Environment variables](#environment-variables-1)
+      - [Runtime parameters](#runtime-parameters)
+        - [Formatting](#formatting)
+      - [Naming restrictions](#naming-restrictions)
+      - [Syntax](#syntax)
+        - [Macro syntax variables](#macro-syntax-variables)
+        - [Template expression syntax](#template-expression-syntax)
+        - [Runtime expression syntax](#runtime-expression-syntax)
+      - [Secrets](#secrets)
+      - [Referencing output variables](#referencing-output-variables)
+      - [List variables](#list-variables)
+      - [Set variables in scripts](#set-variables-in-scripts)
+        - [job-scoped](#job-scoped)
+        - [Configure settable variables for setps](#configure-settable-variables-for-setps)
+      - [Queue-time variables](#queue-time-variables)
+        - [Option 1:](#option-1)
+        - [Option 2:](#option-2)
+      - [Variable expansion](#variable-expansion)
+    - [Secure files](#secure-files)
+    - [Logging commands](#logging-commands)
 
 ## Azure DevOps documentation
 
@@ -95,50 +120,14 @@
 - Script
 - Stage
 
----
+### **Azure Resource Manager** aka `ARM`
 
-### Releases
+- the deployment and management service for [[Azure]]
 
-Releases can be created 3 ways:
-
-1. manually
-2. deployment trigger
-3. the REST API
-
-### Runs
-
-Runs represent 1 execution of a **pipeline**.
-
-During a run, Azure Pipelines will first process the pipeline and then send the run to 1 or more agents. Each agent will
-run jobs.
-
-### Steps
-
-A step is the smallest building block of a pipeline.
-
-Can be either a task or a script.
-
-### Triggers
-
-2 kinds:
-
-1. Build trigger
-2. Release trigger
-
-### Library
-
-Includes **secure files** and **variable groups**
-
----
-
-`Azure Resource Manager` aka `ARM`
-
-- the deployment and management service for Azure
-
-`Bicep`
+### `Bicep`
 
 - DSL that uses declarative syntax to deploy Azure resources
-- an abstraction over ARM templates
+- an abstraction over `ARM` templates
 - [What-if](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/deploy-what-if?tabs=azure-powershell%2CCLI)
   operation
   - preview changes in a Bicep file
@@ -167,6 +156,26 @@ Azure Pipelines don't recognize the identity of a user making an update in GitHu
 - `Build.RequestedFor`
 - `Build.RequestedForId`
 - `Build.RequestedForEmail`
+
+## Runs
+
+Runs represent 1 execution of a **pipeline**.
+
+During a run, Azure Pipelines will first process the pipeline and then send the run to 1 or more agents. Each agent will
+run jobs.
+
+## Steps
+
+A step is the smallest building block of a pipeline.
+
+Can be either a task or a script.
+
+## Triggers
+
+2 kinds:
+
+1. Build trigger
+2. Release trigger
 
 ## Label sources
 
