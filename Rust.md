@@ -6,11 +6,12 @@
 
 `#` - only to item following attribute
 
-> _Inner attributes_, written with a bang (`!`) after the hash (`#`), apply to the item that the attribute is declared within. _Outer attributes_, written without the bang after the hash, apply to the thing that follows the attribute.
+> _Inner attributes_, written with a bang (`!`) after the hash (`#`), apply to the item that the attribute is declared
+> within. _Outer attributes_, written without the bang after the hash, apply to the thing that follows the attribute.
 
 (_source_: <https://doc.rust-lang.org/reference/attributes.html>)
 
-### Suppress Compiler warnings
+## Suppress Compiler warnings
 
 ```rust
 #![allow(unused_variables)]
@@ -36,3 +37,17 @@ Functions that returns the `never` type (`-> !`) are called `diverging functions
 ## `std::unimplemented`
 
 Use the `unimplemented` macro to panic with a message of "not implemented".
+
+## Configuration conditional checks
+
+### Conditional evaluation
+
+`cfg!(...)` macro
+
+- code evaluates at runtime to `true` or `false`
+
+### Conditional compilation
+
+`#[cfg(...)]` attribute
+
+- removes code during compilation
