@@ -12,7 +12,9 @@
     - [Shallow fetch](#shallow-fetch)
     - [Predefined variables](#predefined-variables)
   - [Runs](#runs)
+    - [Job access tokens](#job-access-tokens)
   - [Steps](#steps)
+    - [`Succeeded with issues` vs `failed`](#succeeded-with-issues-vs-failed)
   - [Triggers](#triggers)
   - [Label sources](#label-sources)
   - [Templates](#templates)
@@ -81,6 +83,16 @@
       - [Variable expansion](#variable-expansion)
     - [Secure files](#secure-files)
     - [Logging commands](#logging-commands)
+  - [Release approvals, checks \& Gates](#release-approvals-checks--gates)
+    - [Approvals \& checks](#approvals--checks)
+      - [Azure Function checks](#azure-function-checks)
+      - [REST API checks](#rest-api-checks)
+      - [Query Azure Monitor Alerts](#query-azure-monitor-alerts)
+      - [Evaluate artifact](#evaluate-artifact)
+      - [Exclusive lock](#exclusive-lock)
+    - [Gates](#gates)
+      - [Common use cases](#common-use-cases)
+  - [Pipeline files](#pipeline-files)
 
 ## Azure DevOps documentation
 
@@ -164,11 +176,26 @@ Runs represent 1 execution of a **pipeline**.
 During a run, Azure Pipelines will first process the pipeline and then send the run to 1 or more agents. Each agent will
 run jobs.
 
+see: [Pipeline run sequence](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/runs?view=azure-devops)
+
+### Job access tokens
+
+Used by jobs to access resources in **Azure DevOps**
+
 ## Steps
 
 A step is the smallest building block of a pipeline.
 
 Can be either a task or a script.
+
+Each step runs in its own process, so the environment (and env variables) is not preserved between steps
+
+### `Succeeded with issues` vs `failed`
+
+If the step reports errors and/or warnings, it will be marked `succeeded with issues`.
+
+If it explicitly reports failure (using a `##vso` command) or ends the script with a non-zero exit code, the step is
+marked `failed`.
 
 ## Triggers
 
@@ -544,6 +571,32 @@ System and user-defined variables are also injected into the pipeline as environ
 
 #### Runtime parameters
 
+Defined in the `parameters` section at the beginning of a YAML and used to:
+
+- Supply different values to scripts and tasks at runtime
+- Control parameter types, allowed ranges, and defaults
+- Dynamically select jobs and stages with template expressions
+
+Can be specified in templates and in the pipeline.
+
+Have data types and can be restricted to a subset of values.
+
+Only available at template parsing time.
+
+- Expanded just before the pipeline runs.
+- Values surrounded `${{ }}` are replaced with parameter values.
+
+Can't be optional.
+
+- default value must be assigned in the YAML or when the pipeline is run
+
+`templateContext` can be used to pass extra properties to stages, steps, and jobs that are used as parameters in a
+template.
+
+Use the `length()` expression to check whether an object parameter has no value (i.e. `${{ if eq(length(parameters.foo), 0) }}:`)
+
+[Data types](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/runtime-parameters?view=azure-devops&tabs=script#parameter-data-types)
+
 ##### Formatting
 
 - UNIX ([[macOS]] and [[Linux]]), format `$NAME`
@@ -690,3 +743,71 @@ Variables referenced using macro syntax (`$( )`) are expanded recursively.
 ### Logging commands
 
 see: [Loggin commands](https://learn.microsoft.com/en-us/azure/devops/pipelines/scripts/logging-commands?view=azure-devops&tabs=bash)
+
+## Release approvals, checks & Gates
+
+Pre-deployment and Post-deployment conditions can be set on each stage in a release pipeline.
+
+### Approvals & checks
+
+Approvals and other checks aren't defined in the YAML file.
+
+- Users modifying the pipeline YAML file can't modify the checks performed before start of a stage.
+- Administrators of resources manage checks using the web interface of **Azure Pipelines**.
+
+Checks can be configured on environments, service connections, repositories, variable groups, secure files, and agent pools.
+
+#### Azure Function checks
+
+Can author custom checks using **Azure functions**
+
+By default, some pipeline run information is passed to the Azure functions in the Headers of the REST call made by Azure
+Pipelines:
+
+- `"PlanUrl": "$(system.CollectionUri)"`
+- `"ProjectId": "$(system.TeamProjectId)"`
+- `"HubName": "$(system.HostType)"`
+- `"PlanId": "$(system.PlanId)"`
+- `"JobId": "$(system.JobId)"`
+- `"TaskInstanceId": "$(system.TaskInstanceId)"`
+- `"AuthToken": "$(system.AccessToken)"`
+
+#### REST API checks
+
+Make calls to a REST API
+
+#### Query Azure Monitor Alerts
+
+Check **Azure Monitor** for alerts after deployment.
+
+#### Evaluate artifact
+
+Evaluate artifacts against custom policies.
+
+**NOTE**: Currently only works with container image artifacts.
+
+#### Exclusive lock
+
+Allows only a single run from the pipeline to proceed.
+
+Locks are held by a stage; when it completes, then another stage can proceed.
+
+`lockBehavior` can be either `runLatest` (default if `lockBehavior` isn't set) or `sequential`
+
+### Gates
+
+#### Common use cases
+
+- Incident management
+- Seek approval
+- Quality validation
+  - query pipeline metrics
+    - e.g. pass rate, code coverage
+- Security scan
+- User experience relative to baseline
+- Change management
+- Infrastructure health
+
+## Pipeline files
+
+preview the fully parsed YAML by going to a Pipeline's page and choosing **_More actions_ > _Download full YAML_**
