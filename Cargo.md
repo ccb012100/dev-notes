@@ -3,8 +3,8 @@
 [[Rust]] package manager
 
 - [Cargo](#cargo)
-  - [Commands](#commands)
   - [`cargo new`](#cargo-new)
+  - [`cargo add` vs. `cargo install`](#cargo-add-vs-cargo-install)
   - [Running in \[\[Windows\]\]](#running-in-windows)
     - [link.exe error](#linkexe-error)
   - [`cargo-edit`](#cargo-edit)
@@ -19,15 +19,10 @@
 
 **How to deal with large Cargo workspaces in Rust**: <https://kerkour.com/blog/rust-large-cargo-workspace/>
 
-## Commands
-
-- `new` - create a skeleton project in a new directory.
-- `init` - create a skeleton project in the current directory.
-- `build` - downloads dependencies and compiles the code into an executable.
-- `run` - executes `cargo build` and then runs the executable.
-- `doc` - builds HTML documentation for every dependency in the project.
 
 ## `cargo new`
+
+Create a new cargo package (use `cargo init` to create the package in an existing directory)
 
 ```bash
 # new package
@@ -40,6 +35,12 @@ cargo new hello_world --vcs none
 cargo new hello_world --lib
 
 ```
+
+## `cargo add` vs. `cargo install`
+
+Use `add`/`remove` to add dependencies to your project's manifest.
+
+Use `install`/`uninstall` to install Rust binaries to your system (`$HOME/.cargo/bin`)
 
 ## Running in [[Windows]]
 
