@@ -51,3 +51,21 @@ Use the `unimplemented` macro to panic with a message of "not implemented".
 `#[cfg(...)]` attribute
 
 - removes code during compilation
+
+### Concat 2 strings
+
+#### 2 `&str`
+
+```rs
+let s3: String = format!("{}{}", s1, s2)
+
+```
+
+#### `String` & `&str`
+
+```rs
+let s3: String = s1 + s2
+
+// can also use format! macro
+let s3: String = format!("{}{}", s1, s2)
+```
