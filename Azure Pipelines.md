@@ -14,6 +14,7 @@
   - [Runs](#runs)
     - [Job access tokens](#job-access-tokens)
   - [Steps](#steps)
+    - [Informational Run](#informational-run)
     - [`Succeeded with issues` vs `failed`](#succeeded-with-issues-vs-failed)
   - [Triggers](#triggers)
   - [Label sources](#label-sources)
@@ -93,6 +94,17 @@
     - [Gates](#gates)
       - [Common use cases](#common-use-cases)
   - [Pipeline files](#pipeline-files)
+  - [Pipeline reports](#pipeline-reports)
+    - [Widgets](#widgets)
+      - [**Test Results Trend (Advanced)** widget](#test-results-trend-advanced-widget)
+  - [Default branch](#default-branch)
+  - [\[\[dotnet\]\] integration](#dotnet-integration)
+    - [\[\[Windows\]\]](#windows)
+    - [\[\[Linux\]\]/\[\[macOS\]\]](#linuxmacos)
+  - [Pipeline Artifacts](#pipeline-artifacts)
+  - [Git](#git)
+    - [Avoid triggering a CI build on pushes](#avoid-triggering-a-ci-build-on-pushes)
+  - [Caching](#caching)
 
 ## Azure DevOps documentation
 
@@ -190,6 +202,10 @@ Can be either a task or a script.
 
 Each step runs in its own process, so the environment (and env variables) is not preserved between steps
 
+### Informational Run
+
+Created by the system when it fails to retrieve the source code.
+
 ### `Succeeded with issues` vs `failed`
 
 If the step reports errors and/or warnings, it will be marked `succeeded with issues`.
@@ -223,6 +239,11 @@ template.
 ### Includes templates
 
 For reusable content; used to insert content into another file.
+
+Scope is either `collection` or `project`.
+
+- there are 2 corresponding built-in identities
+  - the collection-scoped identity is used by default
 
 ### Extends templates
 
@@ -811,3 +832,65 @@ Locks are held by a stage; when it completes, then another stage can proceed.
 ## Pipeline files
 
 preview the fully parsed YAML by going to a Pipeline's page and choosing **_More actions_ > _Download full YAML_**
+
+## Pipeline reports
+
+Reachable from the **Analytics" tab of a pipeline.
+
+### Widgets
+
+Can be added to team dashboard
+
+#### **Test Results Trend (Advanced)** widget
+
+Shows a trend of your test results for either build or release pipelines.
+
+Daily counts of tests, pass rates, test duration.
+
+## Default branch
+
+The pipeline's default branch defines the pipeline version used for:
+
+- manual builds
+- scheduled builds
+- retention policies
+- pipeline resource triggers
+
+## [[dotnet]] integration
+
+### [[Windows]]
+
+Use built-in coverage data collector
+
+### [[Linux]]/[[macOS]]
+
+Use [Coverlet](https://github.com/coverlet-coverage/coverlet)
+
+## Pipeline Artifacts
+
+Used to store and manage packages.
+
+Artifacts can be published at any stage of a build pipeline (but not _release_ pipelines)
+
+## Git
+
+Scripts can run [[Git]] commands.
+
+### Avoid triggering a CI build on pushes
+
+In the commit message, or description, add any of the following:
+
+- `[skip ci]` or `[ci skip]`
+- `skip-checks: true` `or skip-checks:true`
+- `[skip azurepipelines]` or `[azurepipelines skip]`
+- `[skip azpipelines]` or `[azpipelines skip]`
+- `[skip azp]` or `[azp skip]`
+- `***NO_CI***`
+
+## Caching
+
+Use to improve build time by reusing files from previous runs.
+
+Caches are immutable.
+
+If the key contains a `.`, wrap it in double quotes so that it is not interpreted as a file path.
