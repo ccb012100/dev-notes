@@ -9,12 +9,14 @@
     - [change author for all matching commits](#change-author-for-all-matching-commits)
     - [amend commit to current time](#amend-commit-to-current-time)
     - [Sign commits with SSH](#sign-commits-with-ssh)
+    - [Unstage all files](#unstage-all-files)
   - [Config](#config)
     - [Set git to rebase on pull:](#set-git-to-rebase-on-pull)
     - [Set fast forward as default](#set-fast-forward-as-default)
     - [Get email](#get-email)
     - [Get username](#get-username)
     - [`Include` directive](#include-directive)
+    - [Relative path to diff/merge tool](#relative-path-to-diffmerge-tool)
   - [Get repository name](#get-repository-name)
   - [`$GIT_DIR`](#git_dir)
   - [Sync fork with original repository](#sync-fork-with-original-repository)
@@ -46,6 +48,7 @@
     - [Checkout specific files from a branch](#checkout-specific-files-from-a-branch)
       - [Checkout to staging area](#checkout-to-staging-area)
       - [Checkout to working area](#checkout-to-working-area)
+    - [Checkout changes from one branch to another branch](#checkout-changes-from-one-branch-to-another-branch)
   - [Change CRLF line endings to LF](#change-crlf-line-endings-to-lf)
   - [Executable (`+x`) file](#executable-x-file)
     - [Stage file as executable](#stage-file-as-executable)
@@ -63,6 +66,11 @@
       - [personal](#personal)
   - [List all committers to a repository](#list-all-committers-to-a-repository)
   - [See specific version of a file](#see-specific-version-of-a-file)
+  - [Worktrees](#worktrees)
+    - [Create a worktree](#create-a-worktree)
+    - [Move a worktree](#move-a-worktree)
+    - [List worktrees](#list-worktrees)
+    - [Delete a worktree](#delete-a-worktree)
 
 ## Commits
 
@@ -111,6 +119,16 @@ GIT_COMMITTER_DATE="$(date)" git commit --amend --no-edit --date "$(date)"
 ### Sign commits with SSH
 
 <https://calebhearth.com/sign-git-with-ssh>
+
+### Unstage all files
+
+`git restore --staged` takes a directory parameter
+
+```bash
+git restore --staged :/ # uses 'top magic' according to the docs
+
+git restore --staged .  # has to be run from the repo root dir to get everything
+```
 
 ## Config
 
@@ -466,7 +484,7 @@ code: `github.com/jdoe/`
     IdentityFile ~/.ssh/personal_private_key
     IdentitiesOnly yes
     AddKeysToAgent yes
-    
+
   # work github account
   Host github-company
     HostName github.com
