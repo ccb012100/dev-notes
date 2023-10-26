@@ -13,6 +13,7 @@
     - [Predefined variables](#predefined-variables)
   - [Runs](#runs)
     - [Job access tokens](#job-access-tokens)
+    - [Retention leases](#retention-leases)
   - [Steps](#steps)
     - [Informational Run](#informational-run)
     - [`Succeeded with issues` vs `failed`](#succeeded-with-issues-vs-failed)
@@ -105,6 +106,10 @@
   - [Git](#git)
     - [Avoid triggering a CI build on pushes](#avoid-triggering-a-ci-build-on-pushes)
   - [Caching](#caching)
+    - [Conditioning on cache restoration](#conditioning-on-cache-restoration)
+  - [Tests](#tests)
+    - [Test Impact Analysis (TIA)](#test-impact-analysis-tia)
+    - [Flaky tests](#flaky-tests)
 
 ## Azure DevOps documentation
 
@@ -193,6 +198,10 @@ see: [Pipeline run sequence](https://learn.microsoft.com/en-us/azure/devops/pipe
 ### Job access tokens
 
 Used by jobs to access resources in **Azure DevOps**
+
+### Retention leases
+
+Can change the duration that runs retained bofore being deleted.
 
 ## Steps
 
@@ -894,3 +903,25 @@ Use to improve build time by reusing files from previous runs.
 Caches are immutable.
 
 If the key contains a `.`, wrap it in double quotes so that it is not interpreted as a file path.
+
+Caches can't be cleared, but expire after seven (`7`) days of no activity.
+
+Cache is created after the last step of the pipeline.
+
+### Conditioning on cache restoration
+
+Can conditionally run steps using the `cacheHitVar` task input.
+
+Cache hit outcome will be one of `true`, `inexact`, or `false`.
+
+## Tests
+
+### Test Impact Analysis (TIA)
+
+Only runs the subset of tests that cover the code changed in the commits.
+
+Requires some manual validation to make sure it's configured and working correctly with your codebase.
+
+### Flaky tests
+
+In **Project settings**, under the **Pipelines** section, click the **Test management** tab and toggle the _Flaky test detection_ setting.
