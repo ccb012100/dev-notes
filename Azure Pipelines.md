@@ -11,6 +11,9 @@
     - [Sync tags](#sync-tags)
     - [Shallow fetch](#shallow-fetch)
     - [Predefined variables](#predefined-variables)
+  - [Environment](#environment)
+    - [User permissions](#user-permissions)
+  - [Virtual Machines (VMs)](#virtual-machines-vms)
   - [Runs](#runs)
     - [Job access tokens](#job-access-tokens)
     - [Retention leases](#retention-leases)
@@ -100,20 +103,29 @@
       - [**Test Results Trend (Advanced)** widget](#test-results-trend-advanced-widget)
   - [Default branch](#default-branch)
   - [\[\[dotnet\]\] integration](#dotnet-integration)
-    - [\[\[Windows\]\]](#windows)
-    - [\[\[Linux\]\]/\[\[macOS\]\]](#linuxmacos)
+    - [code coverage](#code-coverage)
+      - [\[\[Windows\]\]](#windows)
+      - [\[\[Linux\]\]/\[\[macOS\]\]](#linuxmacos)
+      - [diff coverage](#diff-coverage)
   - [Pipeline Artifacts](#pipeline-artifacts)
+    - [Release artifacts](#release-artifacts)
+    - [Debugger symbols](#debugger-symbols)
   - [Git](#git)
+    - [Branch policy](#branch-policy)
     - [Avoid triggering a CI build on pushes](#avoid-triggering-a-ci-build-on-pushes)
   - [Caching](#caching)
     - [Conditioning on cache restoration](#conditioning-on-cache-restoration)
   - [Tests](#tests)
     - [Test Impact Analysis (TIA)](#test-impact-analysis-tia)
     - [Flaky tests](#flaky-tests)
+  - [Resources](#resources)
+  - [Logging commands](#logging-commands-1)
 
 ## Azure DevOps documentation
 
-<https://learn.microsoft.com/en-us/azure/devops/pipelines>
+[Pipelines](https://learn.microsoft.com/en-us/azure/devops/pipelines)
+
+[Task Reference](https://learn.microsoft.com/en-us/azure/devops/pipelines/tasks/reference/?view=azure-pipelines&viewFallbackFrom=azure-devops)
 
 ## Pipeline features
 
@@ -185,6 +197,33 @@ Azure Pipelines don't recognize the identity of a user making an update in GitHu
 - `Build.RequestedFor`
 - `Build.RequestedForId`
 - `Build.RequestedForEmail`
+
+## Environment
+
+An **environment** is a collection of resources that serves as a deployment target (e.g. `Dev`, `Test`, `QA`, `Staging`,
+`Production`).
+
+If the user has the `Creator` role, the environment is created if it doesn't already exist.
+
+2 target resource types for deployments
+
+- Virtual Machines
+- Containers
+
+### User permissions
+
+Split into 4 roles:
+
+- Creator
+- Reader
+- User
+- Administrator
+
+## Virtual Machines (VMs)
+
+`resourceType: virtualMachine`
+
+**Tags** can be used to target a set of specific VMs in an environment.
 
 ## Runs
 
@@ -867,13 +906,24 @@ The pipeline's default branch defines the pipeline version used for:
 
 ## [[dotnet]] integration
 
-### [[Windows]]
+### code coverage
+
+Only supports the [[Visual Studio]] `.coverage` format.
+
+#### [[Windows]]
 
 Use built-in coverage data collector
 
-### [[Linux]]/[[macOS]]
+#### [[Linux]]/[[macOS]]
 
 Use [Coverlet](https://github.com/coverlet-coverage/coverlet)
+
+#### diff coverage
+
+Good for PR runs.
+
+By default, does not block PRs from being merged; you must add a branch policy to prevent merges if the coverage status
+check fails.
 
 ## Pipeline Artifacts
 
@@ -881,9 +931,30 @@ Used to store and manage packages.
 
 Artifacts can be published at any stage of a build pipeline (but not _release_ pipelines)
 
+Artifacts are stored on a [[Windows]] filesystem, so permissions need to be restored after downloading the artifact on
+[[Linux]].
+
+By default, build artifacts are downloaded to the agent running the pipeline.
+
+### Release artifacts
+
+By defaults, releases run with a _collection level_ job authorization.
+
+### Debugger symbols
+
+Symbols can be published to **Azure Artifacts** symbol server using the _Index sources and publish symbols_ task.
+
+### Artifact policy checks
+
+Validate artifacts before they're deployed.
+
 ## Git
 
 Scripts can run [[Git]] commands.
+
+### Branch policy
+
+You must use an ADO Git repo _and_ set up a pull request status server to enforce branch policies on PRs.
 
 ### Avoid triggering a CI build on pushes
 
@@ -924,4 +995,64 @@ Requires some manual validation to make sure it's configured and working correct
 
 ### Flaky tests
 
-In **Project settings**, under the **Pipelines** section, click the **Test management** tab and toggle the _Flaky test detection_ setting.
+In **Project settings**, under the **Pipelines** section, click the **Test management** tab and toggle the _Flaky test
+detection_ setting.
+
+## Resources
+
+A **resource** is anything used by a pipeline that lives outside the pipeline.
+
+## Logging commands
+
+Method via which tasks and scripts communicate with the agent.
+
+### Task commands
+
+- `AddAttachment`
+- `Complete`
+- `LogDetail`
+- `LogIssue`
+- `PrependPath`
+- `SetEndpoint`
+- `SetProgress`
+- `SetVariable`
+- `SetSecret`
+- `UploadFile`
+- `UploadSummary`
+
+### Artifact commands
+
+- `Associate`
+- `Upload`
+
+### Build commands
+
+- `AddBuildTag`
+- `UpdateBuildNumber`
+- `UploadLog`
+
+### Release commands
+
+- `UpdateReleaseName`
+
+### Formatting commands
+
+Messages to the log formatter in Azure Pipelines.
+
+Can be used in either [[Bash]] or [[PowerShell]] tasks.
+
+#### List of commands
+
+- `##[group]Beginning of a group`
+- `##[warning]Warning message`
+- `##[error]Error message`
+- `##[section]Start of a section`
+- `##[debug]Debug text`
+- `##[command]Command-line being run`
+- `##[endgroup]`
+
+### Syntax
+
+General format: `##vso[area.action property1=value;property2=value;...]message`
+
+Alternate format used by a few commands: `##[command]message`
