@@ -11,15 +11,19 @@
 
 (_source_: <https://doc.rust-lang.org/reference/attributes.html>)
 
-## Suppress Compiler warnings
+## Suppress (hide) Compiler warnings
 
-```rust
+Use the `allow` attribute:
+
+```rs
 #![allow(unused_variables)]
 
-#[allow(dead_code)]
+#![allow(dead_code)]
 
-#[allow(unused_assignments)]
+#![allow(unused_assignments)]
 ```
+
+For unused variables, you can also prefix the variable name with an underscore (`_`).
 
 ## `never` type
 
