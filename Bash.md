@@ -7,6 +7,9 @@
     - [arithmetic binary operators](#arithmetic-binary-operators)
     - [Check existence of files/directories](#check-existence-of-filesdirectories)
     - [Check if variable is set](#check-if-variable-is-set)
+    - [Check if variable is an integer](#check-if-variable-is-an-integer)
+      - [Unsigned integer](#unsigned-integer)
+      - [Signed integer](#signed-integer)
   - [arrays](#arrays)
     - [print all array items](#print-all-array-items)
     - [array length](#array-length)
@@ -37,7 +40,7 @@
   - [`bind`](#bind)
     - [quoted insert](#quoted-insert)
   - [`echo` without newline at the end](#echo-without-newline-at-the-end)
-  - [test output destination](#test-output-destination)
+  - [testing/determing the destination of outputs](#testingdeterming-the-destination-of-outputs)
     - [terminal](#terminal)
 
 ## Conditional expressions
@@ -104,6 +107,32 @@ To test in scripts containing `set -o` (which will exit if referencing an unset 
 if [[ "${FOO:-}" ]]; then
   echo "FOO is set"
 fi
+```
+
+### Check if variable is an integer
+
+_source_: <https://stackoverflow.com/questions/806906/how-do-i-test-if-a-variable-is-a-number-in-bash>
+
+#### Unsigned integer
+
+```bash
+case ${foo#[-+]} in
+  ''|*[!0-9]*)
+    echo '$foo is an integer'
+  ;;
+esac;
+
+# or using regex (much slower than case): 
+[[ $foo =~ ^[0-9]+$ ]] && '$foo is an integer'
+```
+
+#### Signed integer
+
+```bash
+[[ $foo == ?(-)+([0-9]) ]] && echo "$foo is an integer"
+
+# or using a POSIX character class:
+[[ $foo == ?(-)+([[:digit:]]) ]] && echo "$foo is an integer"
 ```
 
 ## arrays
