@@ -82,6 +82,8 @@ gJ            " join lines without inserting a space
 
 gv            " reselect previous visual area
 
+ggVG          " select all
+
 ~             " change casing
 gU{motion}    " convert text in direction moved to uppercase
 gu{motion}    " convert text in direction moved to lowercase
@@ -103,6 +105,7 @@ CTRL-R        " redo
 :g/regexp/d   " delete all lines that match regexp
 :v/regexp/d   " delete all lines that do NOT match regexp
 
+:%d           " delete all lines
 ```
 
 ### Scroll screen, centered on cursor
