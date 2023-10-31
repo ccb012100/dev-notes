@@ -1,5 +1,18 @@
 # Rust
 
+- [Rust](#rust)
+  - [Attributes](#attributes)
+  - [Suppress (hide) Compiler warnings](#suppress-hide-compiler-warnings)
+  - [`never` type](#never-type)
+  - [`std::unimplemented`](#stdunimplemented)
+  - [Configuration conditional checks](#configuration-conditional-checks)
+    - [Conditional evaluation](#conditional-evaluation)
+    - [Conditional compilation](#conditional-compilation)
+    - [Concat 2 strings](#concat-2-strings)
+      - [2 `&str`](#2-str)
+      - [`String` \& `&str`](#string--str)
+  - [`fmt::Debug` trait](#fmtdebug-trait)
+
 ## Attributes
 
 `#!` - global to item the attribute is within
@@ -73,3 +86,9 @@ let s3: String = s1 + s2
 // can also use format! macro
 let s3: String = format!("{}{}", s1, s2)
 ```
+
+## `fmt::Debug` trait
+
+Add `#[derive(Debug)]` to a type to be able to make the type printable in a format string.
+
+Use `{:?}` to use the type in a format string. Use `{:#?}` to pretty-print the type.
