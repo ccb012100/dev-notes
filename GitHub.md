@@ -87,3 +87,44 @@ codespace-dotfiles main ❯ git ls-files --stage
 100755 a6e3fb981db6578fa3418467dcd709ee8466ded9 0 install.sh
 # 755 means it's executable
 ```
+
+## GitHub Actions
+
+Can be defined in:
+
+- Directly in the repository
+- In an open sourced public repo
+- [**GitHub Marketplace**](https://github.com/marketplace?type=actions)
+
+### Key Concepts
+
+- Action
+- Artifact
+- Event
+- Job
+- Runner
+- Step
+- Virtual Environment
+- Workflow
+
+### Actions
+
+### Workflows
+
+Workflows contain 1 or more actions.
+
+Must be in the `.github/workflows` directory of a repo.
+
+### Jobs
+
+Task composed of **Steps**.
+
+Can run parallel or sequentially if dependendent on a previous job.
+
+For GitHub-hosted **runners**, each job in a **workflow** runs in a fresh instance of the runner's Virtual Environment.
+
+### Steps
+
+Set of tasks performed by a **job**.
+
+Steps can run **commands** or **actions**.
