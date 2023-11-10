@@ -12,6 +12,8 @@
       - [2 `&str`](#2-str)
       - [`String` \& `&str`](#string--str)
   - [`fmt::Debug` trait](#fmtdebug-trait)
+  - [`Slice`s](#slices)
+    - [Syntax](#syntax)
 
 ## Attributes
 
@@ -92,3 +94,20 @@ let s3: String = format!("{}{}", s1, s2)
 Add `#[derive(Debug)]` to a type to be able to make the type printable in a format string.
 
 Use `{:?}` to use the type in a format string. Use `{:#?}` to pretty-print the type.
+
+## `Slice`s
+
+Type `&[T]`
+
+### Syntax
+
+The syntax `[a..b]` is _inclusive_ for the first index, and _exclusive_ for the second.
+
+e.g. `&x[0..2]`  would be elements `x[0]` and `x[1]`
+
+| slice syntax | equivalent slice syntax | elements |
+| - | - | - |
+| `&x[a..b]`  |                  | `x[a]` through `x[b-1]`     |
+| `&x[a..]`   | `&[a..x.len()]`  | `x[a]` through `x[len(x)-1]`|
+| `&x[..b]`   | `&[0..b]`        | `x[0]` through `x[b-1]`     |
+| `&x[..]`    | `&[0..x.len()]`  | `x[0]` through `x[len(x)-1]`|
