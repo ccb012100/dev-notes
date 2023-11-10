@@ -4,30 +4,33 @@
 
 [Documentation](https://mermaid.js.org/intro/)
 
+## Empty nodes
+
+Use a space character as the label to make the node empty.
+
 ## GitHub
 
 Supported in [[GitHub]] documents.
 
 ### Caveats
 
-Multiline node labels _must_ be wrapped in double quotes (`"`).
+- Markdown strings are not supported and will just be treated as string literals
+- HTML escape codes (e.g. `&nbsp;`) are not supported and will just be treated as string literals
+- Multiline node labels _must_ be wrapped in double quotes (`"`):
 
-```mermaid
----
-title: Example
----
-%%{init: {"flowchart": {"htmlLabels": false}} }%%
-graph TD
-    subgraph VALID
-        v1 --> v2("one
-        two
-        three")
-    end
+    ```plaintext
+    x(this is
+    invalid)
 
-    subgraph INVALID
-        i1 --> i2(one
-        two
-        three)
-    end
+    x("this is
+    valid")
+    ```
 
-```
+- A closing bracket must be on the same line as the end of the node label:
+
+    ```plaintext
+    x("valid")
+
+    x("invalid"
+    )
+    ```
