@@ -599,3 +599,9 @@ git worktree list
 ```bash
 git worktree remove NAME
 ```
+
+## Check if `core.untrackedCache` config is supported
+
+```bash
+git update-index --untracked-cache
+```
