@@ -46,6 +46,7 @@
   - [Plugin keybindings](#plugin-keybindings)
     - [EasyMotion](#easymotion)
     - [commentary.vim](#commentaryvim)
+  - [Buffers](#buffers)
 
 ## Exit
 
@@ -483,3 +484,34 @@ There are 2 clipboard registers:
   - as part of a `:global` invocation like with `:g/TODO/Commentary`
 
 `gcgc` uncomments a set of adjacent commented lines.
+
+## Buffers
+
+```vim
+" open buffer
+:badd FILENAME
+" open buffer in background
+:edit FILENAME " :e
+
+" list open buffers
+:ls
+:files
+:buffers
+
+" open all buffers in horizontal splits
+:ball
+
+" open all buffers in vertical splits
+:vertical ball
+
+" delete buffer
+:bdelete [ FILENAME | BUFFER_INDEX ] " :bd
+
+" switch to a buffer
+:buffer FILENAME
+:buffer N   " where N is the buffer index (the space before N is optional)
+:bnext      " :bn
+:bprevious  " :bp
+:bfirst     " :bf
+:blast      " :bl
+```
