@@ -20,6 +20,7 @@
 - Property-based testing
 - Relentless forward progress
 - Replaceability over reusability
+- [Replace `bool`s with timestamps](https://changelog.com/posts/you-might-as-well-timestamp-it)
 - Row polymorphism
 - Servant leadership
 - Strong opinions, loosely held
