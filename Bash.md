@@ -21,7 +21,8 @@
     - [Alias expansion](#alias-expansion)
   - [Fail and exit script on error](#fail-and-exit-script-on-error)
   - [Brace expansion](#brace-expansion)
-    - [Moving/renaming a file](#movingrenaming-a-file)
+  - [Shell parameter expansion](#shell-parameter-expansion)
+  - [Moving/renaming a file](#movingrenaming-a-file)
   - [Overwrite (clobber) file with redirected output](#overwrite-clobber-file-with-redirected-output)
   - [shebang](#shebang)
   - [dot command](#dot-command)
@@ -216,7 +217,22 @@ set -euo pipefail
 
 _see_: <https://www.howtogeek.com/725657/how-to-use-brace-expansion-in-linuxs-bash-shell/>
 
-### Moving/renaming a file
+## Shell parameter expansion
+
+| parameter | `foo` is unset | `foo` is null | `foo` is set |
+| - | - | - | - |
+| `${foo:-bar}`         | `$bar` | `$bar` | `$foo` |
+| `${foo-bar}`          | `$bar` | `$bar` | `$foo` |
+| `${foo:=bar}`         | sets `foo` to `$bar` | `foo=$bar` | `$foo` |
+| `${foo:?bar}`         | prints `$bar` to stderr | prints `$bar` to stderr | `$foo` |
+| `${foo:?val is null}` | prints `val is null` to stderr; exits non-interactive shell | prints `val is null` to stderr; exits non-interactive shell | `$foo` |
+| `${foo:?val is null}` | prints `val is null` to stderr | prints `val is null` to stderr | `$foo` |
+| `${foo:+bar}`         | _nothing_ | _nothing_ | `$bar` |
+| `${foo:+val is null}` | _nothing_ | _nothing_ | `val is null` |
+
+_source_: <https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html>
+
+## Moving/renaming a file
 
 Change file `foo.txt` to `bar.txt`
 
