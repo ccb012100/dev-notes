@@ -13,7 +13,7 @@
       - [`String` \& `&str`](#string--str)
   - [`fmt::Debug` trait](#fmtdebug-trait)
   - [`Slice`s](#slices)
-    - [Syntax](#syntax)
+  - [Syntax](#syntax)
 
 ## Attributes
 
@@ -99,7 +99,7 @@ Use `{:?}` to use the type in a format string. Use `{:#?}` to pretty-print the t
 
 Type `&[T]`
 
-### Syntax
+## Range Syntax
 
 The syntax `[a..b]` is _inclusive_ for the first index, and _exclusive_ for the second.
 
