@@ -18,6 +18,7 @@
 - Model-based testing
 - Preconditions, Invariants, Postconditions
 - Property-based testing
+- [Push Ifs Up and Fors Down](https://matklad.github.io/2023/11/15/push-ifs-up-and-fors-down.html)
 - Relentless forward progress
 - Replaceability over reusability
 - [Replace `bool`s with timestamps](https://changelog.com/posts/you-might-as-well-timestamp-it)
