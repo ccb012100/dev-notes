@@ -420,9 +420,9 @@ git stash push -u -- FILE
 
 ## Hooks
 
-The default path for the hooks directory is `$GIT_DIR/hooks`, but this can be overridden with `core.hooksPath`.
+The default path for the hooks directory in a repository `.git/hooks`, but this can be overridden globally with `core.hooksPath`.
 
-To continue running the repository's hooks, add the following code to the hooks in `core.hooksPath`:
+To continue running the repository's hooks, add the following code to the hooks pointed to by `core.hooksPath`:
 
 ```bash
 # run the repo's local pre-commit hooks if it exists
@@ -430,6 +430,12 @@ if [[ -f "$(git rev-parse --git-common-dir)/hooks/pre-commit" ]]; then
     "${GIT_DIR}"/hooks/pre-commit "$@"
 fi
 ```
+
+### Get `.git` directory
+
+Don't use `GIT_DIR` anymore; use `git rev-parse --git-dir`.
+
+_source_: <https://stackoverflow.com/a/53121209>
 
 ## [[Windows]] installation
 
