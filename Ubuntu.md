@@ -2,6 +2,8 @@
 
 - [Ubuntu \[\[Linux\]\]](#ubuntu-linux)
   - [get version](#get-version)
+  - [Release upgrade](#release-upgrade)
+  - [Update to interim release](#update-to-interim-release)
   - [Enable \[\[Wayland\]\]](#enable-wayland)
   - [Get latest stable upstream \[\[Git\]\] version](#get-latest-stable-upstream-git-version)
   - [Change default terminal](#change-default-terminal)
@@ -18,6 +20,14 @@
 ```bash
 lsb_release -a
 ```
+
+## Release upgrade
+
+`sudo apt update && sudo do-release-upgrade`
+
+## Update to interim release
+
+Run `sudoedit /etc/update-manager/release-upgrades` and change `Prompt=lts` to `Prompt=normal`
 
 ## Enable [[Wayland]]
 
