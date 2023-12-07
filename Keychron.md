@@ -18,7 +18,7 @@ Set up QMK
 
 `$ qmk setup`
 
-If on [[WSL]], also install [QMK Toolbox](https://github.com/qmk/qmk_toolbox)
+If on [[Windows]]/[[WSL]], also install [QMK Toolbox](https://github.com/qmk/qmk_toolbox)
 
 Set the repo to the default QMK project
 
