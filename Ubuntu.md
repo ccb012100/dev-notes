@@ -43,6 +43,36 @@ _Note: Wayland was made the default in Ubuntu 22.04, so this should only be nece
 sudo add-apt-repository ppa:git-core/ppa && sudo apt update && sudo apt install git
 ```
 
+## apt
+
+**Advanced Package Tool** (**APT**)
+
+Repository list is located in `/etc/apt/sources.list`
+
+### commands
+
+```bash
+# "apt" or "apt-get"
+
+apt update
+
+apt upgrade
+
+apt install $PACKAGE_NAME
+
+apt search $PACKAGE_NAME
+```
+
+## Manual apt repositories
+
+### [[Postgres]]
+
+<https://wiki.postgresql.org/wiki/Apt>
+
+### [[Docker]]
+
+<https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository>
+
 ## Change default terminal
 
 _source: <https://itsfoss.com/change-default-terminal-ubuntu/>_
