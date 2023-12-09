@@ -52,3 +52,9 @@ Run `sqlite3` to start the sqlite CLI
 # dhame output back to console
 .output stdout
 ```
+
+## Generate "create DB" script from a database
+
+The `.schema` command outputs the schema in the format of `CREATE` statements.
+
+Went with `mountebank` over `WireMock`
