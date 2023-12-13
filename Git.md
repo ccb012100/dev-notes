@@ -113,7 +113,10 @@ git rebase HASH -x "git commit --amend --no-edit --author="Author Name <email@ex
 ### amend commit to current time
 
 ```bash
-GIT_COMMITTER_DATE="$(date)" git commit --amend --no-edit --date "$(date)"
+GIT_COMMITTER_DATE="$(date)" git commit --amend --no-edit --date "$GIT_COMMITTER_DATE"
+
+# simpler version
+git commit --amend --no-edit --date=now
 ```
 
 ### Sign commits with SSH
