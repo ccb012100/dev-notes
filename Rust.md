@@ -13,7 +13,7 @@
       - [`String` \& `&str`](#string--str)
   - [`fmt::Debug` trait](#fmtdebug-trait)
   - [`Slice`s](#slices)
-  - [Syntax](#syntax)
+  - [Range Syntax](#range-syntax)
 
 ## Attributes
 
