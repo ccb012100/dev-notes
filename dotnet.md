@@ -242,3 +242,9 @@ _sources_:
 [Starting a container with https support using docker compose](https://learn.microsoft.com/en-us/aspnet/core/security/docker-compose-https?view=aspnetcore-6.0#starting-a-container-with-https-support-using-docker-compose)
 
 [Trust HTTPS certificate from Windows Subsystem for Linux]( https://learn.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?view=aspnetcore-7.0&tabs=visual-studio%2Clinux-ubuntu#trust-https-certificate-from-windows-subsystem-for-linux)
+
+## Install on [[Ubuntu]]
+
+I keep having issues where the latest version isn't in the `apt` repo, so just follow
+[the instructions](https://learn.microsoft.com/en-Us/dotnet/core/install/linux-package-mixup?pivots=os-linux-other#i-need-a-version-of-net-that-isnt-provided-by-my-linux-distribution)
+to use Microsoft's repository.
