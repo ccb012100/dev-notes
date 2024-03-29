@@ -6,6 +6,14 @@
   - [Update to interim release](#update-to-interim-release)
   - [Enable \[\[Wayland\]\]](#enable-wayland)
   - [Get latest stable upstream \[\[Git\]\] version](#get-latest-stable-upstream-git-version)
+  - [apt](#apt)
+    - [commands](#commands)
+  - [Manual apt repositories](#manual-apt-repositories)
+    - [\[\[Postgres\]\]](#postgres)
+    - [\[\[Docker\]\]](#docker)
+    - [Repository does not have Release file](#repository-does-not-have-release-file)
+      - [Problem](#problem)
+      - [Solution](#solution)
   - [Change default terminal](#change-default-terminal)
   - [Show number overlays on GNOME dock](#show-number-overlays-on-gnome-dock)
   - [free up Control+Shift+E shortcut](#free-up-controlshifte-shortcut)
@@ -72,6 +80,22 @@ apt search $PACKAGE_NAME
 ### [[Docker]]
 
 <https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository>
+
+### Repository does not have Release file
+
+#### Problem
+
+When you run `sudo apt update`, you get an Error similar to the following:
+
+> E: The repository '<https://ppa.launchpadcontent.net/wslutilities/wslu/ubuntu> mantic Release' does not have a Release file.
+> N: Updating from such a repository can't be done securely, and is therefore disabled by default.
+> N: See apt-secure(8) manpage for repository creation and user configuration details.
+
+#### Solution
+
+- Find the appropriate file in `/etc/apt/sources.list.d`.
+- Open it with `sudoedit`.
+- Replace the release version to a version that the source does have a Release file for.
 
 ## Change default terminal
 
