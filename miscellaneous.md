@@ -14,6 +14,11 @@
 - Einstellung effect, The
 - False Dilemma/False Dichotomy
 - False economy
+- Fundamental Common Ground Breakdown
+  - Party A believes that Party B possesses some knowledge
+  - Party B doesn’t have this knowledge, and doesn’t know he is supposed to have it.
+  - Therefore, he or she doesn’t request it.
+  - This lack of a request confirms to Party A that Party B has the knowledge
 - Memoization
 - Model-based testing
 - Preconditions, Invariants, Postconditions
