@@ -6,10 +6,10 @@
   - [Export list of Extensions to text](#export-list-of-extensions-to-text)
   - [Launch Tasks](#launch-tasks)
     - [Persist output](#persist-output)
-    - [build logger](#build-logger)
+      - [build logger](#build-logger)
       - [`dotnet run`](#dotnet-run)
   - [Keybindings](#keybindings)
-    - [Make `Ctrl+s` act more like \[\[Emacs\]\]](#make-ctrls-act-more-like-emacs)
+    - [Make `Ctrl+s` act more like \[\[Emacs\]\] search](#make-ctrls-act-more-like-emacs-search)
     - [Use same keybinding to toggle focus to Editor/Explorer](#use-same-keybinding-to-toggle-focus-to-editorexplorer)
     - [Cycle though Quick Fix popup menu](#cycle-though-quick-fix-popup-menu)
   - [Hide Extension Snippet from Intellisense](#hide-extension-snippet-from-intellisense)
@@ -18,7 +18,6 @@
     - [Windows](#windows)
     - [macOS](#macos)
     - [Linux](#linux)
-  - [Installing on Mac with Homebrew](#installing-on-mac-with-homebrew)
   - [Inspect vscode context](#inspect-vscode-context)
   - [Change font size for tab titles, sidebar, etc.](#change-font-size-for-tab-titles-sidebar-etc)
   - [Git error: `TypeError: Cannot read properties of undefined (reading 'replace')?`](#git-error-typeerror-cannot-read-properties-of-undefined-reading-replace)
@@ -67,7 +66,7 @@ To print a launch task's output to a file:
 
 In the object for the task in `task.json`, with label `build` add entry to `args` array:
 
-### build logger
+#### build logger
 
 add `/fileLogger`
 
@@ -87,7 +86,7 @@ allowed values:
 
 ## Keybindings
 
-### Make `Ctrl+s` act more like [[Emacs]]
+### Make `Ctrl+s` act more like [[Emacs]] search
 
 In [[Emacs]], the keybinding `C-s` will start a search, but entering `C-s` again will find the next match. This can be done in VS Code by setting the `When` clause carefully:
 
@@ -153,21 +152,15 @@ In the keybindings find and disable `UpArrow`/`DownArrow` bindings `scm.viewNext
 
 `$HOME/.config/Code/User/settings.json`
 
-## Installing on Mac with Homebrew
-
-```bash
-brew install visual-studio-code
-```
-
 ## Inspect vscode context
 
-To inspect the context of the current vs code instance:
+To inspect the context of the current **vscode** instance:
 
-1. Run the command `Developer: Toggle Developer Tools`
-2. Run the command `Developer: Inspect Context Keys`
-3. Click on the element you want to inspect the context for
+1. Run the command `Developer: Toggle Developer Tools`.
+2. Run the command `Developer: Inspect Context Keys`.
+3. Click on the element you want to inspect the context for.
 
-This will print the current context will be logged to the Developer Tools javascript console
+This will print the current context to the **Developer Tools** javascript console.
 
 ## Change font size for tab titles, sidebar, etc.
 
