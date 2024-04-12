@@ -155,3 +155,23 @@ sudo apt remove zsh
 # create link for /usr/bin/zsh b/c a lot of things will break if there's no zsh there
 sudo ln -s /home/linuxbrew/.linuxbrew/bin/zsh /usr/bin/zsh
 ```
+
+## `xdg-settings`
+
+```bash
+# List all properties xdg-settings knows about
+xdg-settings --list
+
+xdg-settings get PROPERTY
+```
+
+### set default web browser
+
+- `xdg-settings set default-web-browser google-chrome.desktop`
+- `xdg-settings set default-web-browser firefox.desktop`
+
+### check default web browser
+
+-`xdg-settings check default-web-browser BROWSER`
+
+Verifies that BROWSER is actually the default web browser (this can be false even if `xdg-settings get default-web-browser` says it is the default).
