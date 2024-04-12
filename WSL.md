@@ -88,6 +88,16 @@ To configure `xdg-open`:
         sudo apt update
         sudo apt install wslu
 
+### Set as default browser
+
+After I installed Playwright, it took over `xdg-open`.
+
+To fix it, run:
+
+```bash
+xdg-settings set default-web-browser wslview.desktop
+```
+
 ## disable appending [[Windows]] `%PATH%` from `$PATH`
 
 In `/etc/wsl.conf`, set `interop::appendWindowsPath` to `false`
