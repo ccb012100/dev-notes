@@ -104,52 +104,10 @@ This applies to:
 
 Run the command `ssh-add --apple-use-keychain ~/.ssh/id_ed25519`
 
-### Use better versions of UNIX tools
+### Maximizing windows
 
-```bash
-# NOTE: don't install openssh; macOS version has Keychain support
-brew install coreutils \
-  binutils \
-  diffutils \
-  ed  \
-  findutils  \
-  gawk \
-  gnu-indent  \
-  gnu-sed  \
-  gnu-tar  \
-  gnu-which  \
-  gnutls \
-  grep  \
-  gzip \
-  screen \
-  watch \
-  wdiff \
-  wget \
-  bash \
-  emacs \
-  gdb \
-  gpatch \
-  less \
-  m4 \
-  make \
-  nano \
-  file-formula  \
-  git \
-  perl \
-  python \
-  rsync \
-  svn \
-  unzip \
-  vim \
-  macvim \
-  zsh
-```
+Holding `option` and `shift` while clicking the green `+` in the upper-left corner will maximize the window.
 
-- add to `.zshrc`:
+Clicking the mouse on the edge of a window will cause that side to expand to the edge of the screen.
 
-```sh
-export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
-export MANPATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnuman:$MANPATH"
-```
-
-*source*: <https://www.topbug.net/blog/2013/04/14/install-and-use-gnu-command-line-tools-in-mac-os-x/>
+Clicking on the corner will expand both of the sides that meet to form that corner.
