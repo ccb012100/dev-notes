@@ -1,6 +1,21 @@
 # Kitty terminal emulator
 
-## Add desktop entry to run from Launcher
+## Comments in `kitty.conf`
+
+> [!IMPORTANT] Comments MUST BE ON SEPERATE LINES
+> Comments can be added to the config file as lines starting with the `#`
+> character. This works only if the `#` character is the FIRST
+> character in the line.
+
+## Get keyboard escape codes
+
+```bash
+kitten show_key
+```
+
+## [[Linux]]
+
+### Add desktop entry to run from Launcher
 
 <https://github.com/kovidgoyal/kitty/issues/347#issuecomment-1001063151>
 
@@ -29,7 +44,7 @@ To use a single instance, create a script `~/kitty.sh`:
 
 and in `kitty.desktop`, point `Exec`/`TryExec` to the script instead.
 
-## Set as default terminal
+### Set as default terminal
 
 ```bash
 # add to list of alternatives
