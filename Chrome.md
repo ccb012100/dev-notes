@@ -1,5 +1,21 @@
 # Google Chrome
 
+## Keyboard shortcuts
+
+### [[macOS]]
+
+Search open tabs
+
+- `Shift-Cmd-A`
+
+Back
+
+- `Cmd-[`
+
+Forward
+
+- `Cmd-]`
+
 ## Dev Tools
 
 ### Filter Network requests
