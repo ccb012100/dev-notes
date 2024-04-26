@@ -416,6 +416,7 @@ bind -P
 # list bindable functions
 bind -l
 bind -P # also list their current bindings
+bind -p # Display function names and bindings in bind command format
 
 # list variables and their values
 bind -V
