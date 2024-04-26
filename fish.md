@@ -17,6 +17,7 @@
     - [see alias definition](#see-alias-definition)
   - [abbreviations](#abbreviations)
   - [Switch case](#switch-case)
+  - [Print keyboard input codes](#print-keyboard-input-codes)
 
 <https://fishshell.com/docs/current/>
 
@@ -123,3 +124,7 @@ switch $argv[1]
         echo I have no idea what a $animal is
 end
 ```
+
+## Print keyboard input codes
+
+Use [`fish_key_reader`](https://fishshell.com/docs/current/cmds/fish_key_reader.html) to print the key codes for a key sequence.
