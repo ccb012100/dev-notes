@@ -15,7 +15,8 @@
     - [Keyboard Shortcuts](#keyboard-shortcuts)
     - [Add ssh keyphrase to keychain](#add-ssh-keyphrase-to-keychain)
       - [Solution](#solution)
-    - [Use better versions of UNIX tools](#use-better-versions-of-unix-tools)
+    - [Maximizing windows](#maximizing-windows)
+  - [Fix wireless device lag](#fix-wireless-device-lag)
 
 ## Outlook
 
@@ -111,3 +112,21 @@ Holding `option` and `shift` while clicking the green `+` in the upper-left corn
 Clicking the mouse on the edge of a window will cause that side to expand to the edge of the screen.
 
 Clicking on the corner will expand both of the sides that meet to form that corner.
+
+## Fix wireless device lag
+
+Running my **Logitech MX Master 3S** with the 2.4GHz dongle, but supposedly people have also encountered this issue with Bluetooth (and on the **MX
+Keys** keyboard)
+
+To fix it, run the command:
+
+```bash
+sudo defaults write /Library/Preferences/com.apple.airport.bt.plist bluetoothCoexMgmt Hybrid
+
+```
+
+To revert the change:
+
+```bash
+sudo defaults delete /Library/Preferences/com.apple.airport.bt.plist bluetoothCoexMgmt
+```
