@@ -5,6 +5,7 @@
   - [Save](#save)
     - [`ZZ` vs `:wq`](#zz-vs-wq)
   - [Normal mode](#normal-mode)
+  - [Scroll screen](#scroll-screen)
     - [Scroll screen, centered on cursor](#scroll-screen-centered-on-cursor)
     - [Format document](#format-document)
     - [Rewrap text](#rewrap-text)
@@ -32,7 +33,6 @@
   - [Visual mode](#visual-mode)
     - [Enter visual mode](#enter-visual-mode)
     - [Exit visual mode](#exit-visual-mode)
-    - [Manipulate text](#manipulate-text)
   - [runtimepath](#runtimepath)
     - [print runtimepath](#print-runtimepath)
   - [Reload `.vimrc`](#reload-vimrc)
@@ -67,7 +67,7 @@ ZQ    " same as :q!
 :wall   " write all changed buffers
 :wall!  " write all buffers
 :x      " write file if changes have been made, and then exit (short for :exit)
-   
+
 ZZ      " same as :x/:exit
 ```
 
@@ -97,8 +97,23 @@ zy            " yank without trailing spaces
 p             " paste before
 P             " paste after
 
+d             " delete
 dd            " delete line
+dw            " delete word
 D             " delete to EOL
+x             " delete character
+xp            " transpose characters
+
+<             " dedent
+>             " indent
+=             " auto-indent
+
+c             " change
+cw            " change word
+
+~             " change case
+u             " lowercase
+U             " uppercase
 
 u             " undo
 CTRL-R        " redo
@@ -109,13 +124,30 @@ CTRL-R        " redo
 :%d           " delete all lines
 ```
 
+## Scroll screen
+
+```vim
+Ctrl-y  " Moves screen up one line
+Ctrl-e  " Moves screen down one line
+
+Ctrl-u  " Moves cursor & screen up 1/2 page
+Ctrl-d  " Moves cursor & screen down 1/2 page
+
+Ctrl-b  " Moves screen up one page, cursor to last line
+Ctrl-f  " Moves screen down one page, cursor to first line
+```
+
 ### Scroll screen, centered on cursor
+
+`z` is the "redraw" command
 
 ```vim
 z<CR>   " focus cursor on top
 zt      " focus cursor on top
+
 zb      " focus cursor on bottom
 z-      " focus cursor on bottom
+
 z.      " focus cursor in center
 zz      " focus cursor in center
 
@@ -360,25 +392,6 @@ gv      " Start visual mode with last selection
 ### Exit visual mode
 
 `<Esc>`, `CTRL-C`, or the same key you used to enter visual mode
-
-### Manipulate text
-
-Commands act on the selection
-
-```vim
-<   " dedent
->   " indent
-=   " auto-indent
-
-c   " change
-d   " delete
-
-~   " change case
-u   " lowercase
-U   " uppercase
-
-y   " yank
-```
 
 ## runtimepath
 
