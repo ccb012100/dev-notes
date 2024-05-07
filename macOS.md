@@ -130,3 +130,27 @@ To revert the change:
 ```bash
 sudo defaults delete /Library/Preferences/com.apple.airport.bt.plist bluetoothCoexMgmt
 ```
+
+## Keycodes
+
+**macOS** maps some keys to other keycodes:
+
+| Key | macOS |
+| - | - |
+| `SysRq/Print Screen` | `F13` |
+| `Scroll Lock` | `F14` |
+| `Pause Break` | `F15` |
+
+> [!NOTE]
+> **Karabiner Events Viewer** will report the hardware key code, but if you go the **macOS** System Settings Keyboard Shortcuts and set a shortcut
+> using one of the keys, you'll see that it uses the Function key code.
+
+## Screenshots
+
+| Action | Shortcut |
+| - | - |
+| Save picture of screen as a file | ⇧⌘3 |
+| Copy picture of screen to the clipboard | ⌃⇧⌘3 |
+| Save picture selected area as a file | ⇧⌘4 |
+| Save picture selected area to the clipboard | ⌃⇧⌘4 |
+| Screenshot and recording options | ⇧⌘5 |
