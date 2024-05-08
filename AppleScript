@@ -4,7 +4,7 @@
 
 ## Get current directory
 
-```scpt
+```osascript
 set my_POSIX_path to POSIX path of ((path to me as text) & "::")
 ```
 
@@ -27,3 +27,21 @@ source: <https://apple.stackexchange.com/a/457543>
 - For an application, launches it.
 - For a script application, launches it and sends it the `run` command.
 - For a script script object, executes its `run` handler.
+
+## iTerm2
+
+The script:
+
+```osascript
+tell application "iTerm2"
+```
+
+only works if **iTerm2** is already running.
+
+The script:
+
+```osascript
+tell application "iTerm"
+```
+
+always works.
