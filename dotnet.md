@@ -1,31 +1,5 @@
 # dotnet
 
-- [dotnet](#dotnet)
-  - [App secrets](#app-secrets)
-    - [Directory location](#directory-location)
-    - [Add secrets to project](#add-secrets-to-project)
-      - [Option 1: Load from a JSON file](#option-1-load-from-a-json-file)
-      - [Option 2: Using Secret Manager tool](#option-2-using-secret-manager-tool)
-        - [Set secret](#set-secret)
-          - [Nested properties](#nested-properties)
-        - [Remove secret](#remove-secret)
-        - [List secrets](#list-secrets)
-        - [Clear all secrets](#clear-all-secrets)
-      - [Option 3: Editing secrets file directly](#option-3-editing-secrets-file-directly)
-  - [\[\[NuGet\]\] packages](#nuget-packages)
-  - [dotnet-outdated-tool](#dotnet-outdated-tool)
-  - [System.Text.Json](#systemtextjson)
-    - [Pretty-print an object](#pretty-print-an-object)
-  - [XUnit](#xunit)
-    - [Print a message to the test output window](#print-a-message-to-the-test-output-window)
-  - [Test Shims](#test-shims)
-    - [Pose package](#pose-package)
-      - [Usage](#usage)
-  - [Testing](#testing)
-    - [`HttpContext` in a `Controller`](#httpcontext-in-a-controller)
-  - [Log HTTP requests and responses](#log-http-requests-and-responses)
-  - [Trust dev HTTPS Certificates in \[\[Docker\]\] containers running in \[\[WSL\]\] with Docker Compose](#trust-dev-https-certificates-in-docker-containers-running-in-wsl-with-docker-compose)
-
 ## App secrets
 
 [Safe storage of app secrets in development in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-5.0&tabs=windows)

@@ -2,20 +2,6 @@
 
 Windows Subsystem for Linux 2
 
-- [WSL](#wsl)
-  - [Commands](#commands)
-  - [Signed Git commits with \[\[GPG\]\]](#signed-git-commits-with-gpg)
-  - [\[\[Cargo\]\]](#cargo)
-    - [permissions error](#permissions-error)
-  - [clock skew](#clock-skew)
-    - [Syptom](#syptom)
-    - [Solution](#solution)
-  - [open web browser](#open-web-browser)
-    - [`xdg-open`](#xdg-open)
-    - [`wslu`](#wslu)
-  - [disable appending \[\[Windows\]\] `%PATH%` from `$PATH`](#disable-appending-windows-path-from-path)
-  - [WSL2 won't release memory](#wsl2-wont-release-memory)
-
 ## Commands
 
 ```cmd

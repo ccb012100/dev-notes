@@ -1,31 +1,5 @@
 # Windows
 
-- [Windows](#windows)
-  - [Shortcuts](#shortcuts)
-    - [`Win` key shortcuts](#win-key-shortcuts)
-  - [Getting a window off screen back into view](#getting-a-window-off-screen-back-into-view)
-  - [Remap left `Caps Lock` to `Ctrl`](#remap-left-caps-lock-to-ctrl)
-  - [Windows `Startup` folder](#windows-startup-folder)
-    - [Quick open `Startup` folder](#quick-open-startup-folder)
-  - [Environment variables](#environment-variables)
-  - [Windows Defender](#windows-defender)
-    - [Symptom](#symptom)
-    - [Solution](#solution)
-  - [customizating Windows 11](#customizating-windows-11)
-    - [Taskbar grouping](#taskbar-grouping)
-    - [show all icons in Taskbar](#show-all-icons-in-taskbar)
-  - [Choppy/lagging Bluetooth mouse](#choppylagging-bluetooth-mouse)
-    - [Symptom](#symptom-1)
-    - [Solution](#solution-1)
-  - [Windows icon file locations](#windows-icon-file-locations)
-  - [Unable to unpin from Quick access in File Explorer](#unable-to-unpin-from-quick-access-in-file-explorer)
-    - [Symptom](#symptom-2)
-    - [Solution](#solution-2)
-  - [Enable Hibernate](#enable-hibernate)
-  - [Identify which process is locking a file](#identify-which-process-is-locking-a-file)
-    - [**Resource Monitor**](#resource-monitor)
-    - [**Process Explorer**](#process-explorer)
-
 ## Shortcuts
 
 `Alt + Esc` - Cycle through items in the order in which they were opened, moving current window to back

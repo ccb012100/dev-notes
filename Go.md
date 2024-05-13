@@ -1,18 +1,5 @@
 # Go (Golang)
 
-- [Go (Golang)](#go-golang)
-  - [Modules](#modules)
-    - [Create module](#create-module)
-    - [Add module as dependency](#add-module-as-dependency)
-    - [Add missing and remove unused modules](#add-missing-and-remove-unused-modules)
-  - [\[\[Windows\]\]](#windows)
-    - [Install `tdm-gcc`](#install-tdm-gcc)
-  - [\[\[Linux\]\]](#linux)
-    - [Update Go version](#update-go-version)
-    - [Install `gcc`](#install-gcc)
-    - [Error](#error)
-    - [Fix](#fix)
-
 ## Modules
 
 ### Create module

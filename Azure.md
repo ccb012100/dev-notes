@@ -1,11 +1,5 @@
 # Microsoft Azure cloud services
 
-- [Microsoft Azure cloud services](#microsoft-azure-cloud-services)
-  - [Pipelines](#pipelines)
-  - [Logs](#logs)
-    - [Kusto Query Language (KQL)](#kusto-query-language-kql)
-      - [Links](#links)
-
 [Documentation](https://learn.microsoft.com/en-us/azure/?product=popular)
 
 ## Pipelines

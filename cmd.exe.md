@@ -1,35 +1,5 @@
 # Windows Command Prompt
 
-- [Windows Command Prompt](#windows-command-prompt)
-  - [Open as Administrator](#open-as-administrator)
-  - [Aliases](#aliases)
-    - [Auto-load aliases](#auto-load-aliases)
-      - [\[\[Windows Terminal\]\]](#windows-terminal)
-  - [`doskey`](#doskey)
-  - [Symbolic links (symlinks) in \[\[Windows\]\]](#symbolic-links-symlinks-in-windows)
-    - [Soft link](#soft-link)
-      - [File](#file)
-      - [Directory](#directory)
-    - [Hard link](#hard-link)
-      - [File](#file-1)
-      - [Directory (Junction)](#directory-junction)
-  - [Pretty print %PATH% variable](#pretty-print-path-variable)
-  - [Delete directories](#delete-directories)
-    - [Delete directory and contents recursively](#delete-directory-and-contents-recursively)
-  - [List files](#list-files)
-    - [List all files](#list-all-files)
-    - [Paged](#paged)
-    - [Wide list format](#wide-list-format)
-    - [Sort by newest](#sort-by-newest)
-    - [Sort by oldest](#sort-by-oldest)
-  - [Display the contents of a file](#display-the-contents-of-a-file)
-  - [Copy files](#copy-files)
-    - [Switches](#switches)
-  - [Batch files](#batch-files)
-  - [Check if a port is in use](#check-if-a-port-is-in-use)
-  - [Check reserved ports](#check-reserved-ports)
-  - [`powercfg`](#powercfg)
-
 ## Open as Administrator
 
 `Win+X`, `A`

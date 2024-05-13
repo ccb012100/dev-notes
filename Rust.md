@@ -1,20 +1,5 @@
 # Rust
 
-- [Rust](#rust)
-  - [Attributes](#attributes)
-  - [Suppress (hide) Compiler warnings](#suppress-hide-compiler-warnings)
-  - [`never` type](#never-type)
-  - [`std::unimplemented`](#stdunimplemented)
-  - [Configuration conditional checks](#configuration-conditional-checks)
-    - [Conditional evaluation](#conditional-evaluation)
-    - [Conditional compilation](#conditional-compilation)
-    - [Concat 2 strings](#concat-2-strings)
-      - [2 `&str`](#2-str)
-      - [`String` \& `&str`](#string--str)
-  - [`fmt::Debug` trait](#fmtdebug-trait)
-  - [`Slice`s](#slices)
-  - [Range Syntax](#range-syntax)
-
 ## Attributes
 
 `#!` - global to item the attribute is within

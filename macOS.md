@@ -1,23 +1,5 @@
 # macOS
 
-- [macOS](#macos)
-  - [Outlook](#outlook)
-    - [group messages by conversation](#group-messages-by-conversation)
-  - [\[\[rsync\]\]](#rsync)
-  - [\[\[Emacs\]\]](#emacs)
-    - [enable C-M-d](#enable-c-m-d)
-  - [modifying config through Terminal](#modifying-config-through-terminal)
-  - [\[\[vscode\]\]](#vscode)
-    - [Bell sound on Ctrl+/ keybinding](#bell-sound-on-ctrl-keybinding)
-  - [\[\[GPG\]\]](#gpg)
-  - [Finder](#finder)
-    - [Set current folder settings as default view options](#set-current-folder-settings-as-default-view-options)
-    - [Keyboard Shortcuts](#keyboard-shortcuts)
-    - [Add ssh keyphrase to keychain](#add-ssh-keyphrase-to-keychain)
-      - [Solution](#solution)
-    - [Maximizing windows](#maximizing-windows)
-  - [Fix wireless device lag](#fix-wireless-device-lag)
-
 ## Outlook
 
 ### group messages by conversation

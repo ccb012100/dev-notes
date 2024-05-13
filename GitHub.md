@@ -1,24 +1,5 @@
 # GitHub
 
-- [GitHub](#github)
-  - [see a user's public keys](#see-a-users-public-keys)
-    - [public GPG keys](#public-gpg-keys)
-  - [Pull Requests](#pull-requests)
-    - [mark all files viewed](#mark-all-files-viewed)
-    - [add GitHub to `known_hosts`](#add-github-to-known_hosts)
-  - [Search](#search)
-    - [search for file by filename](#search-for-file-by-filename)
-  - [Github Codespaces](#github-codespaces)
-    - [dotfiles](#dotfiles)
-      - [Dotfiles location](#dotfiles-location)
-      - [`install.sh`](#installsh)
-  - [GitHub Actions](#github-actions)
-    - [Key Concepts](#key-concepts)
-    - [Actions](#actions)
-    - [Workflows](#workflows)
-    - [Jobs](#jobs)
-    - [Steps](#steps)
-
 ## see a user's public keys
 
 `https://github.com/<username>.keys`

@@ -2,30 +2,6 @@
 
 Desktop Environment (DE) for [[Linux]]. Used by [[Ubuntu]]
 
-- [GNOME](#gnome)
-  - [GSettings](#gsettings)
-  - [Add top bar to all monitors](#add-top-bar-to-all-monitors)
-  - [Restart GNOME Shell](#restart-gnome-shell)
-  - [Gnome Extensions](#gnome-extensions)
-  - ["Phantom" extensions](#phantom-extensions)
-    - [Symptom](#symptom)
-    - [Integration with Chrome](#integration-with-chrome)
-    - [Extension fails to load after update](#extension-fails-to-load-after-update)
-  - [Keybindings](#keybindings)
-    - ["Select All" shortcut](#select-all-shortcut)
-    - [List keybindings](#list-keybindings)
-    - [Rebind keybindings](#rebind-keybindings)
-      - [Multiple keybindings for an action](#multiple-keybindings-for-an-action)
-      - [`<Super>+P` toggles display](#superp-toggles-display)
-      - [unset SUPER+o](#unset-supero)
-      - [rebind SUPER+SHIFT+,](#rebind-supershift)
-  - [Move Open/Save/Cancel modal buttons to bottom of dialogue](#move-opensavecancel-modal-buttons-to-bottom-of-dialogue)
-  - [Can't set keybindings in GUI](#cant-set-keybindings-in-gui)
-    - [Symptom](#symptom-1)
-    - [Solution](#solution)
-  - [Set text scaling factor](#set-text-scaling-factor)
-  - [Set step size for volume increment/decrement](#set-step-size-for-volume-incrementdecrement)
-
 ## GSettings
 
 Many GNOME and GNOME apps/extensions use GSettings to store settings in a key-based configuration system called `dconf`.

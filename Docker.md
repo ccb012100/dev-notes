@@ -1,32 +1,5 @@
 # Docker
 
-- [Docker](#docker)
-  - [rename image](#rename-image)
-  - [dotnet core locally with https](#dotnet-core-locally-with-https)
-    - [Errors](#errors)
-      - [Permissions error in Linux](#permissions-error-in-linux)
-        - [Cause](#cause)
-        - [Fix](#fix)
-      - [docker-compose build fails](#docker-compose-build-fails)
-        - [Cause](#cause-1)
-        - [Fix](#fix-1)
-      - [docker-compose up fails](#docker-compose-up-fails)
-        - [Can't find installed .NET Core SDKs](#cant-find-installed-net-core-sdks)
-          - [Cause](#cause-2)
-          - [Fix](#fix-2)
-      - [Kestrel won't start](#kestrel-wont-start)
-        - [BIO\_new\_file](#bio_new_file)
-          - [Cause](#cause-3)
-          - [Fix](#fix-3)
-      - [HTTPS request failure](#https-request-failure)
-        - [SSL must use cert with associated private key](#ssl-must-use-cert-with-associated-private-key)
-          - [Cause](#cause-4)
-          - [Fix](#fix-4)
-  - [run localhost SQL Server](#run-localhost-sql-server)
-    - [create login](#create-login)
-    - [create database user](#create-database-user)
-    - [grant CONTROL in DB to user](#grant-control-in-db-to-user)
-
 ## rename image
 
 Names are just tags on an Image, so "renaming" is just adding a new tag and deleting the old one

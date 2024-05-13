@@ -1,29 +1,5 @@
 # Visual Studio Code
 
-- [Visual Studio Code](#visual-studio-code)
-  - [Configure specific elements in theme](#configure-specific-elements-in-theme)
-  - [Configure language specific settings for multiple languages](#configure-language-specific-settings-for-multiple-languages)
-  - [Export list of Extensions to text](#export-list-of-extensions-to-text)
-  - [Launch Tasks](#launch-tasks)
-    - [Persist output](#persist-output)
-      - [build logger](#build-logger)
-      - [`dotnet run`](#dotnet-run)
-  - [Keybindings](#keybindings)
-    - [Make `Ctrl+s` act more like \[\[Emacs\]\] search](#make-ctrls-act-more-like-emacs-search)
-    - [Use same keybinding to toggle focus to Editor/Explorer](#use-same-keybinding-to-toggle-focus-to-editorexplorer)
-    - [Cycle though Quick Fix popup menu](#cycle-though-quick-fix-popup-menu)
-  - [Hide Extension Snippet from Intellisense](#hide-extension-snippet-from-intellisense)
-  - [Disable `UpArrow`/`DownArrow` cycling through commit messages in the Source Control commit message textbox](#disable-uparrowdownarrow-cycling-through-commit-messages-in-the-source-control-commit-message-textbox)
-  - [Settings file location](#settings-file-location)
-    - [Windows](#windows)
-    - [macOS](#macos)
-    - [Linux](#linux)
-  - [Inspect vscode context](#inspect-vscode-context)
-  - [Change font size for tab titles, sidebar, etc.](#change-font-size-for-tab-titles-sidebar-etc)
-  - [Git error: `TypeError: Cannot read properties of undefined (reading 'replace')?`](#git-error-typeerror-cannot-read-properties-of-undefined-reading-replace)
-  - [Code Snippets](#code-snippets)
-    - [Escaping `$0` in a snippet](#escaping-0-in-a-snippet)
-
 ## Configure specific elements in theme
 
 example: remove italics on comments in the HCQ (High Color Queries) theme

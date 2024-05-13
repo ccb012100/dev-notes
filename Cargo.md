@@ -2,23 +2,9 @@
 
 [[Rust]] package manager
 
-- [Cargo](#cargo)
-  - [`cargo new`](#cargo-new)
-  - [`cargo add` vs. `cargo install`](#cargo-add-vs-cargo-install)
-  - [Running in \[\[Windows\]\]](#running-in-windows)
-    - [link.exe error](#linkexe-error)
-  - [`cargo-edit`](#cargo-edit)
-    - [Build failure in Windows](#build-failure-in-windows)
-    - [build failure in \[\[WSL\]\]](#build-failure-in-wsl)
-  - [Set `RUST_BACKTRACE`](#set-rust_backtrace)
-    - [\[\[Windows\]\]](#windows)
-    - [\[\[Linux\]\]](#linux)
-  - [Update installed Cargo packages](#update-installed-cargo-packages)
-
 **The Cargo Book**: <https://doc.rust-lang.org/cargo/>
 
 **How to deal with large Cargo workspaces in Rust**: <https://kerkour.com/blog/rust-large-cargo-workspace/>
-
 
 ## `cargo new`
 

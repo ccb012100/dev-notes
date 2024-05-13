@@ -1,28 +1,5 @@
 # Ubuntu [[Linux]]
 
-- [Ubuntu \[\[Linux\]\]](#ubuntu-linux)
-  - [get version](#get-version)
-  - [Release upgrade](#release-upgrade)
-  - [Update to interim release](#update-to-interim-release)
-  - [Enable \[\[Wayland\]\]](#enable-wayland)
-  - [Get latest stable upstream \[\[Git\]\] version](#get-latest-stable-upstream-git-version)
-  - [apt](#apt)
-    - [commands](#commands)
-  - [Manual apt repositories](#manual-apt-repositories)
-    - [\[\[Postgres\]\]](#postgres)
-    - [\[\[Docker\]\]](#docker)
-    - [Repository does not have Release file](#repository-does-not-have-release-file)
-      - [Problem](#problem)
-      - [Solution](#solution)
-  - [Change default terminal](#change-default-terminal)
-  - [Show number overlays on GNOME dock](#show-number-overlays-on-gnome-dock)
-  - [free up Control+Shift+E shortcut](#free-up-controlshifte-shortcut)
-  - [Disable/modify settings for Automatic Updates](#disablemodify-settings-for-automatic-updates)
-  - [Set default Editor](#set-default-editor)
-    - [Install editor as alternative](#install-editor-as-alternative)
-    - [Configure alternative](#configure-alternative)
-  - [Set \[\[homebrew\]\] \[\[Zsh\]\] as default shell](#set-homebrew-zsh-as-default-shell)
-
 ## get version
 
 ```bash
