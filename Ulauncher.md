@@ -4,7 +4,7 @@ Linux application launcher
 
 <https://github.com/Ulauncher/Ulauncher>
 
-## Running on [[Wayland]]
+## Running on Wayland
 
 To use Ulauncher on Wayland, run `sudo apt install wmctrl` and create launcher for command `ulauncher-toggle` in
 Wayland.
@@ -33,7 +33,7 @@ Useful extensions:
 - [ulauncher-terminal-runner-extension](https://github.com/lighttigerXIV/ulauncher-terminal-runner-extension/)
 - [Ulauncher Github](https://github.com/brpaz/ulauncher-github)
 
-### Installation error with Ulauncher [[Github]]
+### Installation error with Ulauncher Github
 
 The Extension will fail because the `github` is not installed.
 

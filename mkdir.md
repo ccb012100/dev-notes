@@ -1,6 +1,6 @@
 # mkdir
 
-[[Linux]] utility to make directories
+Linux utility to make directories
 
 ```bash
 # make directory 'foobar'

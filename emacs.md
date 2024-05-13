@@ -190,7 +190,7 @@ Let Emacs know `macro-name` is a macro
 M-x xterm-mouse-mode
 ```
 
-## Start server daemon at [[Ubuntu]] startup
+## Start server daemon at Ubuntu startup
 
 - Add the following to `~/.config/systemd/user/emacsd.service`:
 

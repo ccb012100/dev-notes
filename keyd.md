@@ -1,6 +1,6 @@
 # keyd
 
-Keymapping daemon that runs in [[Wayland]] and X.
+Keymapping daemon that runs in Wayland and X.
 
 <https://github.com/rvaiya/keyd>
 

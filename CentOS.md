@@ -1,4 +1,4 @@
-# [[CentOS]]
+# CentOS
 
 ## services
 

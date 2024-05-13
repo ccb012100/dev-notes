@@ -96,7 +96,7 @@ Aliases are just functions. `alias --save` will save the alias as a function in 
 
 ### see alias definition
 
-To do the equivalent of `alias FOO` in [[Bash]], use `function FOO` (works with functions as well, obviously).
+To do the equivalent of `alias FOO` in Bash, use `function FOO` (works with functions as well, obviously).
 
 ## abbreviations
 

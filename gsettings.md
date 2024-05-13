@@ -1,6 +1,6 @@
 # Gsettings
 
-[[GNOME]] settings configuration tool
+GNOME settings configuration tool
 
 ## Finding keybindings
 

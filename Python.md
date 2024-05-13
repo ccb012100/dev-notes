@@ -35,7 +35,7 @@ If you don't want a mutable variable, use an immutable default arg; using `None`
 
 #### Problem
 
-When trying to install a Python package on [[Windows]], an error similar to the following occurs:
+When trying to install a Python package on Windows, an error similar to the following occurs:
 
 ```txt
   WARNING: Failed to write executable - trying to use .deleteme logic

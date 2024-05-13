@@ -1,6 +1,6 @@
 # grep
 
-_NOTE_: see [[ripgrep]] for more syntax
+_NOTE_: see ripgrep for more syntax
 
 ## search a directory recursively
 

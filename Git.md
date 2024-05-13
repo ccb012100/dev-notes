@@ -1,4 +1,4 @@
-# [[Git]]
+# Git
 
 ## Commits
 
@@ -163,7 +163,7 @@ ex. last 3 commits:
 git rebase -i HEAD~3
 ```
 
-## [[GPG]]
+## GPG
 
 ### signing fails
 
@@ -368,7 +368,7 @@ Don't use `GIT_DIR` anymore; use `git rev-parse --git-dir`.
 
 _source_: <https://stackoverflow.com/a/53121209>
 
-## [[Windows]] installation
+## Windows installation
 
 To use Windows Credentials Manager, which will remember the ssh passphrase, when installing **Git for Windows**, choose to:
 

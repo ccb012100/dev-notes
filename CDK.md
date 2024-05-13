@@ -23,7 +23,7 @@ cdk init --language typescript
 └── tsconfig.json
 ```
 
-## [[TypeScript]] project layout
+## TypeScript project layout
 
 - `bin/{PROJECT_NAME}.ts`
   - This is the entry point to your CDK application. This will load/create all the stacks we define under `lib/*`
@@ -38,7 +38,7 @@ cdk init --language typescript
 
 A service that lets you launch AWS resources in a logically isolated virtual network that you define
 
-Similar to a [[Kubernetes]] pod (I _think_)
+Similar to a Kubernetes pod (I _think_)
 
 ## Environments
 
@@ -48,7 +48,7 @@ Each `Stack` instance in your AWS CDK app is explicitly or implicitly associated
 
 ### stack instantiation
 
-#### [[TypeScript]]
+#### TypeScript
 
 `bin/{PROJECT_NAME}.ts`
 

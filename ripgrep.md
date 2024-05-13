@@ -1,6 +1,6 @@
 # ripgrep
 
-[[Rust]] replacement for [[grep]]
+Rust replacement for grep
 
 <https://github.com/BurntSushi/ripgrep>
 

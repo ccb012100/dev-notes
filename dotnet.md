@@ -6,11 +6,11 @@
 
 ### Directory location
 
-[[macOS]]
+macOS
 
 `${HOME}\.microsoft\usersecrets\`
 
-[[Windows]]
+Windows
 
 `C:\Users\$user_name\AppData\Roaming\Microsoft\UserSecrets\`
 
@@ -70,7 +70,7 @@ dotnet user-secrets clear
 
 Edit file at `$user_secrets_directory\$user_secrets_id\secret.json`
 
-## [[NuGet]] packages
+## NuGet packages
 
 ```bash
 # add or update a package reference
@@ -89,7 +89,7 @@ dotnet remove package $package_name
 # (done automatically as part of 'dotnet build' and 'dotnet run')
 dotnet restore
 
-# clear local [[NuGet]] cache
+# clear local NuGet cache
 dotnet nuget locals all -c
 ```
 
@@ -175,9 +175,9 @@ _sut.ControllerContext.HttpContext.Items.Add("Foo", "bar");
 
 [HTTP Logging in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/http-logging)
 
-## Trust dev HTTPS Certificates in [[Docker]] containers running in [[WSL]] with Docker Compose
+## Trust dev HTTPS Certificates in Docker containers running in WSL with Docker Compose
 
-In [[Windows]], run:
+In Windows, run:
 
   ```bash
   dotnet dev-certs https -ep ~/aspnetapp.pfx -p pass123 --trust
@@ -185,7 +185,7 @@ In [[Windows]], run:
 
 This will create the file `~/aspnetapp.pfx` with password = `pass123`
 
-In [[WSL]], run:
+In WSL, run:
 
   ```bash
   sudo cp /mnt/c/Users/<USER>/https.pfx --password pass123 ~/.aspnet/https/aspnetapp.pfx
@@ -217,7 +217,7 @@ _sources_:
 
 [Trust HTTPS certificate from Windows Subsystem for Linux]( https://learn.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?view=aspnetcore-7.0&tabs=visual-studio%2Clinux-ubuntu#trust-https-certificate-from-windows-subsystem-for-linux)
 
-## Install on [[Ubuntu]]
+## Install on Ubuntu
 
 I keep having issues where the latest version isn't in the `apt` repo, so just follow
 [the instructions](https://learn.microsoft.com/en-Us/dotnet/core/install/linux-package-mixup?pivots=os-linux-other#i-need-a-version-of-net-that-isnt-provided-by-my-linux-distribution)

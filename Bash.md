@@ -133,7 +133,7 @@ ${@: -2:1}  # next to last
 
 `set`
 
-- part of the [[POSIX]] standard
+- part of the POSIX standard
 - modifies `$SHELLOPTS` env var
 
 `shopt`

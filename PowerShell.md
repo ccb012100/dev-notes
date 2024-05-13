@@ -16,7 +16,7 @@ $PROFILE
 
 ### Reload Profile
 
-Same as [[Bash]]
+Same as Bash
 
 ```pwsh
 . $PROFILE
@@ -46,7 +46,7 @@ Returns the result of one or more statements as an array. The result is always a
 
 ## Set Environment variable for command
 
-Equivalent to `FOO=bar COMMAND` in [[Bash]]
+Equivalent to `FOO=bar COMMAND` in Bash
 
 ```pwsh
 # set and then remove 

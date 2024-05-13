@@ -2,13 +2,13 @@
 
 ## Settings Repository
 
-### [[git]] configuration
+### git configuration
 
-Rider sets up its own [[git]] repository in AppData to sync settings changes.
+Rider sets up its own git repository in AppData to sync settings changes.
 
 To set the username and email, you need to change the `./git/config` file in that repo.
 
-On [[Windows]], it's located at `~/AppData/Roaming/JetBrains/Rider2021.2/settingsRepository/repository/.git/config`.
+On Windows, it's located at `~/AppData/Roaming/JetBrains/Rider2021.2/settingsRepository/repository/.git/config`.
 
 _Note_: when updating `recentSolutions.xml`, make sure that the IDE is closed and no processes are running
 
@@ -23,7 +23,7 @@ attribute to the `<RecentProjectMetaInfo>` tag for the projects showing up incor
 
 This seems to be because of using monitors with different resolutions (i.e. laptop monitor and external monitor).
 
-To fix it (on [[Windows]]), open `~/AppData/Roaming/JetBrains/Rider2021.2/options/recentSolutions.xml` and edit the `<frame>` attribute
+To fix it (on Windows), open `~/AppData/Roaming/JetBrains/Rider2021.2/options/recentSolutions.xml` and edit the `<frame>` attribute
 that looks like the following:
 
 ```xml

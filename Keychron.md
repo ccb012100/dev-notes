@@ -4,7 +4,7 @@
 
 ### Clone repo
 
-**Keychron** maintain their own [fork](https://github.com/Keychron/qmk_firmware/) of `qmk_firmware`; it contains support for keyboards that haven't been added to the main [[QMK]] project.
+**Keychron** maintain their own [fork](https://github.com/Keychron/qmk_firmware/) of `qmk_firmware`; it contains support for keyboards that haven't been added to the main QMK project.
 
 Clone the fork:
 
@@ -18,7 +18,7 @@ Switch to the `bluetooth_playground` branch:
 
 ### Install/setup QMK
 
-Install [[QMK]]:
+Install QMK:
 
 - `python3.11 -m pip install --upgrade pip`
 
@@ -26,7 +26,7 @@ Set up QMK:
 
 - `$ qmk setup`
 
-If on [[Windows]]/[[WSL]], install [QMK Toolbox](https://github.com/qmk/qmk_toolbox)
+If on Windows/WSL, install [QMK Toolbox](https://github.com/qmk/qmk_toolbox)
 
 Configure the repo to be the default **qmk** project:
 
@@ -66,7 +66,7 @@ Run `$ qmk flash -km keychron/k4_pro/ansi/rgb:default`
 - Wait for flashing to complete
 
 _Note:_ After flashing, it may be necessary to remove the keyboard from the Bluetooth devices and re-pair them (at least
-on [[Windows]])
+on Windows)
 
 #### **QMK Toolbox** flashing issue
 

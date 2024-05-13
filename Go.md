@@ -24,11 +24,11 @@ go get github.com/spf13/cobra
 
 `go mod tidy`
 
-## [[Windows]]
+## Windows
 
 ### Install `tdm-gcc`
 
-[[GCC]] Compiler suite for [[Windows]]
+GCC Compiler suite for Windows
 
 <https://jmeubank.github.io/tdm-gcc/>
 
@@ -38,11 +38,11 @@ If not installed, you'll see the error:
 "gcc": executable file not found in %PATH%
 ```
 
-## [[Linux]]
+## Linux
 
 ### Update Go version
 
-(It's better to use [[homebrew]])
+(It's better to use homebrew)
 
 ```bash
 $ go version
@@ -70,7 +70,7 @@ _source_: <https://golangcode.com/updating-go-on-ubuntu/>
 
 ### Install `gcc`
 
-This applies when Go has been installed via [[[homebrew]]]
+This applies when Go has been installed via [homebrew]
 
 ### Error
 

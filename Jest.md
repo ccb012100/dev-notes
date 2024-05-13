@@ -1,4 +1,4 @@
-# Jest [[JavaScript]] testing framework
+# Jest JavaScript testing framework
 
 [Documentation](https://jestjs.io/docs/getting-started)
 

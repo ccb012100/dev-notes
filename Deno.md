@@ -1,6 +1,6 @@
 # Deno
 
-Runtime for [[JavaScript]]/[[TypeScript]]
+Runtime for JavaScript/TypeScript
 
 ## Certificate errors
 
@@ -22,7 +22,7 @@ Caused by:
 
 Set the `$DENO_TLS_CA_STORE` variable
 
-#### [[PowerShell]]
+#### PowerShell
 
 Run as Administator:
 
@@ -30,7 +30,7 @@ Run as Administator:
 $Env:DENO_TLS_CA_STORE='system'; deno upgrade
 ```
 
-#### [[Linux]]
+#### Linux
 
 ```bash
 DENO_TLS_CA_STORE=system deno upgrade

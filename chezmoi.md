@@ -18,7 +18,7 @@ chezmoi cd
 
 ## Templates
 
-Templates use [[Go]]'s [`text/template`](https://pkg.go.dev/text/template#section-documentation) library.
+Templates use Go's [`text/template`](https://pkg.go.dev/text/template#section-documentation) library.
 
 - Additional `Sprig` library [functions](https://masterminds.github.io/sprig/)
 - Additional `chezmoi` [Functions](https://www.chezmoi.io/reference/templates/functions/)

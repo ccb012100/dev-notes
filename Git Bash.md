@@ -1,4 +1,4 @@
-# Git Bash for [[Windows]]
+# Git Bash for Windows
 
 ## Error: `standard out is not a tty`
 

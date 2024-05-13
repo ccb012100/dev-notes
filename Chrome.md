@@ -2,7 +2,7 @@
 
 ## Keyboard shortcuts
 
-### [[macOS]]
+### macOS
 
 Search open tabs
 

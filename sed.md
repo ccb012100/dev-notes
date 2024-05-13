@@ -6,14 +6,14 @@ Stream editor
 
 Use `-i` or `--in-place` to edit a file in place
 
-### using [[ripgrep]]
+### using ripgrep
 
 ```bash
 # find files containing 'foo' and replace 'foo' with 'bar'
 rg foo --files-with-matches | xargs sed -i 's/foo/bar/g'
 ```
 
-### [[Git Bash]] on [[Windows]]
+### [[Git Bash]] on Windows
 
 Add the `ripgrep` flag `--path-separator //` to feed the filenames to `sed` in the format it expects, e.g.
 

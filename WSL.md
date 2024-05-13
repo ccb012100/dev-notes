@@ -18,13 +18,13 @@ REM shutdown all
 wsl --shutdown
 ```
 
-## Signed Git commits with [[GPG]]
+## Signed Git commits with GPG
 
 Install Gpg4win: <https://www.gpg4win.org/>
 
 <https://www.39digits.com/signed-git-commits-on-wsl2-using-visual-studio-code>
 
-## [[Cargo]]
+## Cargo
 
 ### permissions error
 
@@ -84,7 +84,7 @@ To fix it, run:
 xdg-settings set default-web-browser wslview.desktop
 ```
 
-## disable appending [[Windows]] `%PATH%` from `$PATH`
+## disable appending Windows `%PATH%` from `$PATH`
 
 In `/etc/wsl.conf`, set `interop::appendWindowsPath` to `false`
 

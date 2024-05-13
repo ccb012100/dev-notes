@@ -59,7 +59,7 @@ List current aliases
 doskey /macros
 ```
 
-## Symbolic links (symlinks) in [[Windows]]
+## Symbolic links (symlinks) in Windows
 
 ### Soft link
 
@@ -135,7 +135,7 @@ mklink /J Link Target
 
 `xcopy`
 
-Similar to [[rsync]]
+Similar to rsync
 
 ### Switches
 

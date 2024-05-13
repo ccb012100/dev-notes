@@ -1,6 +1,6 @@
 # GNOME
 
-Desktop Environment (DE) for [[Linux]]. Used by [[Ubuntu]]
+Desktop Environment (DE) for Linux. Used by Ubuntu
 
 ## GSettings
 
@@ -16,7 +16,7 @@ Use [Multi Monitors Add-On](https://github.com/realh/multi-monitors-add-on)
 
 Open Task Runner and run command `r`
 
-On [[Wayland]], you have to run terminal command `killall -3 gnome-shell`
+On Wayland, you have to run terminal command `killall -3 gnome-shell`
 
 ## Gnome Extensions
 
@@ -79,7 +79,7 @@ then you need to [restart the GNOME shell](#restart-gnome-shell) and then restar
 
 ### "Select All" shortcut
 
-`Ctrl-/` is a secondary shortcut for "Select All", and works even when using [[emacs]] keybindings.
+`Ctrl-/` is a secondary shortcut for "Select All", and works even when using emacs keybindings.
 
 ### List keybindings
 
@@ -94,14 +94,14 @@ offender)
 
 #### Multiple keybindings for an action
 
-See [[gsettings]] notes
+See gsettings notes
 
 #### `<Super>+P` toggles display
 
 If you use the keyboard shortcut `<Super>+p`, the GNOME keybindings UI won't tell you it's already bound to
 `switch-monitor`, and using that binding will cause your external displays to freak out.
 
-Use the [[gsettings]] command to unbind it:
+Use the gsettings command to unbind it:
 
 ```bash
 # view keybinding
@@ -148,7 +148,7 @@ couldn't get it to actually _set_ a shortcut to that binding.
 
 ### Solution
 
-To set these, use [[gsettings]] in the command line.
+To set these, use gsettings in the command line.
 
 ## Set text scaling factor
 

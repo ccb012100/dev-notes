@@ -1,4 +1,4 @@
-# Ubuntu [[Linux]]
+# Ubuntu Linux
 
 ## get version
 
@@ -14,15 +14,15 @@ lsb_release -a
 
 Run `sudoedit /etc/update-manager/release-upgrades` and change `Prompt=lts` to `Prompt=normal`
 
-## Enable [[Wayland]]
+## Enable Wayland
 
 _Note: Wayland was made the default in Ubuntu 22.04, so this should only be necessary for earlier versions._
 
 - Run the command `sudo vim /etc/gdm3/custom.conf` and uncomment the line `#WaylandEnable=true`
-- Change it to `WaylandEnable=false` to disable [[Wayland]].
+- Change it to `WaylandEnable=false` to disable Wayland.
 - Run the command `sudo systemctl restart gdm3`
 
-## Get latest stable upstream [[Git]] version
+## Get latest stable upstream Git version
 
 ```bash
 sudo add-apt-repository ppa:git-core/ppa && sudo apt update && sudo apt install git
@@ -50,11 +50,11 @@ apt search $PACKAGE_NAME
 
 ## Manual apt repositories
 
-### [[Postgres]]
+### Postgres
 
 <https://wiki.postgresql.org/wiki/Apt>
 
-### [[Docker]]
+### Docker
 
 <https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository>
 
@@ -86,7 +86,7 @@ Run the command `sudo update-alternatives --config x-terminal-emulator`.
 
 ## free up Control+Shift+E shortcut
 
-Trying to map `Ctrl+Shift+E` to a command in [[vscode]], it will show up as `Unknown`. This is because Linux has the
+Trying to map `Ctrl+Shift+E` to a command in vscode, it will show up as `Unknown`. This is because Linux has the
 shortcut bound globally to Emoji input.
 
 To fix it, run the command `ibus-setup`, go to the _Emoji Input_ tab, and delete the `Control+Shift+E` shortcut.
@@ -118,7 +118,7 @@ e.g.
 _NOTE_: If `update-alternatives` is using 'auto mode', then it will choose the highest priority as the default editor, so
 setting  high priority will make the newly installed editor
 
-## Set [[homebrew]] [[Zsh]] as default shell
+## Set homebrew Zsh as default shell
 
 ```bash
 # install zsh

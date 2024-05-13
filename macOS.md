@@ -6,14 +6,14 @@
 
 > `View` -> `Show as Conversations`
 
-## [[rsync]]
+## rsync
 
-The version of [[rsync]] that comes with macOS is old, so it's best to download a newer version through [[homebrew]].
+The version of rsync that comes with macOS is old, so it's best to download a newer version through homebrew.
 
 - `-t` preserve timestamps
 - `-r` recursive sync directories
 
-## [[Emacs]]
+## Emacs
 
 ### enable C-M-d
 
@@ -30,7 +30,7 @@ defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 70 '<dic
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
 ```
 
-## [[vscode]]
+## vscode
 
 ### Bell sound on Ctrl+/ keybinding
 
@@ -50,7 +50,7 @@ EOF
 
 <https://github.com/microsoft/vscode/issues/44070#issuecomment-799716362>
 
-## [[GPG]]
+## GPG
 
 1. Run `brew install gnupg pinentry-mac`
 2. Add `pinentry-program /usr/local/bin/pinentry-mac` to `~/.gnupg/gpg-agent.conf`
@@ -80,7 +80,7 @@ Links:
 
 This applies to:
 
-- An issue where git commands in [[vscode]] fail because it won't recognize the [[ssh]] keyphrase
+- An issue where git commands in vscode fail because it won't recognize the ssh keyphrase
 - Git on the terminal keeps asking for the ssh keyphrase
 
 #### Solution

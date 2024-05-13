@@ -1,15 +1,15 @@
 # Neovim (nvim)
 
-[[Vim]]-based editor
+Vim-based editor
 
 ## Configuration file
 
-### [[Linux]]
+### Linux
 
 `~/.config/nvim/init.vim`
 
 Falls back to `~/.vim/vimrc` if the above doesn't exist
 
-[[Windows]]
+Windows
 
 `C:\Users\<USER>\AppData\Local\nvim\init.vim`

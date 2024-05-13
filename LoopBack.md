@@ -1,6 +1,6 @@
 # LoopBack
 
-[[Nodejs]] REST API framework
+Nodejs REST API framework
 
 <https://loopback.io/doc/en/lb4>
 
@@ -20,11 +20,11 @@ Check if value of property is contained in an array.
 
 #### `ilike`/`nlike`
 
-Match on case-insensitive [[regex]]es.
+Match on case-insensitive regexes.
 
-Supported by the [[Postgres]] connectors.
+Supported by the Postgres connectors.
 
-##### [[Postgres]] connector syntax
+##### Postgres connector syntax
 
 ```js
 await userRepository.find({where: {name: {ilike: 'john%'}}});
@@ -32,9 +32,9 @@ await userRepository.find({where: {name: {ilike: 'john%'}}});
 
 #### `contains`
 
-[[Postgres]]-specific operator
+Postgres-specific operator
 
-Query [[Postgres]] array for existence of specific value(s)
+Query Postgres array for existence of specific value(s)
 
 ex.
 

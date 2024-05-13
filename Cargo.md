@@ -1,6 +1,6 @@
 # Cargo
 
-[[Rust]] package manager
+Rust package manager
 
 **The Cargo Book**: <https://doc.rust-lang.org/cargo/>
 
@@ -28,7 +28,7 @@ Use `add`/`remove` to add dependencies to your project's manifest.
 
 Use `install`/`uninstall` to install Rust binaries to your system (`$HOME/.cargo/bin`)
 
-## Running in [[Windows]]
+## Running in Windows
 
 ### link.exe error
 
@@ -68,7 +68,7 @@ If you've already installed it, ensure the pkg-config command is one of the dire
 
 <https://download.gnome.org/binaries/win32/dependencies/pkg-config_0.26-1_win32.zip>
 
-### build failure in [[WSL]]
+### build failure in WSL
 
 `openssl` and `libdevssl` need to be installed in Linux before you can install `cargo-edit`.
 
@@ -80,13 +80,13 @@ run pkg_config fail: "`\"pkg-config\" \"--libs\" \"--cflags\" \"openssl\"` did n
 
 ## Set `RUST_BACKTRACE`
 
-### [[Windows]]
+### Windows
 
 ```cmd
 set RUST_BACKTRACE=1
 ```
 
-### [[Linux]]
+### Linux
 
 ```bash
 export RUST_BACKTRACE=1

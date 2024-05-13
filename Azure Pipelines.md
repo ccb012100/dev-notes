@@ -42,7 +42,7 @@
 
 ### **Azure Resource Manager** aka `ARM`
 
-- the deployment and management service for [[Azure]]
+- the deployment and management service for Azure
 
 ### `Bicep`
 
@@ -54,7 +54,7 @@
 
 ## GitHub integration
 
-Integrating with a [[GitHub]]-hosted code repository
+Integrating with a GitHub-hosted code repository
 
 ### Checkout path
 
@@ -547,11 +547,11 @@ Use the `length()` expression to check whether an object parameter has no value 
 
 ##### Formatting
 
-- UNIX ([[macOS]] and [[Linux]]), format `$NAME`
-- On [[Windows]], the format is:
-  - `$NAME` in [[Bash]] scripts
+- UNIX (macOS and Linux), format `$NAME`
+- On Windows, the format is:
+  - `$NAME` in Bash scripts
   - `%NAME%` in `.bat` scripts
-  - `$env:NAME` in [[PowerShell]] scripts
+  - `$env:NAME` in PowerShell scripts
 
 #### Naming restrictions
 
@@ -783,17 +783,17 @@ The pipeline's default branch defines the pipeline version used for:
 - retention policies
 - pipeline resource triggers
 
-## [[dotnet]] integration
+## dotnet integration
 
 ### code coverage
 
 Only supports the [[Visual Studio]] `.coverage` format.
 
-#### [[Windows]]
+#### Windows
 
 Use built-in coverage data collector
 
-#### [[Linux]]/[[macOS]]
+#### Linux/macOS
 
 Use [Coverlet](https://github.com/coverlet-coverage/coverlet)
 
@@ -810,8 +810,8 @@ Used to store and manage packages.
 
 Artifacts can be published at any stage of a build pipeline (but not _release_ pipelines)
 
-Artifacts are stored on a [[Windows]] filesystem, so permissions need to be restored after downloading the artifact on
-[[Linux]].
+Artifacts are stored on a Windows filesystem, so permissions need to be restored after downloading the artifact on
+Linux.
 
 By default, build artifacts are downloaded to the agent running the pipeline.
 
@@ -829,7 +829,7 @@ Validate artifacts before they're deployed.
 
 ## Git
 
-Scripts can run [[Git]] commands.
+Scripts can run Git commands.
 
 ### Branch policy
 
@@ -918,7 +918,7 @@ Method via which tasks and scripts communicate with the agent.
 
 Messages to the log formatter in Azure Pipelines.
 
-Can be used in either [[Bash]] or [[PowerShell]] tasks.
+Can be used in either Bash or PowerShell tasks.
 
 #### List of commands
 

@@ -7,7 +7,7 @@
 
 - settings file is located at `%AppData%\JetBrains\Shared\vAny\GlobalSettingsStorage.DotSettings`
 
-## [[Git]] hooks
+## Git hooks
 
 ### Symptom
 

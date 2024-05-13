@@ -62,9 +62,9 @@ allowed values:
 
 ## Keybindings
 
-### Make `Ctrl+s` act more like [[Emacs]] search
+### Make `Ctrl+s` act more like Emacs search
 
-In [[Emacs]], the keybinding `C-s` will start a search, but entering `C-s` again will find the next match. This can be done in VS Code by setting the `When` clause carefully:
+In Emacs, the keybinding `C-s` will start a search, but entering `C-s` again will find the next match. This can be done in VS Code by setting the `When` clause carefully:
 
 ```json
 {
@@ -144,7 +144,7 @@ In settings, change `window.zoomLevel`, then change `editor.fontSize` to adjust 
 
 ## Git error: `TypeError: Cannot read properties of undefined (reading 'replace')?`
 
-Solution when [[Git]] operations in [[Windows]] result in a failure originating in `%HOME%\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\askpass-main.js`:
+Solution when Git operations in Windows result in a failure originating in `%HOME%\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\askpass-main.js`:
 
 Add to `%HOME%\.gitconfig`:
 

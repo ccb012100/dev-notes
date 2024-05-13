@@ -1,6 +1,6 @@
 # Chocolatey
 
-[[Windows]] CLI package manager
+Windows CLI package manager
 
 List installed packages
 

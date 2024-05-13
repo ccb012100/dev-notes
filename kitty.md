@@ -13,7 +13,7 @@
 kitten show_key
 ```
 
-## [[Linux]]
+## Linux
 
 ### Add desktop entry to run from Launcher
 

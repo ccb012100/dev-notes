@@ -1,5 +1,5 @@
 # Rush
 
-Monorepo manager for [[Nodejs]]
+Monorepo manager for Nodejs
 
 <https://rushjs.io/pages/developer>

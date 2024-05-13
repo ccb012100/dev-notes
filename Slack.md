@@ -99,7 +99,7 @@ M       Remind me
 
 ## Developer tools
 
-To open the developer tools in [[Linux]], run the command
+To open the developer tools in Linux, run the command
 
 ```bash
 export SLACK_DEVELOPER_MENU=true && /usr/bin/slack

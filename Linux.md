@@ -18,7 +18,7 @@ python2 -c "import os; print os.environ['PATH'].replace(':', '\n')"
 echo "${PATH//:/$'\n'}"
 ```
 
-## Set default shell to [[Zsh]]
+## Set default shell to Zsh
 
 ```bash
 chsh -s $(which zsh)
@@ -135,7 +135,7 @@ killall PROGRAM_NAME
 
 `lsusb`
 
-## enable/disable [[Bluetooth]] on boot
+## enable/disable Bluetooth on boot
 
 - Run command `sudo vim /etc/bluetotth/main.conf`
 - Change the line `AutoEnable=false` to `AutoEnable=true`
@@ -226,7 +226,7 @@ Install [[Pulse Audio Volume Control]] (`pavucontrol`) and in the **Output devic
 
 ### Use LDAC
 
-Install [[PipeWire]] and the LDAC codec ([instructions](https://gist.github.com/the-spyke/2de98b22ff4f978ebf0650c90e82027e))
+Install PipeWire and the LDAC codec ([instructions](https://gist.github.com/the-spyke/2de98b22ff4f978ebf0650c90e82027e))
 
 ### Can't adjust system volume
 
@@ -248,7 +248,7 @@ volume = ignore
 - restart audio service
   - [[Pulse Audio]]
     - `pulseaudio -k`
-  - [[PipeWire]]
+  - PipeWire
     - `systemctl --user restart pipewire pipewire-pulse`
 
 [source](https://askubuntu.com/a/1022363)

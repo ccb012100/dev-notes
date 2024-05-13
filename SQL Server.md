@@ -1,6 +1,6 @@
 # Microsoft SQL Server
 
-_Note:_ Unless specified, notes apply to both **[[Azure]] DB** and **SQL Server 2016** (`13.x`) and later.
+_Note:_ Unless specified, notes apply to both **Azure DB** and **SQL Server 2016** (`13.x`) and later.
 
 <https://learn.microsoft.com/en-us/sql/sql-server/?view=sql-server-ver16>
 

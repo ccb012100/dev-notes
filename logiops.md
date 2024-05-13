@@ -1,6 +1,6 @@
 # logiops
 
-[[Linux]] driver for Logitech mice/keyboards (to make up for no Logitech Options+ software on Linux)
+Linux driver for Logitech mice/keyboards (to make up for no Logitech Options+ software on Linux)
 
 [This article](https://danishshakeel.me/configure-logitech-mx-master-3-on-linux-logiops/) is really helpful for the
 configuration file format.

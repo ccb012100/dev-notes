@@ -1,6 +1,6 @@
 # Mermaid
 
-[[JavaScript]] tool for creating diagramming/charting in [[Markdown]] documents.
+JavaScript tool for creating diagramming/charting in Markdown documents.
 
 [Documentation](https://mermaid.js.org/intro/)
 
@@ -10,7 +10,7 @@ Use a space character as the label to make the node empty.
 
 ## GitHub
 
-Supported in [[GitHub]] documents.
+Supported in GitHub documents.
 
 ### Caveats
 
