@@ -18,6 +18,50 @@ see [[Azure Pipelines]]
 
 [Syntax Conventions](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/syntax-conventions?source=recommendations)
 
+### Summarize
+
+```kql
+# Summarize EF Core Warnings
+traces
+| summarize Count=countif( customDimensions["EventName"] matches regex @"Microsoft\.EntityFrameworkCore\..+Warning" )
+    by tostring(customDimensions["EventName"])
+| where Count > 0
+| sort by Count
+
+# SUMMARIZE DbUpdateConcurrencyExceptions
+# WHERE CategoryName is not "Foo.Bar.Baz.Bat" or "Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer"
+# BY (FormattedMessage if OriginalFormat is "Error handling message" else OriginalFormat)
+exceptions
+| summarize Count=countif(
+      type == "Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException"
+      and customDimensions["CategoryName"] !in("Foo.Bar.Baz.Bat", "Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer")
+    ) 
+    by iff(
+      (customDimensions["OriginalFormat"] == "Error handling message"),
+        tostring(customDimensions["FormattedMessage"]),
+        tostring(customDimensions["OriginalFormat"])
+    )
+| where Count > 0
+| sort by Count
+```
+
+### Regex
+
+#### Escaping
+
+I'm not sure why, but you must use a [verbatim string literal](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/scalar-data-types/string#verbatim-string-literal)
+if the regex match contains backslashes (or at least if you want to escape a literal period (`.`) - it might be limited to just that character).
+
+```kql
+# to match on "foo.bar.*"
+
+# bad
+requests | where customDimensions['Foo'] matches regex 'foo\.bar\..+'
+
+# good
+requests | where customDimensions['Foo'] matches regex @'foo\.bar\..+'
+```
+
 ## **Azure SQL**
 
 [documentation](https://learn.microsoft.com/en-us/azure/azure-sql/?view=azuresql)
