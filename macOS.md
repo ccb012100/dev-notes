@@ -1,5 +1,9 @@
 # macOS
 
+## Application Preferences
+
+Applications store preferences in `*.plist` files in the directory  `$HOME/Library/Preferences/`
+
 ## Outlook
 
 ### group messages by conversation
@@ -136,3 +140,19 @@ sudo defaults delete /Library/Preferences/com.apple.airport.bt.plist bluetoothCo
 | Save picture selected area as a file | ⇧⌘4 |
 | Save picture selected area to the clipboard | ⌃⇧⌘4 |
 | Screenshot and recording options | ⇧⌘5 |
+
+## `plutil`
+
+Property List Utility
+
+### Convert plist to JSON format
+
+```zsh
+plutil -convert json FILE.plist TARGET_FILE.json
+```
+
+### Print plist in human-readable format
+
+```zsh
+plutil -p FILE.plist
+```
