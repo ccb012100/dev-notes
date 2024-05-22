@@ -1,24 +1,5 @@
 # fish shell
 
-- [fish shell](#fish-shell)
-  - [`set`](#set)
-  - [shortcuts](#shortcuts)
-  - [here docs/here strings](#here-docshere-strings)
-  - [script arguments](#script-arguments)
-    - [list of arguments](#list-of-arguments)
-    - [access single argument](#access-single-argument)
-    - [access range of args](#access-range-of-args)
-      - [example](#example)
-    - [test argv count](#test-argv-count)
-  - [functions](#functions)
-    - [loading](#loading)
-    - [viewing](#viewing)
-  - [aliases](#aliases)
-    - [see alias definition](#see-alias-definition)
-  - [abbreviations](#abbreviations)
-  - [Switch case](#switch-case)
-  - [Print keyboard input codes](#print-keyboard-input-codes)
-
 <https://fishshell.com/docs/current/>
 
 ## `set`
