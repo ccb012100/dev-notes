@@ -1,5 +1,8 @@
 # awk
 
+- [HANDY ONE-LINE SCRIPTS FOR AWK](https://www.pement.org/awk/awk1line.txt)
+- [Chart of similar operations with sed and awk](https://www.pement.org/awk/awk_sed.txt)
+
 ```bash
 # print lines matching $PATTERN
 awk '/$PATTERN/ {print}' FILE
