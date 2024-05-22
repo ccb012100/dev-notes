@@ -6,9 +6,9 @@
 
 | Action | key |
 | - | - |
-| Activate `warpd` in `grid` mode | `Meh + g` |
+| Activate `warpd` in `grid` mode | `Meh + \|` |
 | Activate `warpd` in `hint` mode | `Meh + ;` |
-| Activate `warpd` in `hint2` mode | `Meh + /` |
+| Activate `warpd` in `hint2` mode | `Meh + '` |
 | | |
 | Switch to drag ((v)isual) mode | `v` |
 | Switch to (g)rid mode | `g` |
