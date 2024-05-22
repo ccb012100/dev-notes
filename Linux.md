@@ -24,6 +24,33 @@ echo "${PATH//:/$'\n'}"
 chsh -s $(which zsh)
 ```
 
+## Benchmarking shell startup time
+
+```bash
+# run and exit
+$ hyperfine --shell=none "fish --command=exit"
+Benchmark 1: fish -c exit
+  Time (mean ± σ):      17.9 ms ±   1.6 ms    [User: 4.5 ms, System: 3.4 ms]
+  Range (min … max):    13.0 ms …  21.6 ms    150 runs
+# run with no config
+$ hyperfine --shell=none "fish --no-config --command=exit"
+Benchmark 1: fish -n -c exit
+  Time (mean ± σ):       5.9 ms ±   0.8 ms    [User: 1.4 ms, System: 1.0 ms]
+  Range (min … max):     4.4 ms …   9.2 ms    418 runs
+# run as login
+$ hyperfine --shell=none "fish --login --command=exit"
+Benchmark 1: fish --login --command=exit
+  Time (mean ± σ):      19.2 ms ±   1.6 ms    [User: 5.1 ms, System: 3.6 ms]
+  Range (min … max):    15.7 ms …  25.5 ms    140 runs
+# run as interactive
+$ hyperfine --shell=none "fish --interactive --command=exit"
+Benchmark 1: fish --interactive --command=exit
+  Time (mean ± σ):     455.7 ms ±  16.5 ms    [User: 327.7 ms, System: 35.9 ms]
+  Range (min … max):   427.8 ms … 484.1 ms    10 runs
+```
+
+_source_: <https://tratt.net/laurie/blog/2024/faster_shell_startup_with_shell_switching.html>
+
 ## display system info using `inxi`
 
 ```bash
