@@ -34,5 +34,20 @@ To test if one string contains another, use the [`contains`](https://masterminds
 > For example, to test if the `.chezmoi.kernel.osrelease` variable contains the string `microsoft-standard-WSL2`:
 >
 > ```go
-> contains contains "microsoft-standard-WSL2" .chezmoi.kernel.osrelease
+> contains "microsoft-standard-WSL2" .chezmoi.kernel.osrelease
 > ```
+
+### Detect Windows Subsystem for Linux (WSL2)
+
+```go-template
+{{- if eq .chezmoi.os "linux" }}
+  {{- if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+  # WSL-specific code
+  {{- end }}
+{{- end }}
+
+{{/* single check */ -}}
+{{- if (and (eq .chezmoi.os "linux") (.chezmoi.kernel.osrelease | lower | contains "microsoft"))}}
+  # WSL-specific code
+{{- end }}
+```
