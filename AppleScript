@@ -30,18 +30,4 @@ source: <https://apple.stackexchange.com/a/457543>
 
 ## iTerm2
 
-The script:
-
-```osascript
-tell application "iTerm2"
-```
-
-only works if **iTerm2** is already running.
-
-The script:
-
-```osascript
-tell application "iTerm"
-```
-
-always works.
+See [iTerm2.md](iTerm2.md) for details regarding using AppleScript to interact with **iTerm2**.

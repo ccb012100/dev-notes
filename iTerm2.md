@@ -10,9 +10,21 @@
 
 [Documentation](https://iterm2.com/documentation-scripting.html)
 
-```osascript
+The script:
 
+```osascript
+tell application "iTerm2"
 ```
+
+only works if **iTerm2** is already running.
+
+The script:
+
+```osascript
+tell application "iTerm"
+```
+
+always works.
 
 ### Python API
 
