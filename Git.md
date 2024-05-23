@@ -377,22 +377,43 @@ To use Windows Credentials Manager, which will remember the ssh passphrase, when
 
 ## Logs
 
-### search logs for commits that added/removed specific text
+### Search logs for commits that added/removed specific text
 
 a.k.a **the pickaxe**
 
 ```bash
 # search for string
-git log -S <string>
+git log -S PATTERN
 
 # search by regex
-git log -G <pattern>
+git log -G PATTERN
 
 # search all branches/tags
-git log -S --all <string>
+git log -S --all PATTERN
 
 # search for branches matching shell glob `<pattern>`
 git log -S <string> --branches[=<pattern>]
+```
+
+### List deleted files
+
+```bash
+git log --diff-filter=D --summary | grep delete
+```
+
+### Logs for a specific file
+
+```bash
+git log --all --full-history -- FILE_PATH
+
+# fuzzy search
+git log --all --full-history -- "**/FILE_NAME>"
+
+# view the file as of a specific commit
+git show SHA -- FILE_PATH
+
+# Restore deleted file (note the caret to grab the previous commit)
+git checkout SHA_WHERE_FILE_WAS_DELETED^ -- FILE_PATH
 ```
 
 ## Using Multiple git profiles with different ssh keys
@@ -541,4 +562,13 @@ git worktree remove NAME
 
 ```bash
 git update-index --untracked-cache
+```
+
+## Restore a deleted file
+
+Find the SHA for the commit where the file was deleted, and then run the command
+
+```bash
+# note the caret to grab the previous commit
+git checkout SHA_WHERE_FILE_WAS_DELETED^ -- FILE_PATH
 ```
