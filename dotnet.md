@@ -1,5 +1,17 @@
 # dotnet
 
+## Configuration
+
+### View applied configuration
+
+Use [ConfigurationRootExtensions.GetDebugView()](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.configuration.configurationrootextensions.getdebugview?view=net-8.0)
+
+```c#
+var configRoot = (IConfigurationRoot)configuration;
+var debugView = configRoot.GetDebugView();
+Console.WriteLine(debugView);
+```
+
 ## App secrets
 
 [Safe storage of app secrets in development in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-5.0&tabs=windows)
