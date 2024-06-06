@@ -383,16 +383,16 @@ a.k.a **the pickaxe**
 
 ```bash
 # search for string
-git log -S PATTERN
+git log -S STRING
 
 # search by regex
 git log -G PATTERN
 
 # search all branches/tags
-git log -S --all PATTERN
+git log -S --all STRING
 
 # search for branches matching shell glob `<pattern>`
-git log -S <string> --branches[=<pattern>]
+git log -S STRING --branches[=<pattern>]
 ```
 
 ### List deleted files
