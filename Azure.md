@@ -73,3 +73,13 @@ requests | where customDimensions['Foo'] matches regex @'foo\.bar\..+'
 CREATE USER [ReadOnlyUser] WITH PASSWORD = 'PASSWORD';
 ALTER ROLE [db_datareader] ADD MEMBER [ReadOnlyUser];
 ```
+
+### Advanced Application Restart
+
+To perform an _Advanced Application Restart_:
+
+1. Go to the `Web App` instance in the **Azure** portal.
+1. Click on `Diagnose and solve problems` in the left-hand navigation panel.
+2. In the `Troubleshooting categories > 🔍 Diagnostic Tools` section, click `Advanced Application Restart`
+    - Will take you to the paged titled **⚙️ Advanced Application restart**
+3. Select the **Server** checkboxes and click `↻ Restart`
