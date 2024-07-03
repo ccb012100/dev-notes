@@ -312,3 +312,19 @@ _source:_ <https://bbs.archlinux.org/viewtopic.php?id=247538>
 - `realpath SYMLINK`
 - `file SYMLINK`
 - `stat -c%N SYMLINK`
+
+## `proc`
+
+Every process has an entry in the `/proc` directory. A process can be located by it's PID at `/proc/PID`.
+
+| file | description |
+| - | - |
+| `/prod/PID/cmdline` | command line arguments the process was started with |
+| `/prod/PID/exe` | symlink to the process' binary |
+| `/prod/PID/environ` | the process' environment variables |
+| `/prod/PID/status` | sleep/wake state, memory usage, etc. |
+| `/prod/PID/fd` | directory containing every file the process has open |
+| `/prod/PID/stack` | kernel's current stack for the process |
+| `/prod/PID/maps` | list of the process' memory maps (shared libraries, heap, anonymous maps, etc.) |
+
+_source_: <https://wizardzines.com/comics/proc>
