@@ -572,3 +572,17 @@ Find the SHA for the commit where the file was deleted, and then run the command
 # note the caret to grab the previous commit
 git checkout SHA_WHERE_FILE_WAS_DELETED^ -- FILE_PATH
 ```
+
+## `blame`
+
+### Ignoring commits
+
+```bash
+git blame --ignore-rev SHA1 --ingore-rev SHA2 FILE
+
+# Use an ignore-revs file (can be specified multiple times)
+git blame --ignore-revs-file IGNORE_REVS_FILE FILE
+
+# set ignore-revs file in repo's config
+git config blame.ignoreRevsFile IGNORE_REVS_FILE
+```
