@@ -50,6 +50,9 @@ rg -c PATTERN # --count
 # show number of matches per file
 rg --count-matches PATTERN
 
+# show total number of matches across all files
+rg -o PATTERN | wc -l
+
 # search for pattern in given file
 rg -f<file> PATTERN # --file
 
