@@ -1,5 +1,36 @@
 # GitHub
 
+## GitHub Markdown
+
+### Alerts
+
+Note
+
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+
+Tip
+
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+
+Important
+
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
+
+Warning
+
+> [!WARNING]
+> Urgent info that needs immediate user attention to avoid problems.
+
+Caution
+
+> [!CAUTION]
+> Advises about risks or negative outcomes of certain actions.
+
+_source_: [GitHub docs](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts)
+
 ## see a user's public keys
 
 `https://github.com/<username>.keys`
@@ -22,7 +53,7 @@ javascript:document.getElementsByName("viewed").forEach(ch => {
 })
 ```
 
-*source:* [stackoverflow.com](https://stackoverflow.com/questions/69945775/how-to-unview-toggle-all-the-viewed-files-on-github-pull-request#comment126429925_69945864)
+_source:_ [stackoverflow.com](https://stackoverflow.com/questions/69945775/how-to-unview-toggle-all-the-viewed-files-on-github-pull-request#comment126429925_69945864)
 
 ### add GitHub to `known_hosts`
 
