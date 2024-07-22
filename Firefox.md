@@ -13,3 +13,11 @@ There are one of 2 ways:
 
 - Create a bookmark to a search results page
 - Edit the bookmark and a **keyword**
+
+### Manage Extension shortcuts
+
+To set extension keyboard shortcuts:
+
+- Go to _Hamburger Menu > Add-ons and Themes_ (`⌘+Shift+A`/`Ctrl+Shift+A`)
+- Click the Gear (`⚙️`) icon
+- Select _Manage Extension Shortcuts_
