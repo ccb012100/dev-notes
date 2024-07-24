@@ -187,6 +187,23 @@ Built-in CLI utility to keep a Mac from sleeping.
 caffeinate -u -t 3600
 ```
 
+### See remaining time
+
+Run the command `pmset -g assertions`. The output should be similar to:
+
+```plaintext
+2024-07-24 13:11:34 -0500
+Assertion status system-wide:
+  --- snip ---
+Listed by owning process:
+  --- snip ---
+  pid 54360(caffeinate): [0x00023c740009a717] 00:12:05 UserIsActive named: "caffeinate command-line tool"
+        Details: caffeinate asserting for 3600 secs
+        Localized=THE CAFFEINATE TOOL IS PREVENTING SLEEP.
+        Timeout will fire in 2874 secs Action=TimeoutActionRelease
+No kernel assertions.
+```
+
 ### Utility arguments
 
 ```zsh
