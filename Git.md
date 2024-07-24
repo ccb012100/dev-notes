@@ -107,6 +107,20 @@ basename -s .git `git config --get remote.origin.url`
 
 _source:_ <https://stackoverflow.com/a/42543006>
 
+### Set config at command-level
+
+To set/override a config value for a single command, use the `-c` flag before the command.
+
+Example:
+
+```bash
+# use less as diff pager
+git -c pager.diff=less diff
+
+# unset pager.diff
+git -c pager.diff= diff
+```
+
 ## `$GIT_DIR`
 
 Instead of accessing `$GIT_DIR` directly, use the command `git rev-parse --git-common-directory`; this uses the logic `return $GIT_COMMON_DIR ?? $GIT_DIR ?? .git/`
