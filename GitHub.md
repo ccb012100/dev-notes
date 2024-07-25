@@ -159,3 +159,16 @@ For GitHub-hosted **runners**, each job in a **workflow** runs in a fresh instan
 Set of tasks performed by a **job**.
 
 Steps can run **commands** or **actions**.
+
+### Comparing/Diffing
+
+2 different comparison methods - two-dot and three-dot (three-dot is the default on **GitHub** PRs)
+
+- two-dot:  <https://github.com/USERNAME/REPOSITORY/compare/BASE..COMPARE>
+- three-dot:  <https://github.com/USERNAME/REPOSITORY/compare/BASE..COMPARE>
+
+`BASE` and `COMPARE` can be either SHAs or branch names.
+
+example: `https://github.com/github-linguist/linguist/compare/f75c570..3391dcc`
+
+_source_: <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-comparing-branches-in-pull-requests>
