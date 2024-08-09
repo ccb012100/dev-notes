@@ -31,6 +31,22 @@ Caution
 
 _source_: [GitHub docs](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts)
 
+### Images
+
+Same as link syntax, but preceded by a `!`:
+
+```markdown
+![alt text](image_path)
+```
+
+| Context | Relative Link |
+| - | - |
+| In a .md file on the same branch | `/assets/images/electrocat.png` |
+| In a .md file on another branch | `/../main/assets/images/electrocat.png` |
+| In issues, pull requests and comments of the repository | `../blob/main/assets/images/electrocat.png?raw=true` |
+| In a .md file in another repository | `/../../../../github/docs/blob/main/assets/images/electrocat.png` |
+| In issues, pull requests and comments of another repository | `../../../github/docs/blob/main/assets/images/electrocat.png?raw=true` |
+
 ## see a user's public keys
 
 `https://github.com/<username>.keys`
