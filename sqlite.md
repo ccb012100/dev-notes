@@ -56,3 +56,7 @@ Run `sqlite3` to start the sqlite CLI
 ## Generate "create DB" script from a database
 
 The `.schema` command outputs the schema in the format of `CREATE` statements.
+
+## Dump contents to file
+
+Use the `.dump` command. `dump table_name` will dump a single table.
