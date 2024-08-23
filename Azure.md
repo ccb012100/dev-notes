@@ -83,3 +83,33 @@ To perform an _Advanced Application Restart_:
 2. In the `Troubleshooting categories > 🔍 Diagnostic Tools` section, click `Advanced Application Restart`
     - Will take you to the paged titled **⚙️ Advanced Application restart**
 3. Select the **Server** checkboxes and click `↻ Restart`
+
+## Azure Cosmos DB
+
+<https://learn.microsoft.com/en-us/azure/cosmos-db/>
+
+### Find items that are missing a specific field
+
+[`ISNULL(<expr>)`](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/query/is-null) will only match if the property exists and is set to `null`.
+
+Use [`NOT IsDefined(<expr>)`](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/query/is-defined), to check if a property exists on a document.
+
+For example, with the items:
+
+```json
+[
+  {
+    "foo": "bar",
+  },
+  {
+    "foo": null,
+    "baz": "bat"
+  }
+]
+```
+
+```sql
+select * from c ISNULL(c.baz) -- returns nothing
+select * from c NOT DEFINED(c.baz) -- returns 2nd item
+select * from c ISNULL(c.foo) -- returns 2nd item
+```
