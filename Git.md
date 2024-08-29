@@ -2,6 +2,10 @@
 
 ## Commits
 
+### Import one repository (and its history) into another
+
+Follow the instructions in <https://stackoverflow.com/a/20974621>
+
 ### `amend`
 
 #### Add files to commit
