@@ -58,7 +58,7 @@ Now packages can be added to a project with the command `cargo add $package_name
 
 ### Build failure in Windows
 
-```plaintext
+```console
 The pkg-config command could not be found.
 
 Most likely, you need to install a pkg-config package for your OS.

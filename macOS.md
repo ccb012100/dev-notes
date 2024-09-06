@@ -191,7 +191,7 @@ caffeinate -u -t 3600
 
 Run the command `pmset -g assertions`. The output should be similar to:
 
-```plaintext
+```console
 2024-07-24 13:11:34 -0500
 Assertion status system-wide:
   --- snip ---
