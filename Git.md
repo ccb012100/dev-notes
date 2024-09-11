@@ -4,7 +4,30 @@
 
 ### Import one repository (and its history) into another
 
-Follow the instructions in <https://stackoverflow.com/a/20974621>
+For example, merging repo `B` into repo `A`:
+
+```bash
+# go to repo B
+cd ~/src/B
+# create a new subdir
+mkdir B
+# move the files (excluding '.git/', '.github/', etc.) to the subdir
+git mv REPO_FILES B/
+# commit the changes
+git add --all && git commit -m "preparing for merge" && git push
+# go to repo A
+cd ~/src/A
+# track repo B
+git remote add B git@github.com@:ccb012100/B.git
+# fetch B
+git fetch B
+# merge in B's 'main' branch
+git merge --allow-unrelated-histories B/main
+# commit changes
+git commit -m "merge in repo B" && git push
+```
+
+_source_: <https://stackoverflow.com/a/20974621>
 
 ### `amend`
 
