@@ -6,7 +6,7 @@
 
 Run `sqlite3` to start the sqlite CLI
 
-```sqlite
+```console
 # open DB file or, if it doesn't exist, create it
 .open db1.db
 
@@ -48,9 +48,28 @@ Run `sqlite3` to start the sqlite CLI
 
 # output to file
 .output file.csv
- 
+
 # dhame output back to console
 .output stdout
+```
+
+## list database names
+
+```console
+# sqlite CLI
+pragma database_list;
+
+# SQL query
+select * from pragma_database_list;
+
+select * from pragma_database_list;
+
+# results
+┌──────┬─────────────────────────────────────────────┐
+│ name │ file                                        │
+├──────┼─────────────────────────────────────────────┤
+│ main │ /Users/ccb012100/playlister.sqlite3         │
+└──────┴─────────────────────────────────────────────┘
 ```
 
 ## Generate "create DB" script from a database
