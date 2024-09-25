@@ -34,11 +34,18 @@ _source_: <https://stackoverflow.com/a/20974621>
 #### Add files to commit
 
 ```bash
-# add files
+# stage files
 git add .
 
 # amend commit with --no-edit to keep the same commit message
 git commit --amend --no-edit
+```
+
+or
+
+```bash
+# add unstaged files and amend commit
+git commit --all --amend --no-edit
 ```
 
 #### Change commit message
