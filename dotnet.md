@@ -234,3 +234,57 @@ _sources_:
 I keep having issues where the latest version isn't in the `apt` repo, so just follow
 [the instructions](https://learn.microsoft.com/en-Us/dotnet/core/install/linux-package-mixup?pivots=os-linux-other#i-need-a-version-of-net-that-isnt-provided-by-my-linux-distribution)
 to use Microsoft's repository.
+
+## SQLite
+
+### In-memory database
+
+The `ConnectionString` will follow the same format as that listed in the [SQLite documentation](https://www.sqlite.org/draft/inmemorydb.html), prepended with `DataSource=`, e.g.:
+
+```json
+{
+    "ConnectionString": "DataSource=file::memory:?cache=shared"
+}
+```
+
+## Integration Testing
+
+### House test appsettings.json in the test project
+
+1. In the integration test project, create the appsettings file for the `Environment` used in the tests, e.g. `appsettings.Test.json`.
+1. In the test project's `.csproj` file, set the appsettings file to be copied with the build:
+
+    ```xml
+    <ItemGroup>
+      <None Include="appsettings.Test.json" CopyToOutputDirectory="PreserveNewest"/>
+    </ItemGroup>
+    ```
+
+1. In your custom `WebApplicationFactory`, apply the appsettings file in the `ConfigureWebHost` override:
+
+    ```csharp
+    protected override void ConfigureWebHost( IWebHostBuilder builder ) {
+        // Apply config from appsettings.Integration.json
+        builder.ConfigureAppConfiguration(
+            ( webHostBuilderContext , configBuilder ) => {
+                configBuilder.AddJsonFile(
+                    Path.Combine(
+                        Directory.GetCurrentDirectory( ),
+                        "appsettings.Integration.json"
+                    )
+                );
+            }
+        );
+    ```
+
+1. If you want to use a **SQLite** in-memory database, you'll want to set a unique `ConnectionString` in `ConfigureWebHost` so that different tests run in parallel don't use the same connection:
+
+    ```csharp
+    protected override void ConfigureWebHost( IWebHostBuilder builder ) {
+        /* 
+         * This is applied _before_ Program.Main, which allows us to override
+         * `appsettings.json` before Services are configured.
+         */
+        builder.UseConfiguration( configuration );
+    }
+    ```
