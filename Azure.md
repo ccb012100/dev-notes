@@ -109,7 +109,61 @@ For example, with the items:
 ```
 
 ```sql
-select * from c ISNULL(c.baz) -- returns nothing
-select * from c NOT DEFINED(c.baz) -- returns 2nd item
-select * from c ISNULL(c.foo) -- returns 2nd item
+SELECT * FROM c WHERE ISNULL(c.baz) -- returns nothing
+SELECT * FROM c WHERE NOT DEFINED(c.baz) -- returns 2nd item
+SELECT * FROM c WHERE ISNULL(c.foo) -- returns 2nd item
 ```
+
+## Application Insights
+
+### Adaptive Sampling
+
+`ExcludedTypes` takes precedence over `IncludedTypes`; it's best to only use one or the other.
+
+### Check Sampling level
+
+Run the query:
+
+```sql
+union requests,dependencies,pageViews,browserTimings,exceptions,traces
+| where timestamp > ago(1d)
+| summarize RetainedPercentage = 100/avg(itemCount) by bin(timestamp, 1h), itemType
+```
+
+Any type where `RetainedPercentage` is less than `100` is being sampled.
+
+_source_: <https://learn.microsoft.com/en-us/azure/azure-monitor/app/sampling-classic-api#knowing-whether-sampling-is-in-operation>
+
+### Configuring the **Application Insights SDK** in .NET Core
+
+#### .NET API
+
+```cs
+using Microsoft.ApplicationInsights.AspNetCore.Extensions;
+using Microsoft.ApplicationInsights.Extensibility;
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.Configure<TelemetryConfiguration>(telemetryConfiguration =>
+{
+   var telemetryProcessorChainBuilder = telemetryConfiguration.DefaultTelemetrySink.TelemetryProcessorChainBuilder;
+
+   // Using adaptive sampling with 5 items per second, and also excludes EventTelemetry from being subject to sampling:
+   telemetryProcessorChainBuilder.UseAdaptiveSampling(maxTelemetryItemsPerSecond:5, excludedTypes: "Event");
+
+   telemetryProcessorChainBuilder.Build();
+});
+
+builder.Services.AddApplicationInsightsTelemetry(new ApplicationInsightsServiceOptions
+{
+   EnableAdaptiveSampling = false,
+});
+
+var app = builder.Build();
+```
+
+_source_: <https://learn.microsoft.com/en-us/azure/azure-monitor/app/sampling-classic-api#configure-sampling-settings>
+
+### Azure Functions
+
+_source_: <https://learn.microsoft.com/en-us/azure/azure-functions/configure-monitoring?tabs=v2#configure-sampling>
