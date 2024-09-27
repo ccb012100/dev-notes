@@ -7,6 +7,7 @@
 - [Documentation](https://docs.splunk.com/Documentation) root
 - [Search](https://docs.splunk.com/Documentation/SplunkCloud/9.2.2406/Search/GetstartedwithSearch?ref=hk)
 - Splunk [**Search Processing Language**](https://docs.splunk.com/Splexicon:Searchprocessinglanguage) (**SPL**)
+- [Splunk Cheat Sheet: Query, SPL, RegEx, & Commands](https://www.splunk.com/en_us/blog/learn/splunk-cheat-sheet-query-spl-regex-commands.html)
 
 Use the **Search & Reporting** app (a.k.a. the "Search app").
 
