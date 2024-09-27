@@ -47,6 +47,18 @@ Same as link syntax, but preceded by a `!`:
 | In a .md file in another repository | `/../../../../github/docs/blob/main/assets/images/electrocat.png` |
 | In issues, pull requests and comments of another repository | `../../../github/docs/blob/main/assets/images/electrocat.png?raw=true` |
 
+### Footnotes
+
+```markdown
+Here is a simple footnote[^1].
+
+A footnote can also have multiple lines[^2].
+
+[^1]: My reference.
+[^2]: To add line breaks within a footnote, prefix new lines with 2 spaces.
+  This is a second line.
+```
+
 ## see a user's public keys
 
 `https://github.com/<username>.keys`
