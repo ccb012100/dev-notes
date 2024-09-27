@@ -125,9 +125,9 @@ SELECT * FROM c WHERE ISNULL(c.foo) -- returns 2nd item
 Run the query:
 
 ```sql
-union requests,dependencies,pageViews,browserTimings,exceptions,traces
+union requests,dependencies,pageViews,browserTimings,exceptions,traces,customEvents
 | where timestamp > ago(1d)
-| summarize RetainedPercentage = 100/avg(itemCount) by bin(timestamp, 1h), itemType
+| summarize RetainedPercentage = 100/avg(itemCount) by bin(timestamp, 24h), itemType
 ```
 
 Any type where `RetainedPercentage` is less than `100` is being sampled.
