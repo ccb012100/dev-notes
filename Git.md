@@ -75,11 +75,18 @@ git rebase HASH -x "git commit --amend --no-edit --author="Author Name <email@ex
 ### amend commit to current time
 
 ```bash
-GIT_COMMITTER_DATE="$(date)" git commit --amend --no-edit --date "$GIT_COMMITTER_DATE"
-
-# simpler version
+# now           c
 git commit --amend --no-edit --date=now
+
+# specific time
+git commit --amend --no-edit --date "Wed Sep 25 17:23:01 CDT 2024"
 ```
+
+#### multiple commits
+
+- Start an interactive rebase
+- Set each commit to `edit`
+- For each commit, amend the commit date and then run `git rebase --continue`
 
 ### Sign commits with SSH
 
