@@ -1,8 +1,24 @@
 # JetBrains Rider
 
+## Switch focus from search box to editor
+
+### macOS
+
+```console
+⌘+Enter
+```
+
+### Windows/Linux
+
+```console
+Ctrl+Enter
+```
+
 ## Settings Repository
 
 ### git configuration
+
+### Windows
 
 Rider sets up its own git repository in AppData to sync settings changes.
 
@@ -14,12 +30,16 @@ _Note_: when updating `recentSolutions.xml`, make sure that the IDE is closed an
 
 ## Recent Items list
 
+### Windows
+
 For some reason, the Recent Items list can start showing the directory name instead of the project name.
 
 To fix it, open `~/AppData/Roaming/JetBrains/Rider2021.2/options/recentSolutions.xml` and add a `displayName=""`
 attribute to the `<RecentProjectMetaInfo>` tag for the projects showing up incorrectly.
 
 ## Projects open in window larger than screen size
+
+### Windows
 
 This seems to be because of using monitors with different resolutions (i.e. laptop monitor and external monitor).
 
