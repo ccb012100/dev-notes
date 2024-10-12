@@ -20,7 +20,8 @@ see [Azure Pipelines](/Azure%20Pipelines.md)
 
 ### Summarize
 
-```kql
+```sql
+# kql
 # Summarize EF Core Warnings
 traces
 | summarize Count=countif( customDimensions["EventName"] matches regex @"Microsoft\.EntityFrameworkCore\..+Warning" )
@@ -87,6 +88,20 @@ To perform an _Advanced Application Restart_:
 ## Azure Cosmos DB
 
 <https://learn.microsoft.com/en-us/azure/cosmos-db/>
+
+> [!IMPORTANT] query terminator Cosmos statements do _not_ have a terminator symbol (i.e. `;`). Including one will cause a syntax error
+
+### `OFFSET LIMIT` query
+
+To set a limit, you have to use the format `OFFSET offset_amount LIMIT limit_amount`:
+
+```sql
+SELECT *
+FROM c
+OFFSET 0 LIMIT 10
+```
+
+_source_: <https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/query/offset-limit>
 
 ### Find items that are missing a specific field
 
