@@ -94,3 +94,34 @@ ALTER ROLE [db_datareader] ADD MEMBER [<username>]
 ```sql
 DROP USER IF EXISTS <username>;
 ```
+
+## Check current index fragmentation levels
+
+```sql
+-- Run against your database to check the current index fragmentation levels
+SELECT
+ idxs.[object_id]
+ ,ObjectSchema = OBJECT_SCHEMA_NAME(idxs.object_id)
+ ,ObjectName = OBJECT_NAME(idxs.object_id)
+ ,IndexName = idxs.name
+ ,idxs.type
+ ,idxs.type_desc
+ ,i.avg_fragmentation_in_percent
+ ,i.page_count
+ ,i.index_id
+ ,i.partition_number
+ ,i.avg_page_space_used_in_percent
+ ,i.record_count
+ ,i.ghost_record_count
+ ,i.forwarded_record_count
+
+FROM sys.indexes idxs
+INNER JOIN sys.dm_db_index_physical_stats(DB_ID(),NULL, NULL, NULL, 'SAMPLED') i  ON i.object_id = idxs.object_id AND i.index_id = idxs.index_id
+
+WHERE idxs.type IN (0 /*HEAP*/, 1/*CLUSTERED*/, 2/*NONCLUSTERED*/, 5/*CLUSTERED COLUMNSTORE*/, 6/*NONCLUSTERED COLUMNSTORE*/)
+AND (alloc_unit_type_desc = 'IN_ROW_DATA' /*avoid LOB_DATA or ROW_OVERFLOW_DATA*/ OR alloc_unit_type_desc IS NULL /*for ColumnStore indexes*/)
+AND OBJECT_SCHEMA_NAME(idxs.object_id) != 'sys'
+AND idxs.is_disabled = 0
+
+ORDER BY i.avg_fragmentation_in_percent DESC, i.page_count DESC
+```
