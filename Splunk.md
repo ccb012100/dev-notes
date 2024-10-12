@@ -8,6 +8,7 @@
 - [Search](https://docs.splunk.com/Documentation/SplunkCloud/9.2.2406/Search/GetstartedwithSearch?ref=hk)
 - Splunk [**Search Processing Language**](https://docs.splunk.com/Splexicon:Searchprocessinglanguage) (**SPL**)
 - [Splunk Cheat Sheet: Query, SPL, RegEx, & Commands](https://www.splunk.com/en_us/blog/learn/splunk-cheat-sheet-query-spl-regex-commands.html)
+- [Query Optimization](https://docs.splunk.com/Documentation/Splunk/9.3.1/Search/Aboutoptimization)
 
 Use the **Search & Reporting** app (a.k.a. the "Search app").
 
@@ -69,3 +70,11 @@ Data that's mapped (keyed off of a field) to and included in the search results.
 ## Reports
 
 The save dialog has an **Add to Dashboard** option.
+
+### Edit query/search
+
+To edit the query used in a report, click the `Edit ⏷ > Open in Search`
+
+## Timechart
+
+<https://docs.splunk.com/Documentation/Splunk/9.3.1/SearchReference/Timechart>
