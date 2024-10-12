@@ -62,6 +62,81 @@ allowed values:
 
 ## Keybindings
 
+### Insert text
+
+Use `"command": "type"`
+
+```json
+{
+  "key": "enter",
+  "command": "type",
+  "args": { "text": "Hello World" },
+  "when": "editorTextFocus"
+}
+```
+
+([source](https://code.visualstudio.com/docs/getstarted/keybindings#_command-arguments))
+
+### Run command with arguments
+
+```json
+{
+  "key": "ctrl+shift+e",
+  "command": "runCommands",
+  "args": {
+    "commands": [
+      {
+        // command invoked with 2 arguments: vscode.executeCommand("myCommand", "arg1", ["arg2", "arg3"], "arg4")
+        "command": "myCommand",
+        "args": ["arg1", ["arg2", "arg3"], "arg4"]
+      }
+    ]
+  }
+}
+```
+
+([source](https://code.visualstudio.com/docs/getstarted/keybindings#_running-multiple-commands))
+
+### Run multiple commands
+
+```json
+{
+  "key": "ctrl+alt+c",
+  "command": "runCommands",
+  "args": {
+    "commands": [
+      "editor.action.copyLinesDownAction",
+      "cursorUp",
+      "editor.action.addCommentLine",
+      "cursorDown"
+    ]
+  }
+},
+{ // with arguments
+  "key": "ctrl+n",
+  "command": "runCommands",
+  "args": {
+    "commands": [
+      {
+        "command": "workbench.action.files.newUntitledFile",
+        "args": {
+          "languageId": "typescript"
+        }
+      },
+      {
+        "command": "editor.action.insertSnippet",
+        "args": {
+          "langId": "typescript",
+          "snippet": "class ${1:ClassName} {\n\tconstructor() {\n\t\t$0\n\t}\n}"
+        }
+      }
+    ]
+  }
+},
+```
+
+([source](https://code.visualstudio.com/docs/getstarted/keybindings#_running-multiple-commands))
+
 ### Make `Ctrl+s` act more like Emacs search
 
 In Emacs, the keybinding `C-s` will start a search, but entering `C-s` again will find the next match. This can be done in VS Code by setting the `When` clause carefully:
@@ -108,7 +183,7 @@ I wanted to turn off the `markdownlint` extension's snippets, and this was the s
 - Chose **Insert Snippet**
 - Hover over the snippet and click the eye icon to hide/show the snippet in Intellisense
 
-_source_: <https://github.com/microsoft/vscode/issues/10565#issuecomment-721832613>
+([source](https://github.com/microsoft/vscode/issues/10565#issuecomment-721832613))
 
 ## Disable `UpArrow`/`DownArrow` cycling through commit messages in the Source Control commit message textbox
 
@@ -153,7 +228,7 @@ Add to `%HOME%\.gitconfig`:
   sshCommand = SSH_ASKPASS=\"C:\\Program Files\\Git\\mingw64\\libexec\\git-core\\git-gui--askpass\" ssh
 ```
 
-_Source_: <https://github.com/microsoft/vscode/issues/166832#issuecomment-1488827368>
+([source](https://github.com/microsoft/vscode/issues/166832#issuecomment-1488827368))
 
 ## Code Snippets
 
