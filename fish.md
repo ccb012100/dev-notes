@@ -109,3 +109,9 @@ end
 ## Print keyboard input codes
 
 Use [`fish_key_reader`](https://fishshell.com/docs/current/cmds/fish_key_reader.html) to print the key codes for a key sequence.
+
+## Get the directory a running script is located
+
+```fish
+dirname (status --current-filename)
+```
