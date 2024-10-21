@@ -1,5 +1,17 @@
 # JetBrains Rider
 
+## Insert text with keyboard shortcut
+
+1. Create a new named macro
+    1. Start a macro (`F8`)
+    2. Type the text
+    3. Stop the macro (`F8`)
+    4. Name the macro
+2. Bind a keyboard shortcut to the macro
+    1. Open **Settings**
+    2. Go to **Keymap**
+    3. In the **Macros** section, the new named macro you created should be available
+
 ## Switch focus from search box to editor
 
 ### macOS
