@@ -211,3 +211,15 @@ No kernel assertions.
 # that prevents idle sleep as long as that process is running
 caffeinate -i make
 ```
+
+## Get the Bundle ID of an app
+
+Run the command `osascript -e 'id of app "APP_NAME"'
+
+Example:
+
+```zsh
+❯ osascript -e 'id of app "Visual Studio Code"'
+com.microsoft.VSCode
+❯ osascript -e 'id of app "WezTerm"'
+```
