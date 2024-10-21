@@ -31,3 +31,37 @@ source: <https://apple.stackexchange.com/a/457543>
 ## iTerm2
 
 See [iTerm2.md](iTerm2.md) for details regarding using AppleScript to interact with **iTerm2**.
+
+## View Application dictionaries
+
+- Open **Script Editor**
+- Go to `File ➤ Open Dictionary` (`⇧⌘O`)
+
+## Logging
+
+- If running via `osascript` in a CLI or the **Script Editor**, use `log TEXT`
+  - In a terminal, it will print to stdout
+  - In **Script Editor**, it will print in the **Replies** pane
+- If running elsewhere, use `dialog TEXT` to open a system dialog
+
+## Toggle the visibility of an application
+
+Using **WezTerm** as a example
+
+```applescript
+tell application "System Events"
+  set currentApp to name of first process where it is frontmost
+end tell
+
+if currentApp is equal to "wezterm-gui"
+  tell application "System events"
+    try
+      set visible of application process "wezterm-gui" to false
+    end try
+  end tell
+else
+  tell application "WezTerm"
+    activate
+  end tell
+end
+```
