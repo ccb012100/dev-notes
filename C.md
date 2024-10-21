@@ -51,3 +51,21 @@ Specified by the language standards
 - `__clang_wide_literal_encoding__`
 
 ([source](https://clang.llvm.org/docs/LanguageExtensions.html#builtin-macros))
+
+## Debugger breakpoint on `assert`s
+
+```c
+#ifdef DEBUG
+#  if __GNUC__
+#    define assert(c) if (!(c)) __builtin_trap()
+#  elif _MSC_VER
+#    define assert(c) if (!(c)) __debugbreak()
+#  else
+#    define assert(c) if (!(c)) *(volatile int *)0 = 0
+#  endif
+#else
+#  define assert(c)
+#endif
+```
+
+([source](https://nullprogram.com/blog/2022/06/26/))
