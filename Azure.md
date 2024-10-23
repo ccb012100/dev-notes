@@ -124,10 +124,20 @@ For example, with the items:
 ```
 
 ```sql
-SELECT * FROM c WHERE ISNULL(c.baz) -- returns nothing
-SELECT * FROM c WHERE NOT DEFINED(c.baz) -- returns 2nd item
-SELECT * FROM c WHERE ISNULL(c.foo) -- returns 2nd item
+SELECT * FROM c WHERE ISNULL(c.baz)       -- returns nothing
+SELECT * FROM c WHERE NOT DEFINED(c.baz)  -- returns 2nd item
+SELECT * FROM c WHERE ISNULL(c.foo)       -- returns 2nd item
 ```
+
+### `STARTSWITH`
+
+```sql
+SELECT * FROM c WHERE STARTSWITH(c.foo, "bar")        -- case sensitive
+SELECT * FROM c WHERE STARTSWITH(c.foo, "bar", false) -- case sensitive
+SELECT * FROM c WHERE STARTSWITH(c.foo, "bar", true)  -- case-insensitive
+```
+
+([source](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/query/startswith))
 
 ## Application Insights
 
