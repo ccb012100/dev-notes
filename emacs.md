@@ -214,4 +214,4 @@ WantedBy=default.target
 
 - Run `systemctl --user enable emacsd`
 
-_source: <https://wikemacs.org/wiki/Emacs_server>_
+_([source](https://wikemacs.org/wiki/Emacs_server))_

@@ -34,4 +34,4 @@ _logger.Setup(x =>
         It.Is<Func<It.IsAnyType, Exception?, string>>((v, t) => true)));
 ```
 
-_source_: <https://carlpaton.github.io/2021/02/mocking-ilogger/>
+([source](https://carlpaton.github.io/2021/02/mocking-ilogger/))

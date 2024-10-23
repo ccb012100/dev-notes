@@ -88,4 +88,4 @@ If any keybindings are disabled with the setting `None`, they will break the key
 
 Run the command `sed -i "s/None/""/g" ~/.config/terminator/config` to fix the invalid values.
 
-_source: <https://github.com/gnome-terminator/terminator/issues/548>_
+_([source](https://github.com/gnome-terminator/terminator/issues/548))_

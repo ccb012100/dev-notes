@@ -9,7 +9,7 @@
 > _Inner attributes_, written with a bang (`!`) after the hash (`#`), apply to the item that the attribute is declared
 > within. _Outer attributes_, written without the bang after the hash, apply to the thing that follows the attribute.
 
-(_source_: <https://doc.rust-lang.org/reference/attributes.html>)
+(([source](https://doc.rust-lang.org/reference/attributes.html)))
 
 ## Suppress (hide) Compiler warnings
 

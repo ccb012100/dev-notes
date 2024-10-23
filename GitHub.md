@@ -81,7 +81,7 @@ javascript:document.getElementsByName("viewed").forEach(ch => {
 })
 ```
 
-_source:_ [stackoverflow.com](https://stackoverflow.com/questions/69945775/how-to-unview-toggle-all-the-viewed-files-on-github-pull-request#comment126429925_69945864)
+([source](https://stackoverflow.com/questions/69945775/how-to-unview-toggle-all-the-viewed-files-on-github-pull-request#comment126429925_69945864))
 
 ### add GitHub to `known_hosts`
 
@@ -199,4 +199,4 @@ Steps can run **commands** or **actions**.
 
 example: `https://github.com/github-linguist/linguist/compare/f75c570..3391dcc`
 
-_source_: <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-comparing-branches-in-pull-requests>
+([source](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-comparing-branches-in-pull-requests))

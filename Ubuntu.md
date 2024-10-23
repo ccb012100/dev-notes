@@ -76,7 +76,7 @@ When you run `sudo apt update`, you get an Error similar to the following:
 
 ## Change default terminal
 
-_source: <https://itsfoss.com/change-default-terminal-ubuntu/>_
+_([source](https://itsfoss.com/change-default-terminal-ubuntu/))_
 
 Run the command `sudo update-alternatives --config x-terminal-emulator`.
 
@@ -91,7 +91,7 @@ shortcut bound globally to Emoji input.
 
 To fix it, run the command `ibus-setup`, go to the _Emoji Input_ tab, and delete the `Control+Shift+E` shortcut.
 
-_source: <https://github.com/microsoft/vscode/issues/72947#issuecomment-491228367>_
+_([source](https://github.com/microsoft/vscode/issues/72947#issuecomment-491228367))_
 
 According to <https://stackoverflow.com/a/52295258>, this is only an issue in `GTK3` versions before `3.24`.
 

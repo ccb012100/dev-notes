@@ -42,7 +42,7 @@ Similar to a Kubernetes pod (I _think_)
 
 ## Environments
 
-_source_: <https://docs.aws.amazon.com/cdk/latest/guide/environments.html>
+([source](https://docs.aws.amazon.com/cdk/latest/guide/environments.html))
 
 Each `Stack` instance in your AWS CDK app is explicitly or implicitly associated with an environment (`env`). An environment is the target AWS account and region into which the stack is intended to be deployed.
 
@@ -70,7 +70,7 @@ An ARN is a unique identifier for an AWS resource.
 
 Required for specifying a resource unambiguously across all of AWS
 
-_source_: <https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html>
+([source](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html))
 
 ### ARN format
 

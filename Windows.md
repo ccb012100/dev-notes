@@ -133,7 +133,7 @@ managed by your administrator**
 4. Delete the `Windows Defender` branch.
 5. Restart `explorer.exe`.
 
-_source_: <https://www.winhelponline.com/blog/windows-defender-disabled-real-time-protection-virus/>
+([source](https://www.winhelponline.com/blog/windows-defender-disabled-real-time-protection-virus/))
 
 ## customizating Windows 11
 
@@ -174,7 +174,7 @@ After leaving the mouse idle for a few seconds, it will take a second or two for
 - Click on the tab **Power Management**
 - Unheck the box labeled _Allow the computer to turn off this device to save power_
 
-_Source_: <https://www.reddit.com/r/Windows11/comments/tafgx3/if_youre_having_issues_with_a_laggystuttering/>
+([source](https://www.reddit.com/r/Windows11/comments/tafgx3/if_youre_having_issues_with_a_laggystuttering/))
 
 ## Windows icon file locations
 

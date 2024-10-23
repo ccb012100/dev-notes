@@ -4,7 +4,7 @@
 
 Add `MSYS2_PATH_TYPE=inherit`
 
-source: <https://sourceforge.net/p/msys2/discussion/general/thread/dbe17030/#3f85>
+([source](https://sourceforge.net/p/msys2/discussion/general/thread/dbe17030/#3f85))
 
 ## add MSYS2 to context menu
 

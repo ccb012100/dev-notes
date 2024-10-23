@@ -35,4 +35,4 @@
 | `Enter`          | Line feed                         |
 | `Ctrl-[`         | Same as `Esc`                     |
 
-_source_: <https://github.com/chzyer/readline/blob/master/doc/shortcut.md>
+([source](https://github.com/chzyer/readline/blob/master/doc/shortcut.md))

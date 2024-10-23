@@ -8,7 +8,7 @@
 set my_POSIX_path to POSIX path of ((path to me as text) & "::")
 ```
 
-source: <https://apple.stackexchange.com/a/457543>
+([source](https://apple.stackexchange.com/a/457543))
 
 ## Commands
 

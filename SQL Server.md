@@ -66,7 +66,7 @@ INNER JOIN sys.foreign_key_columns AS fc
     ON f.object_id = fc.constraint_object_id;
 ```
 
-_source_: <https://learn.microsoft.com/en-us/sql/relational-databases/tables/view-foreign-key-properties?view=sql-server-ver16>
+([source](https://learn.microsoft.com/en-us/sql/relational-databases/tables/view-foreign-key-properties?view=sql-server-ver16))
 
 ## List DB users
 

@@ -27,7 +27,7 @@ git merge --allow-unrelated-histories B/main
 git commit -m "merge in repo B" && git push
 ```
 
-_source_: <https://stackoverflow.com/a/20974621>
+([source](https://stackoverflow.com/a/20974621))
 
 ### `amend`
 
@@ -146,7 +146,7 @@ Git doesn't support environment variables in the paths to `difftool`/`mergetool`
 basename -s .git `git config --get remote.origin.url`
 ```
 
-_source:_ <https://stackoverflow.com/a/42543006>
+([source](https://stackoverflow.com/a/42543006))
 
 ### Set config at command-level
 
@@ -264,7 +264,7 @@ To drop `-` line: change `-` to a single `[space]`)
 git update-index --assume-unchanged $filename
 ```
 
-_source_: <https://practicalgit.com/blog/make-git-ignore-local-changes-to-tracked-files.html>
+([source](https://practicalgit.com/blog/make-git-ignore-local-changes-to-tracked-files.html))
 
 ## Branches
 
@@ -374,7 +374,7 @@ else
 fi
 ```
 
-_source_: <https://stackoverflow.com/a/2180367>
+([source](https://stackoverflow.com/a/2180367))
 
 ## stash
 
@@ -421,7 +421,7 @@ fi
 
 Don't use `GIT_DIR` anymore; use `git rev-parse --git-dir`.
 
-_source_: <https://stackoverflow.com/a/53121209>
+([source](https://stackoverflow.com/a/53121209))
 
 ## Windows installation
 
@@ -554,7 +554,7 @@ code: `github.com/jdoe/`
   Hi john_doe-company! You've successfully authenticated, but GitHub does not provide shell access.
   ```
 
-_source_: <https://gist.github.com/oanhnn/80a89405ab9023894df7>
+([source](https://gist.github.com/oanhnn/80a89405ab9023894df7))
 
 ## List all committers to a repository
 

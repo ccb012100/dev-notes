@@ -9,7 +9,7 @@ Linux application launcher
 To use Ulauncher on Wayland, run `sudo apt install wmctrl` and create launcher for command `ulauncher-toggle` in
 Wayland.
 
-_source: <https://github.com/Ulauncher/Ulauncher/wiki/Hotkey-In-Wayland>_
+_([source](https://github.com/Ulauncher/Ulauncher/wiki/Hotkey-In-Wayland))_
 
 ## Mapping toogle to a shortcut that includes `<Super>`
 
@@ -39,4 +39,4 @@ The Extension will fail because the `github` is not installed.
 
 Run `pip install pygithub` (_not_ `pip install github`)
 
-_source: <https://github.com/brpaz/ulauncher-github/issues/12>_
+_([source](https://github.com/brpaz/ulauncher-github/issues/12))_

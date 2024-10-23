@@ -43,7 +43,7 @@ It can be resolved by running the command
 sudo apt-get install build-essential
 ```
 
-_source:_ <https://github.com/rust-lang/cargo/issues/6757#issuecomment-738494343>
+([source](https://github.com/rust-lang/cargo/issues/6757#issuecomment-738494343))
 
 ## clock skew
 

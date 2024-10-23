@@ -39,7 +39,7 @@ Running as a nonroot user who needs to be added to the `docker` group.
 3. Log your user out then back in or run `newgrp docker`
 4. Verify by running `docker run hello-world`
 
-_source_: <https://docs.docker.com/engine/install/linux-postinstall/>
+([source](https://docs.docker.com/engine/install/linux-postinstall/))
 
 #### docker-compose build fails
 

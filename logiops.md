@@ -17,7 +17,7 @@ If the build fails due to inability to find `libevdev`:
 
 Remove the `.linuxbrew` from `$PATH`, delte `CMakeCache.txt`, and run `cmake ..` again and it should work.
 
-_source: <https://github.com/PixlOne/logiops/issues/142>_
+_([source](https://github.com/PixlOne/logiops/issues/142))_
 
 ## Get device name
 

@@ -66,7 +66,7 @@ go version go1.y linux/amd64
 $ rm go1.y.linux-amd64.tar.gz
 ```
 
-_source_: <https://golangcode.com/updating-go-on-ubuntu/>
+([source](https://golangcode.com/updating-go-on-ubuntu/))
 
 ### Install `gcc`
 

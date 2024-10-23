@@ -25,7 +25,7 @@ rg --path-separator // foo --files-with-matches |
     xargs sed --in-place 's/foo/bar/g'
 ```
 
-_source_: <https://github.com/BurntSushi/ripgrep/blob/master/FAQ.md#search-and-replace>
+([source](https://github.com/BurntSushi/ripgrep/blob/master/FAQ.md#search-and-replace))
 
 ## Print lines that match a pattern
 

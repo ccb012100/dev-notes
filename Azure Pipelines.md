@@ -458,7 +458,7 @@ Specifying a `condition` on a stage removes the implicit conditions for previous
 > of stages without waiting for each other. While we work to bring queuing policies to YAML pipelines, we recommend that
 > you use manual approvals in order to manually sequence and control the order the execution if this is of importance.
 
-_source_: <https://learn.microsoft.com/en-us/azure/devops/pipelines/process/stages?view=azure-devops&tabs=yaml#specify-queuing-policies>
+([source](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/stages?view=azure-devops&tabs=yaml#specify-queuing-policies))
 
 ## Libraries
 

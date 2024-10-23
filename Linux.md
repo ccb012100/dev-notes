@@ -49,7 +49,7 @@ Benchmark 1: fish --interactive --command=exit
   Range (min … max):   427.8 ms … 484.1 ms    10 runs
 ```
 
-_source_: <https://tratt.net/laurie/blog/2024/faster_shell_startup_with_shell_switching.html>
+([source](https://tratt.net/laurie/blog/2024/faster_shell_startup_with_shell_switching.html))
 
 ## display system info using `inxi`
 
@@ -176,7 +176,7 @@ Every process has an entry in the `/proc` directory. A process can be located by
 | `/prod/PID/stack` | kernel's current stack for the process |
 | `/prod/PID/maps` | list of the process' memory maps (shared libraries, heap, anonymous maps, etc.) |
 
-_source_: <https://wizardzines.com/comics/proc>
+([source](https://wizardzines.com/comics/proc))
 
 ### `ldd`
 
@@ -189,7 +189,7 @@ ldd BINARY
 ldd /bin/ls
 ```
 
-_source_: <https://wizardzines.com/comics/shared-libraries>
+([source](https://wizardzines.com/comics/shared-libraries))
 
 ## enable/disable Bluetooth on boot
 
@@ -243,7 +243,7 @@ e.g. `echo enabled > /sys/bus/usb/devices/3-1.1.4.1/power/wakeup`
 
 It should now enable the device on boot.
 
-_source: <https://askubuntu.com/questions/848698/wake-up-from-suspend-using-wireless-usb-keyboard-or-mouse-for-any-linux-distro/874701#874701>
+_([source](https://askubuntu.com/questions/848698/wake-up-from-suspend-using-wireless-usb-keyboard-or-mouse-for-any-linux-distro/874701#874701))
 
 ## set display brightness
 
@@ -318,7 +318,7 @@ This is due to a problem with the jack-sensing feature
 - Run `sudoedit /etc/pulse/default.pa`
 - Comment out the line `load-module module-switch-on-port-available`
 
-_source:_ <https://bbs.archlinux.org/viewtopic.php?id=247538>
+([source](https://bbs.archlinux.org/viewtopic.php?id=247538))
 
 ## man page sections
 

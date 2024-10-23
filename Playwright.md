@@ -14,7 +14,7 @@ await page.route('*/**/api/v1/foo', async route => {
 });
 ```
 
-_source_: <https://playwright.dev/docs/mock>
+([source](https://playwright.dev/docs/mock))
 
 ## Patch/Modify HTTP Responses
 
@@ -31,7 +31,7 @@ await page.route('*/**/api/v1/foo', async route => {
 });
 ```
 
-_source_: <https://playwright.dev/docs/mock>
+([source](https://playwright.dev/docs/mock))
 
 ## Verify HTTP Request was not made
 
@@ -51,4 +51,4 @@ To verify that a certain API call was _not_ made, you can intercept all request 
     expect(requestWasMade).toBe(false);
 ```
 
-_source_: <https://stackoverflow.com/a/77554151/24445522>
+([source](https://stackoverflow.com/a/77554151/24445522))

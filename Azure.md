@@ -101,7 +101,7 @@ FROM c
 OFFSET 0 LIMIT 10
 ```
 
-_source_: <https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/query/offset-limit>
+([source](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/query/offset-limit))
 
 ### Find items that are missing a specific field
 
@@ -157,7 +157,7 @@ union requests,dependencies,pageViews,browserTimings,exceptions,traces,customEve
 
 Any type where `RetainedPercentage` is less than `100` is being sampled.
 
-_source_: <https://learn.microsoft.com/en-us/azure/azure-monitor/app/sampling-classic-api#knowing-whether-sampling-is-in-operation>
+([source](https://learn.microsoft.com/en-us/azure/azure-monitor/app/sampling-classic-api#knowing-whether-sampling-is-in-operation))
 
 ### Configuring the **Application Insights SDK** in .NET Core
 
@@ -187,8 +187,8 @@ builder.Services.AddApplicationInsightsTelemetry(new ApplicationInsightsServiceO
 var app = builder.Build();
 ```
 
-_source_: <https://learn.microsoft.com/en-us/azure/azure-monitor/app/sampling-classic-api#configure-sampling-settings>
+([source](https://learn.microsoft.com/en-us/azure/azure-monitor/app/sampling-classic-api#configure-sampling-settings))
 
 ### Azure Functions
 
-_source_: <https://learn.microsoft.com/en-us/azure/azure-functions/configure-monitoring?tabs=v2#configure-sampling>
+([source](https://learn.microsoft.com/en-us/azure/azure-functions/configure-monitoring?tabs=v2#configure-sampling))

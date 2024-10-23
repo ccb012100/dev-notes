@@ -38,7 +38,7 @@ nvm exec 4.2 node --version
 nvm which 12.22
 ```
 
-_source_: <https://github.com/nvm-sh/nvm?tab=readme-ov-file#usage>
+([source](https://github.com/nvm-sh/nvm?tab=readme-ov-file#usage))
 
 ## Update NPM
 

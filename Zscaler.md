@@ -37,4 +37,4 @@ when trying to install **vscode** extensions in **WSL**, set the WSL environment
 
 1. When prompted for a password, enter `changeit`
 
-[^1]: source: <https://github.com/dbeaver/dbeaver/issues/4341#issuecomment-2284337267>
+[^1]: ([source](https://github.com/dbeaver/dbeaver/issues/4341#issuecomment-2284337267))

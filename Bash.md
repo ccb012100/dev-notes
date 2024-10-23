@@ -68,7 +68,7 @@ fi
 
 ### Check if variable is an integer
 
-_source_: <https://stackoverflow.com/questions/806906/how-do-i-test-if-a-variable-is-a-number-in-bash>
+([source](https://stackoverflow.com/questions/806906/how-do-i-test-if-a-variable-is-a-number-in-bash))
 
 #### Unsigned integer
 
@@ -186,7 +186,7 @@ _see_: <https://www.howtogeek.com/725657/how-to-use-brace-expansion-in-linuxs-ba
 | `${foo:+bar}`         | _nothing_ | _nothing_ | `$bar` |
 | `${foo:+val is null}` | _nothing_ | _nothing_ | `val is null` |
 
-_source_: <https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html>
+([source](https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html))
 
 ## Moving/renaming a file
 
@@ -230,7 +230,7 @@ calls to `sort` and `column`, for example
 
 e.g. `\t` for tab
 
-_source:_ <https://www.gnu.org/savannah-checkoutes/gnu/bash/manual/bash.html#ANSI_002dC-Quoting>
+([source](https://www.gnu.org/savannah-checkoutes/gnu/bash/manual/bash.html#ANSI_002dC-Quoting))
 
 ## list shell variables
 
@@ -272,7 +272,7 @@ echo '*'
  for f in <DIRECTORY>; do source $f; done
 ```
 
-_source:_ <https://stackoverflow.com/a/1423444>
+([source](https://stackoverflow.com/a/1423444))
 
 ## Angle brackets (`<`)
 
@@ -310,7 +310,7 @@ $ cat < /etc/fstab
 --snip--
 ```
 
-_source_: <https://unix.stackexchange.com/a/80368>
+([source](https://unix.stackexchange.com/a/80368))
 
 ## Argument parsing
 

@@ -2,7 +2,7 @@
 
 [[.NET]] environments file
 
-_source_: <https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration>
+([source](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration))
 
 ## `dotnet-env` NuGet package
 

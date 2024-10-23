@@ -24,7 +24,7 @@ methods will not throw.
 
 When testing `not.toBeInTheDocument`, use `screen.queryBy*()`.
 
-_source_: <https://stackoverflow.com/a/52783201>
+([source](https://stackoverflow.com/a/52783201))
 
 ## Mocks
 
