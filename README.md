@@ -1,3 +1,3 @@
 # notes
 
-Notes on Development tools
+Notes on Programming, Development tools, etc.
