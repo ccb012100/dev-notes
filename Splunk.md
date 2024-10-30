@@ -36,6 +36,12 @@ highest to lowest:
 - `OR`
 - `AND`
 
+### `NOT` vs `!=`
+
+`NOT foo="bar"` will include events where `foo` is missing (i.e. no value).
+
+`!= foo="bar"` will only include events that have a value for `foo`.
+
 ### `AS` operator
 
 Used to rename columns.
@@ -46,8 +52,8 @@ Same as SQL (e.g. `distinct_count(productId) AS "Total Products"`
 
 Syntax: `field_name=field_value`
 
-- `field_name` is case-sensitive
-- `field_value` is case-insensitive
+- `field_name` is case-_sensitive_
+- `field_value` is case-_insensitive_
 
 ### Search Processing Language (SPL)
 
@@ -89,13 +95,16 @@ Data that's mapped (keyed off of a field) to and included in the search results.
 
 ([source](https://docs.splunk.com/Documentation/Splunk/9.3.1/Search/Quicktipsforoptimization))
 
-## Reports
+## Adding a query to a Dashboard
 
-The save dialog has an **Add to Dashboard** option.
+2 options:
+
+1. From the search, click the **Save As ⏷** button and choose _Existing Dashboard_.
+2. If the query has been saved as a Report, go to the Report's page, click **Add to Dashboard ⏷**, and choose _Existing Dashboard_.
 
 ### Edit query/search
 
-To edit the query used in a report, click the `Edit ⏷ > Open in Search`
+To edit the query used in a report, click the button labeled **Edit ⏷** and choose _Open in Search_
 
 ## Timechart
 
