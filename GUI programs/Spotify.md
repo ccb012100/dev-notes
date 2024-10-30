@@ -20,6 +20,6 @@
 | Shortcut   | Action |
 |------------|--------|
 | `Ctrl + F` | Filter |
-| `Ctrl + S` | Toggle **Shuffle**
-| `Ctrl + [\<UpArrow>|\<DownArrow>]` | Volume up/down |
-| `Ctrl + [\<LeftArrow>|\<RightArrow>]` | Prev/Next track |
+| `Ctrl + S` | Toggle **Shuffle** |
+| `Ctrl + [\<UpArrow>\|\<DownArrow>]` | Volume up/down |
+| `Ctrl + [\<LeftArrow>\|\<RightArrow>]` | Prev/Next track |
