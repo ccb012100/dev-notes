@@ -288,3 +288,11 @@ The `ConnectionString` will follow the same format as that listed in the [SQLite
         builder.UseConfiguration( configuration );
     }
     ```
+
+## `dotnet-format`
+
+### format only changed files
+
+```bash
+❯ dotnet-format --files $(git diff --name-only | tr '\n' ' ')
+```
