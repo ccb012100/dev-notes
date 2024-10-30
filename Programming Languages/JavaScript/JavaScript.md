@@ -1,29 +1,24 @@
-# Webdev
+# JavaScript
 
-Miscellanious web development notes
-
-## Developer Tools
+## Console
 
 ### Log a variable name's along with the value
 
 Wrap the variable in brackets `{ }`
 
-#### Example
-
 ```js
-console.log({ x });
+let x = 42;
+console.log({ x }); // prints "{x: 42}"
 ```
 
-### Console
-
-#### Printing methods
+### Printing methods
 
 - `console.log` - Prints the text to the console as a log message.
 - `console.info` - Prints the text to the console as an informational message.
 - `console.error` - Prints the text to the console as an error message.
 - `console.warn` - Prints the text to the console as a warning.
 
-#### Formatting
+### Formatting
 
 - `%s` logs as Strings.
 - `%i` or `%d` logs as Integers.
@@ -32,25 +27,25 @@ console.log({ x });
 - `%O` logs as an expandable JavaScript object.
 - `%c` allows you to style you message with CSS.
 
-#### Tracing
+### Tracing
 
 `console.trace` outputs a stack trace to the console.
 
 You can also provide data.
 
-##### Syntax
+#### Syntax
 
 ```js
 console.trace([...any, ...data]);
 ```
 
-#### Group messages
+### Group messages
 
 `console.group` creates a new inline group in the Web console log.
 
 Subsequent messages are indented by an additional level until `console.groupEnd()` is called.
 
-##### Example
+#### Example
 
 ```js
 console.log('This is the outer level');
@@ -60,11 +55,11 @@ console.groupEnd();
 console.log('Back to the outer level');
 ```
 
-#### Count
+### Count
 
 `console.count` logs the number of times that `count` has has been called with that particular label.
 
-##### Syntax
+#### Syntax
 
 ```js
 console.count(label);
@@ -72,7 +67,7 @@ console.count(label);
 
 `label` is optional, and 'default' is used as the label if no value is specified
 
-#### Table
+### Table
 
 `console.table` displays tabular data as a table.
 
@@ -82,7 +77,7 @@ The `data` parameter must be an array or an object. Each element in the array (o
 
 The first column in the table will be labeled `(index)`. If `data` is an array, then its values will be the array indices. If `data` is an object, then its values will be the property names.
 
-##### Syntax
+#### Syntax
 
 ```js
 console.table(data);

@@ -12,7 +12,7 @@
 
 ## Key Concepts
 
-![Key concepts overview diagram](./images/Azure-Pipelines_key-concepts-overview.svg)
+![Key concepts overview diagram](../images/Azure-Pipelines_key-concepts-overview.svg)
 
 - A `trigger` tells a Pipeline to run.
 - A `pipeline` is made up of one or more stages. A pipeline can deploy to one or more `environments`.

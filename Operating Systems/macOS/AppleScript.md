@@ -30,7 +30,7 @@ set my_POSIX_path to POSIX path of ((path to me as text) & "::")
 
 ## iTerm2
 
-See [iTerm2.md](iTerm2.md) for details regarding using AppleScript to interact with **iTerm2**.
+See [iTerm2.md](../iTerm2.md) for details regarding using AppleScript to interact with **iTerm2**.
 
 ## View Application dictionaries
 

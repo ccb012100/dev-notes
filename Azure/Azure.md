@@ -4,7 +4,7 @@
 
 ## Pipelines
 
-see [Azure Pipelines](/Azure%20Pipelines.md)
+see [Azure Pipelines](</Azure/Azure Pipelines.md>)
 
 ## Logs
 
