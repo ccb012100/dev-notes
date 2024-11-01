@@ -10,8 +10,19 @@ Setting up Keychron requires using their [fork](https://github.com/Keychron/qmk_
 
 Use <https://github.com/ccb012100/qmk_firmware/tree/ergodox_ez>:
 
+### Setup
+
 ```zsh
 cd qmk_firmware
 qmk setup
-qmk compile -kb ergodox_ez -km rgb_layer
+qmk config user.keyboard=ergodox_ez
+qmk config user.keymap=ccb012100
+```
+
+### Flash keyboard
+
+```zsh
+qmk compile
+qmk flash
+# press the RESET button on the keyboard
 ```
