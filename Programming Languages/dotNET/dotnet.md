@@ -187,7 +187,21 @@ _sut.ControllerContext.HttpContext.Items.Add("Foo", "bar");
 
 [HTTP Logging in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/http-logging)
 
-## Trust dev HTTPS Certificates in Docker containers running in WSL with Docker Compose
+## Docker
+
+```bash
+$ docker pull mcr.microsoft.com/dotnet/samples:aspnetapp
+
+$ docker run --rm -it \
+    -p 8000:80 -p 8001:443 \
+    -e ASPNETCORE_URLS="https://+;http://+" \
+    -e ASPNETCORE_HTTPS_PORT=8001 \
+    -e ASPNETCORE_Kestrel__Certificates__Default__Password="<CREDENTIAL_PLACEHOLDER>" \
+    -e d \
+    -v %USERPROFILE%\.aspnet\https:/https/ mcr.microsoft.com/dotnet/samples:aspnetapp
+```
+
+### Trust dev HTTPS Certificates in Docker containers running in WSL with Docker Compose
 
 In Windows, run:
 
