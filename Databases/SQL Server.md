@@ -85,14 +85,14 @@ SELECT * FROM master.sys.server_principals
 ### Add a user to a database
 
 ```sql
-CREATE USER [<username>] WITH PASSWORD = '<password>'
-ALTER ROLE [db_datareader] ADD MEMBER [<username>]
+CREATE USER [USERNAME] WITH PASSWORD = 'PASSWORD'
+ALTER ROLE [db_datareader] ADD MEMBER [username]
 ```
 
 ### Drop a user from a database
 
 ```sql
-DROP USER IF EXISTS <username>;
+DROP USER IF EXISTS USERNAME;
 ```
 
 ## Check current index fragmentation levels
