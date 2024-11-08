@@ -67,13 +67,16 @@ requests | where customDimensions['Foo'] matches regex @'foo\.bar\..+'
 
 [documentation](https://learn.microsoft.com/en-us/azure/azure-sql/?view=azuresql)
 
-### Add SQL user to DB
+### Change SQL User's password
+
+> [!IMPORTANT]
+> You must be connected to the `master` database while running the query.
 
 ```sql
--- example of creating a readonly user named 'ReadOnlyUser'
-CREATE USER [ReadOnlyUser] WITH PASSWORD = 'PASSWORD';
-ALTER ROLE [db_datareader] ADD MEMBER [ReadOnlyUser];
+ALTER LOGIN USERNAME WITH PASSWORD='NEW_PASSWORD' OLD_PASSWORD='OLD_PASSWORD';
 ```
+
+([source](https://stackoverflow.com/a/40236718/24445522))
 
 ### Advanced Application Restart
 
