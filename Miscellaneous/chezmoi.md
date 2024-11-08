@@ -16,6 +16,16 @@ chezmoi cd
 
 - `--dry-run` or `-n`
 
+## View computed template variables
+
+```bash
+# print in JSON format (default)
+chezmoi data [--format=json]
+
+# print in YAML format
+chezmoi data --format=yaml
+```
+
 ## Templates
 
 Templates use Go's [`text/template`](https://pkg.go.dev/text/template#section-documentation) library.
