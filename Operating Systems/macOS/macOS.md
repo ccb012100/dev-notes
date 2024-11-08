@@ -223,3 +223,7 @@ Example:
 com.microsoft.VSCode
 ❯ osascript -e 'id of app "WezTerm"'
 ```
+
+## Access Keychains on the CLI
+
+Use the [`security`](https://ss64.com/mac/security.html) utility.
