@@ -53,3 +53,121 @@ I'm still not sure how I resolved this, but what _seemed_ to work:
 4. Restart my MacBook
 
 **NOTE:** I also deleted `$HOME/.config/karabiner/karabiner.json`, but I don't think that was necessary...
+
+## Modifiers
+
+### `from.modifiers`
+
+Omitting `from.modifiers` from a manipulator definition is functionally the _opposite_ of setting `modifiers.optional` to `any`, i.e. the manipulator will
+only trigger if no modifiers are held down.
+
+The modifiers in `from.modifiers.mandatory` are _not_ passed through to the mapping; Any modifiers specified `from.modifiers.optional` _are_ passed through if they're held when the manipulator is triggered.
+
+<https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/from/modifiers/>
+
+## Hold down multiple non-modifier keys
+
+Use `from.simultaneous`.
+
+Example:
+
+```json
+// launch Mission Control when pressing a,s,d simultaneously
+{
+    "type": "basic",
+    "from": {
+        "simultaneous": [
+            { "key_code": "a" },
+            { "key_code": "s" },
+            { "key_code": "d" }
+        ],
+        "modifiers": { "optional": ["any"] }
+    },
+    "to": [ { "key_code": "mission_control" }
+    ]
+}
+```
+
+([source](https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/from/simultaneous/))
+
+## Simulating layers
+
+- Create a manipulator that sets a variable `foo` with
+  [`to.set_variable`](https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/to/set-variable/) to activate the
+  layer when a certain key/combo is held down.
+- For a given keycombo, add a
+  [`variable_if`](https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/conditions/variable/) entry in the
+  `conditions` array that checks the value for the variable `foo` set in the previous manipulator.
+
+Example:
+
+```json
+[
+    {
+        "type": "basic",
+        "from": {
+            "key_code": "keypad_1",
+            "modifiers": {
+                "mandatory": [],
+                "optional": ["any"]
+            }
+        },
+        "to": [
+            {
+                "set_variable": {
+                    "name": "my_modifier_1",
+                    "value": 1
+                }
+            }
+        ],
+        "to_after_key_up": [
+            {
+                "set_variable": {
+                    "name": "my_modifier_1",
+                    "value": 0
+                }
+            }
+        ]
+    },
+
+    {
+        "type": "basic",
+        "from": {
+            "key_code": "a",
+            "modifiers": {
+                "mandatory": [],
+                "optional": ["any"]
+            }
+        },
+        "to": [ { "key_code": "mission_control" }
+        ],
+        "conditions": [
+            {
+                "type": "variable_if",
+                "name": "my_modifier_1",
+                "value": 1
+            }
+        ]
+    },
+
+    {
+        "type": "basic",
+        "from": {
+            "key_code": "s",
+            "modifiers": {
+                "mandatory": [],
+                "optional": ["any"]
+            }
+        },
+        "to": [ { "key_code": "launchpad" }
+        ],
+        "conditions": [
+            {
+                "type": "variable_if",
+                "name": "my_modifier_1",
+                "value": 1
+            }
+        ]
+    }
+]
+```
