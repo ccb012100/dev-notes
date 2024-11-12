@@ -227,3 +227,7 @@ com.microsoft.VSCode
 ## Access Keychains on the CLI
 
 Use the [`security`](https://ss64.com/mac/security.html) utility.
+
+## See filesystem usage for a process/pathname
+
+Use the `fs_usage` utility to list the files that are being accessed by a process (similar to `strace` on Linux).
