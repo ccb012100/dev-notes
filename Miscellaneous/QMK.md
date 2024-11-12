@@ -22,7 +22,6 @@ qmk config user.keymap=ccb012100
 ### Flash keyboard
 
 ```zsh
-qmk compile
-qmk flash
+qmk flash # also compiles the keymap
 # press the RESET button on the keyboard
 ```
