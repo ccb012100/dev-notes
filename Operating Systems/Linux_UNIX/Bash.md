@@ -186,6 +186,23 @@ _see_: <https://www.howtogeek.com/725657/how-to-use-brace-expansion-in-linuxs-ba
 | `${foo:+bar}`         | _nothing_ | _nothing_ | `$bar` |
 | `${foo:+val is null}` | _nothing_ | _nothing_ | `val is null` |
 
+### Strip prefix/suffix
+
+```bash
+$ x="foobar"
+$ echo "${x#foo}"
+foo
+$ echo "${x%bar}"
+bar
+# using variables for prefix/suffix
+$ prefix="foo"
+$ suffix="bar"
+$ echo "${x#"$prefix"}"
+foo
+$ echo "${x%\"$suffix\"}"
+bar
+```
+
 ([source](https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html))
 
 ## Moving/renaming a file
@@ -349,7 +366,7 @@ done <FILENAME
 ## Get the path of the currently executing function or script
 
 ```bash
-# source: https://stackoverflow.com/a/1482133
+# source: <https://stackoverflow.com/a/1482133>
 dir_path=$(dirname -- "$(readlink -f -- "$0")")
 
 # alternate method
