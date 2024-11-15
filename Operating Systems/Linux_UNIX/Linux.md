@@ -341,3 +341,7 @@ This is due to a problem with the jack-sensing feature
 - `realpath SYMLINK`
 - `file SYMLINK`
 - `stat -c%N SYMLINK`
+
+## Search path for manpages
+
+Run the command `manpath` to display the search path for manual pages
