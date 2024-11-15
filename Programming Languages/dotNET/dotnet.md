@@ -82,7 +82,15 @@ dotnet user-secrets clear
 
 Edit file at `$user_secrets_directory\$user_secrets_id\secret.json`
 
-## NuGet packages
+## MVC
+
+### Razor templates
+
+### View compilation
+
+To conditionally enable runtime compilation, see [this doc](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/view-compilation?tabs=visual-studio#enable-runtime-compilation-for-all-environments).
+
+## NuGet
 
 ```bash
 # add or update a package reference
@@ -105,7 +113,7 @@ dotnet restore
 dotnet nuget locals all -c
 ```
 
-## dotnet-outdated-tool
+### dotnet-outdated-tool
 
 ```bash
 dotnet tool install --global dotnet-outdated-tool
