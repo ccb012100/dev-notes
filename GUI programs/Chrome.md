@@ -45,3 +45,11 @@ Can be done 2 ways:
   - Show all requests to `foo.com` except for those to `bar.foo.com`
 
 Full list at [Filter requests by property](https://developer.chrome.com/docs/devtools/network/reference#filter-by-property).
+
+## Bypass HSTS warning
+
+If you're testing locally, Chrome lets you go to `https://localhost`, but if you're using a redirect in your `hosts` file, even with a signed
+certificate, you may get a warning that contains the text _You cannot visit `<URL>` right now because the website uses HSTS_.
+
+To bypass this, type `thisisunsafe⏎` (i.e. `thisisunsafe` followed by `<Return>`/`<Enter>`) while the tab is still in focus and it will bypass the
+warning page an load the URL.
