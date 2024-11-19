@@ -25,3 +25,8 @@ qmk config user.keymap=ccb012100
 qmk flash # also compiles the keymap
 # press the RESET button on the keyboard
 ```
+
+## Apple Fn key
+
+_Fn_ key functionality doesn't work with **NKRO**, and you have to modify `VENDOR_ID` and `PRODUCT_ID` to spoof an Apple keyboard, so it's only
+available as a [patch](https://gist.github.com/fauxpark/010dcf5d6377c3a71ac98ce37414c6c4).
