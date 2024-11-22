@@ -231,3 +231,17 @@ Use the [`security`](https://ss64.com/mac/security.html) utility.
 ## See filesystem usage for a process/pathname
 
 Use the `fs_usage` utility to list the files that are being accessed by a process (similar to `strace` on Linux).
+
+## Hosts file mapping
+
+Mapping `/etc/hosts` is a bit different on macOS. You must include 2 entries (one with `https://`, and one without), and _the order matters_; the `https://` entry must be last.
+
+e.g.
+
+```toml
+127.0.0.1 foo.example.com
+127.0.0.1 https://foo.example.com
+# IPv6
+::1 foo.example.com
+::1 https://foo.example.com
+```
