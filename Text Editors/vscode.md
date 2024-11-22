@@ -62,6 +62,8 @@ allowed values:
 
 ## Keybindings
 
+- [when clause context](https://code.visualstudio.com/api/references/when-clause-contexts)
+
 ### Insert text
 
 Use `"command": "type"`
