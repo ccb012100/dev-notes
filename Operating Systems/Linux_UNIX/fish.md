@@ -63,9 +63,9 @@ end
 
 ### loading
 
-Functions are auto-loaded from the `$HOME/.config/fish/functions/` directory. Fish loads them when they are first used;
-it does this by looking for a file with the same name as the function (i.e. function `foobar` must be contained in
-`foobar.fish`), so functions _must be contained in files of the same name_ if you want to make use of this functionality.
+Functions are auto-loaded from the `$HOME/.config/fish/functions/` directory. Fish loads them when they are first used; it does this by looking for a
+file with the same name as the function (i.e. function `foobar` must be contained in `foobar.fish`), so functions _must be contained in files of the
+same name_ if you want to make use of this functionality.
 
 ### viewing
 
@@ -81,8 +81,7 @@ To do the equivalent of `alias FOO` in Bash, use `function FOO` (works with func
 
 ## abbreviations
 
-Abbreviations are similar to aliases, but are expanded after pressing `Space` or `Enter`. Using `Control+Space` to avoid
-expanding.
+Abbreviations are similar to aliases, but are expanded after pressing `Space` or `Enter`. Using `Control+Space` to avoid expanding.
 
 ```fish
 abbr --add <NAME> <EXPANSION>
@@ -106,9 +105,14 @@ switch $argv[1]
 end
 ```
 
+## List keybindings
+
+Run the command `bind` with no arguments.
+
 ## Print keyboard input codes
 
-Use [`fish_key_reader`](https://fishshell.com/docs/current/cmds/fish_key_reader.html) to print the key codes for a key sequence.
+Run the command [`fish_key_reader`](https://fishshell.com/docs/current/cmds/fish_key_reader.html) followed by a key sequence to print the key codes
+for a key sequence.
 
 ## Get the directory a running script is located
 
