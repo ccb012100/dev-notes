@@ -377,3 +377,7 @@ AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
 AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 setx Logging__0__Level=Warning
 ```
+
+## Privileged ports on macOS
+
+macOS requires running as `root` to bind to ports < `1024`, so it's best to set something higher in `Properties/launchSettings.json`.
