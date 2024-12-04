@@ -14,7 +14,7 @@ gh repo clone Keychron/qmk_firmware`
 
 Switch to the `bluetooth_playground` branch:
 
-- `$ git checkout bluetooth_playground`
+- `git checkout bluetooth_playground`
 
 ### Install/setup QMK
 
@@ -30,7 +30,7 @@ If on Windows/WSL, install [QMK Toolbox](https://github.com/qmk/qmk_toolbox)
 
 Configure the repo to be the default **qmk** project:
 
-- `$ qmk config user.qmk_home=<repo_directory>`
+- `qmk config user.qmk_home=<repo_directory>`
 
 Set the **Keychron K4 Pro** as the default keyboard and keymap:
 
@@ -46,7 +46,7 @@ Set the **Keychron K4 Pro** as the default keyboard and keymap:
 
 ### Compile the keyboard firmware
 
-Run `$ qmk compile -kb keychron/k4_pro/ansi/rgb -km default`
+Run `qmk compile -kb keychron/k4_pro/ansi/rgb -km default`
 
 You can also run just `$ qmk compile`, but it must be run from the keymap folder (`keyboards/keychron/k4_pro/ansi/rgb/keymaps/default`).
 
@@ -56,7 +56,7 @@ Flashing via **QMK Toolbox** is the easiest method.
 
 #### Flashing via the CLI:
 
-Run `$ qmk flash -km keychron/k4_pro/ansi/rgb:default`
+Run `qmk flash -km keychron/k4_pro/ansi/rgb:default`
 
 - Make sure the keyboard's USB-C cord is not connected to the computer.
   - (Was experiencing problems when you just unplug the keyboard but leave the USB-C cable connected to the computer, so it's safest to just unplug from the computer.)
