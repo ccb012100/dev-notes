@@ -4,6 +4,19 @@
 
 Applications store preferences in `*.plist` files in the directory  `$HOME/Library/Preferences/`
 
+## Hide/Focus Applications
+
+- `Cmd + mouse click` on an application
+  - Send mouse click to the application without changing focus to the application
+- `Opt + Cmd + right mouse click` on an application
+  - Hide other applications
+- `Opt + Cmd + right mouse click` on the desktop
+  - Hide all applications
+- `Opt + right mouse click` on an application
+  - Hide the current application and focus on the clicked application
+- `Opt + Cmd + h`
+  - Hide other applications
+
 ## Outlook
 
 ### group messages by conversation
