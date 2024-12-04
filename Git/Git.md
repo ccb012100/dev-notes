@@ -393,6 +393,15 @@ git stash push -S # --staged
 
 # only stash untracked files
 git stash push --only-untracked
+
+# drop stash entry by ref
+git stash drop stash@{n}
+
+# drop most recent stash entry - equiv. to `git stash drop stash@{0}`
+git stash drop
+
+# drop all stash entries
+git stash clear
 ```
 
 ### stash specific file(s)
