@@ -220,7 +220,7 @@ e.g. in this example my keyboard is device `3-1.1.4.1`:
 1:4-Port USB 2.0 Hub
 
 /sys/bus/usb/devices/3-1/product
-1:USB2.0 Hub             
+1:USB2.0 Hub
 
 /sys/bus/usb/devices/3-1.1.4.3/product
 1:YubiKey OTP+FIDO+CCID
@@ -345,3 +345,13 @@ This is due to a problem with the jack-sensing feature
 ## Search path for manpages
 
 Run the command `manpath` to display the search path for manual pages
+
+## `CDPATH`
+
+Environment variable that acts as `cd`'s equivalent to `PATH`.
+
+When set, `CDPATH` is the only context used, so be sure to add `.` (the current directory) to the front of the list, e.g.
+
+```bash
+export CDPATH=".:$HOME:$HOME/src"
+```
