@@ -82,7 +82,7 @@ Links:
 
 ### Set current folder settings as default view options
 
-`⌘+J` to open the settings, then click the button at the bottom labeled *Use as defaults*
+`⌘+J` to open the settings, then click the button at the bottom labeled _Use as defaults_
 
 ### Keyboard Shortcuts
 
@@ -237,7 +237,9 @@ com.microsoft.VSCode
 ❯ osascript -e 'id of app "WezTerm"'
 ```
 
-## Access Keychains on the CLI
+## Keychain Access
+
+### Access Keychains on the CLI
 
 Use the [`security`](https://ss64.com/mac/security.html) utility.
 
@@ -247,7 +249,8 @@ Use the `fs_usage` utility to list the files that are being accessed by a proces
 
 ## Hosts file mapping
 
-Mapping `/etc/hosts` is a bit different on macOS. You must include 2 entries (one with `https://`, and one without), and _the order matters_; the `https://` entry must be last.
+Mapping `/etc/hosts` is a bit different on macOS. You must include 2 entries (one with `https://`, and one without), and _the order matters_; the
+`https://` entry must be last.
 
 e.g.
 
