@@ -1,5 +1,12 @@
 # NuGet
 
+## Restrict project version
+
+```xml
+<!-- Pin to highest available 7.x version -->
+<PackageReference Include="FluentAssertions" Version="7.1.0" AllowedVersions="7.x" />
+```
+
 ## CLI
 
 _reference_: <https://docs.microsoft.com/en-us/nuget/reference/cli-reference/cli-ref-list>
