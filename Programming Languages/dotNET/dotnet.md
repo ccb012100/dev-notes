@@ -195,6 +195,19 @@ _sut.ControllerContext.HttpContext.Items.Add("Foo", "bar");
 
 [HTTP Logging in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/http-logging)
 
+```c#
+if (app.Environment.IsDevelopment())
+{
+    services.AddHttpLogging(logging => {
+        logging.LoggingFields = HttpLoggingFields.All;
+        logging.MediaTypeOptions.AddText("application/javascript");
+        logging.RequestBodyLogLimit = 4096;
+        logging.ResponseBodyLogLimit = 4096;
+        logging.CombineLogs = true;
+    });
+}
+```
+
 ## Docker
 
 ```bash
