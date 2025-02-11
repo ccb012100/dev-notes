@@ -109,3 +109,9 @@ To edit the query used in a report, click the button labeled **Edit ⏷** and ch
 ## Timechart
 
 <https://docs.splunk.com/Documentation/Splunk/9.3.1/SearchReference/Timechart>
+
+## Tokens
+
+<https://docs.splunk.com/Documentation/Splunk/latest/Viz/tokens>
+
+Use tokens to set a dynamic value that can be set via a textbox/dropdown/etc. (for example, the environment).
