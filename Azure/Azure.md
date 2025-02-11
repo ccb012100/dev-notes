@@ -167,27 +167,26 @@ Any type where `RetainedPercentage` is less than `100` is being sampled.
 #### .NET API
 
 ```cs
-using Microsoft.ApplicationInsights.AspNetCore.Extensions;
-using Microsoft.ApplicationInsights.Extensibility;
-
-var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.Configure<TelemetryConfiguration>(telemetryConfiguration =>
+public void ConfigureServices(IServiceCollection services)
 {
-   var telemetryProcessorChainBuilder = telemetryConfiguration.DefaultTelemetrySink.TelemetryProcessorChainBuilder;
-
-   // Using adaptive sampling with 5 items per second, and also excludes EventTelemetry from being subject to sampling:
-   telemetryProcessorChainBuilder.UseAdaptiveSampling(maxTelemetryItemsPerSecond:5, excludedTypes: "Event");
-
-   telemetryProcessorChainBuilder.Build();
-});
-
-builder.Services.AddApplicationInsightsTelemetry(new ApplicationInsightsServiceOptions
-{
-   EnableAdaptiveSampling = false,
-});
-
-var app = builder.Build();
+    services.Configure<Microsoft.ApplicationInsights.Extensibility.TelemetryConfiguration>(
+        telemetryConfiguration => telemetryConfiguration.DefaultTelemetrySink
+            .TelemetryProcessorChainBuilder
+            .UseAdaptiveSampling(
+                settings: new SamplingPercentageEstimatorSettings
+                {
+                    MinSamplingPercentage = 0.01,
+                    MaxSamplingPercentage = 100,
+                    MaxTelemetryItemsPerSecond = 5
+                },
+                callback: null,
+                excludedTypes: "Exception;Event" // exclude Exceptions and Events from adaptive sampling
+            )
+            .Build()
+        )
+        // IMPORTANT: 'EnableAdaptiveSampling' MUST be set to 'false' when using 'UseAdaptiveSampling'.
+        .AddApplicationInsightsTelemetry(options => options.EnableAdaptiveSampling = false);
+}
 ```
 
 ([source](https://learn.microsoft.com/en-us/azure/azure-monitor/app/sampling-classic-api#configure-sampling-settings))
