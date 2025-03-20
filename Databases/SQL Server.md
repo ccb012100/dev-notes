@@ -1,4 +1,4 @@
-# Microsoft SQL Server
+# Microsoft SQL Server and Transact-SQL (T-SQL)
 
 _Note:_ Unless specified, notes apply to both **Azure DB** and **SQL Server 2016** (`13.x`) and later.
 
@@ -124,4 +124,18 @@ AND OBJECT_SCHEMA_NAME(idxs.object_id) != 'sys'
 AND idxs.is_disabled = 0
 
 ORDER BY i.avg_fragmentation_in_percent DESC, i.page_count DESC
+```
+
+## `WITH VALUES`
+
+When you add a new nullable column with a default value to a table, existing records will have the column set to `NULL`.
+
+To instead fill them with the default value, use `WITH VALUES`.
+
+```sql
+ALTER TABLE Foo
+ADD Bar int DEFAULT(0) WITH VALUES; -- sets existing to NULL
+
+ALTER TABLE Foo
+ADD Bar int DEFAULT(0) WITH VALUES; -- sets existing to 0
 ```
