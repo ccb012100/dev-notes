@@ -4,6 +4,10 @@ Scheduled system jobs daemon
 
 ## view cron logs
 
+### macOS
+
+`log show --process cron`
+
 ### dedicated cron log file
 
 Edit `/etc/rsyslog.d/50-default.conf` and uncomment the line that starts with `#cron.*` to have `cron` log to
