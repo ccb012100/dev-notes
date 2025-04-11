@@ -15,8 +15,8 @@ Use <https://github.com/ccb012100/qmk_firmware/tree/ergodox_ez>:
 ```zsh
 cd qmk_firmware
 qmk setup
-qmk config user.keyboard=ergodox_ez
-qmk config user.keymap=ccb012100
+qmk config user.keyboard=ergodox_ez/ccb012100
+qmk config user.keymap=default
 ```
 
 ### Flash keyboard
