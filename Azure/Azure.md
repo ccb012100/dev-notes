@@ -194,3 +194,17 @@ public void ConfigureServices(IServiceCollection services)
 ### Azure Functions
 
 ([source](https://learn.microsoft.com/en-us/azure/azure-functions/configure-monitoring?tabs=v2#configure-sampling))
+
+#### Core Tools
+
+##### inproc8 model host fails to start on macOS
+
+If in-process model fails to start because of permissions, running `sudo chmod +x` on the executable will fix it.
+
+```zsh
+$ func start
+Failed to start the inproc8 model host. An error occurred trying to start process '/opt/homebrew/Cellar/azure-functions-core-tools@4/4.0.7030/in-proc8/func' with working directory '/Users/ccb012100/work/dpc/CCT-consent-service/src/Cct.Consent.Service.Functions.Shared/bin/output'. Permission denied
+$ sudo chmod +x /opt/homebrew/Cellar/azure-functions-core-tools@4/4.0.7030/in-proc8/func
+```
+
+([source](https://github.com/Azure/azure-functions-core-tools/issues/3766))
