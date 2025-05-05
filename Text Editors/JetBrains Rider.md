@@ -61,3 +61,13 @@ that looks like the following:
 ```xml
 <frame x="2958" y="-8" width="2560" height="1400" />
 ```
+
+## Launch Settings
+
+Rider is supposed to pick up the settings from the `launchSettings.json` file. It will show up in the Debug Configurations under the heading **.NET Launch Settings Profile** (_not_ **.NET Project** - that is the wrong one).
+
+![.NET Launch Settings](/images/jetbrains-rider-debug-configurations.png)
+
+If it doesn't have the launch settings, right-click on the file in the Explorer and click **Generate Configurations**.
+
+([source](https://blog.jetbrains.com/dotnet/2018/11/08/using-net-core-launchsettings-json-rundebug-apps-rider/#generating-rider-run-configurations-based-on-launchsettings.json))
