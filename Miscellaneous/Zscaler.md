@@ -19,7 +19,7 @@ Set `NODE_EXTRA_CA_CERTS` in your Windows system environment variables to point 
 
 1. When prompted for a password, enter `changeit`
 
-[^1]: ([source](https://github.com/dbeaver/dbeaver/issues/4341#issuecomment-2284337267))
+([source](https://github.com/dbeaver/dbeaver/issues/4341#issuecomment-2284337267))
 
 ## WSL
 
@@ -47,3 +47,21 @@ when trying to install **vscode** extensions in **WSL**, set the WSL environment
     # !/usr/bin/env bash
     export NODE_EXTRA_CA_CERTS="/mnt/c/Users/chris/zscaler_root_cert.pem"
     ```
+
+## Azure CLI
+
+### macOS
+
+You need to append the ZScaler Root cert to the bundle in the Azure CLI's `certifi` folder.
+
+- `ZSCALER_PEM` = path to ZScaler Root CA `.pem` file
+- `CACERT_PEM` = path to `cacert.pem` found in `/opt/homebrew/Cellar/azure-cli/<version>/libexec/lib/python3.<version>/site-packages/certifi/`
+
+```bash
+cat $ZSCALER_PEM >> $CACERT_PEM
+
+# example
+cat $HOME/zscaler_root_ca.pem >> /opt/homebrew/Cellar/azure-cli/2.73.0/libexec/lib/python3.12/site-packages/certifi/cacert.pem
+```
+
+([source](https://learn.microsoft.com/en-us/cli/azure/use-azure-cli-successfully-troubleshooting?view=azure-cli-latest#work-behind-a-proxy))
