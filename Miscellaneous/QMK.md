@@ -12,10 +12,21 @@ Use <https://github.com/ccb012100/qmk_firmware/tree/ergodox_ez>:
 
 ### Setup
 
+### Ergodox EZ
+
 ```zsh
 cd qmk_firmware
 qmk setup
 qmk config user.keyboard=ergodox_ez/ccb012100
+qmk config user.keymap=default
+```
+
+### Keychron V6
+
+```zsh
+cd qmk_firmware
+qmk setup
+qmk config user.keyboard=keychron/v6/ccb012100
 qmk config user.keymap=default
 ```
 
