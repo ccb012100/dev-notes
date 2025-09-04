@@ -55,6 +55,11 @@ Syntax: `field_name=field_value`
 - `field_name` is case-_sensitive_
 - `field_value` is case-_insensitive_
 
+#### Filter out records where a field does not have a value
+
+- `foo=*` - single field
+- `foo=* bar=*` - multiple fields
+
 ### Search Processing Language (SPL)
 
 #### Transforming commands
