@@ -2,9 +2,20 @@
 
 ## Configuration
 
-### View applied configuration
+### View configuration
 
-Use [ConfigurationRootExtensions.GetDebugView()](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.configuration.configurationrootextensions.getdebugview?view=net-8.0)
+```c#
+foreach ((string key, string value) in configuration.AsEnumerable().OrderBy(x => x.Key))
+{
+    Console.WriteLine($"{key} : {value}");
+}
+```
+
+([source](https://stackoverflow.com/a/37688484))
+
+### View "applied" configuration
+
+To view a more detailed view of the configuration, including the origin of each setting's value, use [ConfigurationRootExtensions.GetDebugView()](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.configuration.configurationrootextensions.getdebugview?view=net-8.0).
 
 ```c#
 var configRoot = (IConfigurationRoot)configuration;
