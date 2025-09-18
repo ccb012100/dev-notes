@@ -120,3 +120,41 @@ To edit the query used in a report, click the button labeled **Edit ⏷** and ch
 <https://docs.splunk.com/Documentation/Splunk/latest/Viz/tokens>
 
 Use tokens to set a dynamic value that can be set via a textbox/dropdown/etc. (for example, the environment).
+
+### Updating multiple tokens at once
+
+In the newer **Splunk Dashboard Studio** dashboard type[^1], a trigger like a dropdown can only set 1 token at a time. Using that token, however, we
+can configure a data source that sets other values.
+
+#### Example
+
+Say we had 3 values we wanted to set dynamically, `foo`, `bar`, and `baz`.
+
+We use a dropdown to set a token named `foo_token`, which gives us our `foo` value.
+
+We then create a data source named `bar_baz_values`. Inside the data source, we use the value of `foo` to set the values of `bar` and `baz`:
+
+```splunk
+| makeresults
+| eval bar = case( "$foo_token$" = "A", "abc", "$foo_token$" = "B", "def", "$foo_token$" = "C", "xyz" )
+| eval baz = case( "$foo_token$" = "A", 1, "$foo_token$" = "B", 3, "$foo_token$" = "C", 42 )
+| fields bar baz
+```
+
+To use the values from the data source in a query, reference them as `$bar_baz_values:result.bar$` and `$bar_baz_values:result.baz$` [^2].
+
+([source](https://help.splunk.com/en/splunk-enterprise/create-dashboards-and-reports/dashboard-studio/9.0/add-dashboard-interactions/setting-tokens-from-search-results-or-search-job-metadata))
+
+[^1]: The style that uses JSON source code (the older one was XML).
+
+[^2]: To be able to reference the value, the data source must have the option _Access search results or metadata_ enabled.
+
+## Time formatting
+
+To format the `_time` field to be more human readable, use the `strftime` command:
+
+```splunk
+source="foobar"
+| eval time=strftime(_time, "%m/%d/%y %I:%M:%S %p")
+| table time bat baz
+```
