@@ -18,6 +18,10 @@ see [Azure Pipelines](</Azure/Azure Pipelines.md>)
 
 [Syntax Conventions](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/syntax-conventions?source=recommendations)
 
+### Comments
+
+Use `//` to start a comment.
+
 ### Summarize
 
 ```sql
@@ -61,6 +65,16 @@ requests | where customDimensions['Foo'] matches regex 'foo\.bar\..+'
 
 # good
 requests | where customDimensions['Foo'] matches regex @'foo\.bar\..+'
+```
+
+### `project`
+
+Use the [project](https://learn.microsoft.com/en-us/kusto/query/project-operator?view=microsoft-fabric) keyword to select specific fields to output.
+
+```kql
+// show just timestamp, type, and outermessage from Exceptions
+exceptions
+| project timestamp, type, outerMessage
 ```
 
 ## **Azure SQL**
