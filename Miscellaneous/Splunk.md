@@ -100,6 +100,28 @@ Data that's mapped (keyed off of a field) to and included in the search results.
 
 ([source](https://docs.splunk.com/Documentation/Splunk/9.3.1/Search/Quicktipsforoptimization))
 
+### Chain search
+
+<https://docs.splunk.com/Documentation/Splunk/8.2.1/DashStudio/dsChain>
+
+It's recommended to use a [transforming search](https://docs.splunk.com/Documentation/Splunk/8.2.1/Search/Aboutreportingcommands) as the base search.
+
+#### Non-transforming base search
+
+If the base search is a non-transforming search, you must explicitly state in the base search what fields will be used in the chain search using the `| fields` command (otherwise, you will get `No results returned`). The base search will be limited to the number of events specified by `max_count` setting in `limits.conf` (the default is 500,000).
+
+#### Chaining multiple searches
+
+To chain multiple searches, 1 hack is to have the base search do a granular count by all the fields you'll need for the various chained searches you're interested in, and then the chained searches can use `sum(count)` to get a count by a single field.
+
+For example, if your events have fields `foo`, `bar`, `baz` & `bat`, make the parent search return `stats count by foo bar baz bat`. For a count by `bar`, you can create a chained search that does `| stats sum(count) as "count" by bar`.
+
+```splunk
+index="x" bar="y" | stats count by foo bar baz bat // base search
+| where foo = "a" // chained search that filters by foo
+| stats sum(count) as "count" by bar // chained search that gets a count by bar
+```
+
 ## Adding a query to a Dashboard
 
 2 options:
