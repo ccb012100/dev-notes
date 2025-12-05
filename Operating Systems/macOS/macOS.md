@@ -2,7 +2,7 @@
 
 ## Application Preferences
 
-Applications store preferences in `*.plist` files in the directory  `$HOME/Library/Preferences/`
+Applications store preferences in `*.plist` files in the directory `$HOME/Library/Preferences/`
 
 ## Hide/Focus Applications
 
@@ -16,6 +16,17 @@ Applications store preferences in `*.plist` files in the directory  `$HOME/Libra
   - Hide the current application and focus on the clicked application
 - `Opt + Cmd + h`
   - Hide other applications
+
+## Restore window positions
+
+macOS doesn't remember window positions, including the monitor they're on.
+
+To move all windows to the primary display, you can enter `cmd + F1` twice to toggle display mirroring on and back off.
+
+## Keep Dock on main display
+
+1. Go to `System Preferences` > `Desktop & Dock` > `Mission Control`
+2. Toggle OFF _Displays have separate Spaces_.
 
 ## Outlook
 
@@ -134,11 +145,11 @@ sudo defaults delete /Library/Preferences/com.apple.airport.bt.plist bluetoothCo
 
 **macOS** maps some keys to other keycodes:
 
-| Key | macOS |
-| - | - |
+| Key                  | macOS |
+| -------------------- | ----- |
 | `SysRq/Print Screen` | `F13` |
-| `Scroll Lock` | `F14` |
-| `Pause Break` | `F15` |
+| `Scroll Lock`        | `F14` |
+| `Pause Break`        | `F15` |
 
 > [!NOTE]
 > **Karabiner Events Viewer** will report the hardware key code, but if you go the **macOS** System Settings Keyboard Shortcuts and set a shortcut
@@ -146,13 +157,13 @@ sudo defaults delete /Library/Preferences/com.apple.airport.bt.plist bluetoothCo
 
 ## Screenshots
 
-| Action | Shortcut |
-| - | - |
-| Save picture of screen as a file | ⇧⌘3 |
-| Copy picture of screen to the clipboard | ⌃⇧⌘3 |
-| Save picture selected area as a file | ⇧⌘4 |
-| Save picture selected area to the clipboard | ⌃⇧⌘4 |
-| Screenshot and recording options | ⇧⌘5 |
+| Action                                      | Shortcut |
+| ------------------------------------------- | -------- |
+| Save picture of screen as a file            | ⇧⌘3      |
+| Copy picture of screen to the clipboard     | ⌃⇧⌘3     |
+| Save picture selected area as a file        | ⇧⌘4      |
+| Save picture selected area to the clipboard | ⌃⇧⌘4     |
+| Screenshot and recording options            | ⇧⌘5      |
 
 ## `plutil`
 
@@ -193,7 +204,7 @@ Built-in CLI utility to keep a Mac from sleeping.
 - `-t SECONDS`
   - Specifies the timeout value in seconds for which this assertion has to be valid. The assertion is dropped after the specified timeout. Timeout value is not used when an utility is invoked with this command.
 - `w PID`
-  - Waits for the process with the specified pid to exit. Once the  the process exits, the assertion is also released. This option is ignored when used with utility option.
+  - Waits for the process with the specified pid to exit. Once the the process exits, the assertion is also released. This option is ignored when used with utility option.
 
 ```zsh
 # Prevent sleep for 1 hour (3600 seconds)
