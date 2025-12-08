@@ -137,6 +137,8 @@ To edit the query used in a report, click the button labeled **Edit ⏷** and ch
 
 <https://docs.splunk.com/Documentation/Splunk/9.3.1/SearchReference/Timechart>
 
+To quickly view a timeline of a search, append `| timechart span=5m count`, replacing `5m` with whatever granularity you want to use.
+
 ## Tokens
 
 <https://docs.splunk.com/Documentation/Splunk/latest/Viz/tokens>
