@@ -69,16 +69,28 @@ A footnote can also have multiple lines[^2].
 
 ## Pull Requests
 
-### mark all files viewed
-
-Create a bookmarklet:
+### Bookmarklet to mark all files viewed
 
 ```js
-javascript:document.getElementsByName("viewed").forEach(ch => {
-    if(!ch.checked) {
-        ch.click();
-    }
-})
+javascript: (() => {
+  if (window.location.origin !== 'https://github.com') {
+    alert('must be on github.com!');
+  } else if (
+    window.location.pathname.match(
+      /^\/[0-9A-Za-z-]+\/[A-Za-z-]+\/pull\/[0-9]+\/changes$/,
+    )
+  ) {
+    document.querySelectorAll('button[aria-label="Not Viewed"]').forEach((ch) => {
+      ch.click();
+    });
+  } else if (
+    window.location.pathname.match(/^\/[0-9A-Za-z+]+\/[A-Za-z-]+\/pull\//)
+  ) {
+    alert('Must be on the "Files changed" page of the Pull Request');
+  } else {
+    alert('must be on a on Pull Request');
+  }
+})();
 ```
 
 ([source](https://stackoverflow.com/questions/69945775/how-to-unview-toggle-all-the-viewed-files-on-github-pull-request#comment126429925_69945864))
