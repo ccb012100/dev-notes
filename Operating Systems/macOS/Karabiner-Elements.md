@@ -171,3 +171,7 @@ Example:
     }
 ]
 ```
+
+## Mouse rules don't work
+
+Make sure the mouse has _Modify events_ enabled (under `Configuration > Devices`).
