@@ -272,3 +272,9 @@ e.g.
 ::1 foo.example.com
 ::1 https://foo.example.com
 ```
+
+## Remove an app from quarantine
+
+```zsh
+xattr -rd com.apple.quarantine /Applications/app_name.app
+```
