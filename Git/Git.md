@@ -650,3 +650,18 @@ git blame --ignore-revs-file IGNORE_REVS_FILE FILE
 # set ignore-revs file in repo's config
 git config blame.ignoreRevsFile IGNORE_REVS_FILE
 ```
+
+## Revert a single file
+
+**Restore to a specific commit**
+
+```console
+# restore to a
+git restore --source=7b9b718825 path/to/file1 path/to/file2
+```
+
+**Restore to 1 commit before a specific commit**
+
+```console
+git restore --source=7b9b718825~1 path/to/file1 path/to/file2
+```
