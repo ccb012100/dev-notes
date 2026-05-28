@@ -175,3 +175,7 @@ Example:
 ## Mouse rules don't work
 
 Make sure the mouse has _Modify events_ enabled (under `Configuration > Devices`).
+
+## Rotary encoding knob
+
+Volume events from a rotary knob can't be remapped in Karabiner.
