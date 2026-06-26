@@ -278,3 +278,15 @@ e.g.
 ```zsh
 xattr -rd com.apple.quarantine /Applications/app_name.app
 ```
+
+## Developer Tools Access prompt
+
+A recurring prompt labeled **Developer Tools Access** pops up and asks for the name and password of a user in the "Developer Tools" group.
+
+Run the following shell commands:
+
+```sh
+sudo DevToolsSecurity -enable && sudo dscl . -append /Groups/_developer GroupMembership $(whoami)
+```
+
+([source](https://youtrack.jetbrains.com/articles/SUPPORT-A-2008/Dialog-Developer-Tools-Access-reappears-upon-macOS-reboot-when-starting-the-project-in-Rider))
