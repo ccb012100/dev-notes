@@ -87,6 +87,16 @@ Abbreviations are similar to aliases, but are expanded after pressing `Space` or
 abbr --add <NAME> <EXPANSION>
 ```
 
+### place cursor position
+
+Use the flag `--set-cursor` and use the token `%` to indicate where the cursor should be placed.
+
+**example**
+
+```fish
+abbr --add gcm --set-cursor "git commit -m '%'"
+```
+
 ## Switch case
 
 ```fish
