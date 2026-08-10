@@ -33,6 +33,15 @@ Defaults to `$HOME/.curlrc`
 
 `--write-out`, `-w`
 
+### Response status code
+
+Use `-w "%{http_code}"`
+
+```bash
+curl -s https://example.com \
+  -w "\nHTTP Status: %{http_code}\n" 
+```
+
 ## Follow redirects
 
 `-L`, `--follow`
