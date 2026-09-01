@@ -237,3 +237,9 @@ Add to `%HOME%\.gitconfig`:
 ### Escaping `$0` in a snippet
 
 `$0`, `$1`, etc. are special variables in snippets. If a snippet needs the literal text `$0`, `$1`, etc. (for example, shell args), escape it with `\\$0`.
+
+## Copilot
+
+### Disabling MCP servers per-workspace
+
+Open the Command Palette and run `Chat: Open Customizations`. Choose the **MCP Servers** tab and you can enable/disable for just the current workspace. The settings are saved in a SQLite database `state.vscdb`, not the `.code-workspace` or `mcp.json` files.
